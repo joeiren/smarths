@@ -23,5 +23,18 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
                           select entity).Skip(Math.Max(0, pageNo - 1)).Take(pageSize);
             return record.Any() ? record : null;
         }
+
+        public int ChildSchoolCount()
+        {
+            var count = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_6_1_1
+                         select entity).Count();
+            return count;
+        }
+        public int PrimarySchoolCount()
+        {
+            var count = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_6_1_2
+                         select entity).Count();
+            return count;
+        }
     }
 }

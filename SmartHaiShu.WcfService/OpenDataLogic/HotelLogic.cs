@@ -23,5 +23,18 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
                           select entity).Skip(Math.Max(0, pageNo - 1)).Take(pageSize);
             return record.Any() ? record : null;
         }
+
+        public int StartHotelCount()
+        {
+            var count = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_4_5_1
+                          select entity).Count();
+            return count;
+        }
+        public int FlowerHotelCount()
+        {
+            var count = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_4_5_2
+                         select entity).Count();
+            return count;
+        }
     }
 }

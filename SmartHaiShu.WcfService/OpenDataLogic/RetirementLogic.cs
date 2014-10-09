@@ -24,5 +24,12 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
                 select entity).Skip(Math.Max(0, pageNo - 1)).Take(pageSize);
             return record.Any() ? record : null;
         }
+
+        public int RetirementHomeCount()
+        {
+            var count = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_8_4
+                         select entity).Count();
+            return count;
+        }
     }
 }

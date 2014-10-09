@@ -61,13 +61,25 @@ namespace SmartHaiShu.WcfService
         string GetBusRoute(string routeName);
 
         [OperationContract]
+        string GetBusRouteCount();
+
+        [OperationContract]
         string GetBusRouteList(int pageNo, int pageSize);
+
+        [OperationContract]
+        string GetCar4SLocationCount();
 
         [OperationContract]
         string GetCar4SLocation(int pageNo, int pageSize);
 
         [OperationContract]
+        string GetCarRepairLocationCount();
+
+        [OperationContract]
         string GetCarRepairLocation(int pageNo, int pageSize);
+
+        [OperationContract]
+        string GetCarAnnualCheckCount();
 
         [OperationContract]
         string GetCarAnnualCheck(int pageNo, int pageSize);
@@ -76,16 +88,34 @@ namespace SmartHaiShu.WcfService
         string GetCarSchool(int pageNo, int pageSize);
 
         [OperationContract]
+        string GetCarSchoolCount();
+
+        [OperationContract]
+        string GetStarHotelCount();
+
+        [OperationContract]
         string GetStarHotels(int pageNo, int pageSize);
+        
+        [OperationContract]
+        string GetFlowerHotelCount();
 
         [OperationContract]
         string GetFlowerHotels(int pageNo, int pageSize);
+        
+        [OperationContract]
+        string GetChildSchoolCount();
 
         [OperationContract]
         string GetChildSchool(int pageNo, int pageSize);
 
         [OperationContract]
+        string GetPrimarySchoolCount();
+
+        [OperationContract]
         string GetPrimarySchool(int pageNo, int pageSize);
+
+        [OperationContract]
+        string GetRetirementHomeCount();
 
         [OperationContract]
         string GetRetirementHome(int pageNo, int pageSize);

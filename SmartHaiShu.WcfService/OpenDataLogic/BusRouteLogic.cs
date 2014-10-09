@@ -30,5 +30,12 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
                           select entity).Skip(Math.Max(pageNo-1,0) * pageSize).Take(pageSize);
             return record.Any() ? record : null;
         }
+
+        public int BusRouteCount()
+        {
+            var count = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_4_2_7
+                          select entity).Count();
+            return count;
+        }
     }
 }

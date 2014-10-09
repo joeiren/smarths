@@ -11,6 +11,13 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
     /// </summary>
     public class CarServiceLogic
     {
+        public int Car4SLocationCount()
+        {
+            var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_4_3_1
+                          select entity).Count();
+            return record;
+        }
+
         /// <summary>
         /// 汽车4s店
         /// </summary>
@@ -23,6 +30,14 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
                           orderby entity.RELEASE_TIME descending
                           select entity).Skip(Math.Max(0, pageNo -1)).Take(pageSize);
             return record.Any() ? record : null;
+        }
+
+
+        public int CarRepairLocationCount()
+        {
+            var count = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_4_3_2
+                          select entity).Count();
+            return count;
         }
 
         /// <summary>
@@ -39,6 +54,13 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
             return record.Any() ? record : null;
         }
 
+        public int CarAnnualCheckCount()
+        {
+            var count = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_4_3_3
+                         select entity).Count();
+            return count;
+        }
+
         /// <summary>
         /// 车辆年检
         /// </summary>
@@ -51,6 +73,13 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
                           orderby entity.RELEASE_TIME descending
                           select entity).Skip(Math.Max(0, pageNo - 1)).Take(pageSize);
             return record.Any() ? record : null;
+        }
+
+        public int CarSchoolCount()
+        {
+            var count = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_4_3_5
+                         select entity).Count();
+            return count;
         }
 
         /// <summary>

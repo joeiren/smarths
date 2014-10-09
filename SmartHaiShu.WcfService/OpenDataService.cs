@@ -24,7 +24,7 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     社区简介
         /// </summary>
-        /// <param name="community"></param>
+        /// <param name="community">社区名称</param>
         /// <returns></returns>
         public string GetCommunityIntroduction(string community)
         {
@@ -93,9 +93,9 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        ///     获取社区名字
+        ///  通过地址匹配获取社区名字
         /// </summary>
-        /// <param name="address"></param>
+        /// <param name="address">地址</param>
         /// <returns></returns>
         public string GetCommunityName(string address)
         {
@@ -118,7 +118,7 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     获取社区通告
         /// </summary>
-        /// <param name="noticeId"></param>
+        /// <param name="noticeId">通告id</param>
         /// <returns></returns>
         public string GetCommunityNotice(string noticeId)
         {
@@ -149,7 +149,7 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     获取社区通告标题(最近10条)
         /// </summary>
-        /// <param name="community"></param>
+        /// <param name="community">社区名称</param>
         /// <returns></returns>
         public string GetCommunityNoticeTitles(string community)
         {
@@ -179,7 +179,7 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     获取社区通告条数
         /// </summary>
-        /// <param name="community"></param>
+        /// <param name="community">社区名称</param>
         /// <returns></returns>
         public string GetCommunityNoticeCount(string community)
         {
@@ -198,9 +198,9 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     按页获取社区通告标题
         /// </summary>
-        /// <param name="community"></param>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="community">社区名称</param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetCommunityNoticeTitleByPage(string community, int pageNo, int pageSize)
         {
@@ -226,9 +226,9 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     按页获取社区通告（标题和内容）
         /// </summary>
-        /// <param name="community"></param>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="community">社区名称</param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetCommunityNoticeByPage(string community, int pageNo, int pageSize)
         {
@@ -255,7 +255,7 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     获取社区风采条数
         /// </summary>
-        /// <param name="community"></param>
+        /// <param name="community">社区名称</param>
         /// <returns></returns>
         public string GetCommunityFCCount(string community)
         {
@@ -302,8 +302,8 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     分页获取社区风采(标题和内容)
         /// </summary>
-        /// <param name="community"></param>
-        /// <param name="pageNo"></param>
+        /// <param name="community">社区名称</param>
+        /// <param name="pageNo">页号(大于0)</param>
         /// <param name="pageSize"></param>
         /// <returns></returns>
         public string GetCommunityFCByPage(string community, int pageNo, int pageSize)
@@ -331,7 +331,7 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     获取指定id的社区风采内容
         /// </summary>
-        /// <param name="fcId"></param>
+        /// <param name="fcId">风采Id</param>
         /// <returns></returns>
         public string GetCommunityFC(string fcId)
         {
@@ -379,8 +379,8 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     停水通知
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetWaterNotice(int pageNo, int pageSize)
         {
@@ -428,8 +428,8 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     获取停电通知
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetElectricNotice(int pageNo, int pageSize)
         {
@@ -482,9 +482,27 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        ///     公交线路列表
+        /// 公交路线记录条数
         /// </summary>
-        /// <param name="pageNo"></param>
+        /// <returns></returns>
+        public string GetBusRouteCount()
+        {
+            try
+            {
+                int result = _busRouteLogic.BusRouteCount();
+                return new ResultFormat(1, result.ToString()).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
+        ///     分页获取公交线路列表
+        /// </summary>
+        /// <param name="pageNo">页号(大于0)</param>
         /// <param name="pageSize"></param>
         /// <returns></returns>
         public string GetBusRouteList(int pageNo, int pageSize)
@@ -509,10 +527,28 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
+        /// 4S店条数
+        /// </summary>
+        /// <returns></returns>
+        public string GetCar4SLocationCount()
+        {
+            try
+            {
+                int result = _carLogic.Car4SLocationCount();
+                return new ResultFormat(1, result.ToString()).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
         ///     获取汽车4S店列表
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetCar4SLocation(int pageNo, int pageSize)
         {
@@ -538,10 +574,28 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
+        /// 汽车维修店条数
+        /// </summary>
+        /// <returns></returns>
+        public string GetCarRepairLocationCount()
+        {
+            try
+            {
+                int result = _carLogic.CarRepairLocationCount();
+                return new ResultFormat(1, result.ToString()).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
         ///     汽车维修店列表
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetCarRepairLocation(int pageNo, int pageSize)
         {
@@ -567,10 +621,28 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
+        /// 汽车年检点条数
+        /// </summary>
+        /// <returns></returns>
+        public string GetCarAnnualCheckCount()
+        {
+            try
+            {
+                int result = _carLogic.CarAnnualCheckCount();
+                return new ResultFormat(1, result.ToString()).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
         ///     汽车年检点列表
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetCarAnnualCheck(int pageNo, int pageSize)
         {
@@ -595,10 +667,28 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
+        /// 培训驾校条数
+        /// </summary>
+        /// <returns></returns>
+        public string GetCarSchoolCount()
+        {
+            try
+            {
+                int result = _carLogic.CarSchoolCount();
+                return new ResultFormat(1, result.ToString()).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
         ///     培训驾校列表
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetCarSchool(int pageNo, int pageSize)
         {
@@ -624,10 +714,28 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
+        /// 星级酒店条数
+        /// </summary>
+        /// <returns></returns>
+        public string GetStarHotelCount()
+        {
+            try
+            {
+                int result = _hotelLogic.StartHotelCount();
+                return new ResultFormat(1, result.ToString()).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
         ///     星级酒店
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetStarHotels(int pageNo, int pageSize)
         {
@@ -655,10 +763,28 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
+        /// 花级酒店条数
+        /// </summary>
+        /// <returns></returns>
+        public string GetFlowerHotelCount()
+        {
+            try
+            {
+                int result = _hotelLogic.FlowerHotelCount();
+                return new ResultFormat(1, result.ToString()).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
         ///     花级酒店
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetFlowerHotels(int pageNo, int pageSize)
         {
@@ -686,10 +812,28 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
+        /// 学前教育 幼儿园条数
+        /// </summary>
+        /// <returns></returns>
+        public string GetChildSchoolCount()
+        {
+            try
+            {
+                int result = _educationLogic.ChildSchoolCount();
+                return new ResultFormat(1, result.ToString()).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
         ///     学前教育 幼儿园列表
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetChildSchool(int pageNo, int pageSize)
         {
@@ -716,10 +860,28 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
+        /// 义务教育 （小学，初中）条数
+        /// </summary>
+        /// <returns></returns>
+        public string GetPrimarySchoolCount()
+        {
+            try
+            {
+                int result = _educationLogic.PrimarySchoolCount();
+                return new ResultFormat(1, result.ToString()).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
         ///     义务教育 （小学，初中）列表
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetPrimarySchool(int pageNo, int pageSize)
         {
@@ -750,10 +912,28 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
+        /// 养老院条数
+        /// </summary>
+        /// <returns></returns>
+        public string GetRetirementHomeCount()
+        {
+            try
+            {
+                int result = _retirementLogic.RetirementHomeCount();
+                return new ResultFormat(1, result.ToString()).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
         ///     养老院列表
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetRetirementHome(int pageNo, int pageSize)
         {
@@ -800,8 +980,8 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     按页获取超市记录
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetMarket(int pageNo, int pageSize)
         {
@@ -850,8 +1030,8 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     按页获取药店记录
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetDrugStore(int pageNo, int pageSize)
         {
@@ -900,8 +1080,8 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         ///     按页获取银行网点记录
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetBankLocation(int pageNo, int pageSize)
         {
@@ -950,8 +1130,8 @@ namespace SmartHaiShu.WcfService
         /// <summary>
         /// 按页获取自行车分布记录
         /// </summary>
-        /// <param name="pageNo"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
         /// <returns></returns>
         public string GetBikeLocation(int pageNo, int pageSize)
         {
