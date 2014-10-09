@@ -77,12 +77,16 @@
     <Compile Include="IOpenDataService.cs" />
     <Compile Include="ISmartHsService.cs" />
     <Compile Include="LogHelper.cs" />
+    <Compile Include="OpenDataLogic\BankLocationLogic.cs" />
+    <Compile Include="OpenDataLogic\BikeLocationLogic.cs" />
     <Compile Include="OpenDataLogic\BusRouteLogic.cs" />
     <Compile Include="OpenDataLogic\CarServiceLogic.cs" />
     <Compile Include="OpenDataLogic\CommunityNoticeLogic.cs" />
+    <Compile Include="OpenDataLogic\DrugStoreLogic.cs" />
     <Compile Include="OpenDataLogic\DzkBizLogic.cs" />
     <Compile Include="OpenDataLogic\EducationLogic.cs" />
     <Compile Include="OpenDataLogic\HotelLogic.cs" />
+    <Compile Include="OpenDataLogic\MarketLogic.cs" />
     <Compile Include="OpenDataLogic\RetirementLogic.cs" />
     <Compile Include="OpenDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

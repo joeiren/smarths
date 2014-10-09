@@ -113,7 +113,7 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
         public IEnumerable<b_t_ufp_3_2_3> LoadWaterNotice(int pageNo, int pageSize)
         {
             var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_3_2_3
-                          orderby entity.CHECK_TIME descending
+                          orderby entity.RELEASE_TIME descending, entity.CHECK_TIME descending
                           select entity).Skip(Math.Max(0,pageNo -1) * pageSize).Take(pageSize);
             return record;
         }
@@ -138,7 +138,7 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
         public IEnumerable<b_t_ufp_3_2_4> LoadElectricNotice(int pageNo, int pageSize)
         {
             var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_3_2_4
-                          orderby entity.CHECK_TIME descending
+                          orderby entity.RELEASE_TIME descending, entity.CHECK_TIME descending
                           select entity).Skip(Math.Max(0, pageNo - 1) * pageSize).Take(pageSize);
             return record;
         }

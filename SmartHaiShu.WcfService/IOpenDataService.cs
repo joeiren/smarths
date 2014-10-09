@@ -6,11 +6,12 @@ using System.ServiceModel;
 
 namespace SmartHaiShu.WcfService
 {
+    /// <summary>
+    /// 数据开放平台相关数据
+    /// </summary>
     [ServiceContract]
     public interface IOpenDataService
     {
-        // TODO: 在此添加您的服务操作
-
         [OperationContract]
         string GetCommunityIntroduction(string community);
 
@@ -24,7 +25,6 @@ namespace SmartHaiShu.WcfService
         string GetCommunityNoticeTitles(string community);
 
         [OperationContract]
-
         string GetCommunityNoticeCount(string community);
        
         [OperationContract]
@@ -89,5 +89,29 @@ namespace SmartHaiShu.WcfService
 
         [OperationContract]
         string GetRetirementHome(int pageNo, int pageSize);
+
+        [OperationContract]
+        string GetMarketCount();
+
+        [OperationContract]
+        string GetMarket(int pageNo, int pageSize);
+
+        [OperationContract]
+        string GetDrugStoreCount();
+
+        [OperationContract]
+        string GetDrugStore(int pageNo, int pageSize);
+
+        [OperationContract]
+        string GetBankLocationCount();
+
+        [OperationContract]
+        string GetBankLocation(int pageNo, int pageSize);
+
+        [OperationContract]
+        string GetBikeLocationCount();
+
+        [OperationContract]
+        string GetBikeLocation(int pageNo, int pageSize);
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using SmartHaiShu.Utility;
 using SmartHaiShu.WcfService;
 using SmartHaisuModel;
 
@@ -48,5 +49,35 @@ namespace ServiceLogic.Test
             //Assert.AreEqual(introduction["Code"], 1);
 
         }
+
+
+        [TestMethod]
+        public void GetBikeLocationCountTest()
+        {
+            OpenDataService service = new OpenDataService();
+            var result = service.GetBikeLocationCount();
+            Assert.IsTrue(result.JObjCodeTrue());
+            Assert.AreNotEqual(result.JobjMessageConvert<int>(), 0);
+        }
+        [TestMethod]
+        public void GetBikeLocationTest()
+        {
+            OpenDataService service = new OpenDataService();
+            var result = service.GetBikeLocation(1,10);
+            Assert.IsTrue(result.JObjCodeTrue());
+            var jresult = JsonConvert.DeserializeObject(result);
+        }
+
+
+        [TestMethod]
+        public void GetMarketTest()
+        {
+            OpenDataService service = new OpenDataService();
+            var result = service.GetMarket(1, 10);
+            Assert.IsTrue(result.JObjCodeTrue());
+            var jresult = JsonConvert.DeserializeObject(result);
+        }
+
+
     }
 }

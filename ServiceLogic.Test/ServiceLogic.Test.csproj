@@ -85,6 +85,10 @@
     <Compile Include="SessionVerifyTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SmartHaiShu.Utility\SmartHaiShu.Utility.csproj">
+      <Project>{3871B4C5-DB83-4F0D-80B9-5A74B19E31B1}</Project>
+      <Name>SmartHaiShu.Utility</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SmartHaiShu.WcfService\SmartHaishu.WcfService.csproj">
       <Project>{59B45F01-002D-4FA1-9F1D-6F4C89F4C89B}</Project>
       <Name>SmartHaishu.WcfService</Name>
