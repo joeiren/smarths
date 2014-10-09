@@ -1,0 +1,134 @@
+﻿/* File Created: 九月 9, 2014 */
+body {
+    font-family: "Microsoft YaHei";
+    background-color: #f6f6f6;
+    border-color: #9f9f9f;
+}
+#stow {
+    border-width: 1px;
+    background-color: #f7f7f7;
+}
+.favorite {
+    background: url("../images/20130725.png") no-repeat scroll 0 0 #000000;
+    background: url("../images/20130725.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 13px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    width: 13px;
+}
+
+.location-icon {
+    background: url("../images/17.png") no-repeat scroll -5px -3px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 18px;
+    margin: 0 4px;
+    padding: 0;
+    position: relative;
+    top: 3px;
+    width: 12px;
+}
+/*多云*/
+.weather-could {
+    background: url('../images/main/wea-cloud.png') no-repeat scroll 0 0 #000000;
+    background: url('../images/main/wea-cloud.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 28px;
+    margin: 0 0px;
+    padding: 0;
+    position: relative;
+    top: 3px;
+    width: 35px;    
+}
+
+#stow>div, #dateWeather>div {
+    line-height: 25px;
+    font-size: 12px;    
+    color: #666;
+    text-decoration: none;
+}
+
+/* navbar dropmenu submenu */
+.dropdown:hover .menu-top {
+    display: block;
+}
+
+.dropdown-submenu{
+    position:relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top:0;
+    left:100%;
+    margin-top:-6px;
+    margin-left:-1px;
+    -webkit-border-radius:0 6px 6px 6px;
+    -moz-border-radius:0 6px 6px 6px;
+    -ms-border-radius:0 6px 6px 6px;
+    border-radius:0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu{
+    display:block;
+}
+
+.dropdown-submenu > a:after{
+    display:block;
+    content:" ";
+    float:right;
+    width:0;
+    height:0;
+    border-color:transparent;
+    border-style:solid;
+    border-width:5px 0 5px 5px;
+    border-left-color:#cccccc;
+    margin-top:5px;
+    margin-right:-10px;
+}
+
+.dropdown-submenu:hover > a:after{
+    border-left-color:#ffffff;
+  
+}
+
+.dropdown-submenu .pull-left{
+    float:none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+    left:-100%;
+    margin-left:10px;
+    -webkit-border-radius:6px 0 6px 6px;
+    -moz-border-radius:6px 0 6px 6px;
+    -ms-border-radius:6px 0 6px 6px;
+    border-radius:6px 0 6px 6px;
+}
+
+/*navbar */
+#top_nav > li > a:hover, .nav > li > a:focus, .nav> li.active {
+    background-color: #fff;
+    color: #00bfff;
+}
+/*
+#top_nav > li > a  {
+    color: #fff;
+}
+*/
+.nav-active {
+	 background-color: #fff;
+     color: #00bfff;
+}
+
+#category_drop_menu >li {
+    min-height: 40px;
+}
+
+#category_drop_menu >li img {
+    margin-right: 25px;
+}
+
+.list-item-selected {
+    color: orange;
+}

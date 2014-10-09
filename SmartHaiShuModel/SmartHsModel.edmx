@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SelfDataModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SelfDataModelStoreContainer">
+          <EntitySet Name="community" EntityType="SelfDataModel.Store.community" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="member" EntityType="SelfDataModel.Store.member" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="session_verify" EntityType="SelfDataModel.Store.session_verify" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="v_community" EntityType="SelfDataModel.Store.v_community" store:Type="Views" store:Schema="hs_smart_0" store:Name="v_community">
+            <DefiningQuery>SELECT
+      `v_community`.`community_id`, 
+      `v_community`.`name`, 
+      `v_community`.`parent_id`, 
+      `v_community`.`parent_name`
+      FROM `v_community` AS `v_community`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_member" EntityType="SelfDataModel.Store.v_member" store:Type="Views" store:Schema="hs_smart_0" store:Name="v_member">
+            <DefiningQuery>SELECT
+      `v_member`.`member_id`, 
+      `v_member`.`name`, 
+      `v_member`.`member_key`, 
+      `v_member`.`phone`, 
+      `v_member`.`mail`, 
+      `v_member`.`address`, 
+      `v_member`.`default_community`, 
+      `v_member`.`last_ip`, 
+      `v_member`.`last_time`, 
+      `v_member`.`last_way`, 
+      `v_member`.`community_name`, 
+      `v_member`.`community_parent`
+      FROM `v_member` AS `v_member`</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="member_community" Association="SelfDataModel.Store.member_community">
+            <End Role="community" EntitySet="community" />
+            <End Role="member" EntitySet="member" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="community">
+          <Key>
+            <PropertyRef Name="community_id" />
+          </Key>
+          <Property Name="community_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="parent_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="member">
+          <Key>
+            <PropertyRef Name="member_id" />
+          </Key>
+          <Property Name="member_id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="member_key" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="phone" Type="varchar" MaxLength="32" />
+          <Property Name="mail" Type="varchar" MaxLength="32" />
+          <Property Name="address" Type="varchar" MaxLength="128" />
+          <Property Name="default_community" Type="int" />
+          <Property Name="last_ip" Type="varchar" MaxLength="32" />
+          <Property Name="last_time" Type="datetime" />
+          <Property Name="last_way" Type="int" />
+        </EntityType>
+        <EntityType Name="session_verify">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="type" Type="int" Nullable="false" />
+          <Property Name="create_datetime" Type="datetime" Nullable="false" />
+          <Property Name="session_key" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="verify_code" Type="varchar" Nullable="false" MaxLength="36" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'hs_smart_0.v_community' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="v_community">
+          <Key>
+            <PropertyRef Name="community_id" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="parent_id" />
+          </Key>
+          <Property Name="community_id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="parent_id" Type="int" Nullable="false" />
+          <Property Name="parent_name" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'hs_smart_0.v_member' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="v_member">
+          <Key>
+            <PropertyRef Name="member_id" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="member_key" />
+          </Key>
+          <Property Name="member_id" Type="bigint" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="member_key" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="phone" Type="varchar" MaxLength="32" />
+          <Property Name="mail" Type="varchar" MaxLength="32" />
+          <Property Name="address" Type="varchar" MaxLength="128" />
+          <Property Name="default_community" Type="int" />
+          <Property Name="last_ip" Type="varchar" MaxLength="32" />
+          <Property Name="last_time" Type="datetime" />
+          <Property Name="last_way" Type="int" />
+          <Property Name="community_name" Type="varchar" MaxLength="32" />
+          <Property Name="community_parent" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <Association Name="member_community">
+          <End Role="community" Type="SelfDataModel.Store.community" Multiplicity="0..1" />
+          <End Role="member" Type="SelfDataModel.Store.member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="community">
+              <PropertyRef Name="community_id" />
+            </Principal>
+            <Dependent Role="member">
+              <PropertyRef Name="default_community" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SelfDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SmartHsContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="community" EntityType="SelfDataModel.community" />
+          <EntitySet Name="member" EntityType="SelfDataModel.member" />
+          <EntitySet Name="v_community" EntityType="SelfDataModel.v_community" />
+          <EntitySet Name="v_member" EntityType="SelfDataModel.v_member" />
+          <AssociationSet Name="member_community" Association="SelfDataModel.member_community">
+            <End Role="community" EntitySet="community" />
+            <End Role="member" EntitySet="member" />
+          </AssociationSet>
+          <EntitySet Name="session_verify" EntityType="SelfDataModel.session_verify" />
+        </EntityContainer>
+        <EntityType Name="community">
+          <Key>
+            <PropertyRef Name="community_id" />
+          </Key>
+          <Property Type="Int32" Name="community_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="parent_id" Nullable="false" />
+          <NavigationProperty Name="member" Relationship="SelfDataModel.member_community" FromRole="community" ToRole="member" />
+        </EntityType>
+        <EntityType Name="member">
+          <Key>
+            <PropertyRef Name="member_id" />
+          </Key>
+          <Property Type="Int64" Name="member_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="member_key" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="phone" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="mail" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="address" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="default_community" />
+          <Property Type="String" Name="last_ip" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="last_time" />
+          <Property Type="Int32" Name="last_way" />
+          <NavigationProperty Name="community" Relationship="SelfDataModel.member_community" FromRole="member" ToRole="community" />
+        </EntityType>
+        <EntityType Name="v_community">
+          <Key>
+            <PropertyRef Name="community_id" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="parent_id" />
+          </Key>
+          <Property Type="Int32" Name="community_id" Nullable="false" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="parent_id" Nullable="false" />
+          <Property Type="String" Name="parent_name" MaxLength="32" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="v_member">
+          <Key>
+            <PropertyRef Name="member_id" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="member_key" />
+          </Key>
+          <Property Type="Int64" Name="member_id" Nullable="false" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="member_key" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="phone" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="mail" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="address" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="default_community" />
+          <Property Type="String" Name="last_ip" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="last_time" />
+          <Property Type="Int32" Name="last_way" />
+          <Property Type="String" Name="community_name" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="community_parent" MaxLength="32" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="member_community">
+          <End Type="SelfDataModel.community" Role="community" Multiplicity="0..1" />
+          <End Type="SelfDataModel.member" Role="member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="community">
+              <PropertyRef Name="community_id" />
+            </Principal>
+            <Dependent Role="member">
+              <PropertyRef Name="default_community" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="session_verify">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="type" Nullable="false" />
+          <Property Type="DateTime" Name="create_datetime" Nullable="false" />
+          <Property Type="String" Name="session_key" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="verify_code" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SelfDataModelStoreContainer" CdmEntityContainer="SmartHsContext">
+          <EntitySetMapping Name="community">
+            <EntityTypeMapping TypeName="SelfDataModel.community">
+              <MappingFragment StoreEntitySet="community">
+                <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="community_id" ColumnName="community_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="member">
+            <EntityTypeMapping TypeName="SelfDataModel.member">
+              <MappingFragment StoreEntitySet="member">
+                <ScalarProperty Name="last_way" ColumnName="last_way" />
+                <ScalarProperty Name="last_time" ColumnName="last_time" />
+                <ScalarProperty Name="last_ip" ColumnName="last_ip" />
+                <ScalarProperty Name="default_community" ColumnName="default_community" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="member_key" ColumnName="member_key" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="member_id" ColumnName="member_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_community">
+            <EntityTypeMapping TypeName="SelfDataModel.v_community">
+              <MappingFragment StoreEntitySet="v_community">
+                <ScalarProperty Name="parent_name" ColumnName="parent_name" />
+                <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="community_id" ColumnName="community_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_member">
+            <EntityTypeMapping TypeName="SelfDataModel.v_member">
+              <MappingFragment StoreEntitySet="v_member">
+                <ScalarProperty Name="community_parent" ColumnName="community_parent" />
+                <ScalarProperty Name="community_name" ColumnName="community_name" />
+                <ScalarProperty Name="last_way" ColumnName="last_way" />
+                <ScalarProperty Name="last_time" ColumnName="last_time" />
+                <ScalarProperty Name="last_ip" ColumnName="last_ip" />
+                <ScalarProperty Name="default_community" ColumnName="default_community" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="member_key" ColumnName="member_key" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="member_id" ColumnName="member_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="session_verify">
+            <EntityTypeMapping TypeName="SelfDataModel.session_verify">
+              <MappingFragment StoreEntitySet="session_verify">
+                <ScalarProperty Name="verify_code" ColumnName="verify_code" />
+                <ScalarProperty Name="session_key" ColumnName="session_key" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="SmartHsModel">
+        <EntityTypeShape EntityType="SelfDataModel.community" Width="1.5" PointX="0.75" PointY="1.625" Height="1.7354337565104174" />
+        <EntityTypeShape EntityType="SelfDataModel.member" Width="1.5" PointX="3" PointY="1" Height="3.0289925130208317" />
+        <EntityTypeShape EntityType="SelfDataModel.v_community" Width="1.5" PointX="5.75" PointY="0.75" Height="1.7354337565104174" />
+        <EntityTypeShape EntityType="SelfDataModel.v_member" Width="1.5" PointX="0.75" PointY="5.75" Height="3.2137866210937496" />
+        <AssociationConnector Association="SelfDataModel.member_community" >
+          <ConnectorPoint PointX="2.25" PointY="2.4927168782552087" />
+          <ConnectorPoint PointX="3" PointY="2.4927168782552087" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SelfDataModel.session_verify" Width="1.5" PointX="5.375" PointY="3.75" Height="1.9202278645833246" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

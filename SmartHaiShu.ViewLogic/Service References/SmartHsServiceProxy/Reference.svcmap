@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3db2d2b0-9b21-409f-9161-4f7b142644a4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8167/Design_Time_Addresses/SmartHaiShu.WcfService/SmartHsService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="smarths-ndtv.com.wsdl" MetadataType="Wsdl" ID="6f9ea052-de91-45da-ba08-b3e0ceb109ba" SourceId="1" SourceUrl="http://localhost:8167/Design_Time_Addresses/SmartHaiShu.WcfService/SmartHsService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="1669aca2-72cb-4c9a-ba90-48aac9a2f49a" SourceId="1" SourceUrl="http://localhost:8167/Design_Time_Addresses/SmartHaiShu.WcfService/SmartHsService/mex" />
+    <MetadataFile FileName="smarths-ndtv.com.xsd" MetadataType="Schema" ID="d275d27a-a098-4734-9b7a-ec2aa7b0b44f" SourceId="1" SourceUrl="http://localhost:8167/Design_Time_Addresses/SmartHaiShu.WcfService/SmartHsService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="fa3e3ff4-935c-4778-b9a0-29dccb78dfbf" SourceId="1" SourceUrl="http://localhost:8167/Design_Time_Addresses/SmartHaiShu.WcfService/SmartHsService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

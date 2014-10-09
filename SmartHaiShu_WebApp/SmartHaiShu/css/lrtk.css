@@ -1,0 +1,38 @@
+.mainbox{
+    overflow:hidden;
+    position:relative;
+}
+.flashbox{
+   overflow:hidden;
+    position:relative;
+}
+.imagebox{
+    text-align:center;
+    position:relative;
+    /*z-index:999;*/
+}
+
+.bitdiv{display:inline-block;width:18px;height:18px;margin:0 10px 10px 0px;
+        cursor:pointer;
+        display: inline-block;
+        margin: 0 4px;
+        background: #999;
+        text-align: center;
+        cursor: default;
+        color: #fff;
+        width: 32px;
+        height: 7px;
+        line-height: 7px;
+        float:right;
+        }
+.defimg
+{
+    /*background-image:url(../images/02.png)*/
+    background: #999;
+    }
+.curimg
+{
+    /*background-image:url(../images/01.png)*/
+    background: #E4393C;
+    
+    }

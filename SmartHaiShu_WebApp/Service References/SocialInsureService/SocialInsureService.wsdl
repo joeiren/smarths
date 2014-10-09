@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetSocialInsure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSocialInsureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSocialInsureResult" type="tns:ArrayOfMonthInsure" />
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="tns:AccountInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="medIn" type="tns:MedicalInsure" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMonthInsure">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MonthInsure" nillable="true" type="tns:MonthInsure" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MonthInsure">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ShenbaoNY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DaozhangNY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JiaofeiJS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DanweiJF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GerenBF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JiaofeiYS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AccountInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SINO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsureType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MedicalInsure">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="InsureSt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDcard" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Yibaohao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Kahao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DaiyuLX" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DangqianDY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DangnianYE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinianYE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MenzhenFee" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZhuyuanFee" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZhuyuanLJ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JiezhiDate" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSocialInsureSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSocialInsure" />
+  </wsdl:message>
+  <wsdl:message name="GetSocialInsureSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSocialInsureResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SocialInsureServiceSoap">
+    <wsdl:operation name="GetSocialInsure">
+      <wsdl:input message="tns:GetSocialInsureSoapIn" />
+      <wsdl:output message="tns:GetSocialInsureSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SocialInsureServiceSoap" type="tns:SocialInsureServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSocialInsure">
+      <soap:operation soapAction="http://tempuri.org/GetSocialInsure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SocialInsureServiceSoap12" type="tns:SocialInsureServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSocialInsure">
+      <soap12:operation soapAction="http://tempuri.org/GetSocialInsure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SocialInsureService">
+    <wsdl:port name="SocialInsureServiceSoap" binding="tns:SocialInsureServiceSoap">
+      <soap:address location="http://10.254.208.72/SocialInsureService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SocialInsureServiceSoap12" binding="tns:SocialInsureServiceSoap12">
+      <soap12:address location="http://10.254.208.72/SocialInsureService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

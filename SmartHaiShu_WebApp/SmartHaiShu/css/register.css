@@ -1,0 +1,412 @@
+﻿body
+{
+    font-family: Arial,'宋体',Lucida,Verdana,Helvetica,sans-serif;
+    font-size: 12px;
+    color: #333;
+    line-height: 150%;
+    margin: 0 auto;
+}
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, big, cite, code, del, em, font, img, ins, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend
+{
+    margin: 0;
+    padding: 0;
+}
+
+.topW
+{
+    width: 990px;
+    margin: 0 auto;
+    padding: 0;
+}
+#regist
+{
+    background: none repeat scroll 0 0 #FFF;
+    margin-bottom: 10px;
+}
+.form label, .form input, .form select, .form textarea, .form button, .form .label {
+    float: left;
+    font-size: 12px;
+}
+
+.hide {
+    display: none;
+}
+#logo
+{
+    position: relative;
+    padding: 10px 0;
+}
+
+
+
+body, #regist .mt
+{
+    background: none repeat scroll 0 0 #F2F2F2;
+}
+
+#regist .mt
+{
+    padding-right: 10px;
+    position: relative;
+    overflow: visible;
+    margin-bottom: -1px;
+    border-bottom: 1px solid #DDD;
+}
+#regist .mc {
+    padding: 30px 0px 20px;
+    border-style: solid;
+    border-color: #DDD;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-image: none;
+	-webkit-border-image: none;
+	-o-border-image: none;
+	border-image: none;
+    border-width: 0px 1px 1px;
+}
+#regist .mt, #regist .mt h2, #regist .mt span
+{
+    height: 32px;
+    line-height: 32px;
+}
+
+#regist .tab
+{
+    height: 33px;
+    padding-left: 10px;
+}
+
+#regist .tab li
+{
+    margin-right: 5px;
+    margin-top: 3px;
+    font-size: 14px;
+    width: 100px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    color: #F79100;
+    background: none repeat scroll 0 0 #F7F7F7;
+    border: 1px solid #DDD;
+}
+
+#regist .tab .curr
+{
+    position: relative;
+    background: none repeat scroll 0 0 #FFF;
+    color: #E4393C;
+    height: 32px;
+    line-height: 32px;
+    font-weight: 700;
+    margin-top: 0;
+    -moz-box-shadow: 2px 0 2px #DDD;
+    -webkit-box-shadow: 2px 0 2px #DDD;
+    -o-box-shadow: 2px 0 2px #DDD;
+    box-shadow: 2px 0 2px #DDD;
+    border-bottom: medium none;
+}
+
+#regist .mt .extra
+{
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+
+.tab li, .tab-item
+{
+    float: left;
+    text-align: center;
+}
+
+ol, ul
+{
+    list-style: none outside none;
+}
+
+.mt .extra
+{
+    float: right;
+}
+
+.ftx13, .flk13 a:link, .flk13 a:visited, a.flk13:link, a.flk13:visited
+{
+    color: #005AA0;
+}
+
+a:link, a:visited
+{
+    color: #333;
+    text-decoration: none;
+}
+
+a img
+{
+    border: 0 none;
+}
+
+img
+{
+    vertical-align: middle;
+}
+
+.form
+{
+    position: relative;
+    float: left;
+    width: 750px;
+}
+
+#regist #select-regName
+{
+    z-index: 5;
+}
+
+#regist .item
+{
+    padding-top: 9px;
+    height: 60px;
+    line-height: 34px;
+    position: relative;
+    z-index: 1;
+}
+
+#regist .label
+{
+    width: 190px;
+    text-align: right;
+    font-size: 14px;
+    color: #999;
+    padding-right: 10px;
+}
+
+#regist .label b
+{
+    font-family: '宋体';
+    margin-right: 5px;
+    font-weight: 400;
+}
+
+#regist .item .item-ifo
+{
+    position: relative;
+    width: 270px;
+}
+#regist .item-ifo i, .thickbox-form .item-ifo i {
+    position: absolute;
+    right: 8px;
+}
+body .fl
+{
+    float: left;
+}
+
+.ftx04, .flk04 a:link, .flk04 a:visited, a.flk04:link, a.flk04:visited
+{
+    color: #F00;
+}
+
+#select-regName
+{
+    overflow: visible;
+}
+
+.m, .mt, .mc, .mb, .tab, .form .item
+{
+    overflow: hidden;
+}
+
+.o-intelligent-regName {
+    z-index: 3;
+}
+.o-intelligent-regName {
+
+}
+#regist .item-ifo .i-name {
+    background: url('../images/one4.jpg') no-repeat scroll 0px 0px transparent;
+    height: 16px;
+    top: 9px;
+    width: 16px;
+}
+#regist .item-ifo .i-pass, .thickbox-form .item-ifo .i-pass {
+    background: url('../images/one5.jpg') no-repeat scroll 0px 0px transparent;
+    height: 19px;
+    top: 10px;
+    width: 14px;
+}
+#regist .item-ifo .i-phone, .thickbox-form .item-ifo .i-phone {
+    background: url('../images/one6.jpg') no-repeat scroll 0px 0px transparent;
+    height: 21px;
+    top: 8px;
+    width: 14px;
+    left: 250px;
+}
+#regist .item-ifo i {
+    position: absolute;
+    right: 8px;
+}
+
+#regist .blank, .thickbox-form .blank {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 243px;
+    top: 7px;
+    padding: 3px;
+    float: none;
+}
+
+#intelligent-regName {
+    background: none repeat scroll 0px 0px #FFF;
+    border: 1px solid #BBB;
+    left: 0px;
+    position: absolute;
+    top: 38px;
+    width: 268px;
+    z-index: 100;
+}
+
+#regist #regName_error, .thickbox-form #regName_error {
+    margin-top: 0px;
+    float: none;
+    cursor: pointer;
+}
+.intelligent-error {
+    background: none repeat scroll 0px 0px #FFEBEB;
+    border: 1px solid #FFBDBE;
+    left: 0px;
+    position: absolute;
+    top: 38px;
+    width: 268px;
+    z-index: 20;
+}
+
+
+.clr {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0px;
+    line-height: 0;
+    font-size: 0px;
+}
+
+.ml5 {
+    margin-left: 5px;
+}
+.ftx03, .ftx-03 {
+    color: #999;
+}
+
+.ftx05, .ftx-05, a.ftx-05:link, a.ftx-05:visited {
+    color: #005EA7;
+}
+a:link, a:visited {
+    color: #333;
+    text-decoration: none;
+}
+.ml5 {
+    margin-left: 5px;
+}
+
+.invisible {
+    visibility: hidden;
+}
+#sendMobileCode {
+    float: left;
+    margin-right: 0px;
+}
+.btn, .btn-comm {
+    margin-left: 10px;
+    border: 1px solid #DDD;
+    padding: 0px;
+    width: 106px;
+    height: 36px;
+    background: none repeat scroll 0% 0% #F4F4F4;
+    margin-top: 0px;
+    text-align: center;
+    line-height: 36px;
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn, .btn-15 {
+    margin-top: 5px;
+}
+
+#regist .item-new {
+    padding-top: 0px;
+    height: 49px;
+}
+#regist .checkbox {
+    margin-top: 11px;
+}
+#regist .checkbox {
+    margin-top: 8px;
+}
+
+#regist .null, #regist .error, .thickbox-form .null, .thickbox-form .error {
+    color: #F00;
+}
+#regist .focus, #regist .error, #regist .cue {
+    color: #E4393C;
+    line-height: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0px;
+    right: -275px;
+    width: 260px;
+    padding: 0px 5px;
+    background: none repeat scroll 0% 0% #FFEBEB;
+    border: 1px solid #FFBDBE;
+}
+#regist a.blue:link, #regist a.blue:visited {
+    color: #005AA0;
+}
+
+#regist .btn-regist {
+    display: inline-block;
+    border: 0px none;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #FFF;
+}
+#regist .btn-regist {
+    padding-bottom: 5px;
+}
+#regist .btn-regist {
+    width: 270px;
+    height: 36px;
+    color: #FFF;
+    font-family: "microsoft yahei";
+    font-size: 16px;
+    text-indent: -9999px;
+    font-weight: 800;
+    overflow: hidden;
+    background: url('../images/regist-btn.jpg') no-repeat scroll 0% 0% transparent;
+}
+.btn-img {
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    text-align: center;
+}
+
+.phone {
+    float: left;
+    margin-top: 9px;
+    width: 220px;
+    height: 182px;
+}
+
+.user-info {
+    text-align: center;
+    font-size: 1.333em;
+    padding-top: 40px;
+}

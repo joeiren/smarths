@@ -1,0 +1,28 @@
+﻿/* File Created: 八月 27, 2014 */
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.tabContainer {
+    padding: 30px 0px 20px;
+border-style: solid;
+border-color: #DDD;
+-moz-border-top-colors: none;
+-moz-border-right-colors: none;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+-moz-border-image: none;
+	-webkit-border-image: none;
+	-o-border-image: none;
+	border-image: none;
+border-width: 0px 1px 1px;
+    background-color: white;
+}
+
+.required-field {
+    font-size: 16px;
+    color: red;
+    font-weight: bolder;
+}

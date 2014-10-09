@@ -1,0 +1,44 @@
+﻿/* File Created: 九月 9, 2014 */
+body {
+    font-family: "microsoft yahei";
+}
+.left_bg {
+    float: left;
+    background-color: white;
+    -moz-min-width: 260px;
+    -ms-min-width: 260px;
+    -o-min-width: 260px;
+    -webkit-min-width: 260px;
+    min-width: 260px;
+    min-height: 500px;
+}
+
+.container_bg {
+   background-color: #f7f7f7;
+    border-width: 1px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    min-height: 750px;
+   
+}
+
+.vline_spliter {
+    color: #0389dc;
+    padding-left: 35px;
+    font-weight: bolder;
+    line-height: 15px;
+}
+
+#menu_list li a span 
+{
+    font-size: 14px;
+    font-weight: bold;
+}
+#menu_list li:hover, li:active{
+    font-weight: bold;
+    color: orange;
+}
+
+#tripContainer a {
+     text-decoration:none; 
+}

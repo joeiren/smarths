@@ -1,0 +1,87 @@
+﻿body {
+}
+#content1  
+{
+    height:492px; 
+    width:987px; 
+    margin: 0 auto;
+}
+
+#content1_part1  
+{
+     height: 492px; 
+     width:289px; 
+     float:left; 
+     background-image:url();
+}
+#SheQuTelephone
+{
+    height:33%;
+}
+#SheQuBM
+{
+    height:67%;
+}
+#content1_part3  
+{
+    float:right; 
+    background-repeat:no-repeat;
+    _background: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="");
+    height: 492px; width:289px;    
+    background-image:url(); 
+}
+#SheQuNotice
+{
+    height:33%;
+}
+#SheQuSafe
+{
+    height:33%;
+}
+#HaiShuImportantNews
+{
+    height:34%;
+}
+#content1_part2  
+{
+    margin: 0px 300px 0px 300px ; 
+    height:492px;
+}
+#SheQuNewsImages
+{
+    height:40%;
+}
+#SheQuZhengWu
+{
+    height:40%;
+}
+#SheQuBZ
+{
+    height:20%;
+}
+#content2  
+{
+    height:220px; 
+    width:987px; 
+    margin: 0 auto; 
+    background-image:url(); 
+    margin-top:5px; 
+    background-repeat:no-repeat;
+}
+#content2_part1
+{
+    float:left;
+    width:289px;
+    height:220px;   
+}
+#content2_part2
+{
+    float:right;
+    width:688px;   
+    height:220px;
+}
+.faster
+{
+    text-align:center;
+}

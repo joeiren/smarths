@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://smarths-ndtv.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://smarths-ndtv.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://smarths-ndtv.com/Imports">
+      <xsd:import namespace="http://smarths-ndtv.com" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISmartHsService_AddMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMember" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_AddMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_ExistMemberName_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExistMemberName" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_ExistMemberName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExistMemberNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindMember" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindMemberByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindMemberByName" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindMemberByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindMemberByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_UpdateMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMember" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_UpdateMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindAllStreet_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllStreet" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindAllStreet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllStreetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindCommunityByStreet_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCommunityByStreet" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindCommunityByStreet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCommunityByStreetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindCommunity_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCommunity" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindCommunity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCommunityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindStreetGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindStreetGroup" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindStreetGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStreetGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_AddSessionVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSessionVerify" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_AddSessionVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSessionVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_ReadyToUseSessionVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadyToUseSessionVerify" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_ReadyToUseSessionVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadyToUseSessionVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_CanUseSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:CanUseSession" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_CanUseSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CanUseSessionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISmartHsService">
+    <wsdl:operation name="AddMember">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddMember" message="tns:ISmartHsService_AddMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddMemberResponse" message="tns:ISmartHsService_AddMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistMemberName">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/ExistMemberName" message="tns:ISmartHsService_ExistMemberName_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/ExistMemberNameResponse" message="tns:ISmartHsService_ExistMemberName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindMember">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindMember" message="tns:ISmartHsService_FindMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindMemberResponse" message="tns:ISmartHsService_FindMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindMemberByName">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindMemberByName" message="tns:ISmartHsService_FindMemberByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindMemberByNameResponse" message="tns:ISmartHsService_FindMemberByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMember">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/UpdateMember" message="tns:ISmartHsService_UpdateMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/UpdateMemberResponse" message="tns:ISmartHsService_UpdateMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/Login" message="tns:ISmartHsService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/LoginResponse" message="tns:ISmartHsService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllStreet">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindAllStreet" message="tns:ISmartHsService_FindAllStreet_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindAllStreetResponse" message="tns:ISmartHsService_FindAllStreet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCommunityByStreet">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindCommunityByStreet" message="tns:ISmartHsService_FindCommunityByStreet_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindCommunityByStreetResponse" message="tns:ISmartHsService_FindCommunityByStreet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCommunity">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindCommunity" message="tns:ISmartHsService_FindCommunity_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindCommunityResponse" message="tns:ISmartHsService_FindCommunity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindStreetGroup">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindStreetGroup" message="tns:ISmartHsService_FindStreetGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindStreetGroupResponse" message="tns:ISmartHsService_FindStreetGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSessionVerify">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddSessionVerify" message="tns:ISmartHsService_AddSessionVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddSessionVerifyResponse" message="tns:ISmartHsService_AddSessionVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadyToUseSessionVerify">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/ReadyToUseSessionVerify" message="tns:ISmartHsService_ReadyToUseSessionVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/ReadyToUseSessionVerifyResponse" message="tns:ISmartHsService_ReadyToUseSessionVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CanUseSession">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/CanUseSession" message="tns:ISmartHsService_CanUseSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/CanUseSessionResponse" message="tns:ISmartHsService_CanUseSession_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,1488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HsOpenData.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="HsOpenDataStoreContainer">
+          <EntitySet Name="b_t_ufp_0003_cs" EntityType="HsOpenData.Store.b_t_ufp_0003_cs" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_0003_ydml" EntityType="HsOpenData.Store.b_t_ufp_0003_ydml" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_0003_yh" EntityType="HsOpenData.Store.b_t_ufp_0003_yh" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_1_1" EntityType="HsOpenData.Store.b_t_ufp_1_1" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_1_2" EntityType="HsOpenData.Store.b_t_ufp_1_2" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_3_1_5" EntityType="HsOpenData.Store.b_t_ufp_3_1_5" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_3_1_6" EntityType="HsOpenData.Store.b_t_ufp_3_1_6" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_3_2_1" EntityType="HsOpenData.Store.b_t_ufp_3_2_1" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_3_2_2" EntityType="HsOpenData.Store.b_t_ufp_3_2_2" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_3_2_3" EntityType="HsOpenData.Store.b_t_ufp_3_2_3" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_3_2_4" EntityType="HsOpenData.Store.b_t_ufp_3_2_4" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_3_2_5" EntityType="HsOpenData.Store.b_t_ufp_3_2_5" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_4_1_2" EntityType="HsOpenData.Store.b_t_ufp_4_1_2" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_4_2_1" EntityType="HsOpenData.Store.b_t_ufp_4_2_1" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_4_2_6" EntityType="HsOpenData.Store.b_t_ufp_4_2_6" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_4_2_7" EntityType="HsOpenData.Store.b_t_ufp_4_2_7" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_4_3_1" EntityType="HsOpenData.Store.b_t_ufp_4_3_1" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_4_3_2" EntityType="HsOpenData.Store.b_t_ufp_4_3_2" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_4_3_3" EntityType="HsOpenData.Store.b_t_ufp_4_3_3" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_4_3_5" EntityType="HsOpenData.Store.b_t_ufp_4_3_5" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_4_5_1" EntityType="HsOpenData.Store.b_t_ufp_4_5_1" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_4_5_2" EntityType="HsOpenData.Store.b_t_ufp_4_5_2" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_6_1_1" EntityType="HsOpenData.Store.b_t_ufp_6_1_1" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_6_1_2" EntityType="HsOpenData.Store.b_t_ufp_6_1_2" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="b_t_ufp_8_4" EntityType="HsOpenData.Store.b_t_ufp_8_4" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="dzk_bzdzk" EntityType="HsOpenData.Store.dzk_bzdzk" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="dzk_bzxxdzk" EntityType="HsOpenData.Store.dzk_bzxxdzk" store:Type="Tables" Schema="hs_smart_0" />
+          <EntitySet Name="dzk_jzwdzk" EntityType="HsOpenData.Store.dzk_jzwdzk" store:Type="Tables" Schema="hs_smart_0" />
+        </EntityContainer>
+        <EntityType Name="b_t_ufp_0003_cs">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="QYMC" Type="text" />
+          <Property Name="JYFW" Type="text" />
+          <Property Name="JYDZ" Type="text" />
+          <Property Name="JYBZ" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_0003_ydml">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="QYMC" Type="text" />
+          <Property Name="JYFW" Type="text" />
+          <Property Name="JYDZ" Type="text" />
+          <Property Name="JYBZ" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_0003_yh">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="QYMC" Type="text" />
+          <Property Name="JYFW" Type="text" />
+          <Property Name="JYDZ" Type="text" />
+          <Property Name="JYBZ" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_1_1">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="TYPE1" Type="text" />
+          <Property Name="LEVEL" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="TEL" Type="text" />
+          <Property Name="BUS" Type="text" />
+          <Property Name="URL" Type="text" />
+          <Property Name="CONTENT" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_1_2">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="DEPARTMENT" Type="text" />
+          <Property Name="DOCTOR" Type="text" />
+          <Property Name="SEX" Type="text" />
+          <Property Name="AGE" Type="text" />
+          <Property Name="TECHNIC" Type="text" />
+          <Property Name="MAJOR" Type="text" />
+          <Property Name="CONTENT" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_1_5">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="TYPE1" Type="text" />
+          <Property Name="COMPANY_NAME" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="TEL" Type="text" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_1_6">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="TYPE1" Type="text" />
+          <Property Name="COMPANY_NAME" Type="text" />
+          <Property Name="CONTENT" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_2_1">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="STREET_NAME" Type="text" />
+          <Property Name="COMMUNITY_NAME" Type="text" />
+          <Property Name="INTRODUCTION" Type="text" />
+          <Property Name="TEL_BOOK" Type="text" />
+          <Property Name="FAX" Type="text" />
+          <Property Name="EMAIL" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="ZIP_CODE" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_2_2">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="STREET_NAME" Type="text" />
+          <Property Name="COMMUNITY_NAME" Type="text" />
+          <Property Name="TITLE" Type="text" />
+          <Property Name="CONTENT" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_2_3">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="START_TIME" Type="text" />
+          <Property Name="END_TIME" Type="text" />
+          <Property Name="RANGE1" Type="text" />
+          <Property Name="REASON" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_2_4">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="BLACKOUT" Type="text" />
+          <Property Name="RANGE1" Type="text" />
+          <Property Name="LINE" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_2_5">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="STREET_NAME" Type="text" />
+          <Property Name="COMMUNITY_NAME" Type="text" />
+          <Property Name="TITLE" Type="text" />
+          <Property Name="CONTENT" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_1_2">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="CODE" Type="text" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="CONTENT" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_2_1">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="TYPE1" Type="text" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="SCOPE" Type="text" />
+          <Property Name="BUSINESS_TIME" Type="text" />
+          <Property Name="CONTENT" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_2_6">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="IMPORT_PORT" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="PAUSE_ADD" Type="text" />
+          <Property Name="FLIGHT" Type="text" />
+          <Property Name="TYPE1" Type="text" />
+          <Property Name="LEAVE1" Type="text" />
+          <Property Name="PAUSE" Type="text" />
+          <Property Name="ARRIVE" Type="text" />
+          <Property Name="LIMIT1" Type="text" />
+          <Property Name="TIME_SLOT" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_2_7">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="LINE" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_3_1">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="BRAND" Type="text" />
+          <Property Name="TEL" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_3_2">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="LEVEL" Type="text" />
+          <Property Name="MANAGER" Type="text" />
+          <Property Name="TYPE1" Type="text" />
+          <Property Name="TEL" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_3_3">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="TEL" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_3_5">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="LINKMAN" Type="text" />
+          <Property Name="TEL" Type="text" />
+          <Property Name="LEVEL" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_5_1">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="TEL" Type="text" />
+          <Property Name="LINE" Type="text" />
+          <Property Name="CONTENT" Type="text" />
+          <Property Name="LEVEL" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_5_2">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="TEL" Type="text" />
+          <Property Name="LINE" Type="text" />
+          <Property Name="CONTENT" Type="text" />
+          <Property Name="LEVEL" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_6_1_1">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="TEL" Type="text" />
+          <Property Name="LEVEL" Type="text" />
+          <Property Name="URL" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_6_1_2">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="TYPE1" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="POST" Type="text" />
+          <Property Name="WORK_TIME" Type="text" />
+          <Property Name="TEL_CONTACTS" Type="text" />
+          <Property Name="COMPLAINT_TEL" Type="text" />
+          <Property Name="WEB_SITE" Type="text" />
+          <Property Name="SEAT" Type="text" />
+          <Property Name="INTRODUCTION" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_8_4">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Name="UUID" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="ADDRESS" Type="text" />
+          <Property Name="FANWEI" Type="text" />
+          <Property Name="TEL" Type="text" />
+          <Property Name="TELR" Type="text" />
+          <Property Name="RELEASE_TIME" Type="text" />
+          <Property Name="DATA_SRC" Type="text" />
+          <Property Name="CHECK_TIME" Type="text" />
+        </EntityType>
+        <EntityType Name="dzk_bzdzk">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="TD_Y" Type="varchar" MaxLength="50" />
+          <Property Name="TD_X" Type="varchar" MaxLength="50" />
+          <Property Name="SysDate" Type="datetime" />
+          <Property Name="DMBQYDate" Type="datetime" />
+          <Property Name="ZXDate" Type="datetime" />
+          <Property Name="ZXBZ" Type="int" />
+          <Property Name="WZJZ" Type="varchar" MaxLength="50" />
+          <Property Name="Unit" Type="int" />
+          <Property Name="Floor" Type="int" />
+          <Property Name="XQLY" Type="varchar" MaxLength="50" />
+          <Property Name="DLX" Type="varchar" MaxLength="50" />
+          <Property Name="HM" Type="varchar" MaxLength="50" />
+          <Property Name="ZM" Type="varchar" MaxLength="50" />
+          <Property Name="NM" Type="varchar" MaxLength="50" />
+          <Property Name="LM" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="255" />
+          <Property Name="SQ" Type="varchar" MaxLength="50" />
+          <Property Name="JD" Type="varchar" MaxLength="50" />
+          <Property Name="QX" Type="int" Nullable="false" />
+          <Property Name="Build_ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dzk_bzxxdzk">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="FJ_Y" Type="int" />
+          <Property Name="FJ_X" Type="int" />
+          <Property Name="SysDate" Type="datetime" />
+          <Property Name="DMBQYDate" Type="datetime" />
+          <Property Name="ZXDate" Type="datetime" />
+          <Property Name="ZXBZ" Type="int" />
+          <Property Name="WZJZ" Type="varchar" MaxLength="50" />
+          <Property Name="Unit" Type="int" />
+          <Property Name="Floor" Type="int" />
+          <Property Name="XQLY" Type="varchar" MaxLength="50" />
+          <Property Name="DLX" Type="varchar" MaxLength="50" />
+          <Property Name="FJM" Type="varchar" MaxLength="50" />
+          <Property Name="HM" Type="varchar" MaxLength="50" />
+          <Property Name="ZM" Type="varchar" MaxLength="50" />
+          <Property Name="NM" Type="varchar" MaxLength="50" />
+          <Property Name="LM" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="255" />
+          <Property Name="SQ" Type="varchar" MaxLength="50" />
+          <Property Name="JD" Type="varchar" MaxLength="50" />
+          <Property Name="QX" Type="int" />
+          <Property Name="StdAddr_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Build_ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dzk_jzwdzk">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ZPXX" Type="text" />
+          <Property Name="TFD_Y" Type="float" />
+          <Property Name="TFD_X" Type="float" />
+          <Property Name="TFD_ID" Type="int" />
+          <Property Name="ThD_VC" Type="varchar" MaxLength="200" />
+          <Property Name="ThD_Z" Type="float" />
+          <Property Name="ThD_Y" Type="float" />
+          <Property Name="ThD_X" Type="float" />
+          <Property Name="ThD_ID" Type="varchar" MaxLength="200" />
+          <Property Name="SysDate" Type="datetime" />
+          <Property Name="DMBQYDate" Type="datetime" />
+          <Property Name="ZXDate" Type="datetime" />
+          <Property Name="ZXBZ" Type="int" />
+          <Property Name="WZJZ" Type="varchar" MaxLength="50" />
+          <Property Name="Unit" Type="int" />
+          <Property Name="Floor" Type="int" />
+          <Property Name="XQLY" Type="varchar" MaxLength="50" />
+          <Property Name="DLX" Type="varchar" MaxLength="50" />
+          <Property Name="FJM" Type="varchar" MaxLength="50" />
+          <Property Name="HM" Type="varchar" MaxLength="50" />
+          <Property Name="ZM" Type="varchar" MaxLength="50" />
+          <Property Name="NM" Type="varchar" MaxLength="50" />
+          <Property Name="LM" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="255" />
+          <Property Name="SQ" Type="varchar" MaxLength="50" />
+          <Property Name="JD" Type="varchar" MaxLength="50" />
+          <Property Name="QX" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HsOpenData" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="HsSmartEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="b_t_ufp_1_2" EntityType="HsOpenData.b_t_ufp_1_2" />
+          <EntitySet Name="b_t_ufp_3_2_1" EntityType="HsOpenData.b_t_ufp_3_2_1" />
+          <EntitySet Name="b_t_ufp_3_2_3" EntityType="HsOpenData.b_t_ufp_3_2_3" />
+          <EntitySet Name="b_t_ufp_3_2_4" EntityType="HsOpenData.b_t_ufp_3_2_4" />
+          <EntitySet Name="b_t_ufp_3_2_5" EntityType="HsOpenData.b_t_ufp_3_2_5" />
+          <EntitySet Name="b_t_ufp_4_2_6" EntityType="HsOpenData.b_t_ufp_4_2_6" />
+          <EntitySet Name="b_t_ufp_4_2_7" EntityType="HsOpenData.b_t_ufp_4_2_7" />
+          <EntitySet Name="b_t_ufp_4_3_1" EntityType="HsOpenData.b_t_ufp_4_3_1" />
+          <EntitySet Name="b_t_ufp_4_3_2" EntityType="HsOpenData.b_t_ufp_4_3_2" />
+          <EntitySet Name="b_t_ufp_4_3_3" EntityType="HsOpenData.b_t_ufp_4_3_3" />
+          <EntitySet Name="b_t_ufp_4_3_5" EntityType="HsOpenData.b_t_ufp_4_3_5" />
+          <EntitySet Name="b_t_ufp_4_5_1" EntityType="HsOpenData.b_t_ufp_4_5_1" />
+          <EntitySet Name="b_t_ufp_4_5_2" EntityType="HsOpenData.b_t_ufp_4_5_2" />
+          <EntitySet Name="b_t_ufp_6_1_1" EntityType="HsOpenData.b_t_ufp_6_1_1" />
+          <EntitySet Name="b_t_ufp_8_4" EntityType="HsOpenData.b_t_ufp_8_4" />
+          <EntitySet Name="dzk_bzdzk" EntityType="HsOpenData.dzk_bzdzk" />
+          <EntitySet Name="dzk_bzxxdzk" EntityType="HsOpenData.dzk_bzxxdzk" />
+          <EntitySet Name="dzk_jzwdzk" EntityType="HsOpenData.dzk_jzwdzk" />
+          <EntitySet Name="b_t_ufp_3_2_2" EntityType="HsOpenData.b_t_ufp_3_2_2" />
+          <EntitySet Name="b_t_ufp_1_1" EntityType="HsOpenData.b_t_ufp_1_1" />
+          <EntitySet Name="b_t_ufp_3_1_5" EntityType="HsOpenData.b_t_ufp_3_1_5" />
+          <EntitySet Name="b_t_ufp_3_1_6" EntityType="HsOpenData.b_t_ufp_3_1_6" />
+          <EntitySet Name="b_t_ufp_4_2_1" EntityType="HsOpenData.b_t_ufp_4_2_1" />
+          <EntitySet Name="b_t_ufp_6_1_2" EntityType="HsOpenData.b_t_ufp_6_1_2" />
+          <EntitySet Name="b_t_ufp_0003_cs" EntityType="HsOpenData.b_t_ufp_0003_cs" />
+          <EntitySet Name="b_t_ufp_0003_ydml" EntityType="HsOpenData.b_t_ufp_0003_ydml" />
+          <EntitySet Name="b_t_ufp_0003_yh" EntityType="HsOpenData.b_t_ufp_0003_yh" />
+          <EntitySet Name="b_t_ufp_4_1_2" EntityType="HsOpenData.b_t_ufp_4_1_2" />
+        </EntityContainer>
+        <EntityType Name="b_t_ufp_1_2">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DEPARTMENT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DOCTOR" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SEX" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AGE" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TECHNIC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MAJOR" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTENT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_2_1">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STREET_NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMMUNITY_NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INTRODUCTION" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TEL_BOOK" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FAX" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMAIL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ZIP_CODE" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_2_3">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="START_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="END_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RANGE1" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REASON" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_2_4">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BLACKOUT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RANGE1" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LINE" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_2_5">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STREET_NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMMUNITY_NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TITLE" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTENT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_2_6">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IMPORT_PORT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAUSE_ADD" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FLIGHT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TYPE1" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LEAVE1" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAUSE" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ARRIVE" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LIMIT1" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TIME_SLOT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_2_7">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LINE" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_3_1">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BRAND" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_3_2">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LEVEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MANAGER" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TYPE1" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_3_3">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_3_5">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LINKMAN" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LEVEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_5_1">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LINE" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTENT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LEVEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_5_2">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LINE" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTENT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LEVEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_6_1_1">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LEVEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="URL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_8_4">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FANWEI" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TELR" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="dzk_bzdzk">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="TD_Y" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TD_X" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SysDate" />
+          <Property Type="DateTime" Name="DMBQYDate" />
+          <Property Type="DateTime" Name="ZXDate" />
+          <Property Type="Int32" Name="ZXBZ" />
+          <Property Type="String" Name="WZJZ" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Unit" />
+          <Property Type="Int32" Name="Floor" />
+          <Property Type="String" Name="XQLY" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DLX" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ZM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SQ" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JD" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="QX" Nullable="false" />
+          <Property Type="Int32" Name="Build_ID" Nullable="false" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dzk_bzxxdzk">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="FJ_Y" />
+          <Property Type="Int32" Name="FJ_X" />
+          <Property Type="DateTime" Name="SysDate" />
+          <Property Type="DateTime" Name="DMBQYDate" />
+          <Property Type="DateTime" Name="ZXDate" />
+          <Property Type="Int32" Name="ZXBZ" />
+          <Property Type="String" Name="WZJZ" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Unit" />
+          <Property Type="Int32" Name="Floor" />
+          <Property Type="String" Name="XQLY" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DLX" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FJM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ZM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SQ" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JD" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="QX" />
+          <Property Type="String" Name="StdAddr_ID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Build_ID" Nullable="false" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dzk_jzwdzk">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ZPXX" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="Single" Name="TFD_Y" />
+          <Property Type="Single" Name="TFD_X" />
+          <Property Type="Int32" Name="TFD_ID" />
+          <Property Type="String" Name="ThD_VC" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Single" Name="ThD_Z" />
+          <Property Type="Single" Name="ThD_Y" />
+          <Property Type="Single" Name="ThD_X" />
+          <Property Type="String" Name="ThD_ID" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SysDate" />
+          <Property Type="DateTime" Name="DMBQYDate" />
+          <Property Type="DateTime" Name="ZXDate" />
+          <Property Type="Int32" Name="ZXBZ" />
+          <Property Type="String" Name="WZJZ" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Unit" />
+          <Property Type="Int32" Name="Floor" />
+          <Property Type="String" Name="XQLY" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DLX" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FJM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ZM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SQ" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JD" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="QX" Nullable="false" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_2_2">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STREET_NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMMUNITY_NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TITLE" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTENT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_1_1">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TYPE1" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LEVEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BUS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="URL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTENT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_1_5">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TYPE1" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMPANY_NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_3_1_6">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TYPE1" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMPANY_NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTENT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_2_1">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TYPE1" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SCOPE" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BUSINESS_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTENT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_6_1_2">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TYPE1" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="POST" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="WORK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TEL_CONTACTS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMPLAINT_TEL" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="WEB_SITE" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SEAT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INTRODUCTION" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_0003_cs">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="QYMC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JYFW" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JYDZ" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JYBZ" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_0003_ydml">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="QYMC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JYFW" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JYDZ" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JYBZ" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_0003_yh">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="QYMC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JYFW" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JYDZ" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JYBZ" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="b_t_ufp_4_1_2">
+          <Key>
+            <PropertyRef Name="UUID" />
+          </Key>
+          <Property Type="String" Name="UUID" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CODE" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTENT" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RELEASE_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DATA_SRC" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECK_TIME" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HsOpenDataStoreContainer" CdmEntityContainer="HsSmartEntities">
+          <EntitySetMapping Name="b_t_ufp_1_2">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_1_2">
+              <MappingFragment StoreEntitySet="b_t_ufp_1_2">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="MAJOR" ColumnName="MAJOR" />
+                <ScalarProperty Name="TECHNIC" ColumnName="TECHNIC" />
+                <ScalarProperty Name="AGE" ColumnName="AGE" />
+                <ScalarProperty Name="SEX" ColumnName="SEX" />
+                <ScalarProperty Name="DOCTOR" ColumnName="DOCTOR" />
+                <ScalarProperty Name="DEPARTMENT" ColumnName="DEPARTMENT" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_3_2_1">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_3_2_1">
+              <MappingFragment StoreEntitySet="b_t_ufp_3_2_1">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="ZIP_CODE" ColumnName="ZIP_CODE" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="FAX" ColumnName="FAX" />
+                <ScalarProperty Name="TEL_BOOK" ColumnName="TEL_BOOK" />
+                <ScalarProperty Name="INTRODUCTION" ColumnName="INTRODUCTION" />
+                <ScalarProperty Name="COMMUNITY_NAME" ColumnName="COMMUNITY_NAME" />
+                <ScalarProperty Name="STREET_NAME" ColumnName="STREET_NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_3_2_3">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_3_2_3">
+              <MappingFragment StoreEntitySet="b_t_ufp_3_2_3">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="REASON" ColumnName="REASON" />
+                <ScalarProperty Name="RANGE1" ColumnName="RANGE1" />
+                <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
+                <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_3_2_4">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_3_2_4">
+              <MappingFragment StoreEntitySet="b_t_ufp_3_2_4">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="LINE" ColumnName="LINE" />
+                <ScalarProperty Name="RANGE1" ColumnName="RANGE1" />
+                <ScalarProperty Name="BLACKOUT" ColumnName="BLACKOUT" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_3_2_5">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_3_2_5">
+              <MappingFragment StoreEntitySet="b_t_ufp_3_2_5">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+                <ScalarProperty Name="COMMUNITY_NAME" ColumnName="COMMUNITY_NAME" />
+                <ScalarProperty Name="STREET_NAME" ColumnName="STREET_NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_4_2_6">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_4_2_6">
+              <MappingFragment StoreEntitySet="b_t_ufp_4_2_6">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="TIME_SLOT" ColumnName="TIME_SLOT" />
+                <ScalarProperty Name="LIMIT1" ColumnName="LIMIT1" />
+                <ScalarProperty Name="ARRIVE" ColumnName="ARRIVE" />
+                <ScalarProperty Name="PAUSE" ColumnName="PAUSE" />
+                <ScalarProperty Name="LEAVE1" ColumnName="LEAVE1" />
+                <ScalarProperty Name="TYPE1" ColumnName="TYPE1" />
+                <ScalarProperty Name="FLIGHT" ColumnName="FLIGHT" />
+                <ScalarProperty Name="PAUSE_ADD" ColumnName="PAUSE_ADD" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="IMPORT_PORT" ColumnName="IMPORT_PORT" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_4_2_7">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_4_2_7">
+              <MappingFragment StoreEntitySet="b_t_ufp_4_2_7">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="LINE" ColumnName="LINE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_4_3_1">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_4_3_1">
+              <MappingFragment StoreEntitySet="b_t_ufp_4_3_1">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="BRAND" ColumnName="BRAND" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_4_3_2">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_4_3_2">
+              <MappingFragment StoreEntitySet="b_t_ufp_4_3_2">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="TYPE1" ColumnName="TYPE1" />
+                <ScalarProperty Name="MANAGER" ColumnName="MANAGER" />
+                <ScalarProperty Name="LEVEL" ColumnName="LEVEL" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_4_3_3">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_4_3_3">
+              <MappingFragment StoreEntitySet="b_t_ufp_4_3_3">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_4_3_5">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_4_3_5">
+              <MappingFragment StoreEntitySet="b_t_ufp_4_3_5">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="LEVEL" ColumnName="LEVEL" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="LINKMAN" ColumnName="LINKMAN" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_4_5_1">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_4_5_1">
+              <MappingFragment StoreEntitySet="b_t_ufp_4_5_1">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="LEVEL" ColumnName="LEVEL" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="LINE" ColumnName="LINE" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_4_5_2">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_4_5_2">
+              <MappingFragment StoreEntitySet="b_t_ufp_4_5_2">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="LEVEL" ColumnName="LEVEL" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="LINE" ColumnName="LINE" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_6_1_1">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_6_1_1">
+              <MappingFragment StoreEntitySet="b_t_ufp_6_1_1">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="LEVEL" ColumnName="LEVEL" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_8_4">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_8_4">
+              <MappingFragment StoreEntitySet="b_t_ufp_8_4">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="TELR" ColumnName="TELR" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="FANWEI" ColumnName="FANWEI" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dzk_bzdzk">
+            <EntityTypeMapping TypeName="HsOpenData.dzk_bzdzk">
+              <MappingFragment StoreEntitySet="dzk_bzdzk">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Build_ID" ColumnName="Build_ID" />
+                <ScalarProperty Name="QX" ColumnName="QX" />
+                <ScalarProperty Name="JD" ColumnName="JD" />
+                <ScalarProperty Name="SQ" ColumnName="SQ" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="LM" ColumnName="LM" />
+                <ScalarProperty Name="NM" ColumnName="NM" />
+                <ScalarProperty Name="ZM" ColumnName="ZM" />
+                <ScalarProperty Name="HM" ColumnName="HM" />
+                <ScalarProperty Name="DLX" ColumnName="DLX" />
+                <ScalarProperty Name="XQLY" ColumnName="XQLY" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="WZJZ" ColumnName="WZJZ" />
+                <ScalarProperty Name="ZXBZ" ColumnName="ZXBZ" />
+                <ScalarProperty Name="ZXDate" ColumnName="ZXDate" />
+                <ScalarProperty Name="DMBQYDate" ColumnName="DMBQYDate" />
+                <ScalarProperty Name="SysDate" ColumnName="SysDate" />
+                <ScalarProperty Name="TD_X" ColumnName="TD_X" />
+                <ScalarProperty Name="TD_Y" ColumnName="TD_Y" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dzk_bzxxdzk">
+            <EntityTypeMapping TypeName="HsOpenData.dzk_bzxxdzk">
+              <MappingFragment StoreEntitySet="dzk_bzxxdzk">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Build_ID" ColumnName="Build_ID" />
+                <ScalarProperty Name="StdAddr_ID" ColumnName="StdAddr_ID" />
+                <ScalarProperty Name="QX" ColumnName="QX" />
+                <ScalarProperty Name="JD" ColumnName="JD" />
+                <ScalarProperty Name="SQ" ColumnName="SQ" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="LM" ColumnName="LM" />
+                <ScalarProperty Name="NM" ColumnName="NM" />
+                <ScalarProperty Name="ZM" ColumnName="ZM" />
+                <ScalarProperty Name="HM" ColumnName="HM" />
+                <ScalarProperty Name="FJM" ColumnName="FJM" />
+                <ScalarProperty Name="DLX" ColumnName="DLX" />
+                <ScalarProperty Name="XQLY" ColumnName="XQLY" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="WZJZ" ColumnName="WZJZ" />
+                <ScalarProperty Name="ZXBZ" ColumnName="ZXBZ" />
+                <ScalarProperty Name="ZXDate" ColumnName="ZXDate" />
+                <ScalarProperty Name="DMBQYDate" ColumnName="DMBQYDate" />
+                <ScalarProperty Name="SysDate" ColumnName="SysDate" />
+                <ScalarProperty Name="FJ_X" ColumnName="FJ_X" />
+                <ScalarProperty Name="FJ_Y" ColumnName="FJ_Y" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dzk_jzwdzk">
+            <EntityTypeMapping TypeName="HsOpenData.dzk_jzwdzk">
+              <MappingFragment StoreEntitySet="dzk_jzwdzk">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="QX" ColumnName="QX" />
+                <ScalarProperty Name="JD" ColumnName="JD" />
+                <ScalarProperty Name="SQ" ColumnName="SQ" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="LM" ColumnName="LM" />
+                <ScalarProperty Name="NM" ColumnName="NM" />
+                <ScalarProperty Name="ZM" ColumnName="ZM" />
+                <ScalarProperty Name="HM" ColumnName="HM" />
+                <ScalarProperty Name="FJM" ColumnName="FJM" />
+                <ScalarProperty Name="DLX" ColumnName="DLX" />
+                <ScalarProperty Name="XQLY" ColumnName="XQLY" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="WZJZ" ColumnName="WZJZ" />
+                <ScalarProperty Name="ZXBZ" ColumnName="ZXBZ" />
+                <ScalarProperty Name="ZXDate" ColumnName="ZXDate" />
+                <ScalarProperty Name="DMBQYDate" ColumnName="DMBQYDate" />
+                <ScalarProperty Name="SysDate" ColumnName="SysDate" />
+                <ScalarProperty Name="ThD_ID" ColumnName="ThD_ID" />
+                <ScalarProperty Name="ThD_X" ColumnName="ThD_X" />
+                <ScalarProperty Name="ThD_Y" ColumnName="ThD_Y" />
+                <ScalarProperty Name="ThD_Z" ColumnName="ThD_Z" />
+                <ScalarProperty Name="ThD_VC" ColumnName="ThD_VC" />
+                <ScalarProperty Name="TFD_ID" ColumnName="TFD_ID" />
+                <ScalarProperty Name="TFD_X" ColumnName="TFD_X" />
+                <ScalarProperty Name="TFD_Y" ColumnName="TFD_Y" />
+                <ScalarProperty Name="ZPXX" ColumnName="ZPXX" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_3_2_2">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_3_2_2">
+              <MappingFragment StoreEntitySet="b_t_ufp_3_2_2">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+                <ScalarProperty Name="COMMUNITY_NAME" ColumnName="COMMUNITY_NAME" />
+                <ScalarProperty Name="STREET_NAME" ColumnName="STREET_NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_1_1">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_1_1">
+              <MappingFragment StoreEntitySet="b_t_ufp_1_1">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="BUS" ColumnName="BUS" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="LEVEL" ColumnName="LEVEL" />
+                <ScalarProperty Name="TYPE1" ColumnName="TYPE1" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_3_1_5">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_3_1_5">
+              <MappingFragment StoreEntitySet="b_t_ufp_3_1_5">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+                <ScalarProperty Name="TYPE1" ColumnName="TYPE1" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_3_1_6">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_3_1_6">
+              <MappingFragment StoreEntitySet="b_t_ufp_3_1_6">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+                <ScalarProperty Name="TYPE1" ColumnName="TYPE1" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_4_2_1">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_4_2_1">
+              <MappingFragment StoreEntitySet="b_t_ufp_4_2_1">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="BUSINESS_TIME" ColumnName="BUSINESS_TIME" />
+                <ScalarProperty Name="SCOPE" ColumnName="SCOPE" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="TYPE1" ColumnName="TYPE1" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_6_1_2">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_6_1_2">
+              <MappingFragment StoreEntitySet="b_t_ufp_6_1_2">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="INTRODUCTION" ColumnName="INTRODUCTION" />
+                <ScalarProperty Name="SEAT" ColumnName="SEAT" />
+                <ScalarProperty Name="WEB_SITE" ColumnName="WEB_SITE" />
+                <ScalarProperty Name="COMPLAINT_TEL" ColumnName="COMPLAINT_TEL" />
+                <ScalarProperty Name="TEL_CONTACTS" ColumnName="TEL_CONTACTS" />
+                <ScalarProperty Name="WORK_TIME" ColumnName="WORK_TIME" />
+                <ScalarProperty Name="POST" ColumnName="POST" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="TYPE1" ColumnName="TYPE1" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_0003_cs">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_0003_cs">
+              <MappingFragment StoreEntitySet="b_t_ufp_0003_cs">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="JYBZ" ColumnName="JYBZ" />
+                <ScalarProperty Name="JYDZ" ColumnName="JYDZ" />
+                <ScalarProperty Name="JYFW" ColumnName="JYFW" />
+                <ScalarProperty Name="QYMC" ColumnName="QYMC" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_0003_ydml">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_0003_ydml">
+              <MappingFragment StoreEntitySet="b_t_ufp_0003_ydml">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="JYBZ" ColumnName="JYBZ" />
+                <ScalarProperty Name="JYDZ" ColumnName="JYDZ" />
+                <ScalarProperty Name="JYFW" ColumnName="JYFW" />
+                <ScalarProperty Name="QYMC" ColumnName="QYMC" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_0003_yh">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_0003_yh">
+              <MappingFragment StoreEntitySet="b_t_ufp_0003_yh">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="JYBZ" ColumnName="JYBZ" />
+                <ScalarProperty Name="JYDZ" ColumnName="JYDZ" />
+                <ScalarProperty Name="JYFW" ColumnName="JYFW" />
+                <ScalarProperty Name="QYMC" ColumnName="QYMC" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_t_ufp_4_1_2">
+            <EntityTypeMapping TypeName="HsOpenData.b_t_ufp_4_1_2">
+              <MappingFragment StoreEntitySet="b_t_ufp_4_1_2">
+                <ScalarProperty Name="CHECK_TIME" ColumnName="CHECK_TIME" />
+                <ScalarProperty Name="DATA_SRC" ColumnName="DATA_SRC" />
+                <ScalarProperty Name="RELEASE_TIME" ColumnName="RELEASE_TIME" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="OpenDataModel">
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_1_2" Width="1.5" PointX="2.75" PointY="0.75" Height="3.2137866210937496" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_3_2_1" Width="1.5" PointX="5.75" PointY="4.75" Height="3.2137866210937496" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_3_2_3" Width="1.5" PointX="6.75" PointY="0.75" Height="2.4746101888020817" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_3_2_4" Width="1.5" PointX="7.75" PointY="4.75" Height="2.2898160807291674" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_3_2_5" Width="1.5" PointX="8.75" PointY="0.75" Height="2.4746101888020817" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_4_2_6" Width="1.5" PointX="5.75" PointY="8.75" Height="3.5833748372395888" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_4_2_7" Width="1.5" PointX="7.75" PointY="8.75" Height="2.1050219726562531" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_4_3_1" Width="1.5" PointX="9.75" PointY="4.75" Height="2.4746101888020888" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_4_3_2" Width="1.5" PointX="9.75" PointY="8.75" Height="2.8441984049479174" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_4_3_3" Width="1.5" PointX="10.75" PointY="0.75" Height="2.2898160807291674" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_4_3_5" Width="1.5" PointX="0.75" PointY="10.75" Height="2.6594042968750031" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_4_5_1" Width="1.5" PointX="11.75" PointY="4.75" Height="2.8441984049479174" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_4_5_2" Width="1.5" PointX="11.75" PointY="8.75" Height="2.8441984049479174" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_6_1_1" Width="1.5" PointX="12.75" PointY="0.75" Height="2.6594042968750067" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_8_4" Width="1.5" PointX="7.75" PointY="12.75" Height="2.6594042968750102" />
+        <EntityTypeShape EntityType="HsOpenData.dzk_bzdzk" Width="1.5" PointX="9.75" PointY="12.75" Height="4.87693359375001" />
+        <EntityTypeShape EntityType="HsOpenData.dzk_bzxxdzk" Width="1.5" PointX="11.75" PointY="12.75" Height="5.2465218098958246" />
+        <EntityTypeShape EntityType="HsOpenData.dzk_jzwdzk" Width="1.5" PointX="13.75" PointY="4.75" Height="6.1704923502604174" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_3_2_2" Width="1.5" PointX="0.75" PointY="5.75" Height="2.4746101888020746" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_1_1" Width="1.5" PointX="14.375" PointY="11.75" Height="3.2137866210937602" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_3_1_5" Width="1.5" PointX="15.375" PointY="0.75" Height="2.6594042968750102" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_3_1_6" Width="1.5" PointX="14.375" PointY="15.75" Height="2.2898160807291674" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_4_2_1" Width="1.5" PointX="16.375" PointY="4.75" Height="2.8441984049479174" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_6_1_2" Width="1.5" PointX="3.375" PointY="13.75" Height="3.5833748372395746" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_0003_cs" Width="1.5" PointX="0.75" PointY="14.75" Height="2.4746101888020746" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_0003_ydml" Width="1.5" PointX="5.75" PointY="16.75" Height="2.4746101888020746" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_0003_yh" Width="1.5" PointX="16.75" PointY="8.75" Height="2.4746101888020746" />
+        <EntityTypeShape EntityType="HsOpenData.b_t_ufp_4_1_2" Width="1.5" PointX="16.75" PointY="12.75" Height="2.4746101888020746" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

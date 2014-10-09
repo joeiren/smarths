@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F81A83D-81E8-4163-94C4-22EEFE63C99A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartHaiShu_WebApp</RootNamespace>
+    <AssemblyName>SmartHaiShu_WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\Libs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\Libs\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\..\Libs\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HSOpenDataService\service.wsdl" />
+    <None Include="Service References\HSOpenDataService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HSOpenDataService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HSSmartDataService\service.wsdl" />
+    <None Include="Service References\HSSmartDataService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HSSmartDataService\smarths-ndtv.com.wsdl" />
+    <None Include="Service References\HSSmartDataService\smarths-ndtv.com.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SocialInsureService\SocialInsureService.disco" />
+    <None Include="Service References\SocialInsureService\configuration91.svcinfo" />
+    <None Include="Service References\SocialInsureService\configuration.svcinfo" />
+    <None Include="Service References\SocialInsureService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TrafficVioService\TrafficVioService.disco" />
+    <None Include="Service References\TrafficVioService\configuration91.svcinfo" />
+    <None Include="Service References\TrafficVioService\configuration.svcinfo" />
+    <None Include="Service References\TrafficVioService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HSOpenDataService\configuration91.svcinfo" />
+    <None Include="Service References\HSOpenDataService\configuration.svcinfo" />
+    <None Include="Service References\HSOpenDataService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HSSmartDataService\configuration91.svcinfo" />
+    <None Include="Service References\HSSmartDataService\configuration.svcinfo" />
+    <None Include="Service References\HSSmartDataService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SmartHaiShu\css\siderbar.css" />
+    <Content Include="SmartHaiShu\NoticeDetail.aspx" />
+    <Content Include="SmartHaiShu\ApplyMemberKey.aspx" />
+    <Content Include="SmartHaiShu\ConvenienceLive.aspx" />
+    <Content Include="SmartHaiShu\ConvLiveBank.aspx" />
+    <Content Include="SmartHaiShu\ConvLiveExpress.aspx" />
+    <Content Include="SmartHaiShu\ConvLiveFund.aspx" />
+    <Content Include="SmartHaiShu\ConvLiveHouseKeeping.aspx" />
+    <Content Include="SmartHaiShu\ConvLivePrice.aspx" />
+    <Content Include="SmartHaiShu\ConvLiveSocialSecurity.aspx" />
+    <Content Include="SmartHaiShu\Education.aspx" />
+    <Content Include="SmartHaiShu\EduDoctors.aspx" />
+    <Content Include="SmartHaiShu\EduDrugStore.aspx" />
+    <Content Include="SmartHaiShu\EduHealth.aspx" />
+    <Content Include="SmartHaiShu\EduHospital.aspx" />
+    <Content Include="SmartHaiShu\EduHospitalOrder.aspx" />
+    <Content Include="SmartHaiShu\EduInfo.aspx" />
+    <Content Include="SmartHaiShu\EduJobs.aspx" />
+    <Content Include="SmartHaiShu\EduKindergarten.aspx" />
+    <Content Include="SmartHaiShu\EduOldPeople.aspx" />
+    <Content Include="SmartHaiShu\EduSchool.aspx" />
+    <Content Include="SmartHaiShu\images\educ\doctors.png" />
+    <Content Include="SmartHaiShu\images\educ\doctors_0.png" />
+    <Content Include="SmartHaiShu\images\educ\drugstore.png" />
+    <Content Include="SmartHaiShu\images\educ\drugstore_0.png" />
+    <Content Include="SmartHaiShu\images\educ\edu_info.png" />
+    <Content Include="SmartHaiShu\images\educ\edu_info_0.png" />
+    <Content Include="SmartHaiShu\images\educ\health.png" />
+    <Content Include="SmartHaiShu\images\educ\health_0.png" />
+    <Content Include="SmartHaiShu\images\educ\hospital.png" />
+    <Content Include="SmartHaiShu\images\educ\hospital_0.png" />
+    <Content Include="SmartHaiShu\images\educ\old_people.png" />
+    <Content Include="SmartHaiShu\images\educ\old_people_0.png" />
+    <Content Include="SmartHaiShu\images\educ\order.png" />
+    <Content Include="SmartHaiShu\images\educ\order_0.png" />
+    <Content Include="SmartHaiShu\images\educ\jobs.png" />
+    <Content Include="SmartHaiShu\images\educ\jobs_0.png" />
+    <Content Include="SmartHaiShu\images\educ\kindergarten.png" />
+    <Content Include="SmartHaiShu\images\educ\kindergarten_0.png" />
+    <Content Include="SmartHaiShu\images\educ\school.png" />
+    <Content Include="SmartHaiShu\images\educ\school_0.png" />
+    <Content Include="SmartHaiShu\images\main\logo_simple.png" />
+    <Content Include="SmartHaiShu\images\trip\line1.png" />
+    <Content Include="SmartHaiShu\LifeArea.aspx" />
+    <Content Include="SmartHaiShu\LifeHotel.aspx" />
+    <Content Include="SmartHaiShu\LifeMarket.aspx" />
+    <Content Include="SmartHaiShu\LifeSpecial.aspx" />
+    <Content Include="SmartHaiShu\Trip4S.aspx" />
+    <Content Include="SmartHaiShu\TripBike.aspx" />
+    <Content Include="SmartHaiShu\TripBusRoute.aspx" />
+    <Content Include="SmartHaiShu\BusRouteInfo.aspx" />
+    <Content Include="SmartHaiShu\CommonInvoke.aspx" />
+    <Content Include="SmartHaiShu\css\bootstrap.min.css" />
+    <Content Include="SmartHaiShu\css\master.css" />
+    <Content Include="SmartHaiShu\css\style.css" />
+    <Content Include="SmartHaiShu\css\index.css" />
+    <Content Include="SmartHaiShu\css\lrtk.css" />
+    <Content Include="SmartHaiShu\css\pgwslider.min.css" />
+    <Content Include="SmartHaiShu\css\reg.css" />
+    <Content Include="SmartHaiShu\css\SheQuDongTai.css" />
+    <Content Include="SmartHaiShu\css\signin.css" />
+    <Content Include="SmartHaiShu\css\SmartHaiShu_Master.css" />
+    <Content Include="SmartHaiShu\EasyTrip.aspx" />
+    <Content Include="SmartHaiShu\images\01.png" />
+    <Content Include="SmartHaiShu\images\02.png" />
+    <Content Include="SmartHaiShu\images\17.png" />
+    <Content Include="SmartHaiShu\images\20130330A_2.png" />
+    <Content Include="SmartHaiShu\images\20130725.png" />
+    <Content Include="SmartHaiShu\images\53f444b8N7c7db751.jpg" />
+    <Content Include="SmartHaiShu\images\53f4799dNc363ef75.jpg" />
+    <Content Include="SmartHaiShu\images\index\icon10.png" />
+    <Content Include="SmartHaiShu\images\index\icon11.png" />
+    <Content Include="SmartHaiShu\images\index\icon12.png" />
+    <Content Include="SmartHaiShu\images\index\icon13.png" />
+    <Content Include="SmartHaiShu\images\index\icon14.png" />
+    <Content Include="SmartHaiShu\images\index\icon7.png" />
+    <Content Include="SmartHaiShu\images\index\icon8.png" />
+    <Content Include="SmartHaiShu\images\index\icon9.png" />
+    <Content Include="SmartHaiShu\images\main\icon_1.png" />
+    <Content Include="SmartHaiShu\images\main\icon_2.png" />
+    <Content Include="SmartHaiShu\images\main\icon_3.png" />
+    <Content Include="SmartHaiShu\images\main\icon_4.png" />
+    <Content Include="SmartHaiShu\images\main\icon_5.png" />
+    <Content Include="SmartHaiShu\images\main\wea-cloud.png" />
+    <Content Include="SmartHaiShu\images\main\icon1.png" />
+    <Content Include="SmartHaiShu\images\main\logo.png" />
+    <Content Include="SmartHaiShu\images\main\pin.png" />
+    <Content Include="SmartHaiShu\images\trip\bus.png" />
+    <Content Include="SmartHaiShu\images\trip\bus_0.png" />
+    <Content Include="SmartHaiShu\images\trip\train.png" />
+    <Content Include="SmartHaiShu\images\trip\train_0.png" />
+    <Content Include="SmartHaiShu\images\trip\car_check.png" />
+    <Content Include="SmartHaiShu\images\trip\car_check_0.png" />
+    <Content Include="SmartHaiShu\images\trip\trip_info.png" />
+    <Content Include="SmartHaiShu\images\trip\trip_info_0.png" />
+    <Content Include="SmartHaiShu\images\trip\car_school.png" />
+    <Content Include="SmartHaiShu\images\trip\car_school_0.png" />
+    <Content Include="SmartHaiShu\images\trip\metro.png" />
+    <Content Include="SmartHaiShu\images\trip\metro_0.png" />
+    <Content Include="SmartHaiShu\images\trip\4s.png" />
+    <Content Include="SmartHaiShu\images\trip\4s_0.png" />
+    <Content Include="SmartHaiShu\images\trip\record.png" />
+    <Content Include="SmartHaiShu\images\trip\record_0.png" />
+    <Content Include="SmartHaiShu\images\trip\bike.png" />
+    <Content Include="SmartHaiShu\images\trip\bike_0.png" />
+    <Content Include="SmartHaiShu\images\trip\car_repair.png" />
+    <Content Include="SmartHaiShu\images\trip\car_repair_0.png" />
+    <Content Include="SmartHaiShu\images\trip\flight.png" />
+    <Content Include="SmartHaiShu\images\trip\flight_0.png" />
+    <Content Include="SmartHaiShu\images\trip\point.png" />
+    <Content Include="SmartHaiShu\images\trip\point_0.png" />
+    <Content Include="SmartHaiShu\index.aspx" />
+    <Content Include="SmartHaiShu\js\bootstrap.min.js" />
+    <Content Include="SmartHaiShu\js\jquery-1.4.1-vsdoc.js" />
+    <Content Include="SmartHaiShu\js\jquery-1.4.1.js" />
+    <Content Include="SmartHaiShu\js\jquery-1.4.1.min.js" />
+    <Content Include="SmartHaiShu\js\jquery-1.9.1.min.js" />
+    <Content Include="SmartHaiShu\js\jquery.min.js" />
+    <Content Include="SmartHaiShu\js\jquery.timers-1.2.js" />
+    <Content Include="SmartHaiShu\js\json2.js" />
+    <Content Include="SmartHaiShu\js\js\highlight.pack.js" />
+    <Content Include="SmartHaiShu\js\js\jPages.js" />
+    <Content Include="SmartHaiShu\js\js\jPages.min.js" />
+    <Content Include="SmartHaiShu\js\js\jquery-1.8.2.min.js" />
+    <Content Include="SmartHaiShu\js\js\jquery.lazyload.js" />
+    <Content Include="SmartHaiShu\js\js\js.js" />
+    <Content Include="SmartHaiShu\js\js\tabifier.js" />
+    <Content Include="SmartHaiShu\js\pgwslider.min.js" />
+    <Content Include="SmartHaiShu\js\portamento.js" />
+    <Content Include="SmartHaiShu\js\pptBox.js" />
+    <Content Include="SmartHaiShu\js\SmartHaiShu.js" />
+    <Content Include="SmartHaiShu\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="SmartHaiShu\js\SmartHS_BianMing\SmartHaiShuBianMing_json.js" />
+    <Content Include="SmartHaiShu\MemberModify.aspx" />
+    <Content Include="SmartHaiShu\Register.aspx" />
+    <Content Include="SmartHaiShu\SheQuDongTai.aspx" />
+    <Content Include="SmartHaiShu\NoticeInfo.aspx" />
+    <Content Include="SmartHaiShu\SignIn.aspx" />
+    <Content Include="SmartHaiShu\TripCarCheck.aspx" />
+    <Content Include="SmartHaiShu\TripCarRepair.aspx" />
+    <Content Include="SmartHaiShu\TripCarSchool.aspx" />
+    <Content Include="SmartHaiShu\TripFlight.aspx" />
+    <Content Include="SmartHaiShu\TripInfo.aspx" />
+    <Content Include="SmartHaiShu\TripMetro.aspx" />
+    <Content Include="SmartHaiShu\TripRecord.aspx" />
+    <Content Include="SmartHaiShu\TripTrain.aspx" />
+    <Content Include="SmartHaiShu\VerifyCode.aspx" />
+    <Content Include="Web.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SmartHaiShu\SmartHaiShu.Master" />
+    <None Include="Service References\SocialInsureService\SocialInsureService.wsdl" />
+    <None Include="Service References\TrafficVioService\TrafficVioService.wsdl" />
+    <None Include="SmartHaiShu\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="SmartHaiShu\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="SmartHaiShu\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="SmartHaiShu\Main.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Service References\HSOpenDataService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HSSmartDataService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\NoticeDetail.aspx.cs">
+      <DependentUpon>NoticeDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\NoticeDetail.aspx.designer.cs">
+      <DependentUpon>NoticeDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\SocialInsureService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TrafficVioService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\ApplyMemberKey.aspx.cs">
+      <DependentUpon>ApplyMemberKey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\ApplyMemberKey.aspx.designer.cs">
+      <DependentUpon>ApplyMemberKey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvenienceLive.aspx.cs">
+      <DependentUpon>ConvenienceLive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvenienceLive.aspx.designer.cs">
+      <DependentUpon>ConvenienceLive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLiveBank.aspx.cs">
+      <DependentUpon>ConvLiveBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLiveBank.aspx.designer.cs">
+      <DependentUpon>ConvLiveBank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLiveExpress.aspx.cs">
+      <DependentUpon>ConvLiveExpress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLiveExpress.aspx.designer.cs">
+      <DependentUpon>ConvLiveExpress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLiveFund.aspx.cs">
+      <DependentUpon>ConvLiveFund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLiveFund.aspx.designer.cs">
+      <DependentUpon>ConvLiveFund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLiveHouseKeeping.aspx.cs">
+      <DependentUpon>ConvLiveHouseKeeping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLiveHouseKeeping.aspx.designer.cs">
+      <DependentUpon>ConvLiveHouseKeeping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLivePrice.aspx.cs">
+      <DependentUpon>ConvLivePrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLivePrice.aspx.designer.cs">
+      <DependentUpon>ConvLivePrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLiveSocialSecurity.aspx.cs">
+      <DependentUpon>ConvLiveSocialSecurity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLiveSocialSecurity.aspx.designer.cs">
+      <DependentUpon>ConvLiveSocialSecurity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\Education.aspx.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\Education.aspx.designer.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduDoctors.aspx.cs">
+      <DependentUpon>EduDoctors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduDoctors.aspx.designer.cs">
+      <DependentUpon>EduDoctors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduDrugStore.aspx.cs">
+      <DependentUpon>EduDrugStore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduDrugStore.aspx.designer.cs">
+      <DependentUpon>EduDrugStore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduHealth.aspx.cs">
+      <DependentUpon>EduHealth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduHealth.aspx.designer.cs">
+      <DependentUpon>EduHealth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduHospital.aspx.cs">
+      <DependentUpon>EduHospital.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduHospital.aspx.designer.cs">
+      <DependentUpon>EduHospital.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduHospitalOrder.aspx.cs">
+      <DependentUpon>EduHospitalOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduHospitalOrder.aspx.designer.cs">
+      <DependentUpon>EduHospitalOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduInfo.aspx.cs">
+      <DependentUpon>EduInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduInfo.aspx.designer.cs">
+      <DependentUpon>EduInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduJobs.aspx.cs">
+      <DependentUpon>EduJobs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduJobs.aspx.designer.cs">
+      <DependentUpon>EduJobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduKindergarten.aspx.cs">
+      <DependentUpon>EduKindergarten.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduKindergarten.aspx.designer.cs">
+      <DependentUpon>EduKindergarten.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduOldPeople.aspx.cs">
+      <DependentUpon>EduOldPeople.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduOldPeople.aspx.designer.cs">
+      <DependentUpon>EduOldPeople.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduSchool.aspx.cs">
+      <DependentUpon>EduSchool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\EduSchool.aspx.designer.cs">
+      <DependentUpon>EduSchool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\LifeArea.aspx.cs">
+      <DependentUpon>LifeArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\LifeArea.aspx.designer.cs">
+      <DependentUpon>LifeArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\LifeHotel.aspx.cs">
+      <DependentUpon>LifeHotel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\LifeHotel.aspx.designer.cs">
+      <DependentUpon>LifeHotel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\LifeMarket.aspx.cs">
+      <DependentUpon>LifeMarket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\LifeMarket.aspx.designer.cs">
+      <DependentUpon>LifeMarket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\LifeSpecial.aspx.cs">
+      <DependentUpon>LifeSpecial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\LifeSpecial.aspx.designer.cs">
+      <DependentUpon>LifeSpecial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\Trip4S.aspx.cs">
+      <DependentUpon>Trip4S.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\Trip4S.aspx.designer.cs">
+      <DependentUpon>Trip4S.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripBike.aspx.cs">
+      <DependentUpon>TripBike.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripBike.aspx.designer.cs">
+      <DependentUpon>TripBike.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripBusRoute.aspx.cs">
+      <DependentUpon>TripBusRoute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripBusRoute.aspx.designer.cs">
+      <DependentUpon>TripBusRoute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\BusRouteInfo.aspx.cs">
+      <DependentUpon>BusRouteInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\BusRouteInfo.aspx.designer.cs">
+      <DependentUpon>BusRouteInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\Cache\StaticData.cs" />
+    <Compile Include="SmartHaiShu\CommonInvoke.aspx.cs">
+      <DependentUpon>CommonInvoke.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\CommonInvoke.aspx.designer.cs">
+      <DependentUpon>CommonInvoke.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\EasyTrip.aspx.cs">
+      <DependentUpon>EasyTrip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\EasyTrip.aspx.designer.cs">
+      <DependentUpon>EasyTrip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\MemberModify.aspx.cs">
+      <DependentUpon>MemberModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\MemberModify.aspx.designer.cs">
+      <DependentUpon>MemberModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\RegisterWebInvoke.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\SheQuDongTai.aspx.cs">
+      <DependentUpon>SheQuDongTai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\SheQuDongTai.aspx.designer.cs">
+      <DependentUpon>SheQuDongTai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\NoticeInfo.aspx.cs">
+      <DependentUpon>NoticeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\NoticeInfo.aspx.designer.cs">
+      <DependentUpon>NoticeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\SmartHaiShu.Master.cs">
+      <DependentUpon>SmartHaiShu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripCarCheck.aspx.cs">
+      <DependentUpon>TripCarCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripCarCheck.aspx.designer.cs">
+      <DependentUpon>TripCarCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripCarRepair.aspx.cs">
+      <DependentUpon>TripCarRepair.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripCarRepair.aspx.designer.cs">
+      <DependentUpon>TripCarRepair.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripCarSchool.aspx.cs">
+      <DependentUpon>TripCarSchool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripCarSchool.aspx.designer.cs">
+      <DependentUpon>TripCarSchool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripFlight.aspx.cs">
+      <DependentUpon>TripFlight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripFlight.aspx.designer.cs">
+      <DependentUpon>TripFlight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripInfo.aspx.cs">
+      <DependentUpon>TripInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripInfo.aspx.designer.cs">
+      <DependentUpon>TripInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripMetro.aspx.cs">
+      <DependentUpon>TripMetro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripMetro.aspx.designer.cs">
+      <DependentUpon>TripMetro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripRecord.aspx.cs">
+      <DependentUpon>TripRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripRecord.aspx.designer.cs">
+      <DependentUpon>TripRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripTrain.aspx.cs">
+      <DependentUpon>TripTrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripTrain.aspx.designer.cs">
+      <DependentUpon>TripTrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\VerifyCode.aspx.cs">
+      <DependentUpon>VerifyCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\VerifyCode.aspx.designer.cs">
+      <DependentUpon>VerifyCode.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\HSOpenDataService\" />
+    <WCFMetadataStorage Include="Service References\HSSmartDataService\" />
+    <WCFMetadataStorage Include="Service References\SocialInsureService\" />
+    <WCFMetadataStorage Include="Service References\TrafficVioService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartHaiShu.Utility\SmartHaiShu.Utility.csproj">
+      <Project>{3871B4C5-DB83-4F0D-80B9-5A74B19E31B1}</Project>
+      <Name>SmartHaiShu.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartHaiShuModel\SmartHaisuModel.csproj">
+      <Project>{F968B734-7577-4EB2-A479-1C5C3011F694}</Project>
+      <Name>SmartHaisuModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SmartHaiShu\images\convlive\" />
+    <Folder Include="SmartHaiShu\images\life\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>33999</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OpenDataService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOpenDataService_GetCommunityIntroduction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityIntroduction" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityIntroduction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityIntroductionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityName" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityNotice" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityNoticeTitles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityNoticeTitles" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityNoticeTitles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityNoticeTitlesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityNoticeCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityNoticeCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityNoticeCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityNoticeCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityNoticeTitleByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityNoticeTitleByPage" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityNoticeTitleByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityNoticeTitleByPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityNoticeByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityNoticeByPage" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityNoticeByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityNoticeByPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityFCCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityFCCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityFCCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityFCCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityFCTitles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityFCTitles" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityFCTitles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityFCTitlesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityFCByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityFCByPage" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityFCByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityFCByPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityFC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityFC" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCommunityFC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommunityFCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetWaterNoticeCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWaterNoticeCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetWaterNoticeCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWaterNoticeCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetWaterNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWaterNotice" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetWaterNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWaterNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetElectricNoticeCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetElectricNoticeCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetElectricNoticeCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetElectricNoticeCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetElectricNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetElectricNotice" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetElectricNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetElectricNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBusRoute_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusRoute" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBusRoute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusRouteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBusRouteList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusRouteList" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBusRouteList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusRouteListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCar4SLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCar4SLocation" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCar4SLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCar4SLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCarRepairLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarRepairLocation" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCarRepairLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarRepairLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCarAnnualCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarAnnualCheck" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCarAnnualCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarAnnualCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCarSchool_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarSchool" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCarSchool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarSchoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetStarHotels_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStarHotels" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetStarHotels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStarHotelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetFlowerHotels_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowerHotels" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetFlowerHotels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowerHotelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetChildSchool_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildSchool" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetChildSchool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildSchoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetPrimarySchool_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrimarySchool" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetPrimarySchool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrimarySchoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetRetirementHome_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetirementHome" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetRetirementHome_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetirementHomeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOpenDataService">
+    <wsdl:operation name="GetCommunityIntroduction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityIntroduction" message="tns:IOpenDataService_GetCommunityIntroduction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityIntroductionResponse" message="tns:IOpenDataService_GetCommunityIntroduction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityName" message="tns:IOpenDataService_GetCommunityName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityNameResponse" message="tns:IOpenDataService_GetCommunityName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityNotice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityNotice" message="tns:IOpenDataService_GetCommunityNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityNoticeResponse" message="tns:IOpenDataService_GetCommunityNotice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityNoticeTitles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityNoticeTitles" message="tns:IOpenDataService_GetCommunityNoticeTitles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityNoticeTitlesResponse" message="tns:IOpenDataService_GetCommunityNoticeTitles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityNoticeCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityNoticeCount" message="tns:IOpenDataService_GetCommunityNoticeCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityNoticeCountResponse" message="tns:IOpenDataService_GetCommunityNoticeCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityNoticeTitleByPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityNoticeTitleByPage" message="tns:IOpenDataService_GetCommunityNoticeTitleByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityNoticeTitleByPageResponse" message="tns:IOpenDataService_GetCommunityNoticeTitleByPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityNoticeByPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityNoticeByPage" message="tns:IOpenDataService_GetCommunityNoticeByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityNoticeByPageResponse" message="tns:IOpenDataService_GetCommunityNoticeByPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityFCCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityFCCount" message="tns:IOpenDataService_GetCommunityFCCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityFCCountResponse" message="tns:IOpenDataService_GetCommunityFCCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityFCTitles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityFCTitles" message="tns:IOpenDataService_GetCommunityFCTitles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityFCTitlesResponse" message="tns:IOpenDataService_GetCommunityFCTitles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityFCByPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityFCByPage" message="tns:IOpenDataService_GetCommunityFCByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityFCByPageResponse" message="tns:IOpenDataService_GetCommunityFCByPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityFC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityFC" message="tns:IOpenDataService_GetCommunityFC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityFCResponse" message="tns:IOpenDataService_GetCommunityFC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWaterNoticeCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetWaterNoticeCount" message="tns:IOpenDataService_GetWaterNoticeCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetWaterNoticeCountResponse" message="tns:IOpenDataService_GetWaterNoticeCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWaterNotice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetWaterNotice" message="tns:IOpenDataService_GetWaterNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetWaterNoticeResponse" message="tns:IOpenDataService_GetWaterNotice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetElectricNoticeCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetElectricNoticeCount" message="tns:IOpenDataService_GetElectricNoticeCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetElectricNoticeCountResponse" message="tns:IOpenDataService_GetElectricNoticeCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetElectricNotice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetElectricNotice" message="tns:IOpenDataService_GetElectricNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetElectricNoticeResponse" message="tns:IOpenDataService_GetElectricNotice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusRoute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetBusRoute" message="tns:IOpenDataService_GetBusRoute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetBusRouteResponse" message="tns:IOpenDataService_GetBusRoute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusRouteList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetBusRouteList" message="tns:IOpenDataService_GetBusRouteList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetBusRouteListResponse" message="tns:IOpenDataService_GetBusRouteList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCar4SLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCar4SLocation" message="tns:IOpenDataService_GetCar4SLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCar4SLocationResponse" message="tns:IOpenDataService_GetCar4SLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarRepairLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCarRepairLocation" message="tns:IOpenDataService_GetCarRepairLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCarRepairLocationResponse" message="tns:IOpenDataService_GetCarRepairLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarAnnualCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCarAnnualCheck" message="tns:IOpenDataService_GetCarAnnualCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCarAnnualCheckResponse" message="tns:IOpenDataService_GetCarAnnualCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarSchool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCarSchool" message="tns:IOpenDataService_GetCarSchool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCarSchoolResponse" message="tns:IOpenDataService_GetCarSchool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStarHotels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetStarHotels" message="tns:IOpenDataService_GetStarHotels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetStarHotelsResponse" message="tns:IOpenDataService_GetStarHotels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowerHotels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetFlowerHotels" message="tns:IOpenDataService_GetFlowerHotels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetFlowerHotelsResponse" message="tns:IOpenDataService_GetFlowerHotels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChildSchool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetChildSchool" message="tns:IOpenDataService_GetChildSchool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetChildSchoolResponse" message="tns:IOpenDataService_GetChildSchool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimarySchool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetPrimarySchool" message="tns:IOpenDataService_GetPrimarySchool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetPrimarySchoolResponse" message="tns:IOpenDataService_GetPrimarySchool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRetirementHome">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetRetirementHome" message="tns:IOpenDataService_GetRetirementHome_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetRetirementHomeResponse" message="tns:IOpenDataService_GetRetirementHome_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOpenDataService" type="tns:IOpenDataService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCommunityIntroduction">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCommunityIntroduction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityName">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCommunityName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityNotice">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCommunityNotice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityNoticeTitles">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCommunityNoticeTitles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityNoticeCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCommunityNoticeCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityNoticeTitleByPage">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCommunityNoticeTitleByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityNoticeByPage">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCommunityNoticeByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityFCCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCommunityFCCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityFCTitles">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCommunityFCTitles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityFCByPage">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCommunityFCByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommunityFC">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCommunityFC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWaterNoticeCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetWaterNoticeCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWaterNotice">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetWaterNotice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetElectricNoticeCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetElectricNoticeCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetElectricNotice">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetElectricNotice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBusRoute">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetBusRoute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBusRouteList">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetBusRouteList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCar4SLocation">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCar4SLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarRepairLocation">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCarRepairLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarAnnualCheck">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCarAnnualCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarSchool">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCarSchool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStarHotels">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetStarHotels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowerHotels">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetFlowerHotels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChildSchool">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetChildSchool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimarySchool">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetPrimarySchool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRetirementHome">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetRetirementHome" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OpenDataService">
+    <wsdl:port name="BasicHttpBinding_IOpenDataService" binding="tns:BasicHttpBinding_IOpenDataService">
+      <soap:address location="http://localhost:8167/Design_Time_Addresses/SmartHaiShu.WcfService/OpenDataService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

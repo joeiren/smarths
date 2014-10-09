@@ -1,0 +1,79 @@
+﻿body {
+}
+#pgw-o-slide {
+float: left;
+width: 890px;
+height: 662px;
+overflow: hidden;
+/*padding-left: 220px;*/
+}
+
+#pgw-slide
+{
+    margin-left: 35px;
+    width: 820px;
+    height: 450px;
+}
+#SheQuTongGao {
+width: 860px;
+padding: 0;
+height: 200px;
+border-style: solid;
+border-color: #EEE;
+border-width: 1px;
+position: relative;
+margin-top:10px;
+}
+#NoticeTitle {
+width: 70px;
+padding-top: 7px;
+margin-left: 50px;
+float:left;
+}
+#introduce {
+/*width: 800px;*/
+height: 160px;
+float: left;
+/*background-image: url(../Images/img8.png);*/
+background-repeat: no-repeat;
+margin-top: 5px;
+margin-left: 20px !important;
+margin-left: 10px;
+}
+.dottedline {
+width: 2px;
+float: left;
+height: 200px;
+margin-top: 25px;
+}
+#introduceTitle {
+width: 90px;
+float: left;
+margin-left: 30px !important;
+margin-left: 15px;
+font-weight: bold;
+}
+.moreText {
+float: right;
+margin-right: 60px;
+color: gray;
+font-size: 11px;
+padding-top: 7px;
+}
+.clear
+{
+    border: 1px solid #CCCCCC;
+    border-width: 1px 0 0 0;
+    width: 870px;
+    float: left;
+    height: 0px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+#introduce ul.more_tit li {
+width: 400px;
+padding: 0 0 0 30px;
+height: 24px;
+padding-top: 4px;
+float: left;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a2c35419-7a8c-4cb2-a568-487d1a9a7ef6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8167/Design_Time_Addresses/SmartHaiShu.WcfService/OpenDataService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f5466ec6-b0a3-48f5-8f5b-9b170c25d35a" SourceId="1" SourceUrl="http://localhost:8167/Design_Time_Addresses/SmartHaiShu.WcfService/OpenDataService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="b184a01b-312d-4e4a-bac8-55be6c929c8e" SourceId="1" SourceUrl="http://localhost:8167/Design_Time_Addresses/SmartHaiShu.WcfService/OpenDataService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="b332476c-e9f6-4893-9ea1-af30e728283e" SourceId="1" SourceUrl="http://localhost:8167/Design_Time_Addresses/SmartHaiShu.WcfService/OpenDataService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
