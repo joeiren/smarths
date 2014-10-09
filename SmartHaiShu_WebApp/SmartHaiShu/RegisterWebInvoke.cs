@@ -13,7 +13,7 @@ using SmartHaiShu.Utility;
 using SmartHaiShu_WebApp.HSSmartDataService;
 using SmartHaiShu_WebApp.SmartHaiShu.Cache;
 using SmartHaisuModel;
-using Telerik.Web.UI.com.hisoftware.api2;
+
 
 namespace SmartHaiShu_WebApp.SmartHaiShu
 {
