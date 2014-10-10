@@ -1,34 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
   <publishProfile publishUrl="D:\WebSitePublish\SmartHs\SmartHsService" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="SmartHs/Service" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/log4net.xml" publishTime="10/08/2014 14:28:42" />
     <file relUrl="bin/MySql.Data.dll" publishTime="08/18/2014 09:07:32" />
-    <file relUrl="bin/SmartHaiShu.Repository.Implement.dll" publishTime="09/28/2014 13:00:42" />
+    <file relUrl="bin/SmartHaiShu.Repository.Implement.dll" publishTime="10/08/2014 14:51:09" />
     <file relUrl="OpenDataService.svc" publishTime="08/21/2014 13:45:42" />
     <file relUrl="bin/EntityFramework.SqlServer.dll" publishTime="08/18/2014 09:07:26" />
-    <file relUrl="bin/SmartHaiShu.Repository.Interface.dll" publishTime="09/28/2014 13:00:41" />
-    <file relUrl="bin/SmartHaiShu.WcfService.xml" publishTime="08/26/2014 13:17:34" />
-    <file relUrl="bin/SmartHaiShu.WcfService.dll" publishTime="09/28/2014 13:00:42" />
-    <file relUrl="bin/SmartHaiShu.WcfService.WebHost.pdb" publishTime="09/28/2014 13:02:18" />
+    <file relUrl="bin/SmartHaiShu.Repository.Interface.dll" publishTime="10/08/2014 14:51:08" />
+    <file relUrl="bin/SmartHaiShu.WcfService.xml" publishTime="10/10/2014 09:57:36" />
+    <file relUrl="bin/SmartHaiShu.WcfService.dll" publishTime="10/10/2014 09:57:36" />
+    <file relUrl="bin/SmartHaiShu.WcfService.WebHost.pdb" publishTime="10/10/2014 10:00:44" />
     <file relUrl="bin/Newtonsoft.Json.xml" publishTime="08/19/2014 09:14:48" />
-    <file relUrl="SmartHsService.svc" publishTime="08/21/2014 13:48:06" />
-    <file relUrl="bin/SmartHaisuModel.pdb" publishTime="09/28/2014 13:00:41" />
-    <file relUrl="bin/SmartHaiShu.BizLogic.Interface.dll" publishTime="09/28/2014 13:00:41" />
-    <file relUrl="bin/SmartHaiShu.BizLogic.Implement.dll" publishTime="09/28/2014 13:00:42" />
-    <file relUrl="bin/SmartHaiShu.Utility.pdb" publishTime="09/28/2014 13:00:41" />
+    <file relUrl="bin/log4net.dll" publishTime="10/08/2014 14:28:42" />
+    <file relUrl="bin/SmartHaisuModel.pdb" publishTime="10/08/2014 14:51:08" />
+    <file relUrl="bin/SmartHaiShu.BizLogic.Interface.dll" publishTime="10/08/2014 14:51:08" />
+    <file relUrl="bin/SmartHaiShu.BizLogic.Implement.dll" publishTime="10/09/2014 09:24:26" />
+    <file relUrl="bin/SmartHaiShu.Utility.pdb" publishTime="10/09/2014 09:24:59" />
     <file relUrl="bin/EntityFramework.xml" publishTime="08/18/2014 09:07:26" />
-    <file relUrl="bin/SmartHaiShu.Repository.Implement.pdb" publishTime="09/28/2014 13:00:42" />
+    <file relUrl="bin/SmartHaiShu.Repository.Implement.pdb" publishTime="10/08/2014 14:51:09" />
     <file relUrl="bin/Newtonsoft.Json.dll" publishTime="08/19/2014 09:14:48" />
-    <file relUrl="bin/SmartHaiShu.BizLogic.Implement.pdb" publishTime="09/28/2014 13:00:42" />
-    <file relUrl="bin/SmartHaiShu.Utility.dll" publishTime="09/28/2014 13:00:41" />
-    <file relUrl="packages.config" publishTime="08/27/2014 09:03:59" />
+    <file relUrl="bin/SmartHaiShu.BizLogic.Implement.pdb" publishTime="10/09/2014 09:24:26" />
+    <file relUrl="bin/SmartHaiShu.Utility.dll" publishTime="10/09/2014 09:24:59" />
+    <file relUrl="packages.config" publishTime="10/08/2014 14:36:07" />
     <file relUrl="bin/EntityFramework.SqlServer.xml" publishTime="08/18/2014 09:07:26" />
-    <file relUrl="bin/SmartHaisuModel.dll" publishTime="09/28/2014 13:00:41" />
+    <file relUrl="bin/SmartHaisuModel.dll" publishTime="10/08/2014 14:51:08" />
     <file relUrl="bin/MySql.Data.Entity.EF6.dll" publishTime="08/18/2014 09:07:33" />
-    <file relUrl="bin/SmartHaiShu.BizLogic.Interface.pdb" publishTime="09/28/2014 13:00:41" />
-    <file relUrl="bin/SmartHaiShu.Repository.Interface.pdb" publishTime="09/28/2014 13:00:41" />
-    <file relUrl="Web.config" publishTime="09/29/2014 08:41:36" />
-    <file relUrl="bin/SmartHaiShu.WcfService.pdb" publishTime="09/28/2014 13:00:42" />
+    <file relUrl="bin/SmartHaiShu.BizLogic.Interface.pdb" publishTime="10/08/2014 14:51:08" />
+    <file relUrl="bin/SmartHaiShu.Repository.Interface.pdb" publishTime="10/08/2014 14:51:08" />
+    <file relUrl="Web.config" publishTime="10/10/2014 10:00:44" />
+    <file relUrl="bin/SmartHaiShu.WcfService.pdb" publishTime="10/10/2014 09:57:36" />
     <file relUrl="bin/EntityFramework.dll" publishTime="08/18/2014 09:07:26" />
-    <file relUrl="bin/SmartHaiShu.WcfService.WebHost.dll" publishTime="09/28/2014 13:02:18" />
+    <file relUrl="bin/SmartHaiShu.WcfService.WebHost.dll" publishTime="10/10/2014 10:00:44" />
+    <file relUrl="SmartHsService.svc" publishTime="08/21/2014 13:48:06" />
   </publishProfile>
 </publishData>

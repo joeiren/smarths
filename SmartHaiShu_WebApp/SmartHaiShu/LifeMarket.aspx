@@ -60,7 +60,7 @@
 
         <div class="row">
         <div class="panel-group" id="accordion">
-            <asp:Repeater ID="Repeater1" runat="server">
+            <asp:Repeater ID="RepeaterMarket" runat="server">
                     <ItemTemplate>
                 <div class="panel panel-info">
                     <div class="panel-heading">

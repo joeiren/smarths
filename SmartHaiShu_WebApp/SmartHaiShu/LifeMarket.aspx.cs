@@ -42,8 +42,10 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
+                
                 PageNo = Convert.ToInt32(Request.QueryString["PageNo"]);
                 PageNo = Math.Max(PageNo, 1);
                 var json = _serviceClient.GetMarketCount();
@@ -56,13 +58,14 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                         json = _serviceClient.GetMarket(PageNo, PageSize);
                         if (json.JObjCodeTrue())
                         {
-                            Repeater1.DataSource = from item in json.JObjMessageToken()
+
+                            RepeaterMarket.DataSource = from item in json.JObjMessageToken()
                                                    select new
                                                    {
                                                        Name = item["Name"].ValueOrDefault <string>(),
                                                        Range = item["Range"].ValueOrDefault <string>(),
                                                        Address = item["Address"].ValueOrDefault <string>(),
-                                                       Id = item["Id"],
+                                                       Id = item["Id"].ValueOrDefault<string>(),
                                                        Type = item["Type"].ValueOrDefault <string>(),
                                                    };
                         }
@@ -71,7 +74,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             }
             TotalPage = TotalCount/PageSize + (TotalCount%PageSize == 0 ? 0 : 1);
             Page1 = (Math.Max(PageNo, 1) - 1)/PageListNumber*PageListNumber + 1;
-            Repeater1.DataBind();
+            RepeaterMarket.DataBind();
 
             Page.ClientScript.RegisterStartupScript(GetType(), "pageNoSelector",
                 "<script language='javascript'>pageNoSelector(" + PageNo + "," + TotalPage + ");</script>");
