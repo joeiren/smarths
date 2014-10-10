@@ -63,14 +63,26 @@ namespace SmartHaiShu_WebApp.HSOpenDataService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetBusRoute", ReplyAction="http://tempuri.org/IOpenDataService/GetBusRouteResponse")]
         string GetBusRoute(string routeName);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetBusRouteCount", ReplyAction="http://tempuri.org/IOpenDataService/GetBusRouteCountResponse")]
+        string GetBusRouteCount();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetBusRouteList", ReplyAction="http://tempuri.org/IOpenDataService/GetBusRouteListResponse")]
         string GetBusRouteList(int pageNo, int pageSize);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetCar4SLocationCount", ReplyAction="http://tempuri.org/IOpenDataService/GetCar4SLocationCountResponse")]
+        string GetCar4SLocationCount();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetCar4SLocation", ReplyAction="http://tempuri.org/IOpenDataService/GetCar4SLocationResponse")]
         string GetCar4SLocation(int pageNo, int pageSize);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetCarRepairLocationCount", ReplyAction="http://tempuri.org/IOpenDataService/GetCarRepairLocationCountResponse")]
+        string GetCarRepairLocationCount();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetCarRepairLocation", ReplyAction="http://tempuri.org/IOpenDataService/GetCarRepairLocationResponse")]
         string GetCarRepairLocation(int pageNo, int pageSize);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetCarAnnualCheckCount", ReplyAction="http://tempuri.org/IOpenDataService/GetCarAnnualCheckCountResponse")]
+        string GetCarAnnualCheckCount();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetCarAnnualCheck", ReplyAction="http://tempuri.org/IOpenDataService/GetCarAnnualCheckResponse")]
         string GetCarAnnualCheck(int pageNo, int pageSize);
@@ -78,20 +90,62 @@ namespace SmartHaiShu_WebApp.HSOpenDataService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetCarSchool", ReplyAction="http://tempuri.org/IOpenDataService/GetCarSchoolResponse")]
         string GetCarSchool(int pageNo, int pageSize);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetCarSchoolCount", ReplyAction="http://tempuri.org/IOpenDataService/GetCarSchoolCountResponse")]
+        string GetCarSchoolCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetStarHotelCount", ReplyAction="http://tempuri.org/IOpenDataService/GetStarHotelCountResponse")]
+        string GetStarHotelCount();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetStarHotels", ReplyAction="http://tempuri.org/IOpenDataService/GetStarHotelsResponse")]
         string GetStarHotels(int pageNo, int pageSize);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetFlowerHotelCount", ReplyAction="http://tempuri.org/IOpenDataService/GetFlowerHotelCountResponse")]
+        string GetFlowerHotelCount();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetFlowerHotels", ReplyAction="http://tempuri.org/IOpenDataService/GetFlowerHotelsResponse")]
         string GetFlowerHotels(int pageNo, int pageSize);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetChildSchoolCount", ReplyAction="http://tempuri.org/IOpenDataService/GetChildSchoolCountResponse")]
+        string GetChildSchoolCount();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetChildSchool", ReplyAction="http://tempuri.org/IOpenDataService/GetChildSchoolResponse")]
         string GetChildSchool(int pageNo, int pageSize);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetPrimarySchoolCount", ReplyAction="http://tempuri.org/IOpenDataService/GetPrimarySchoolCountResponse")]
+        string GetPrimarySchoolCount();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetPrimarySchool", ReplyAction="http://tempuri.org/IOpenDataService/GetPrimarySchoolResponse")]
         string GetPrimarySchool(int pageNo, int pageSize);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetRetirementHomeCount", ReplyAction="http://tempuri.org/IOpenDataService/GetRetirementHomeCountResponse")]
+        string GetRetirementHomeCount();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetRetirementHome", ReplyAction="http://tempuri.org/IOpenDataService/GetRetirementHomeResponse")]
         string GetRetirementHome(int pageNo, int pageSize);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetMarketCount", ReplyAction="http://tempuri.org/IOpenDataService/GetMarketCountResponse")]
+        string GetMarketCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetMarket", ReplyAction="http://tempuri.org/IOpenDataService/GetMarketResponse")]
+        string GetMarket(int pageNo, int pageSize);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetDrugStoreCount", ReplyAction="http://tempuri.org/IOpenDataService/GetDrugStoreCountResponse")]
+        string GetDrugStoreCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetDrugStore", ReplyAction="http://tempuri.org/IOpenDataService/GetDrugStoreResponse")]
+        string GetDrugStore(int pageNo, int pageSize);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetBankLocationCount", ReplyAction="http://tempuri.org/IOpenDataService/GetBankLocationCountResponse")]
+        string GetBankLocationCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetBankLocation", ReplyAction="http://tempuri.org/IOpenDataService/GetBankLocationResponse")]
+        string GetBankLocation(int pageNo, int pageSize);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetBikeLocationCount", ReplyAction="http://tempuri.org/IOpenDataService/GetBikeLocationCountResponse")]
+        string GetBikeLocationCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetBikeLocation", ReplyAction="http://tempuri.org/IOpenDataService/GetBikeLocationResponse")]
+        string GetBikeLocation(int pageNo, int pageSize);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -185,16 +239,32 @@ namespace SmartHaiShu_WebApp.HSOpenDataService {
             return base.Channel.GetBusRoute(routeName);
         }
         
+        public string GetBusRouteCount() {
+            return base.Channel.GetBusRouteCount();
+        }
+        
         public string GetBusRouteList(int pageNo, int pageSize) {
             return base.Channel.GetBusRouteList(pageNo, pageSize);
+        }
+        
+        public string GetCar4SLocationCount() {
+            return base.Channel.GetCar4SLocationCount();
         }
         
         public string GetCar4SLocation(int pageNo, int pageSize) {
             return base.Channel.GetCar4SLocation(pageNo, pageSize);
         }
         
+        public string GetCarRepairLocationCount() {
+            return base.Channel.GetCarRepairLocationCount();
+        }
+        
         public string GetCarRepairLocation(int pageNo, int pageSize) {
             return base.Channel.GetCarRepairLocation(pageNo, pageSize);
+        }
+        
+        public string GetCarAnnualCheckCount() {
+            return base.Channel.GetCarAnnualCheckCount();
         }
         
         public string GetCarAnnualCheck(int pageNo, int pageSize) {
@@ -205,24 +275,80 @@ namespace SmartHaiShu_WebApp.HSOpenDataService {
             return base.Channel.GetCarSchool(pageNo, pageSize);
         }
         
+        public string GetCarSchoolCount() {
+            return base.Channel.GetCarSchoolCount();
+        }
+        
+        public string GetStarHotelCount() {
+            return base.Channel.GetStarHotelCount();
+        }
+        
         public string GetStarHotels(int pageNo, int pageSize) {
             return base.Channel.GetStarHotels(pageNo, pageSize);
+        }
+        
+        public string GetFlowerHotelCount() {
+            return base.Channel.GetFlowerHotelCount();
         }
         
         public string GetFlowerHotels(int pageNo, int pageSize) {
             return base.Channel.GetFlowerHotels(pageNo, pageSize);
         }
         
+        public string GetChildSchoolCount() {
+            return base.Channel.GetChildSchoolCount();
+        }
+        
         public string GetChildSchool(int pageNo, int pageSize) {
             return base.Channel.GetChildSchool(pageNo, pageSize);
+        }
+        
+        public string GetPrimarySchoolCount() {
+            return base.Channel.GetPrimarySchoolCount();
         }
         
         public string GetPrimarySchool(int pageNo, int pageSize) {
             return base.Channel.GetPrimarySchool(pageNo, pageSize);
         }
         
+        public string GetRetirementHomeCount() {
+            return base.Channel.GetRetirementHomeCount();
+        }
+        
         public string GetRetirementHome(int pageNo, int pageSize) {
             return base.Channel.GetRetirementHome(pageNo, pageSize);
+        }
+        
+        public string GetMarketCount() {
+            return base.Channel.GetMarketCount();
+        }
+        
+        public string GetMarket(int pageNo, int pageSize) {
+            return base.Channel.GetMarket(pageNo, pageSize);
+        }
+        
+        public string GetDrugStoreCount() {
+            return base.Channel.GetDrugStoreCount();
+        }
+        
+        public string GetDrugStore(int pageNo, int pageSize) {
+            return base.Channel.GetDrugStore(pageNo, pageSize);
+        }
+        
+        public string GetBankLocationCount() {
+            return base.Channel.GetBankLocationCount();
+        }
+        
+        public string GetBankLocation(int pageNo, int pageSize) {
+            return base.Channel.GetBankLocation(pageNo, pageSize);
+        }
+        
+        public string GetBikeLocationCount() {
+            return base.Channel.GetBikeLocationCount();
+        }
+        
+        public string GetBikeLocation(int pageNo, int pageSize) {
+            return base.Channel.GetBikeLocation(pageNo, pageSize);
         }
     }
 }

@@ -102,11 +102,23 @@
   <wsdl:message name="IOpenDataService_GetBusRoute_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetBusRouteResponse" />
   </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBusRouteCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusRouteCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBusRouteCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusRouteCountResponse" />
+  </wsdl:message>
   <wsdl:message name="IOpenDataService_GetBusRouteList_InputMessage">
     <wsdl:part name="parameters" element="tns:GetBusRouteList" />
   </wsdl:message>
   <wsdl:message name="IOpenDataService_GetBusRouteList_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetBusRouteListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCar4SLocationCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCar4SLocationCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCar4SLocationCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCar4SLocationCountResponse" />
   </wsdl:message>
   <wsdl:message name="IOpenDataService_GetCar4SLocation_InputMessage">
     <wsdl:part name="parameters" element="tns:GetCar4SLocation" />
@@ -114,11 +126,23 @@
   <wsdl:message name="IOpenDataService_GetCar4SLocation_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCar4SLocationResponse" />
   </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCarRepairLocationCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarRepairLocationCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCarRepairLocationCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarRepairLocationCountResponse" />
+  </wsdl:message>
   <wsdl:message name="IOpenDataService_GetCarRepairLocation_InputMessage">
     <wsdl:part name="parameters" element="tns:GetCarRepairLocation" />
   </wsdl:message>
   <wsdl:message name="IOpenDataService_GetCarRepairLocation_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCarRepairLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCarAnnualCheckCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarAnnualCheckCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCarAnnualCheckCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarAnnualCheckCountResponse" />
   </wsdl:message>
   <wsdl:message name="IOpenDataService_GetCarAnnualCheck_InputMessage">
     <wsdl:part name="parameters" element="tns:GetCarAnnualCheck" />
@@ -132,11 +156,29 @@
   <wsdl:message name="IOpenDataService_GetCarSchool_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCarSchoolResponse" />
   </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCarSchoolCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarSchoolCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetCarSchoolCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarSchoolCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetStarHotelCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStarHotelCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetStarHotelCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStarHotelCountResponse" />
+  </wsdl:message>
   <wsdl:message name="IOpenDataService_GetStarHotels_InputMessage">
     <wsdl:part name="parameters" element="tns:GetStarHotels" />
   </wsdl:message>
   <wsdl:message name="IOpenDataService_GetStarHotels_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetStarHotelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetFlowerHotelCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowerHotelCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetFlowerHotelCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowerHotelCountResponse" />
   </wsdl:message>
   <wsdl:message name="IOpenDataService_GetFlowerHotels_InputMessage">
     <wsdl:part name="parameters" element="tns:GetFlowerHotels" />
@@ -144,11 +186,23 @@
   <wsdl:message name="IOpenDataService_GetFlowerHotels_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetFlowerHotelsResponse" />
   </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetChildSchoolCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildSchoolCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetChildSchoolCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildSchoolCountResponse" />
+  </wsdl:message>
   <wsdl:message name="IOpenDataService_GetChildSchool_InputMessage">
     <wsdl:part name="parameters" element="tns:GetChildSchool" />
   </wsdl:message>
   <wsdl:message name="IOpenDataService_GetChildSchool_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetChildSchoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetPrimarySchoolCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrimarySchoolCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetPrimarySchoolCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrimarySchoolCountResponse" />
   </wsdl:message>
   <wsdl:message name="IOpenDataService_GetPrimarySchool_InputMessage">
     <wsdl:part name="parameters" element="tns:GetPrimarySchool" />
@@ -156,11 +210,65 @@
   <wsdl:message name="IOpenDataService_GetPrimarySchool_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetPrimarySchoolResponse" />
   </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetRetirementHomeCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetirementHomeCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetRetirementHomeCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetirementHomeCountResponse" />
+  </wsdl:message>
   <wsdl:message name="IOpenDataService_GetRetirementHome_InputMessage">
     <wsdl:part name="parameters" element="tns:GetRetirementHome" />
   </wsdl:message>
   <wsdl:message name="IOpenDataService_GetRetirementHome_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetRetirementHomeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetMarketCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetMarketCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetMarket_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarket" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetMarket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetDrugStoreCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrugStoreCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetDrugStoreCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrugStoreCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetDrugStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrugStore" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetDrugStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrugStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBankLocationCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankLocationCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBankLocationCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankLocationCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBankLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankLocation" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBankLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBikeLocationCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBikeLocationCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBikeLocationCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBikeLocationCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBikeLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBikeLocation" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetBikeLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBikeLocationResponse" />
   </wsdl:message>
   <wsdl:portType name="IOpenDataService">
     <wsdl:operation name="GetCommunityIntroduction">
@@ -227,17 +335,33 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetBusRoute" message="tns:IOpenDataService_GetBusRoute_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetBusRouteResponse" message="tns:IOpenDataService_GetBusRoute_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetBusRouteCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetBusRouteCount" message="tns:IOpenDataService_GetBusRouteCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetBusRouteCountResponse" message="tns:IOpenDataService_GetBusRouteCount_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetBusRouteList">
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetBusRouteList" message="tns:IOpenDataService_GetBusRouteList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetBusRouteListResponse" message="tns:IOpenDataService_GetBusRouteList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCar4SLocationCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCar4SLocationCount" message="tns:IOpenDataService_GetCar4SLocationCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCar4SLocationCountResponse" message="tns:IOpenDataService_GetCar4SLocationCount_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetCar4SLocation">
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCar4SLocation" message="tns:IOpenDataService_GetCar4SLocation_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCar4SLocationResponse" message="tns:IOpenDataService_GetCar4SLocation_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetCarRepairLocationCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCarRepairLocationCount" message="tns:IOpenDataService_GetCarRepairLocationCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCarRepairLocationCountResponse" message="tns:IOpenDataService_GetCarRepairLocationCount_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetCarRepairLocation">
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCarRepairLocation" message="tns:IOpenDataService_GetCarRepairLocation_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCarRepairLocationResponse" message="tns:IOpenDataService_GetCarRepairLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarAnnualCheckCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCarAnnualCheckCount" message="tns:IOpenDataService_GetCarAnnualCheckCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCarAnnualCheckCountResponse" message="tns:IOpenDataService_GetCarAnnualCheckCount_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetCarAnnualCheck">
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCarAnnualCheck" message="tns:IOpenDataService_GetCarAnnualCheck_InputMessage" />
@@ -247,25 +371,81 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCarSchool" message="tns:IOpenDataService_GetCarSchool_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCarSchoolResponse" message="tns:IOpenDataService_GetCarSchool_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetCarSchoolCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCarSchoolCount" message="tns:IOpenDataService_GetCarSchoolCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetCarSchoolCountResponse" message="tns:IOpenDataService_GetCarSchoolCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStarHotelCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetStarHotelCount" message="tns:IOpenDataService_GetStarHotelCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetStarHotelCountResponse" message="tns:IOpenDataService_GetStarHotelCount_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetStarHotels">
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetStarHotels" message="tns:IOpenDataService_GetStarHotels_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetStarHotelsResponse" message="tns:IOpenDataService_GetStarHotels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowerHotelCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetFlowerHotelCount" message="tns:IOpenDataService_GetFlowerHotelCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetFlowerHotelCountResponse" message="tns:IOpenDataService_GetFlowerHotelCount_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetFlowerHotels">
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetFlowerHotels" message="tns:IOpenDataService_GetFlowerHotels_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetFlowerHotelsResponse" message="tns:IOpenDataService_GetFlowerHotels_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetChildSchoolCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetChildSchoolCount" message="tns:IOpenDataService_GetChildSchoolCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetChildSchoolCountResponse" message="tns:IOpenDataService_GetChildSchoolCount_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetChildSchool">
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetChildSchool" message="tns:IOpenDataService_GetChildSchool_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetChildSchoolResponse" message="tns:IOpenDataService_GetChildSchool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimarySchoolCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetPrimarySchoolCount" message="tns:IOpenDataService_GetPrimarySchoolCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetPrimarySchoolCountResponse" message="tns:IOpenDataService_GetPrimarySchoolCount_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetPrimarySchool">
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetPrimarySchool" message="tns:IOpenDataService_GetPrimarySchool_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetPrimarySchoolResponse" message="tns:IOpenDataService_GetPrimarySchool_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetRetirementHomeCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetRetirementHomeCount" message="tns:IOpenDataService_GetRetirementHomeCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetRetirementHomeCountResponse" message="tns:IOpenDataService_GetRetirementHomeCount_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetRetirementHome">
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetRetirementHome" message="tns:IOpenDataService_GetRetirementHome_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetRetirementHomeResponse" message="tns:IOpenDataService_GetRetirementHome_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetMarketCount" message="tns:IOpenDataService_GetMarketCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetMarketCountResponse" message="tns:IOpenDataService_GetMarketCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetMarket" message="tns:IOpenDataService_GetMarket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetMarketResponse" message="tns:IOpenDataService_GetMarket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugStoreCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetDrugStoreCount" message="tns:IOpenDataService_GetDrugStoreCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetDrugStoreCountResponse" message="tns:IOpenDataService_GetDrugStoreCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetDrugStore" message="tns:IOpenDataService_GetDrugStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetDrugStoreResponse" message="tns:IOpenDataService_GetDrugStore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankLocationCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetBankLocationCount" message="tns:IOpenDataService_GetBankLocationCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetBankLocationCountResponse" message="tns:IOpenDataService_GetBankLocationCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetBankLocation" message="tns:IOpenDataService_GetBankLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetBankLocationResponse" message="tns:IOpenDataService_GetBankLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBikeLocationCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetBikeLocationCount" message="tns:IOpenDataService_GetBikeLocationCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetBikeLocationCountResponse" message="tns:IOpenDataService_GetBikeLocationCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBikeLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetBikeLocation" message="tns:IOpenDataService_GetBikeLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetBikeLocationResponse" message="tns:IOpenDataService_GetBikeLocation_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IOpenDataService" type="tns:IOpenDataService">
@@ -414,8 +594,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetBusRouteCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetBusRouteCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetBusRouteList">
       <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetBusRouteList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCar4SLocationCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCar4SLocationCount" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -432,8 +630,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetCarRepairLocationCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCarRepairLocationCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetCarRepairLocation">
       <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCarRepairLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarAnnualCheckCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCarAnnualCheckCount" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -459,8 +675,35 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetCarSchoolCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetCarSchoolCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStarHotelCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetStarHotelCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetStarHotels">
       <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetStarHotels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowerHotelCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetFlowerHotelCount" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -477,8 +720,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetChildSchoolCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetChildSchoolCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetChildSchool">
       <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetChildSchool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimarySchoolCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetPrimarySchoolCount" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -495,8 +756,89 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetRetirementHomeCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetRetirementHomeCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetRetirementHome">
       <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetRetirementHome" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetMarketCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarket">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetMarket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugStoreCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetDrugStoreCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugStore">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetDrugStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankLocationCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetBankLocationCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankLocation">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetBankLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBikeLocationCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetBikeLocationCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBikeLocation">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetBikeLocation" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

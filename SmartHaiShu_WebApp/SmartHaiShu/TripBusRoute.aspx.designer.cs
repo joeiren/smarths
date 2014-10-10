@@ -10,7 +10,7 @@
 namespace SmartHaiShu_WebApp.SmartHaiShu {
     
     
-    public partial class BusRoute {
+    public partial class TripBusRoute {
         
         /// <summary>
         /// form1 control.

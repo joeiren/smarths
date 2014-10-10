@@ -38,7 +38,7 @@
                                                    { "Child_memb": "锋领集市", "Child_id": "", "url": "" }]
                 },
                 { "id": "5", "title": "社区生活圈", "url": "LifeArea.aspx", "content": [{ "Child_memb": "商家优惠", "Child_id": "", "url": "m_special" },
-                                                   { "Child_memb": "商家超市", "Child_id": "", "url": "m_market" },
-                                                   { "Child_memb": "酒店超市", "Child_id": "", "url": "m_hotel"}]
+                                                   { "Child_memb": "商场超市", "Child_id": "", "url": "m_market" },
+                                                   { "Child_memb": "酒店住宿", "Child_id": "", "url": "m_hotel"}]
                 }
                 ]};

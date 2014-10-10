@@ -5,11 +5,13 @@ using System.Linq;
 using SmartHaiShu.WcfService.OpenDataLogic;
 using SmartHaisuModel;
 
+
 namespace SmartHaiShu.WcfService
 {
     public class OpenDataService : IOpenDataService
     {
         private readonly BankLocationLogic _bankLocationLogic = new BankLocationLogic();
+        private readonly BikeLocationLogic _bikeLocationLogic = new BikeLocationLogic();
         private readonly BusRouteLogic _busRouteLogic = new BusRouteLogic();
         private readonly CarServiceLogic _carLogic = new CarServiceLogic();
         private readonly DrugStoreLogic _drugStoreLogic = new DrugStoreLogic();
@@ -19,7 +21,6 @@ namespace SmartHaiShu.WcfService
         private readonly MarketLogic _marketLogic = new MarketLogic();
         private readonly CommunityNoticeLogic _noticeLogic = new CommunityNoticeLogic();
         private readonly RetirementLogic _retirementLogic = new RetirementLogic();
-        private readonly BikeLocationLogic _bikeLocationLogic = new BikeLocationLogic();
 
         /// <summary>
         ///     社区简介
@@ -30,13 +31,13 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                b_t_ufp_3_2_1 result = _noticeLogic.LoadCommunityIntroduction(community);
+                var result = _noticeLogic.LoadCommunityIntroduction(community);
 
                 if (result != null)
                 {
                     // 处理 TelBook
-                    var telReset = new List<string>();
-                    foreach (string tel in result.TEL_BOOK.Split('\n'))
+                    var telReset = new List <string>();
+                    foreach (var tel in result.TEL_BOOK.Split('\n'))
                     {
                         string real = tel.Trim();
                         if (string.IsNullOrWhiteSpace(real))
@@ -93,7 +94,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        ///  通过地址匹配获取社区名字
+        ///     通过地址匹配获取社区名字
         /// </summary>
         /// <param name="address">地址</param>
         /// <returns></returns>
@@ -124,7 +125,7 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                b_t_ufp_3_2_2 notices = _noticeLogic.LoadSpecificNotice(noticeId);
+                var notices = _noticeLogic.LoadSpecificNotice(noticeId);
 
                 if (notices != null)
                 {
@@ -155,16 +156,16 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_3_2_2> notices = _noticeLogic.LoadNotices(community);
+                var notices = _noticeLogic.LoadNotices(community);
                 if (notices != null)
                 {
                     var result = (from it in notices
-                        select new
-                        {
-                            Id = it.UUID,
-                            Title = it.TITLE,
-                            ReleaseTime = it.RELEASE_TIME
-                        }).ToList();
+                                  select new
+                                  {
+                                      Id = it.UUID,
+                                      Title = it.TITLE,
+                                      ReleaseTime = it.RELEASE_TIME
+                                  }).ToList();
                     return new ResultFormat(1, result).ToString();
                 }
                 return new ResultFormat(0, string.Empty).ToString();
@@ -206,14 +207,14 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_3_2_2> result = _noticeLogic.LoadNotices(community, pageNo, pageSize);
+                var result = _noticeLogic.LoadNotices(community, pageNo, pageSize);
                 var notice = (from it in result
-                    select new
-                    {
-                        Id = it.UUID,
-                        Title = it.TITLE,
-                        ReleaseTime = it.RELEASE_TIME
-                    }).ToList();
+                              select new
+                              {
+                                  Id = it.UUID,
+                                  Title = it.TITLE,
+                                  ReleaseTime = it.RELEASE_TIME
+                              }).ToList();
                 return new ResultFormat(1, notice).ToString();
             }
             catch (Exception ex)
@@ -234,15 +235,15 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_3_2_2> result = _noticeLogic.LoadNotices(community, pageNo, pageSize);
+                var result = _noticeLogic.LoadNotices(community, pageNo, pageSize);
                 var notice = (from it in result
-                    select new
-                    {
-                        Id = it.UUID,
-                        Title = it.TITLE,
-                        Content = it.CONTENT,
-                        ReleaseTime = it.RELEASE_TIME
-                    }).ToList();
+                              select new
+                              {
+                                  Id = it.UUID,
+                                  Title = it.TITLE,
+                                  Content = it.CONTENT,
+                                  ReleaseTime = it.RELEASE_TIME
+                              }).ToList();
                 return new ResultFormat(1, notice).ToString();
             }
             catch (Exception ex)
@@ -282,14 +283,14 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_3_2_5> fcs = _noticeLogic.LoadFC(community, pageNo, pageSize);
+                var fcs = _noticeLogic.LoadFC(community, pageNo, pageSize);
                 var result = (from it in fcs
-                    select new
-                    {
-                        Id = it.UUID,
-                        Title = it.TITLE,
-                        ReleaseTime = it.RELEASE_TIME
-                    }).ToList();
+                              select new
+                              {
+                                  Id = it.UUID,
+                                  Title = it.TITLE,
+                                  ReleaseTime = it.RELEASE_TIME
+                              }).ToList();
                 return new ResultFormat(1, result).ToString();
             }
             catch (Exception ex)
@@ -310,15 +311,15 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_3_2_5> fcs = _noticeLogic.LoadFC(community, pageNo, pageSize);
+                var fcs = _noticeLogic.LoadFC(community, pageNo, pageSize);
                 var result = (from it in fcs
-                    select new
-                    {
-                        Id = it.UUID,
-                        Title = it.TITLE,
-                        Content = it.CONTENT,
-                        ReleaseTime = it.RELEASE_TIME
-                    }).ToList();
+                              select new
+                              {
+                                  Id = it.UUID,
+                                  Title = it.TITLE,
+                                  Content = it.CONTENT,
+                                  ReleaseTime = it.RELEASE_TIME
+                              }).ToList();
                 return new ResultFormat(1, result).ToString();
             }
             catch (Exception ex)
@@ -337,7 +338,7 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                b_t_ufp_3_2_5 notices = _noticeLogic.LoadSpecificFC(fcId);
+                var notices = _noticeLogic.LoadSpecificFC(fcId);
                 if (notices != null)
                 {
                     var result = new
@@ -386,17 +387,17 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_3_2_3> result = _noticeLogic.LoadWaterNotice(pageNo, pageSize);
+                var result = _noticeLogic.LoadWaterNotice(pageNo, pageSize);
 
                 var notice = (from it in result
-                    select new
-                    {
-                        StartTime = it.START_TIME,
-                        EndTime = it.END_TIME,
-                        Range = it.RANGE1,
-                        Reason = it.REASON,
-                        ReleaseTime = it.RELEASE_TIME
-                    }).ToList();
+                              select new
+                              {
+                                  StartTime = it.START_TIME,
+                                  EndTime = it.END_TIME,
+                                  Range = it.RANGE1,
+                                  Reason = it.REASON,
+                                  ReleaseTime = it.RELEASE_TIME
+                              }).ToList();
 
                 return new ResultFormat(1, notice).ToString();
             }
@@ -435,16 +436,16 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_3_2_4> result = _noticeLogic.LoadElectricNotice(pageNo, pageSize);
+                var result = _noticeLogic.LoadElectricNotice(pageNo, pageSize);
 
                 var notice = (from it in result
-                    select new
-                    {
-                        Blackout_time = it.BLACKOUT,
-                        Range = it.RANGE1,
-                        Line = it.LINE,
-                        ReleaseTime = it.RELEASE_TIME
-                    }).ToList();
+                              select new
+                              {
+                                  Blackout_time = it.BLACKOUT,
+                                  Range = it.RANGE1,
+                                  Line = it.LINE,
+                                  ReleaseTime = it.RELEASE_TIME
+                              }).ToList();
 
                 return new ResultFormat(1, result).ToString();
             }
@@ -464,13 +465,13 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_4_2_7> result = _busRouteLogic.LoadBusRoute(routeName);
+                var result = _busRouteLogic.LoadBusRoute(routeName);
                 var routes = (from it in result
-                    select new
-                    {
-                        Name = it.NAME,
-                        Line = it.LINE,
-                    }).ToList();
+                              select new
+                              {
+                                  Name = it.NAME,
+                                  Line = it.LINE,
+                              }).ToList();
 
                 return new ResultFormat(1, routes).ToString();
             }
@@ -482,7 +483,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 公交路线记录条数
+        ///     公交路线记录条数
         /// </summary>
         /// <returns></returns>
         public string GetBusRouteCount()
@@ -509,13 +510,13 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_4_2_7> result = _busRouteLogic.LoadBusRouteList(pageNo, pageSize);
+                var result = _busRouteLogic.LoadBusRouteList(pageNo, pageSize);
                 var routes = (from it in result
-                    select new
-                    {
-                        Name = it.NAME,
-                        Line = it.LINE,
-                    }).ToList();
+                              select new
+                              {
+                                  Name = it.NAME,
+                                  Line = it.LINE,
+                              }).ToList();
 
                 return new ResultFormat(1, routes).ToString();
             }
@@ -527,7 +528,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 4S店条数
+        ///     4S店条数
         /// </summary>
         /// <returns></returns>
         public string GetCar4SLocationCount()
@@ -554,15 +555,15 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_4_3_1> result = _carLogic.Load4SLocation(pageNo, pageSize);
+                var result = _carLogic.Load4SLocation(pageNo, pageSize);
                 var routes = (from it in result
-                    select new
-                    {
-                        Name = it.NAME,
-                        Brand = it.BRAND,
-                        Tel = it.TEL,
-                        Address = it.ADDRESS
-                    }).ToList();
+                              select new
+                              {
+                                  Name = it.NAME,
+                                  Brand = it.BRAND,
+                                  Tel = it.TEL,
+                                  Address = it.ADDRESS
+                              }).ToList();
 
                 return new ResultFormat(1, routes).ToString();
             }
@@ -574,7 +575,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 汽车维修店条数
+        ///     汽车维修店条数
         /// </summary>
         /// <returns></returns>
         public string GetCarRepairLocationCount()
@@ -601,15 +602,15 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_4_3_2> result = _carLogic.LoadCarRepairLocation(pageNo, pageSize);
+                var result = _carLogic.LoadCarRepairLocation(pageNo, pageSize);
                 var routes = (from it in result
-                    select new
-                    {
-                        Name = it.NAME,
-                        Level = it.LEVEL,
-                        Type = it.TYPE1,
-                        Address = it.ADDRESS
-                    }).ToList();
+                              select new
+                              {
+                                  Name = it.NAME,
+                                  Level = it.LEVEL,
+                                  Type = it.TYPE1,
+                                  Address = it.ADDRESS
+                              }).ToList();
 
                 return new ResultFormat(1, routes).ToString();
             }
@@ -621,7 +622,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 汽车年检点条数
+        ///     汽车年检点条数
         /// </summary>
         /// <returns></returns>
         public string GetCarAnnualCheckCount()
@@ -648,14 +649,14 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_4_3_3> result = _carLogic.LoadCarAnnualCheck(pageNo, pageSize);
+                var result = _carLogic.LoadCarAnnualCheck(pageNo, pageSize);
                 var routes = (from it in result
-                    select new
-                    {
-                        Name = it.NAME,
-                        Address = it.ADDRESS,
-                        Tel = it.TEL
-                    }).ToList();
+                              select new
+                              {
+                                  Name = it.NAME,
+                                  Address = it.ADDRESS,
+                                  Tel = it.TEL
+                              }).ToList();
 
                 return new ResultFormat(1, routes).ToString();
             }
@@ -667,7 +668,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 培训驾校条数
+        ///     培训驾校条数
         /// </summary>
         /// <returns></returns>
         public string GetCarSchoolCount()
@@ -694,15 +695,15 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_4_3_5> result = _carLogic.LoadCarSchool(pageNo, pageSize);
+                var result = _carLogic.LoadCarSchool(pageNo, pageSize);
                 var routes = (from it in result
-                    select new
-                    {
-                        Name = it.NAME,
-                        Address = it.ADDRESS,
-                        Tel = it.TEL,
-                        Level = it.LEVEL
-                    }).ToList();
+                              select new
+                              {
+                                  Name = it.NAME,
+                                  Address = it.ADDRESS,
+                                  Tel = it.TEL,
+                                  Level = it.LEVEL
+                              }).ToList();
 
                 return new ResultFormat(1, routes).ToString();
             }
@@ -714,7 +715,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 星级酒店条数
+        ///     星级酒店条数
         /// </summary>
         /// <returns></returns>
         public string GetStarHotelCount()
@@ -741,17 +742,17 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_4_5_1> result = _hotelLogic.LoadStarHotelList(pageNo, pageSize);
+                var result = _hotelLogic.LoadStarHotelList(pageNo, pageSize);
                 var routes = (from it in result
-                    select new
-                    {
-                        Name = it.NAME,
-                        Address = it.ADDRESS,
-                        Tel = it.TEL,
-                        Level = it.LEVEL,
-                        BusLine = it.LINE,
-                        Content = it.CONTENT
-                    }).ToList();
+                              select new
+                              {
+                                  Name = it.NAME,
+                                  Address = it.ADDRESS,
+                                  Tel = it.TEL,
+                                  Level = it.LEVEL,
+                                  BusLine = it.LINE,
+                                  Content = it.CONTENT
+                              }).ToList();
 
                 return new ResultFormat(1, routes).ToString();
             }
@@ -763,7 +764,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 花级酒店条数
+        ///     花级酒店条数
         /// </summary>
         /// <returns></returns>
         public string GetFlowerHotelCount()
@@ -790,17 +791,17 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_4_5_2> result = _hotelLogic.LoadFlowerHotelList(pageNo, pageSize);
+                var result = _hotelLogic.LoadFlowerHotelList(pageNo, pageSize);
                 var routes = (from it in result
-                    select new
-                    {
-                        Name = it.NAME,
-                        Address = it.ADDRESS,
-                        Tel = it.TEL,
-                        Level = it.LEVEL,
-                        BusLine = it.LINE,
-                        Content = it.CONTENT
-                    }).ToList();
+                              select new
+                              {
+                                  Name = it.NAME,
+                                  Address = it.ADDRESS,
+                                  Tel = it.TEL,
+                                  Level = it.LEVEL,
+                                  BusLine = it.LINE,
+                                  Content = it.CONTENT
+                              }).ToList();
 
                 return new ResultFormat(1, routes).ToString();
             }
@@ -812,7 +813,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 学前教育 幼儿园条数
+        ///     学前教育 幼儿园条数
         /// </summary>
         /// <returns></returns>
         public string GetChildSchoolCount()
@@ -839,16 +840,16 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_6_1_1> result = _educationLogic.LoadChildSchool(pageNo, pageSize);
+                var result = _educationLogic.LoadChildSchool(pageNo, pageSize);
                 var routes = (from it in result
-                    select new
-                    {
-                        Name = it.NAME,
-                        Address = it.ADDRESS,
-                        Tel = it.TEL,
-                        Level = it.LEVEL,
-                        Url = it.URL
-                    }).ToList();
+                              select new
+                              {
+                                  Name = it.NAME,
+                                  Address = it.ADDRESS,
+                                  Tel = it.TEL,
+                                  Level = it.LEVEL,
+                                  Url = it.URL
+                              }).ToList();
 
                 return new ResultFormat(1, routes).ToString();
             }
@@ -860,7 +861,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 义务教育 （小学，初中）条数
+        ///     义务教育 （小学，初中）条数
         /// </summary>
         /// <returns></returns>
         public string GetPrimarySchoolCount()
@@ -887,20 +888,20 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_6_1_2> result = _educationLogic.LoadPrimarySchool(pageNo, pageSize);
+                var result = _educationLogic.LoadPrimarySchool(pageNo, pageSize);
                 var routes = (from it in result
-                    select new
-                    {
-                        Name = it.NAME,
-                        Address = it.ADDRESS,
-                        Type = it.TYPE1,
-                        WorkTime = it.WORK_TIME,
-                        TelContacts = it.TEL_CONTACTS,
-                        ComplaintTel = it.COMPLAINT_TEL,
-                        Seat = it.SEAT,
-                        WebSite = it.WEB_SITE,
-                        Introduction = it.INTRODUCTION
-                    }).ToList();
+                              select new
+                              {
+                                  Name = it.NAME,
+                                  Address = it.ADDRESS,
+                                  Type = it.TYPE1,
+                                  WorkTime = it.WORK_TIME,
+                                  TelContacts = it.TEL_CONTACTS,
+                                  ComplaintTel = it.COMPLAINT_TEL,
+                                  Seat = it.SEAT,
+                                  WebSite = it.WEB_SITE,
+                                  Introduction = it.INTRODUCTION
+                              }).ToList();
 
                 return new ResultFormat(1, routes).ToString();
             }
@@ -912,7 +913,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 养老院条数
+        ///     养老院条数
         /// </summary>
         /// <returns></returns>
         public string GetRetirementHomeCount()
@@ -939,16 +940,16 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_8_4> result = _retirementLogic.LoadRetirementHome(pageNo, pageSize);
+                var result = _retirementLogic.LoadRetirementHome(pageNo, pageSize);
                 var routes = (from it in result
-                    select new
-                    {
-                        Name = it.NAME,
-                        Address = it.ADDRESS,
-                        Fanwei = it.FANWEI,
-                        Tel = it.TEL,
-                        TelR = it.TELR,
-                    }).ToList();
+                              select new
+                              {
+                                  Name = it.NAME,
+                                  Address = it.ADDRESS,
+                                  Fanwei = it.FANWEI,
+                                  Tel = it.TEL,
+                                  TelR = it.TELR,
+                              }).ToList();
 
                 return new ResultFormat(1, routes).ToString();
             }
@@ -987,18 +988,18 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_0003_cs> result = _marketLogic.LoadMarket(pageNo, pageSize);
+                var result = _marketLogic.LoadMarket(pageNo, pageSize);
                 var markets = (from it in result
-                    select new
-                    {
-                        Name = it.QYMC,
-                        Range = it.JYFW,
-                        Address = it.JYDZ,
-                        Id = it.UUID,
-                        Type = it.JYBZ,
-                        ReleaseTime = it.RELEASE_TIME,
-                        CheckTime = it.CHECK_TIME
-                    }).ToList();
+                               select new
+                               {
+                                   Name = it.QYMC,
+                                   Range = it.JYFW,
+                                   Address = it.JYDZ,
+                                   Id = it.UUID,
+                                   Type = it.JYBZ,
+                                   ReleaseTime = it.RELEASE_TIME,
+                                   CheckTime = it.CHECK_TIME
+                               }).ToList();
 
                 return new ResultFormat(1, markets).ToString();
             }
@@ -1037,18 +1038,18 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_0003_ydml> result = _drugStoreLogic.LoadDrugStore(pageNo, pageSize);
+                var result = _drugStoreLogic.LoadDrugStore(pageNo, pageSize);
                 var markets = (from it in result
-                    select new
-                    {
-                        Name = it.QYMC,
-                        Range = it.JYFW,
-                        Address = it.JYDZ,
-                        Id = it.UUID,
-                        Type = it.JYBZ,
-                        ReleaseTime = it.RELEASE_TIME,
-                        CheckTime = it.CHECK_TIME
-                    }).ToList();
+                               select new
+                               {
+                                   Name = it.QYMC,
+                                   Range = it.JYFW,
+                                   Address = it.JYDZ,
+                                   Id = it.UUID,
+                                   Type = it.JYBZ,
+                                   ReleaseTime = it.RELEASE_TIME,
+                                   CheckTime = it.CHECK_TIME
+                               }).ToList();
 
                 return new ResultFormat(1, markets).ToString();
             }
@@ -1087,18 +1088,18 @@ namespace SmartHaiShu.WcfService
         {
             try
             {
-                IEnumerable<b_t_ufp_0003_yh> result = _bankLocationLogic.LoadBankLocation(pageNo, pageSize);
+                var result = _bankLocationLogic.LoadBankLocation(pageNo, pageSize);
                 var markets = (from it in result
-                    select new
-                    {
-                        Name = it.QYMC,
-                        Range = it.JYFW,
-                        Address = it.JYDZ,
-                        Id = it.UUID,
-                        Type = it.JYBZ,
-                        ReleaseTime = it.RELEASE_TIME,
-                        CheckTime = it.CHECK_TIME
-                    }).ToList();
+                               select new
+                               {
+                                   Name = it.QYMC,
+                                   Range = it.JYFW,
+                                   Address = it.JYDZ,
+                                   Id = it.UUID,
+                                   Type = it.JYBZ,
+                                   ReleaseTime = it.RELEASE_TIME,
+                                   CheckTime = it.CHECK_TIME
+                               }).ToList();
 
                 return new ResultFormat(1, markets).ToString();
             }
@@ -1110,7 +1111,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 自行车分布点位条数
+        ///     自行车分布点位条数
         /// </summary>
         /// <returns></returns>
         public string GetBikeLocationCount()
@@ -1128,7 +1129,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 按页获取自行车分布记录
+        ///     按页获取自行车分布记录
         /// </summary>
         /// <param name="pageNo">页号(大于0)</param>
         /// <param name="pageSize">每页大小(小于20)</param>
@@ -1139,15 +1140,15 @@ namespace SmartHaiShu.WcfService
             {
                 var result = _bikeLocationLogic.LoadBikeLocation(pageNo, pageSize);
                 var bikes = (from it in result
-                               select new
-                               {
-                                   Code = it.CODE,
-                                   Name = it.NAME,
-                                   Address = it.ADDRESS,
-                                   Content = it.CONTENT,
-                                   ReleaseTime = DateTime.Parse(it.RELEASE_TIME).ToString("yyyy-MM-dd"),
-                                   CheckTime = it.CHECK_TIME
-                               }).ToList();
+                             select new
+                             {
+                                 Code = it.CODE,
+                                 Name = it.NAME,
+                                 Address = it.ADDRESS,
+                                 Content = it.CONTENT,
+                                 ReleaseTime = DateTime.Parse(it.RELEASE_TIME).ToString("yyyy-MM-dd"),
+                                 CheckTime = it.CHECK_TIME
+                             }).ToList();
 
                 return new ResultFormat(1, bikes).ToString();
             }
@@ -1157,6 +1158,5 @@ namespace SmartHaiShu.WcfService
                 return new ResultFormat(0, ex.Message).ToString();
             }
         }
-
     }
 }
