@@ -21,6 +21,8 @@ namespace SmartHaiShu.BizLogic.Interface
         /// <param name="userName">用户名</param>
         /// <returns></returns>
         member Find(string userName);
-     
+
+        member FindBy(long id);
+
     }
 }

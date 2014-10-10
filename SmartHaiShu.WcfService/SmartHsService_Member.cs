@@ -273,7 +273,8 @@ namespace SmartHaiShu.WcfService
                             default_community = result.default_community,
                             mail = result.mail,
                             member_id = result.member_id,
-                            name = result.name
+                            name = result.name,
+                            phone = result.phone
                         }).ToString();
                     }
                 }

@@ -20,5 +20,10 @@ namespace SmartHaiShu.BizLogic.Implement
         {
             return CurrentRepository.Find(it => it.name == userName).FirstOrDefault();
         }
+
+        public member FindBy(long id)
+        {
+            return CurrentRepository.Find(it => it.member_id == id).FirstOrDefault();
+        }
     }
 }

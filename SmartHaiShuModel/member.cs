@@ -14,6 +14,11 @@ namespace SmartHaisuModel
     
     public partial class member
     {
+        public member()
+        {
+            this.interact_post = new HashSet<interact_post>();
+        }
+    
         // Primitive properties
     
         public long member_id { get; set; }
@@ -29,6 +34,7 @@ namespace SmartHaisuModel
     
         // Navigation properties
     
+        public virtual ICollection<interact_post> interact_post { get; set; }
         public virtual community community { get; set; }
     
     }

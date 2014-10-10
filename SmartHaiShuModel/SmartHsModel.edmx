@@ -4,12 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="SelfDataModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="SelfDataModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="SelfDataModelStoreContainer">
-          <EntitySet Name="community" EntityType="SelfDataModel.Store.community" store:Type="Tables" Schema="hs_smart_0" />
-          <EntitySet Name="member" EntityType="SelfDataModel.Store.member" store:Type="Tables" Schema="hs_smart_0" />
-          <EntitySet Name="session_verify" EntityType="SelfDataModel.Store.session_verify" store:Type="Tables" Schema="hs_smart_0" />
-          <EntitySet Name="v_community" EntityType="SelfDataModel.Store.v_community" store:Type="Views" store:Schema="hs_smart_0" store:Name="v_community">
+          <EntitySet Name="community" EntityType="SelfDataModel.Store.community" store:Type="Tables" Schema="hs_smart" />
+          <EntitySet Name="global_type_config" EntityType="SelfDataModel.Store.global_type_config" store:Type="Tables" Schema="hs_smart" />
+          <EntitySet Name="interact_post" EntityType="SelfDataModel.Store.interact_post" store:Type="Tables" Schema="hs_smart" />
+          <EntitySet Name="member" EntityType="SelfDataModel.Store.member" store:Type="Tables" Schema="hs_smart" />
+          <EntitySet Name="session_verify" EntityType="SelfDataModel.Store.session_verify" store:Type="Tables" Schema="hs_smart" />
+          <EntitySet Name="v_community" EntityType="SelfDataModel.Store.v_community" store:Type="Views" store:Schema="hs_smart" store:Name="v_community">
             <DefiningQuery>SELECT
       `v_community`.`community_id`, 
       `v_community`.`name`, 
@@ -17,7 +19,7 @@
       `v_community`.`parent_name`
       FROM `v_community` AS `v_community`</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="v_member" EntityType="SelfDataModel.Store.v_member" store:Type="Views" store:Schema="hs_smart_0" store:Name="v_member">
+          <EntitySet Name="v_member" EntityType="SelfDataModel.Store.v_member" store:Type="Views" store:Schema="hs_smart" store:Name="v_member">
             <DefiningQuery>SELECT
       `v_member`.`member_id`, 
       `v_member`.`name`, 
@@ -33,6 +35,10 @@
       `v_member`.`community_parent`
       FROM `v_member` AS `v_member`</DefiningQuery>
           </EntitySet>
+          <AssociationSet Name="interact_post_ibfk_1" Association="SelfDataModel.Store.interact_post_ibfk_1">
+            <End Role="member" EntitySet="member" />
+            <End Role="interact_post" EntitySet="interact_post" />
+          </AssociationSet>
           <AssociationSet Name="member_community" Association="SelfDataModel.Store.member_community">
             <End Role="community" EntitySet="community" />
             <End Role="member" EntitySet="member" />
@@ -45,6 +51,30 @@
           <Property Name="community_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="varchar" Nullable="false" MaxLength="32" />
           <Property Name="parent_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="global_type_config">
+          <Key>
+            <PropertyRef Name="type_id" />
+          </Key>
+          <Property Name="type_id" Type="int" Nullable="false" />
+          <Property Name="type_name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="category_id" Type="int" Nullable="false" />
+          <Property Name="valid" Type="bool" Nullable="false" />
+        </EntityType>
+        <EntityType Name="interact_post">
+          <Key>
+            <PropertyRef Name="post_id" />
+          </Key>
+          <Property Name="post_id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="member_id" Type="bigint" />
+          <Property Name="member_name" Type="varchar" MaxLength="32" />
+          <Property Name="content" Type="varchar" Nullable="false" />
+          <Property Name="keyword" Type="varchar" MaxLength="32" />
+          <Property Name="contact_info" Type="varchar" MaxLength="128" />
+          <Property Name="data_span" Type="int" />
+          <Property Name="release_time" Type="datetime" Nullable="false" />
+          <Property Name="state" Type="int" />
         </EntityType>
         <EntityType Name="member">
           <Key>
@@ -72,7 +102,7 @@
           <Property Name="verify_code" Type="varchar" Nullable="false" MaxLength="36" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'hs_smart_0.v_community' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'def.hs_smart.v_community' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="v_community">
           <Key>
@@ -86,7 +116,7 @@
           <Property Name="parent_name" Type="varchar" MaxLength="32" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'hs_smart_0.v_member' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'def.hs_smart.v_member' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="v_member">
           <Key>
@@ -107,6 +137,18 @@
           <Property Name="community_name" Type="varchar" MaxLength="32" />
           <Property Name="community_parent" Type="varchar" MaxLength="32" />
         </EntityType>
+        <Association Name="interact_post_ibfk_1">
+          <End Role="member" Type="SelfDataModel.Store.member" Multiplicity="0..1" />
+          <End Role="interact_post" Type="SelfDataModel.Store.interact_post" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="member_id" />
+            </Principal>
+            <Dependent Role="interact_post">
+              <PropertyRef Name="member_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="member_community">
           <End Role="community" Type="SelfDataModel.Store.community" Multiplicity="0..1" />
           <End Role="member" Type="SelfDataModel.Store.member" Multiplicity="*" />
@@ -124,24 +166,46 @@
     <edmx:ConceptualModels>
       <Schema Namespace="SelfDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="SmartHsContext" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="community" EntityType="SelfDataModel.community" />
+          <EntitySet Name="global_type_config" EntityType="SelfDataModel.global_type_config" />
+          <EntitySet Name="interact_post" EntityType="SelfDataModel.interact_post" />
           <EntitySet Name="member" EntityType="SelfDataModel.member" />
+          <EntitySet Name="session_verify" EntityType="SelfDataModel.session_verify" />
           <EntitySet Name="v_community" EntityType="SelfDataModel.v_community" />
           <EntitySet Name="v_member" EntityType="SelfDataModel.v_member" />
+          <AssociationSet Name="interact_post_ibfk_1" Association="SelfDataModel.interact_post_ibfk_1">
+            <End Role="member" EntitySet="member" />
+            <End Role="interact_post" EntitySet="interact_post" />
+          </AssociationSet>
+          <EntitySet Name="community" EntityType="SelfDataModel.community" />
           <AssociationSet Name="member_community" Association="SelfDataModel.member_community">
             <End Role="community" EntitySet="community" />
             <End Role="member" EntitySet="member" />
           </AssociationSet>
-          <EntitySet Name="session_verify" EntityType="SelfDataModel.session_verify" />
         </EntityContainer>
-        <EntityType Name="community">
+        <EntityType Name="global_type_config">
           <Key>
-            <PropertyRef Name="community_id" />
+            <PropertyRef Name="type_id" />
           </Key>
-          <Property Type="Int32" Name="community_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="name" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="parent_id" Nullable="false" />
-          <NavigationProperty Name="member" Relationship="SelfDataModel.member_community" FromRole="community" ToRole="member" />
+          <Property Type="Int32" Name="type_id" Nullable="false" />
+          <Property Type="String" Name="type_name" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="category_id" Nullable="false" />
+          <Property Type="Boolean" Name="valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="interact_post">
+          <Key>
+            <PropertyRef Name="post_id" />
+          </Key>
+          <Property Type="Int64" Name="post_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="title" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="member_id" />
+          <Property Type="String" Name="member_name" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="content" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="keyword" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="contact_info" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="data_span" />
+          <Property Type="DateTime" Name="release_time" Nullable="false" />
+          <Property Type="Int32" Name="state" />
+          <NavigationProperty Name="member" Relationship="SelfDataModel.interact_post_ibfk_1" FromRole="interact_post" ToRole="member" />
         </EntityType>
         <EntityType Name="member">
           <Key>
@@ -157,7 +221,18 @@
           <Property Type="String" Name="last_ip" MaxLength="32" FixedLength="false" Unicode="false" />
           <Property Type="DateTime" Name="last_time" />
           <Property Type="Int32" Name="last_way" />
+          <NavigationProperty Name="interact_post" Relationship="SelfDataModel.interact_post_ibfk_1" FromRole="member" ToRole="interact_post" />
           <NavigationProperty Name="community" Relationship="SelfDataModel.member_community" FromRole="member" ToRole="community" />
+        </EntityType>
+        <EntityType Name="session_verify">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="type" Nullable="false" />
+          <Property Type="DateTime" Name="create_datetime" Nullable="false" />
+          <Property Type="String" Name="session_key" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="verify_code" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="v_community">
           <Key>
@@ -189,6 +264,27 @@
           <Property Type="String" Name="community_name" MaxLength="32" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="community_parent" MaxLength="32" FixedLength="false" Unicode="false" />
         </EntityType>
+        <Association Name="interact_post_ibfk_1">
+          <End Type="SelfDataModel.member" Role="member" Multiplicity="0..1" />
+          <End Type="SelfDataModel.interact_post" Role="interact_post" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="member_id" />
+            </Principal>
+            <Dependent Role="interact_post">
+              <PropertyRef Name="member_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="community">
+          <Key>
+            <PropertyRef Name="community_id" />
+          </Key>
+          <Property Type="Int32" Name="community_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="parent_id" Nullable="false" />
+          <NavigationProperty Name="member" Relationship="SelfDataModel.member_community" FromRole="community" ToRole="member" />
+        </EntityType>
         <Association Name="member_community">
           <End Type="SelfDataModel.community" Role="community" Multiplicity="0..1" />
           <End Type="SelfDataModel.member" Role="member" Multiplicity="*" />
@@ -201,28 +297,35 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="session_verify">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int32" Name="type" Nullable="false" />
-          <Property Type="DateTime" Name="create_datetime" Nullable="false" />
-          <Property Type="String" Name="session_key" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="verify_code" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="SelfDataModelStoreContainer" CdmEntityContainer="SmartHsContext">
-          <EntitySetMapping Name="community">
-            <EntityTypeMapping TypeName="SelfDataModel.community">
-              <MappingFragment StoreEntitySet="community">
-                <ScalarProperty Name="parent_id" ColumnName="parent_id" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="community_id" ColumnName="community_id" />
+          <EntitySetMapping Name="global_type_config">
+            <EntityTypeMapping TypeName="SelfDataModel.global_type_config">
+              <MappingFragment StoreEntitySet="global_type_config">
+                <ScalarProperty Name="valid" ColumnName="valid" />
+                <ScalarProperty Name="category_id" ColumnName="category_id" />
+                <ScalarProperty Name="type_name" ColumnName="type_name" />
+                <ScalarProperty Name="type_id" ColumnName="type_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="interact_post">
+            <EntityTypeMapping TypeName="SelfDataModel.interact_post">
+              <MappingFragment StoreEntitySet="interact_post">
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="release_time" ColumnName="release_time" />
+                <ScalarProperty Name="data_span" ColumnName="data_span" />
+                <ScalarProperty Name="contact_info" ColumnName="contact_info" />
+                <ScalarProperty Name="keyword" ColumnName="keyword" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="member_name" ColumnName="member_name" />
+                <ScalarProperty Name="member_id" ColumnName="member_id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="post_id" ColumnName="post_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -239,6 +342,17 @@
                 <ScalarProperty Name="member_key" ColumnName="member_key" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="member_id" ColumnName="member_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="session_verify">
+            <EntityTypeMapping TypeName="SelfDataModel.session_verify">
+              <MappingFragment StoreEntitySet="session_verify">
+                <ScalarProperty Name="verify_code" ColumnName="verify_code" />
+                <ScalarProperty Name="session_key" ColumnName="session_key" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -270,14 +384,12 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="session_verify">
-            <EntityTypeMapping TypeName="SelfDataModel.session_verify">
-              <MappingFragment StoreEntitySet="session_verify">
-                <ScalarProperty Name="verify_code" ColumnName="verify_code" />
-                <ScalarProperty Name="session_key" ColumnName="session_key" />
-                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
-                <ScalarProperty Name="type" ColumnName="type" />
-                <ScalarProperty Name="id" ColumnName="id" />
+          <EntitySetMapping Name="community">
+            <EntityTypeMapping TypeName="SelfDataModel.community">
+              <MappingFragment StoreEntitySet="community">
+                <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="community_id" ColumnName="community_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -303,15 +415,23 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="SmartHsModel">
-        <EntityTypeShape EntityType="SelfDataModel.community" Width="1.5" PointX="0.75" PointY="1.625" Height="1.7354337565104174" />
-        <EntityTypeShape EntityType="SelfDataModel.member" Width="1.5" PointX="3" PointY="1" Height="3.0289925130208317" />
-        <EntityTypeShape EntityType="SelfDataModel.v_community" Width="1.5" PointX="5.75" PointY="0.75" Height="1.7354337565104174" />
-        <EntityTypeShape EntityType="SelfDataModel.v_member" Width="1.5" PointX="0.75" PointY="5.75" Height="3.2137866210937496" />
-        <AssociationConnector Association="SelfDataModel.member_community" >
-          <ConnectorPoint PointX="2.25" PointY="2.4927168782552087" />
-          <ConnectorPoint PointX="3" PointY="2.4927168782552087" />
+        <EntityTypeShape EntityType="SelfDataModel.global_type_config" Width="1.5" PointX="5.75" PointY="0.75" Height="1.7354337565104174" />
+        <EntityTypeShape EntityType="SelfDataModel.interact_post" Width="1.5" PointX="3" PointY="1" Height="3.0289925130208388" />
+        <EntityTypeShape EntityType="SelfDataModel.member" Width="1.5" PointX="0.75" PointY="1" Height="3.0289925130208393" />
+        <EntityTypeShape EntityType="SelfDataModel.session_verify" Width="1.5" PointX="0.75" PointY="5.75" Height="1.9202278645833388" />
+        <EntityTypeShape EntityType="SelfDataModel.v_community" Width="1.5" PointX="2.75" PointY="5.75" Height="1.7354337565104174" />
+        <EntityTypeShape EntityType="SelfDataModel.v_member" Width="1.5" PointX="5.75" PointY="3.75" Height="3.2137866210937531" />
+        <AssociationConnector Association="SelfDataModel.interact_post_ibfk_1" >
+          <ConnectorPoint PointX="2.25" PointY="2.5144962565104194" />
+          <ConnectorPoint PointX="3" PointY="2.5144962565104194" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="SelfDataModel.session_verify" Width="1.5" PointX="5.375" PointY="3.75" Height="1.9202278645833246" />
+        <EntityTypeShape EntityType="SelfDataModel.community" Width="1.5" PointX="0.75" PointY="8.75" Height="1.7354337565104174" />
+        <AssociationConnector Association="SelfDataModel.member_community" >
+          <ConnectorPoint PointX="0.75115284615384614" PointY="8.75" />
+          <ConnectorPoint PointX="0.375" PointY="8.3738471538461532" />
+          <ConnectorPoint PointX="0.375" PointY="4.58878662109375" />
+          <ConnectorPoint PointX="0.75" PointY="4.21378662109375" />
+        </AssociationConnector>
       </Diagram>
     </Diagrams>
   </Designer>

@@ -93,6 +93,8 @@
     <Compile Include="ResultFormat.cs" />
     <Compile Include="SmartHsService_Community.cs" />
     <Compile Include="SmartHsService.cs" />
+    <Compile Include="SmartHsService_GlobalTypeConfig.cs" />
+    <Compile Include="SmartHsService_InteractPost.cs" />
     <Compile Include="SmartHsService_Member.cs" />
     <Compile Include="SmartHsService_SessionVerify.cs" />
   </ItemGroup>

@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using SmartHaiShu.Repository.Interface;
 
+
 namespace SmartHaiShu.Repository.Implement
 {
     public class RepositoryFactory
     {
-        public static IMemberRepository MemberRepo 
+        public static IMemberRepository MemberRepo
         {
             get
             {
@@ -24,11 +25,28 @@ namespace SmartHaiShu.Repository.Implement
             }
         }
 
-
         public static ISessionVerifyRepository SessionVerifyRepo
         {
-            get { return new SessionVerifyRepository(); }
+            get
+            {
+                return new SessionVerifyRepository();
+            }
         }
 
+        public static IGlobalTypeConfigRepository GlobalTypeConfigRepo
+        {
+            get
+            {
+                return new GlobalTypeConfigRepository();
+            }
+        }
+
+        public static IInteractPostRepository InteractPostRepo
+        {
+            get
+            {
+                return new InteractPostRepository();
+            }
+        }
     }
 }

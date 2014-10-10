@@ -40,6 +40,8 @@ namespace SmartHaiShu.WcfService
         IMemberLogic _memberLogic = new MemberLogic();
         CommunityLogic _communityLogic = new CommunityLogic();
         SessionVerifyLogic _sessionVerifyLogic = new SessionVerifyLogic();
+        GlobalTypeConfigLogic _globalTypeConfigLogic = new GlobalTypeConfigLogic();
+        InteractPostLogic _interactPostLogic = new InteractPostLogic();
 
         private static bool AuthenticationPrecondition()
         {

@@ -50,6 +50,8 @@
   <ItemGroup>
     <Compile Include="IBaseRepository.cs" />
     <Compile Include="ICommunityRepository.cs" />
+    <Compile Include="IGlobalTypeConfigRepository.cs" />
+    <Compile Include="IInteractPostRepository.cs" />
     <Compile Include="IMemberRepository.cs" />
     <Compile Include="ISessionVerifyRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -29,5 +29,6 @@ namespace SmartHaiShu.BizLogic.Interface
         /// <returns>是否成功</returns>
         bool Delete(T entity);
 
+
     }
 }

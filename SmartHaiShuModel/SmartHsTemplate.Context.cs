@@ -19,10 +19,12 @@ namespace SmartHaisuModel
         {
         }
     
-        public DbSet<community> Db_community { get; set; }
+        public DbSet<global_type_config> Db_global_type_config { get; set; }
+        public DbSet<interact_post> Db_interact_post { get; set; }
         public DbSet<member> Db_member { get; set; }
+        public DbSet<session_verify> Db_session_verify { get; set; }
         public DbSet<v_community> Db_v_community { get; set; }
         public DbSet<v_member> Db_v_member { get; set; }
-        public DbSet<session_verify> Db_session_verify { get; set; }
+        public DbSet<community> Db_community { get; set; }
     }
 }

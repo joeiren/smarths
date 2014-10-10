@@ -50,6 +50,8 @@
   <ItemGroup>
     <Compile Include="IBaseLogic.cs" />
     <Compile Include="ICommunityLogic.cs" />
+    <Compile Include="IGlobalTypeConfigLogic.cs" />
+    <Compile Include="IInteractPostLogic.cs" />
     <Compile Include="IMemberLogic.cs" />
     <Compile Include="ISessionVerifyLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

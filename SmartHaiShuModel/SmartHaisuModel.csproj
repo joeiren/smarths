@@ -160,6 +160,12 @@
     <Compile Include="dzk_jzwdzk.cs">
       <DependentUpon>OpenDataTemplate.tt</DependentUpon>
     </Compile>
+    <Compile Include="global_type_config.cs">
+      <DependentUpon>SmartHsTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="interact_post.cs">
+      <DependentUpon>SmartHsTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="member.cs">
       <DependentUpon>SmartHsTemplate.tt</DependentUpon>
     </Compile>
