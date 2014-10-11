@@ -55,6 +55,7 @@ namespace SmartHaiShu.WcfService
                 entity.contact_info = contractInfo;
                 entity.data_span = dataSpan;
                 entity.release_time = DateTime.Now;
+                entity.state = 1;
                 var result = _interactPostLogic.Add(entity);
                 if (result.member_id > 0)
                 {
@@ -181,6 +182,39 @@ namespace SmartHaiShu.WcfService
                     ).ToString();
                 }
                 return new ResultFormat(0, string.Empty).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
+        /// 删除指定的互帮互助
+        /// </summary>
+        /// <param name="postId">互帮互助id</param>
+        /// <returns></returns>
+        public string DeleteInteractPost(long postId)
+        {
+            try
+            {
+                var entity = _interactPostLogic.Find(postId);
+                if (entity != null && entity.post_id == postId)
+                {
+                    entity.state = 0;
+                    var result = _interactPostLogic.Update(entity);
+                    if (result)
+                    {
+                        return new ResultFormat(1, string.Empty).ToString();
+                    }
+                    return new ResultFormat(0, "删除失败").ToString();
+                }
+                else
+                {
+                    return new ResultFormat(0, string.Format("未找到id={0}的记录", postId)).ToString();
+                }
+                
             }
             catch (Exception ex)
             {

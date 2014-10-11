@@ -88,5 +88,8 @@ namespace SmartHaiShu.WcfService
 
         [OperationContract]
         string GetSpecialInteractPost(long postId);
+
+        [OperationContract]
+        string DeleteInteractPost(long postId);
     }
 }
