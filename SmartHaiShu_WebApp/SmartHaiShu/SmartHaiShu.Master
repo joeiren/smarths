@@ -123,7 +123,7 @@
 					    <li class="fore1" id="nav-home" clstag="homepage|keycount|home2013|07a"><a href="index.aspx">首页</a></li>
 					    <li class="fore2" id="nav-fashion" clstag="homepage|keycount|home2013|07b"><a href="SheQuDongTai.aspx">社区动态</a></li>
 					    <li class="fore3" id="nav-chaoshi" clstag="homepage|keycount|home2013|07c"><a href="LifeArea.aspx">社区生活圈</a></li>
-					    <li class="fore4" id="nav-tuan" clstag="homepage|keycount|home2013|07y"><a href="#" >互动家园</a></li>
+					    <li class="fore4" id="nav-tuan" clstag="homepage|keycount|home2013|07y"><a href="HomeInteraction.aspx" >互动家园</a></li>
 					    <li class="fore5" id="nav-auction" clstag="homepage|keycount|home2013|07e"><a href="Education.aspx">教育</a></li>
 					    <li class="fore6" id="nav-shan" clstag="homepage|keycount|home2013|07f"><a href="http://nbhs.zjzwfw.gov.cn/col/col44483/index.html" target="_blank">网上办事</a></li>
 					    

@@ -96,6 +96,54 @@
   <wsdl:message name="ISmartHsService_CanUseSessionById_OutputMessage">
     <wsdl:part name="parameters" element="tns:CanUseSessionByIdResponse" />
   </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindPostSpanTypeConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPostSpanTypeConfig" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindPostSpanTypeConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPostSpanTypeConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindTypeConfigByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTypeConfigByCategory" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindTypeConfigByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTypeConfigByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_AddInteractPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddInteractPost" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_AddInteractPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddInteractPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPostCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostCount" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPostCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPostTitlesByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostTitlesByPage" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPostTitlesByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostTitlesByPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPostsByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostsByPage" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPostsByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostsByPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetSpecialInteractPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialInteractPost" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetSpecialInteractPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialInteractPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_DeleteInteractPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInteractPost" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_DeleteInteractPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInteractPostResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISmartHsService">
     <wsdl:operation name="AddMember">
       <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddMember" message="tns:ISmartHsService_AddMember_InputMessage" />
@@ -156,6 +204,38 @@
     <wsdl:operation name="CanUseSessionById">
       <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/CanUseSessionById" message="tns:ISmartHsService_CanUseSessionById_InputMessage" />
       <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/CanUseSessionByIdResponse" message="tns:ISmartHsService_CanUseSessionById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPostSpanTypeConfig">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindPostSpanTypeConfig" message="tns:ISmartHsService_FindPostSpanTypeConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindPostSpanTypeConfigResponse" message="tns:ISmartHsService_FindPostSpanTypeConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTypeConfigByCategory">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindTypeConfigByCategory" message="tns:ISmartHsService_FindTypeConfigByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindTypeConfigByCategoryResponse" message="tns:ISmartHsService_FindTypeConfigByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddInteractPost">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddInteractPost" message="tns:ISmartHsService_AddInteractPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddInteractPostResponse" message="tns:ISmartHsService_AddInteractPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostCount">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPostCount" message="tns:ISmartHsService_GetPostCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPostCountResponse" message="tns:ISmartHsService_GetPostCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostTitlesByPage">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPostTitlesByPage" message="tns:ISmartHsService_GetPostTitlesByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPostTitlesByPageResponse" message="tns:ISmartHsService_GetPostTitlesByPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostsByPage">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPostsByPage" message="tns:ISmartHsService_GetPostsByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPostsByPageResponse" message="tns:ISmartHsService_GetPostsByPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialInteractPost">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetSpecialInteractPost" message="tns:ISmartHsService_GetSpecialInteractPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetSpecialInteractPostResponse" message="tns:ISmartHsService_GetSpecialInteractPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInteractPost">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/DeleteInteractPost" message="tns:ISmartHsService_DeleteInteractPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/DeleteInteractPostResponse" message="tns:ISmartHsService_DeleteInteractPost_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

@@ -111,6 +111,22 @@
     </None>
     <Content Include="Global.asax" />
     <Content Include="SmartHaiShu\css\siderbar.css" />
+    <Content Include="SmartHaiShu\HomeFljs.aspx" />
+    <Content Include="SmartHaiShu\HomeInteractPost.aspx" />
+    <Content Include="SmartHaiShu\HomePhoneRefer.aspx" />
+    <Content Include="SmartHaiShu\HomeStreetMail.aspx" />
+    <Content Include="SmartHaiShu\HomeVolunteer.aspx" />
+    <Content Include="SmartHaiShu\images\home\phonerefer.png" />
+    <Content Include="SmartHaiShu\images\home\phonerefer_0.png" />
+    <Content Include="SmartHaiShu\images\home\interact.png" />
+    <Content Include="SmartHaiShu\images\home\interact_0.png" />
+    <Content Include="SmartHaiShu\images\home\volunteer.png" />
+    <Content Include="SmartHaiShu\images\home\volunteer_0.png" />
+    <Content Include="SmartHaiShu\images\home\streetmail.png" />
+    <Content Include="SmartHaiShu\images\home\streetmail_0.png" />
+    <Content Include="SmartHaiShu\images\home\fljs.png" />
+    <Content Include="SmartHaiShu\images\home\fljs_0.png" />
+    <Content Include="SmartHaiShu\HomeInteraction.aspx" />
     <Content Include="SmartHaiShu\NoticeDetail.aspx" />
     <Content Include="SmartHaiShu\ApplyMemberKey.aspx" />
     <Content Include="SmartHaiShu\ConvenienceLive.aspx" />
@@ -157,6 +173,7 @@
     <Content Include="SmartHaiShu\LifeHotel.aspx" />
     <Content Include="SmartHaiShu\LifeMarket.aspx" />
     <Content Include="SmartHaiShu\LifeSpecial.aspx" />
+    <Content Include="SmartHaiShu\ShowNotice.aspx" />
     <Content Include="SmartHaiShu\Trip4S.aspx" />
     <Content Include="SmartHaiShu\TripBike.aspx" />
     <Content Include="SmartHaiShu\TripBusRoute.aspx" />
@@ -290,6 +307,48 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomeFljs.aspx.cs">
+      <DependentUpon>HomeFljs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomeFljs.aspx.designer.cs">
+      <DependentUpon>HomeFljs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomeInteractPost.aspx.cs">
+      <DependentUpon>HomeInteractPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomeInteractPost.aspx.designer.cs">
+      <DependentUpon>HomeInteractPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomeInteraction.aspx.cs">
+      <DependentUpon>HomeInteraction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomeInteraction.aspx.designer.cs">
+      <DependentUpon>HomeInteraction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomePhoneRefer.aspx.cs">
+      <DependentUpon>HomePhoneRefer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomePhoneRefer.aspx.designer.cs">
+      <DependentUpon>HomePhoneRefer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomeStreetMail.aspx.cs">
+      <DependentUpon>HomeStreetMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomeStreetMail.aspx.designer.cs">
+      <DependentUpon>HomeStreetMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomeVolunteer.aspx.cs">
+      <DependentUpon>HomeVolunteer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomeVolunteer.aspx.designer.cs">
+      <DependentUpon>HomeVolunteer.aspx</DependentUpon>
     </Compile>
     <Compile Include="SmartHaiShu\NoticeDetail.aspx.cs">
       <DependentUpon>NoticeDetail.aspx</DependentUpon>
@@ -469,6 +528,13 @@
     </Compile>
     <Compile Include="SmartHaiShu\LifeSpecial.aspx.designer.cs">
       <DependentUpon>LifeSpecial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\ShowNotice.aspx.cs">
+      <DependentUpon>ShowNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\ShowNotice.aspx.designer.cs">
+      <DependentUpon>ShowNotice.aspx</DependentUpon>
     </Compile>
     <Compile Include="SmartHaiShu\Trip4S.aspx.cs">
       <DependentUpon>Trip4S.aspx</DependentUpon>

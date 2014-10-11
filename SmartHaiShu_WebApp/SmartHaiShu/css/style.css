@@ -14,7 +14,7 @@ body {
 }
 
 .container_bg {
-   background-color: #f7f7f7;
+   background-color: #f5f5f5;
     border-width: 1px;
     -ms-border-radius: 4px;
     border-radius: 4px;
@@ -41,4 +41,18 @@ body {
 
 #tripContainer a {
      text-decoration:none; 
+}
+
+
+.cell-panel-list {
+    float: left;
+    height: 38px;
+    border-bottom-width: 0px;
+    border-left-width: 0px; 
+    border-top-width: 0px; 
+}
+
+.cell-panel-list-heading {
+   text-align: center;
+   font-weight: bold;
 }

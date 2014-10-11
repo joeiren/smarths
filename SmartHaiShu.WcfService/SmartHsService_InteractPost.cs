@@ -57,9 +57,9 @@ namespace SmartHaiShu.WcfService
                 entity.release_time = DateTime.Now;
                 entity.state = 1;
                 var result = _interactPostLogic.Add(entity);
-                if (result.member_id > 0)
+                if (result.post_id > 0)
                 {
-                    return new ResultFormat(1, result.member_id).ToString();
+                    return new ResultFormat(1, result.post_id).ToString();
                 }
                 return new ResultFormat(0, string.Empty).ToString();
             }
@@ -110,6 +110,7 @@ namespace SmartHaiShu.WcfService
                         Keyword = it.keyword,
                         Contact = it.contact_info,
                         ReleaseTime = it.release_time,
+                        Member = it.member_name,
                         DateSpan = PostDataSpanTypes.Where(span =>it.data_span.HasValue && span.type_id == it.data_span).Select(type => type.type_name).FirstOrDefault()
                     }
                     ).ToString();
@@ -144,6 +145,7 @@ namespace SmartHaiShu.WcfService
                         Contact = it.contact_info,
                         ReleaseTime = it.release_time,
                         Content = it.content,
+                        Member = it.member_name,
                         DateSpan = PostDataSpanTypes.Where(span => it.data_span.HasValue && span.type_id == it.data_span).Select(type => type.type_name).FirstOrDefault()
                     }
                     ).ToString();

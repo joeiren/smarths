@@ -59,6 +59,30 @@ namespace SmartHaiShu_WebApp.HSSmartDataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/CanUseSessionById", ReplyAction="http://smarths-ndtv.com/ISmartHsService/CanUseSessionByIdResponse")]
         string CanUseSessionById(long sessionId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/FindPostSpanTypeConfig", ReplyAction="http://smarths-ndtv.com/ISmartHsService/FindPostSpanTypeConfigResponse")]
+        string FindPostSpanTypeConfig();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/FindTypeConfigByCategory", ReplyAction="http://smarths-ndtv.com/ISmartHsService/FindTypeConfigByCategoryResponse")]
+        string FindTypeConfigByCategory(int categoryId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/AddInteractPost", ReplyAction="http://smarths-ndtv.com/ISmartHsService/AddInteractPostResponse")]
+        string AddInteractPost(string title, string content, string keyword, string contractInfo, int dataSpan, long memberId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetPostCount", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetPostCountResponse")]
+        string GetPostCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetPostTitlesByPage", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetPostTitlesByPageResponse")]
+        string GetPostTitlesByPage(int pageNo, int pageSize);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetPostsByPage", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetPostsByPageResponse")]
+        string GetPostsByPage(int pageNo, int pageSize);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetSpecialInteractPost", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetSpecialInteractPostResponse")]
+        string GetSpecialInteractPost(long postId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/DeleteInteractPost", ReplyAction="http://smarths-ndtv.com/ISmartHsService/DeleteInteractPostResponse")]
+        string DeleteInteractPost(long postId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -146,6 +170,38 @@ namespace SmartHaiShu_WebApp.HSSmartDataService {
         
         public string CanUseSessionById(long sessionId) {
             return base.Channel.CanUseSessionById(sessionId);
+        }
+        
+        public string FindPostSpanTypeConfig() {
+            return base.Channel.FindPostSpanTypeConfig();
+        }
+        
+        public string FindTypeConfigByCategory(int categoryId) {
+            return base.Channel.FindTypeConfigByCategory(categoryId);
+        }
+        
+        public string AddInteractPost(string title, string content, string keyword, string contractInfo, int dataSpan, long memberId) {
+            return base.Channel.AddInteractPost(title, content, keyword, contractInfo, dataSpan, memberId);
+        }
+        
+        public string GetPostCount() {
+            return base.Channel.GetPostCount();
+        }
+        
+        public string GetPostTitlesByPage(int pageNo, int pageSize) {
+            return base.Channel.GetPostTitlesByPage(pageNo, pageSize);
+        }
+        
+        public string GetPostsByPage(int pageNo, int pageSize) {
+            return base.Channel.GetPostsByPage(pageNo, pageSize);
+        }
+        
+        public string GetSpecialInteractPost(long postId) {
+            return base.Channel.GetSpecialInteractPost(postId);
+        }
+        
+        public string DeleteInteractPost(long postId) {
+            return base.Channel.DeleteInteractPost(postId);
         }
     }
 }

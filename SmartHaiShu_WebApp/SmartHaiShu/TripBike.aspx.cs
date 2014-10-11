@@ -17,7 +17,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         protected int TotalPage { get; set; }
         protected int PageNo { get; set; }
         public int Page1 { get; set; }
-        protected const int PageSize = 10;
+        protected const int PageSize = 20;
         protected const int PageListNumber = 5;
 
         protected void Page_Load(object sender, EventArgs e)

@@ -127,30 +127,36 @@
          }
      }
 
-     function dyniframesize(down) {
-         var pTar = null;
-         if (document.getElementById) {
-             pTar = document.getElementById(down);
-         }
-         else {
-             eval('pTar = ' + down + ';');
-         }
-         if (pTar && !window.opera) {
-             //begin resizing iframe
-             pTar.style.display = "block";
-             if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight) {
-                 //ns6 syntax
-                 pTar.height = pTar.contentDocument.body.offsetHeight+10 ;
-                 pTar.width = pTar.contentDocument.body.scrollWidth +10;
-             }
-             else if (pTar.Document && pTar.Document.body.scrollHeight) {
-                 //ie5+ syntax
-                 pTar.height = pTar.Document.body.scrollHeight;
-                 pTar.width = pTar.Document.body.scrollWidth;
-             }
+//     function dyniframesize(down) {
+//         var pTar = null;
+//         if (document.getElementById) {
+//             pTar = document.getElementById(down);
+//         }
+//         else {
+//             eval('pTar = ' + down + ';');
+//         }
+//         if (pTar && !window.opera) {
+//             //begin resizing iframe
+//             pTar.style.display = "block";
+//             if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight) {
+//                 //ns6 syntax
+//                 pTar.height = pTar.contentDocument.body.offsetHeight+10 ;
+//                 pTar.width = pTar.contentDocument.body.scrollWidth +10;
+//             }
+//             else if (pTar.Document && pTar.Document.body.scrollHeight) {
+//                 //ie5+ syntax
+//                 pTar.height = pTar.Document.body.scrollHeight;
+//                 pTar.width = pTar.Document.body.scrollWidth;
+//             }
+//         }
+//     } 
+     function iFrameHeight() {
+         var ifm = document.getElementById("contentFrame");
+         var subWeb = document.frames ? document.frames["contentFrame"].document : ifm.contentDocument;
+         if (ifm != null && subWeb != null) {
+             ifm.height = subWeb.body.scrollHeight;
          }
      } 
-
      
  </script>
 </asp:Content>
@@ -257,9 +263,10 @@
             </div>
         </li>
         <li>
-            <div class="container_bg col-sm-8 col-md-8" id="rigthContainer">
-                <iframe src ="TripBusRoute.aspx" frameborder="0"  marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" id="contentFrame" name="ifm" onload="javascript:dyniframesize('contentFrame');" width="100%">
-</iframe> 
+
+             <div class="container_bg col-sm-8 col-md-8" style="padding-left: 1px;padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" id="rigthContainer">
+               
+<iframe src="TripBusRoute.aspx" id="contentFrame" name="contentFrame" frameborder="0"  marginheight="0" marginwidth="0" scrolling="auto" width="100%" onLoad="iFrameHeight()" ></iframe>
             </div>
         </li>
     </ul>

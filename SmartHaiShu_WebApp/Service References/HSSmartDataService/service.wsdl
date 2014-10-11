@@ -139,6 +139,78 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="FindPostSpanTypeConfig">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/FindPostSpanTypeConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTypeConfigByCategory">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/FindTypeConfigByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInteractPost">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/AddInteractPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostCount">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetPostCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostTitlesByPage">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetPostTitlesByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostsByPage">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetPostsByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialInteractPost">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetSpecialInteractPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInteractPost">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/DeleteInteractPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="SmartHsService">
     <wsdl:port name="BasicHttpBinding_ISmartHsService" binding="tns:BasicHttpBinding_ISmartHsService">

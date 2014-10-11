@@ -7,41 +7,6 @@
      $(document).ready(function () {
          $("#menu_list li ").click(function () {
              menuClick(this);
-//             if (this.id.indexOf("m_") == 0) {
-//                 var selected = $("#menu_list li.sel").first();
-//                 if (selected.length != null && selected.length > 0) {
-//                     var html = normalNode(selected[0]);
-//                     selected.removeClass("sel").empty().append(html);
-//                 }
-//                 var selHtml = selectedNode(this);
-//                 $(this).addClass("sel").empty().append(selHtml);
-
-//                 switch (this.id) {
-//                     case "m_price":
-//                         $("#contentFrame").attr('src', 'ConvLivePrice.aspx');
-//                         break;
-//                     case "m_house_keeping":
-//                         $("#contentFrame").attr('src', 'ConvLiveHouseKeeping.aspx');
-//                         break;
-//                     case "m_express":
-//                         $("#contentFrame").attr('src', 'ConvLiveExpress.aspx');
-//                         break;
-//                     case "m_social_security":
-//                         $("#contentFrame").attr('src', 'ConvLiveSocialSecurity.aspx');
-//                         break;
-//                     case "m_fund":
-//                         $("#contentFrame").attr('src', 'ConvLiveFund.aspx');
-//                         break;
-//                     case "m_bank":
-//                         $("#contentFrame").attr('src', 'ConvLiveBank.aspx');
-//                         break;
-
-//                     default:
-//                         break;
-//                 }
-//                 ("#contentFrame").contentDocument.location.reload(true);
-
-//             }
          });
      });
 
@@ -127,27 +92,34 @@
          }
      }
 
-     function dyniframesize(down) {
-         var pTar = null;
-         if (document.getElementById) {
-             pTar = document.getElementById(down);
-         }
-         else {
-             eval('pTar = ' + down + ';');
-         }
-         if (pTar && !window.opera) {
-             //begin resizing iframe
-             pTar.style.display = "block";
-             if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight) {
-                 //ns6 syntax
-                 pTar.height = pTar.contentDocument.body.offsetHeight;
-                 pTar.width = pTar.contentDocument.body.scrollWidth;
-             }
-             else if (pTar.Document && pTar.Document.body.scrollHeight) {
-                 //ie5+ syntax
-                 pTar.height = pTar.Document.body.scrollHeight;
-                 pTar.width = pTar.Document.body.scrollWidth;
-             }
+//     function dyniframesize(down) {
+//         var pTar = null;
+//         if (document.getElementById) {
+//             pTar = document.getElementById(down);
+//         }
+//         else {
+//             eval('pTar = ' + down + ';');
+//         }
+//         if (pTar && !window.opera) {
+//             //begin resizing iframe
+//             pTar.style.display = "block";
+//             if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight) {
+//                 //ns6 syntax
+//                 pTar.height = pTar.contentDocument.body.offsetHeight;
+//                 pTar.width = pTar.contentDocument.body.scrollWidth;
+//             }
+//             else if (pTar.Document && pTar.Document.body.scrollHeight) {
+//                 //ie5+ syntax
+//                 pTar.height = pTar.Document.body.scrollHeight;
+//                 pTar.width = pTar.Document.body.scrollWidth;
+//             }
+//         }
+     //     } 
+     function iFrameHeight() {
+         var ifm = document.getElementById("contentFrame");
+         var subWeb = document.frames ? document.frames["contentFrame"].document : ifm.contentDocument;
+         if (ifm != null && subWeb != null) {
+             ifm.height = subWeb.body.scrollHeight;
          }
      } 
  </script>
@@ -215,9 +187,9 @@
             </div>
         </li>
         <li>
-            <div class="container_bg col-sm-8 col-md-8" id="rigthContainer">
-                <iframe src ="ConvLivePrice.aspx" frameborder="0"  marginheight="0" marginwidth="0" scrolling="auto" id="contentFrame" name="ifm" onload="javascript:dyniframesize('contentFrame');" width="100%">
-</iframe> 
+             <div class="container_bg col-sm-8 col-md-8" style="padding-left: 1px;padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" id="rigthContainer">
+               
+                <iframe src="ConvLivePrice.aspx" id="contentFrame" name="contentFrame" frameborder="0"  marginheight="0" marginwidth="0" scrolling="auto" width="100%" onLoad="iFrameHeight()" ></iframe>
             </div>
         </li>
     </ul>
