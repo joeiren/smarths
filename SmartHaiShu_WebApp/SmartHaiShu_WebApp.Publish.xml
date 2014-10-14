@@ -2,30 +2,32 @@
 <publishData>
   <publishProfile publishUrl="D:\WebSitePublish\SmartHs\WebSite" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
     <file relUrl="SmartHaiShu/js/json2.js" publishTime="08/27/2014 10:55:52" />
+    <file relUrl="SmartHaiShu/images/trip/bike_0.png" publishTime="09/12/2014 13:45:23" />
     <file relUrl="SmartHaiShu/images/53f444b8N7c7db751.jpg" publishTime="08/27/2014 10:55:52" />
     <file relUrl="SmartHaiShu/images/trip/car_repair_0.png" publishTime="09/12/2014 13:45:23" />
+    <file relUrl="SmartHaiShu/images/home/phonerefer_0.png" publishTime="10/11/2014 10:26:32" />
     <file relUrl="SmartHaiShu/images/main/wea-cloud.png" publishTime="09/11/2014 09:49:36" />
+    <file relUrl="Web.config" publishTime="10/14/2014 08:46:53" />
     <file relUrl="SmartHaiShu/js/jquery-1.4.1-vsdoc.js" publishTime="08/27/2014 10:55:52" />
     <file relUrl="SmartHaiShu/css/pgwslider.min.css" publishTime="09/02/2014 17:14:28" />
     <file relUrl="SmartHaiShu/EduSchool.aspx" publishTime="09/23/2014 15:11:23" />
+    <file relUrl="SmartHaiShu/images/home/interact_0.png" publishTime="10/11/2014 09:56:37" />
     <file relUrl="bin/SmartHaiShu.Utility.pdb" publishTime="10/09/2014 09:24:59" />
     <file relUrl="SmartHaiShu/images/trip/train_0.png" publishTime="09/12/2014 13:45:23" />
-    <file relUrl="SmartHaiShu/images/educ/health.png" publishTime="09/23/2014 10:57:20" />
     <file relUrl="SmartHaiShu/EduDrugStore.aspx" publishTime="10/09/2014 17:13:06" />
-    <file relUrl="SmartHaiShu/images/main/icon_2.png" publishTime="09/16/2014 16:06:56" />
     <file relUrl="SmartHaiShu/images/educ/jobs.png" publishTime="09/23/2014 10:57:20" />
     <file relUrl="SmartHaiShu/images/trip/point_0.png" publishTime="09/12/2014 13:45:23" />
     <file relUrl="SmartHaiShu/TripCarCheck.aspx" publishTime="09/19/2014 16:11:34" />
-    <file relUrl="SmartHaiShu/images/index/icon13.png" publishTime="09/17/2014 15:51:46" />
     <file relUrl="SmartHaiShu/images/main/pin.png" publishTime="09/11/2014 09:47:02" />
     <file relUrl="SmartHaiShu/images/trip/car_check_0.png" publishTime="09/12/2014 13:45:23" />
     <file relUrl="SmartHaiShu/js/pptBox.js" publishTime="08/27/2014 10:55:52" />
     <file relUrl="SmartHaiShu/ConvLiveSocialSecurity.aspx" publishTime="09/23/2014 10:30:55" />
     <file relUrl="SmartHaiShu/images/trip/car_check.png" publishTime="09/12/2014 13:45:23" />
+    <file relUrl="SmartHaiShu/SmartHaiShu.Master" publishTime="10/11/2014 10:23:35" />
     <file relUrl="SmartHaiShu/images/trip/line1.png" publishTime="09/24/2014 17:29:31" />
-    <file relUrl="SmartHaiShu/ConvLiveHouseKeeping.aspx" publishTime="09/22/2014 14:14:53" />
+    <file relUrl="SmartHaiShu/images/home/streetmail_0.png" publishTime="10/11/2014 09:56:37" />
     <file relUrl="SmartHaiShu/images/main/icon_1.png" publishTime="09/16/2014 16:06:56" />
-    <file relUrl="SmartHaiShu/js/SmartHS_BianMing/SmartHaiShuBianMing_json.js" publishTime="10/09/2014 14:51:05" />
+    <file relUrl="SmartHaiShu/js/SmartHS_BianMing/SmartHaiShuBianMing_json.js" publishTime="10/11/2014 10:43:23" />
     <file relUrl="SmartHaiShu/Register.aspx" publishTime="09/24/2014 10:24:29" />
     <file relUrl="SmartHaiShu/images/20130330A_2.png" publishTime="09/02/2014 17:14:28" />
     <file relUrl="SmartHaiShu/images/main/icon1.png" publishTime="09/11/2014 09:45:58" />
@@ -38,11 +40,14 @@
     <file relUrl="SmartHaiShu/LifeSpecial.aspx" publishTime="09/22/2014 10:05:03" />
     <file relUrl="bin/SmartHaiShu.Utility.dll" publishTime="10/09/2014 09:24:59" />
     <file relUrl="SmartHaiShu/TripBusRoute.aspx" publishTime="10/10/2014 09:39:31" />
+    <file relUrl="SmartHaiShu/images/17.png" publishTime="08/27/2014 10:55:52" />
     <file relUrl="SmartHaiShu/js/js/highlight.pack.js" publishTime="08/27/2014 10:55:52" />
+    <file relUrl="SmartHaiShu/ShowNotice.aspx" publishTime="10/11/2014 16:24:53" />
     <file relUrl="SmartHaiShu/images/trip/trip_info.png" publishTime="09/12/2014 13:45:23" />
     <file relUrl="SmartHaiShu/BusRouteInfo.aspx" publishTime="09/24/2014 17:01:58" />
     <file relUrl="SmartHaiShu/ConvLiveBank.aspx" publishTime="10/09/2014 17:12:22" />
     <file relUrl="SmartHaiShu/images/educ/order_0.png" publishTime="09/23/2014 10:57:20" />
+    <file relUrl="SmartHaiShu/HomeFljs.aspx" publishTime="10/11/2014 11:03:56" />
     <file relUrl="SmartHaiShu/images/trip/car_school_0.png" publishTime="09/12/2014 13:45:23" />
     <file relUrl="SmartHaiShu/images/educ/drugstore_0.png" publishTime="09/23/2014 10:57:20" />
     <file relUrl="bin/Web.Debug.config" publishTime="08/19/2014 17:42:44" />
@@ -51,10 +56,11 @@
     <file relUrl="SmartHaiShu/images/educ/old_people_0.png" publishTime="09/23/2014 13:28:54" />
     <file relUrl="SmartHaiShu/js/js/js.js" publishTime="08/27/2014 10:55:52" />
     <file relUrl="SmartHaiShu/images/trip/flight.png" publishTime="09/12/2014 13:45:23" />
+    <file relUrl="SmartHaiShu/HomeStreetMail.aspx" publishTime="10/11/2014 10:15:27" />
     <file relUrl="bin/Newtonsoft.Json.dll" publishTime="08/19/2014 09:14:48" />
     <file relUrl="SmartHaiShu/images/trip/4s_0.png" publishTime="09/12/2014 13:45:23" />
-    <file relUrl="bin/SmartHaisuModel.pdb" publishTime="10/08/2014 14:51:08" />
-    <file relUrl="bin/SmartHaiShu_WebApp.dll" publishTime="10/10/2014 11:47:14" />
+    <file relUrl="bin/SmartHaisuModel.pdb" publishTime="10/10/2014 14:40:12" />
+    <file relUrl="bin/SmartHaiShu_WebApp.dll" publishTime="10/14/2014 09:10:55" />
     <file relUrl="SmartHaiShu/EduOldPeople.aspx" publishTime="09/24/2014 10:04:47" />
     <file relUrl="SmartHaiShu/LifeMarket.aspx" publishTime="10/10/2014 11:47:11" />
     <file relUrl="SmartHaiShu/EduHospitalOrder.aspx" publishTime="09/23/2014 17:28:22" />
@@ -63,33 +69,36 @@
     <file relUrl="SmartHaiShu/css/lrtk.css" publishTime="08/27/2014 10:55:52" />
     <file relUrl="bin/log4net.dll" publishTime="10/08/2014 14:28:42" />
     <file relUrl="bin/log4net.xml" publishTime="10/08/2014 14:28:42" />
-    <file relUrl="Web.config" publishTime="10/10/2014 11:35:20" />
+    <file relUrl="Global.asax" publishTime="10/10/2014 11:29:16" />
     <file relUrl="SmartHaiShu/images/trip/bus.png" publishTime="09/12/2014 13:42:31" />
     <file relUrl="SmartHaiShu/images/index/icon11.png" publishTime="09/17/2014 15:51:46" />
     <file relUrl="SmartHaiShu/SignIn.aspx" publishTime="09/24/2014 10:23:37" />
-    <file relUrl="SmartHaiShu/images/index/icon9.png" publishTime="09/17/2014 15:51:46" />
+    <file relUrl="SmartHaiShu/images/educ/edu_info_0.png" publishTime="09/23/2014 10:57:20" />
     <file relUrl="bin/Web.Release.config" publishTime="08/19/2014 17:42:44" />
     <file relUrl="SmartHaiShu/js/jquery-1.4.1.min.js" publishTime="08/27/2014 10:55:52" />
-    <file relUrl="SmartHaiShu/images/educ/edu_info_0.png" publishTime="09/23/2014 10:57:20" />
-    <file relUrl="Global.asax" publishTime="10/10/2014 11:29:16" />
     <file relUrl="SmartHaiShu/js/js/jPages.js" publishTime="08/27/2014 10:55:52" />
     <file relUrl="bin/Newtonsoft.Json.xml" publishTime="08/19/2014 09:14:48" />
     <file relUrl="SmartHaiShu/images/main/logo.png" publishTime="09/10/2014 16:34:45" />
     <file relUrl="SmartHaiShu/js/jquery.timers-1.2.js" publishTime="08/27/2014 10:55:52" />
     <file relUrl="SmartHaiShu/js/jquery.min.js" publishTime="08/27/2014 10:55:52" />
     <file relUrl="SmartHaiShu/images/educ/hospital.png" publishTime="09/23/2014 10:57:20" />
+    <file relUrl="SmartHaiShu/HomePhoneRefer.aspx" publishTime="10/11/2014 10:28:23" />
     <file relUrl="SmartHaiShu/images/index/icon14.png" publishTime="09/17/2014 15:51:46" />
     <file relUrl="SmartHaiShu/js/jquery-1.9.1.min.js" publishTime="08/27/2014 10:55:52" />
-    <file relUrl="SmartHaiShu/EasyTrip.aspx" publishTime="09/28/2014 08:51:14" />
+    <file relUrl="SmartHaiShu/HomeInteractPost.aspx" publishTime="10/11/2014 15:56:45" />
+    <file relUrl="SmartHaiShu/EasyTrip.aspx" publishTime="10/11/2014 11:11:42" />
     <file relUrl="SmartHaiShu/EduJobs.aspx" publishTime="09/23/2014 15:07:51" />
     <file relUrl="bin/EntityFramework.xml" publishTime="08/18/2014 09:07:26" />
     <file relUrl="SmartHaiShu/css/SheQuDongTai.css" publishTime="09/25/2014 14:13:43" />
     <file relUrl="SmartHaiShu/images/index/icon7.png" publishTime="09/17/2014 15:51:46" />
-    <file relUrl="SmartHaiShu/SmartHaiShu.Master" publishTime="09/28/2014 16:48:16" />
+    <file relUrl="SmartHaiShu/images/home/fljs_0.png" publishTime="10/11/2014 09:56:37" />
+    <file relUrl="SmartHaiShu/images/educ/health.png" publishTime="09/23/2014 10:57:20" />
     <file relUrl="SmartHaiShu/js/jquery-1.4.1.js" publishTime="08/27/2014 10:55:52" />
     <file relUrl="SmartHaiShu/images/trip/point.png" publishTime="09/12/2014 13:45:23" />
+    <file relUrl="SmartHaiShu/images/main/icon_5.png" publishTime="09/16/2014 16:06:56" />
     <file relUrl="SmartHaiShu/css/bootstrap.min.css" publishTime="06/26/2014 09:14:12" />
-    <file relUrl="bin/Web.config" publishTime="10/10/2014 11:35:20" />
+    <file relUrl="bin/Web.config" publishTime="10/14/2014 08:46:53" />
+    <file relUrl="SmartHaiShu/images/home/volunteer.png" publishTime="10/11/2014 09:56:37" />
     <file relUrl="SmartHaiShu/images/main/icon_4.png" publishTime="09/16/2014 16:06:56" />
     <file relUrl="SmartHaiShu/MemberModify.aspx" publishTime="09/24/2014 10:24:44" />
     <file relUrl="SmartHaiShu/TripCarSchool.aspx" publishTime="09/19/2014 15:53:44" />
@@ -100,10 +109,12 @@
     <file relUrl="SmartHaiShu/images/20130725.png" publishTime="08/27/2014 10:55:52" />
     <file relUrl="SmartHaiShu/images/educ/order.png" publishTime="09/23/2014 10:57:20" />
     <file relUrl="SmartHaiShu/fonts/glyphicons-halflings-regular.svg" publishTime="09/02/2014 17:32:22" />
+    <file relUrl="SmartHaiShu/images/home/phonerefer.png" publishTime="10/11/2014 10:26:32" />
     <file relUrl="SmartHaiShu/css/reg.css" publishTime="09/02/2014 14:48:20" />
     <file relUrl="SmartHaiShu/images/index/icon12.png" publishTime="09/17/2014 15:51:46" />
     <file relUrl="SmartHaiShu/css/index.css" publishTime="09/16/2014 14:26:33" />
     <file relUrl="SmartHaiShu/CommonInvoke.aspx" publishTime="09/11/2014 17:09:32" />
+    <file relUrl="SmartHaiShu/images/home/streetmail.png" publishTime="10/11/2014 09:56:37" />
     <file relUrl="SmartHaiShu/images/educ/doctors.png" publishTime="09/23/2014 10:57:20" />
     <file relUrl="SmartHaiShu/images/trip/flight_0.png" publishTime="09/12/2014 13:45:23" />
     <file relUrl="SmartHaiShu/ConvLiveFund.aspx" publishTime="09/22/2014 16:06:04" />
@@ -111,39 +122,43 @@
     <file relUrl="SmartHaiShu/images/trip/car_repair.png" publishTime="09/12/2014 13:45:23" />
     <file relUrl="SmartHaiShu/css/master.css" publishTime="09/12/2014 09:26:11" />
     <file relUrl="SmartHaiShu/js/SmartHaiShu.js" publishTime="09/29/2014 15:27:49" />
+    <file relUrl="SmartHaiShu/js/portamento.js" publishTime="08/27/2014 10:55:52" />
     <file relUrl="SmartHaiShu/images/educ/edu_info.png" publishTime="09/23/2014 10:57:20" />
-    <file relUrl="bin/SmartHaiShu_WebApp.pdb" publishTime="10/10/2014 11:47:14" />
+    <file relUrl="bin/SmartHaiShu_WebApp.pdb" publishTime="10/14/2014 09:10:55" />
     <file relUrl="SmartHaiShu/css/signin.css" publishTime="09/02/2014 15:19:47" />
+    <file relUrl="SmartHaiShu/images/main/icon_3.png" publishTime="09/16/2014 16:06:56" />
     <file relUrl="SmartHaiShu/images/educ/school.png" publishTime="09/23/2014 10:57:20" />
-    <file relUrl="SmartHaiShu/css/style.css" publishTime="09/19/2014 11:52:48" />
-    <file relUrl="SmartHaiShu/LifeArea.aspx" publishTime="10/09/2014 17:05:56" />
+    <file relUrl="SmartHaiShu/css/style.css" publishTime="10/11/2014 14:40:01" />
+    <file relUrl="SmartHaiShu/HomeVolunteer.aspx" publishTime="10/11/2014 10:16:11" />
     <file relUrl="SmartHaiShu/images/educ/old_people.png" publishTime="09/23/2014 13:28:54" />
+    <file relUrl="SmartHaiShu/images/home/fljs.png" publishTime="10/11/2014 09:56:37" />
     <file relUrl="SmartHaiShu/images/educ/hospital_0.png" publishTime="09/23/2014 10:57:20" />
     <file relUrl="SmartHaiShu/images/index/icon10.png" publishTime="09/17/2014 15:51:46" />
     <file relUrl="SmartHaiShu/TripInfo.aspx" publishTime="09/19/2014 17:01:25" />
-    <file relUrl="SmartHaiShu/Main.Master" publishTime="09/12/2014 11:18:09" />
+    <file relUrl="SmartHaiShu/images/index/icon13.png" publishTime="09/17/2014 15:51:46" />
     <file relUrl="SmartHaiShu/images/educ/kindergarten.png" publishTime="09/23/2014 10:57:20" />
+    <file relUrl="SmartHaiShu/Main.Master" publishTime="09/12/2014 11:18:09" />
     <file relUrl="SmartHaiShu/images/trip/car_school.png" publishTime="09/12/2014 13:45:23" />
     <file relUrl="SmartHaiShu/images/main/logo_simple.png" publishTime="09/24/2014 10:12:06" />
-    <file relUrl="SmartHaiShu/js/js/jquery-1.8.2.min.js" publishTime="08/27/2014 10:55:52" />
-    <file relUrl="SmartHaiShu/Education.aspx" publishTime="09/24/2014 11:28:21" />
-    <file relUrl="SmartHaiShu/images/index/icon8.png" publishTime="09/17/2014 15:51:46" />
+    <file relUrl="SmartHaiShu/Education.aspx" publishTime="10/11/2014 11:00:03" />
+    <file relUrl="SmartHaiShu/images/main/icon_2.png" publishTime="09/16/2014 16:06:56" />
     <file relUrl="SmartHaiShu/images/educ/jobs_0.png" publishTime="09/23/2014 10:57:20" />
-    <file relUrl="SmartHaiShu/js/js/jPages.min.js" publishTime="08/27/2014 10:55:52" />
     <file relUrl="SmartHaiShu/images/trip/bus_0.png" publishTime="09/12/2014 13:42:53" />
     <file relUrl="SmartHaiShu/images/trip/4s.png" publishTime="09/12/2014 13:45:23" />
-    <file relUrl="bin/SmartHaisuModel.dll" publishTime="10/08/2014 14:51:08" />
-    <file relUrl="SmartHaiShu/images/17.png" publishTime="08/27/2014 10:55:52" />
+    <file relUrl="bin/SmartHaisuModel.dll" publishTime="10/10/2014 14:40:12" />
+    <file relUrl="SmartHaiShu/LifeArea.aspx" publishTime="10/11/2014 11:14:00" />
     <file relUrl="SmartHaiShu/images/trip/train.png" publishTime="09/12/2014 13:45:23" />
     <file relUrl="SmartHaiShu/js/js/jquery.lazyload.js" publishTime="08/27/2014 10:55:52" />
     <file relUrl="SmartHaiShu/Trip4S.aspx" publishTime="09/19/2014 15:37:01" />
     <file relUrl="SmartHaiShu/images/trip/metro_0.png" publishTime="09/12/2014 13:45:23" />
     <file relUrl="SmartHaiShu/js/pgwslider.min.js" publishTime="09/02/2014 17:14:28" />
     <file relUrl="SmartHaiShu/EduInfo.aspx" publishTime="09/23/2014 14:59:08" />
+    <file relUrl="SmartHaiShu/HomeInteraction.aspx" publishTime="10/14/2014 09:10:52" />
     <file relUrl="bin/EntityFramework.dll" publishTime="08/18/2014 09:07:26" />
     <file relUrl="SmartHaiShu/images/trip/record.png" publishTime="09/12/2014 13:45:23" />
+    <file relUrl="SmartHaiShu/images/index/icon9.png" publishTime="09/17/2014 15:51:46" />
     <file relUrl="SmartHaiShu/TripBike.aspx" publishTime="10/09/2014 17:37:34" />
-    <file relUrl="SmartHaiShu/images/main/icon_3.png" publishTime="09/16/2014 16:06:56" />
+    <file relUrl="SmartHaiShu/ConvLiveHouseKeeping.aspx" publishTime="09/22/2014 14:14:53" />
     <file relUrl="SmartHaiShu/ConvLiveExpress.aspx" publishTime="09/22/2014 14:16:26" />
     <file relUrl="SmartHaiShu/EduKindergarten.aspx" publishTime="09/23/2014 14:21:49" />
     <file relUrl="SmartHaiShu/index.aspx" publishTime="09/25/2014 14:14:06" />
@@ -151,19 +166,21 @@
     <file relUrl="SmartHaiShu/TripFlight.aspx" publishTime="09/19/2014 15:22:30" />
     <file relUrl="SmartHaiShu/js/bootstrap.min.js" publishTime="12/05/2013 08:40:20" />
     <file relUrl="SmartHaiShu/SheQuDongTai.aspx" publishTime="09/28/2014 10:05:30" />
+    <file relUrl="SmartHaiShu/images/home/volunteer_0.png" publishTime="10/11/2014 09:56:37" />
     <file relUrl="SmartHaiShu/images/educ/doctors_0.png" publishTime="09/23/2014 10:57:20" />
     <file relUrl="SmartHaiShu/images/trip/record_0.png" publishTime="09/12/2014 13:45:23" />
     <file relUrl="SmartHaiShu/EduHealth.aspx" publishTime="09/24/2014 09:50:20" />
     <file relUrl="SmartHaiShu/EduHospital.aspx" publishTime="09/23/2014 15:25:47" />
     <file relUrl="SmartHaiShu/images/educ/school_0.png" publishTime="09/23/2014 10:57:20" />
-    <file relUrl="SmartHaiShu/ConvenienceLive.aspx" publishTime="09/25/2014 17:27:27" />
-    <file relUrl="SmartHaiShu/images/main/icon_5.png" publishTime="09/16/2014 16:06:56" />
+    <file relUrl="SmartHaiShu/ConvenienceLive.aspx" publishTime="10/11/2014 11:15:25" />
+    <file relUrl="SmartHaiShu/images/index/icon8.png" publishTime="09/17/2014 15:51:46" />
     <file relUrl="SmartHaiShu/TripRecord.aspx" publishTime="09/23/2014 17:28:26" />
     <file relUrl="SmartHaiShu/TripCarRepair.aspx" publishTime="09/19/2014 16:03:39" />
-    <file relUrl="SmartHaiShu/js/portamento.js" publishTime="08/27/2014 10:55:52" />
+    <file relUrl="SmartHaiShu/js/js/jquery-1.8.2.min.js" publishTime="08/27/2014 10:55:52" />
     <file relUrl="SmartHaiShu/css/SmartHaiShu_Master.css" publishTime="09/25/2014 09:24:19" />
     <file relUrl="SmartHaiShu/images/educ/drugstore.png" publishTime="09/23/2014 10:57:20" />
-    <file relUrl="SmartHaiShu/images/trip/bike_0.png" publishTime="09/12/2014 13:45:23" />
+    <file relUrl="SmartHaiShu/js/js/jPages.min.js" publishTime="08/27/2014 10:55:52" />
+    <file relUrl="SmartHaiShu/images/home/interact.png" publishTime="10/11/2014 09:56:37" />
     <file relUrl="SmartHaiShu/TripMetro.aspx" publishTime="09/24/2014 17:34:21" />
     <file relUrl="SmartHaiShu/css/siderbar.css" publishTime="09/28/2014 09:52:30" />
     <file relUrl="SmartHaiShu/images/trip/bike.png" publishTime="09/12/2014 13:45:23" />

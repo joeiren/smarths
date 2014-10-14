@@ -52,6 +52,27 @@ namespace ServiceLogic.Test
 
 
         [TestMethod]
+        public void GetCommunityFCCount_Test()
+        {
+            OpenDataService service = new OpenDataService();
+            var result = service.GetCommunityFCCount("联南社区");
+            //var introduction = JsonConvert.DeserializeObject(result);
+            Assert.IsTrue(result.JObjCodeTrue());
+
+        }
+
+        [TestMethod]
+        public void GetCommunityNotitceTitles_Test()
+        {
+            OpenDataService service = new OpenDataService();
+            var result = service.GetCommunityNoticeByPage("汪弄社区", 2,20);
+            //var introduction = JsonConvert.DeserializeObject(result);
+            Assert.IsTrue(result.JObjCodeTrue());
+
+        }
+
+
+        [TestMethod]
         public void GetBikeLocationCountTest()
         {
             OpenDataService service = new OpenDataService();

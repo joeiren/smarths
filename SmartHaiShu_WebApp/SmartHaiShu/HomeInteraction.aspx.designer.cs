@@ -10,6 +10,6 @@
 namespace SmartHaiShu_WebApp.SmartHaiShu {
     
     
-    public partial class InteractionHome {
+    public partial class HomeInteraction {
     }
 }

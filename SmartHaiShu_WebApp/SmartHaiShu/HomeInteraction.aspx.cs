@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SmartHaiShu_WebApp.SmartHaiShu
 {
-    public partial class InteractionHome : System.Web.UI.Page
+    public partial class HomeInteraction : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="互动家园" Language="C#" AutoEventWireup="true" MasterPageFile="~/SmartHaiShu/SmartHaiShu.Master" CodeBehind="HomeInteraction.aspx.cs" Inherits="SmartHaiShu_WebApp.SmartHaiShu.InteractionHome" %>
+﻿<%@ Page Title="互动家园" Language="C#" AutoEventWireup="true" MasterPageFile="~/SmartHaiShu/SmartHaiShu.Master" CodeBehind="HomeInteraction.aspx.cs" Inherits="SmartHaiShu_WebApp.SmartHaiShu.HomeInteraction" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
  

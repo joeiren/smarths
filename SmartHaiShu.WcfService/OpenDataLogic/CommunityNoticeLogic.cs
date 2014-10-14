@@ -38,8 +38,8 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
             var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_3_2_2
                           where String.Compare(community, entity.COMMUNITY_NAME, System.StringComparison.OrdinalIgnoreCase) == 0
                           orderby entity.RELEASE_TIME descending
-                          select entity).Skip(Math.Max(0, pageNo - 1) * pageSize).Take(pageSize);
-            return record.Any() ? record : null;
+                          select entity).Skip(Math.Max(0, pageNo - 1) * pageSize).Take(pageSize).ToList();
+            return record;
         }
 
         public b_t_ufp_3_2_2 LoadSpecificNotice(string uuid)
@@ -59,6 +59,7 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
         public int LoadFCCount(string community)
         {
             var count = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_3_2_5
+                         where System.String.Compare(entity.COMMUNITY_NAME, community, StringComparison.Ordinal) == 0
                           select entity).Count();
             return count;
         }
@@ -75,8 +76,8 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
             var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_3_2_5
                           where String.Compare(community, entity.COMMUNITY_NAME, System.StringComparison.OrdinalIgnoreCase) == 0
                           orderby entity.RELEASE_TIME descending
-                          select entity).Skip(Math.Max(0, pageNo - 1) * pageSize).Take(pageSize);
-            return record.Any() ? record : null;
+                          select entity).Skip(Math.Max(0, pageNo - 1) * pageSize).Take(pageSize).ToList();
+            return record;
         }
 
         /// <summary>
