@@ -57,7 +57,7 @@
     <form id="form1" runat="server">
     <div id="container1" class="container ">
         <div class="row">
-            <button class="pull-right btn btn-success" style="margin-bottom: 5px;" onclick="alert(11);return false;">我要发布</button>
+            <button class="pull-right btn btn-success" style="margin-bottom: 5px;" data-toggle="modal" data-target="#dlgPost">我要发布</button>
         </div>
         <div class="row">
         <div class="panel-group" id="accordion">
@@ -109,9 +109,9 @@
                         
             </div>
                         
-            <div id="collapse<%#Container.ItemIndex+1 %>"  class="<%#Container.ItemIndex==0? "panel-collapse collapse " : "panel-collapse collapse" %> " >
-                <div class="panel-body" style="font-size: 12px;height: 150px;overflow-y:auto; ">
-             <div class="panel">
+            <div id="collapse<%#Container.ItemIndex+1 %>"  class="<%#Container.ItemIndex==0? "panel-collapse collapse in" : "panel-collapse collapse" %> " >
+                    <div class="panel-body" style="font-size: 12px;height: 150px;overflow-y:auto; ">
+         <div class="panel">
                     <%# Eval("Content")%>
                </div>
                <div class="panel-success">
@@ -154,8 +154,8 @@
             </div>
                         
             <div id="collapse<%#Container.ItemIndex+1 %>"  class="panel-collapse collapse" >
-                <div class="panel-body" style="font-size: 12px;height: 150px;overflow-y:auto; ">
-                <div class="panel">
+                 <div class="panel-body" style="font-size: 12px;height: 150px;overflow-y:auto; ">
+               <div class="panel">
                     <%# Eval("Content")%>
                </div>
                <div class="panel-success">
@@ -170,6 +170,7 @@
                    </span>
                </p>
                 </div>
+               
             </div>
             </div>
         </AlternatingItemTemplate>
@@ -189,8 +190,59 @@
               <li id="pageNext"><a href="javascript:trunPage(<%=Page1 + 4%>,true)">&raquo;</a></li>
             </ul> 
         </div>
-
+        
+        <div class="modal fade" id="dlgPost">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">互帮互助 -- 我要发布</h4>
+              </div>
+              <div class="modal-body">
+                 <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="Email"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password"/>
+                    </div>
+                  </div>
+                  
+                  
+                </form>
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-sm btn-success" onclick="commitPost();">确定</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
     </form>
+    
+     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function showPostDlg() {
+            $('#dlgPost').modal({
+                keyboard: false
+            });
+            $('#dlgPost').modal("show");
+        }
+
+        function commitPost() {
+            $('#dlgPost').modal("hide");
+            //alert($("#inputEmail3").val() + "--" + $("#inputPassword3").val());
+            location.href = location.pathname;
+
+        }
+    </script>
 </body>
 </html>
