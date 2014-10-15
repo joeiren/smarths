@@ -127,6 +127,13 @@
     <Content Include="SmartHaiShu\images\home\fljs.png" />
     <Content Include="SmartHaiShu\images\home\fljs_0.png" />
     <Content Include="SmartHaiShu\HomeInteraction.aspx" />
+    <Content Include="SmartHaiShu\images\test\itpubcms %2827%29.jpg" />
+    <Content Include="SmartHaiShu\images\test\itpubcms %2834%29.jpg" />
+    <Content Include="SmartHaiShu\images\test\itpubcms %2854%29.jpg" />
+    <Content Include="SmartHaiShu\images\test\itpubcms %2863%29.jpg" />
+    <Content Include="SmartHaiShu\images\test\itpubcms %2876%29.jpg" />
+    <Content Include="SmartHaiShu\images\test\itpubcms %2882%29.jpg" />
+    <Content Include="SmartHaiShu\index.aspx" />
     <Content Include="SmartHaiShu\NoticeDetail.aspx" />
     <Content Include="SmartHaiShu\ApplyMemberKey.aspx" />
     <Content Include="SmartHaiShu\ConvenienceLive.aspx" />
@@ -193,7 +200,6 @@
     <Content Include="SmartHaiShu\images\01.png" />
     <Content Include="SmartHaiShu\images\02.png" />
     <Content Include="SmartHaiShu\images\17.png" />
-    <Content Include="SmartHaiShu\images\20130330A_2.png" />
     <Content Include="SmartHaiShu\images\20130725.png" />
     <Content Include="SmartHaiShu\images\53f444b8N7c7db751.jpg" />
     <Content Include="SmartHaiShu\images\53f4799dNc363ef75.jpg" />
@@ -238,7 +244,6 @@
     <Content Include="SmartHaiShu\images\trip\flight_0.png" />
     <Content Include="SmartHaiShu\images\trip\point.png" />
     <Content Include="SmartHaiShu\images\trip\point_0.png" />
-    <Content Include="SmartHaiShu\index.aspx" />
     <Content Include="SmartHaiShu\js\bootstrap.min.js" />
     <Content Include="SmartHaiShu\js\jquery-1.4.1-vsdoc.js" />
     <Content Include="SmartHaiShu\js\jquery-1.4.1.js" />
@@ -349,6 +354,13 @@
     </Compile>
     <Compile Include="SmartHaiShu\HomeVolunteer.aspx.designer.cs">
       <DependentUpon>HomeVolunteer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="SmartHaiShu\NoticeDetail.aspx.cs">
       <DependentUpon>NoticeDetail.aspx</DependentUpon>
@@ -578,10 +590,6 @@
     </Compile>
     <Compile Include="SmartHaiShu\EasyTrip.aspx.designer.cs">
       <DependentUpon>EasyTrip.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SmartHaiShu\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SmartHaiShu\Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
