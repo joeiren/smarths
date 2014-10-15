@@ -10,7 +10,7 @@
 namespace SmartHaiShu_WebApp.SmartHaiShu {
     
     
-    public partial class Index2 {
+    public partial class index {
         
         /// <summary>
         /// RepeaterPost control.

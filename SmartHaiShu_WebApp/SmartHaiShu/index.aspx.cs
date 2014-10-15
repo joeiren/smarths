@@ -11,7 +11,7 @@ using SmartHaiShu_WebApp.HSSmartDataService;
 
 namespace SmartHaiShu_WebApp.SmartHaiShu
 {
-    public partial class Index2 : Page
+    public partial class index : Page
     {
         private readonly OpenDataServiceClient _openDataServiceClient = new OpenDataServiceClient();
         private readonly SmartHsServiceClient _smartHsServiceClient = new SmartHsServiceClient();
@@ -91,8 +91,6 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                                               ReleaseTime = item["ReleaseTime"].ValueOrDefault <string>(),
                                               DateSpan = item["DateSpan"].ValueOrDefault <string>(),
                                           };
-                
-                
             }
             RepeaterPost.DataBind();
             SchoolBinding();
@@ -104,16 +102,16 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         private void SchoolBinding()
         {
             string json = _openDataServiceClient.GetPrimarySchoolCount();
-            if (json.JObjCodeTrue() && json.JobjMessageConvert<int>() > 0)
+            if (json.JObjCodeTrue() && json.JobjMessageConvert <int>() > 0)
             {
                 json = _openDataServiceClient.GetPrimarySchool(1, 5);
                 RepeaterScholl.DataSource = from item in json.JObjMessageToken()
-                                          select new
-                                          {
-                                              Name = item["Name"].ValueOrDefault<string>(),
-                                              Address = item["Address"].ValueOrDefault<string>(),
-                                              Type = item["Type"].ValueOrDefault<string>(),
-                                          };
+                                            select new
+                                            {
+                                                Name = item["Name"].ValueOrDefault <string>(),
+                                                Address = item["Address"].ValueOrDefault <string>(),
+                                                Type = item["Type"].ValueOrDefault <string>(),
+                                            };
                 RepeaterScholl.DataBind();
             }
         }
@@ -121,34 +119,33 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         private void KindergartenBinding()
         {
             string json = _openDataServiceClient.GetChildSchoolCount();
-            if (json.JObjCodeTrue() && json.JobjMessageConvert<int>() > 0)
+            if (json.JObjCodeTrue() && json.JobjMessageConvert <int>() > 0)
             {
                 json = _openDataServiceClient.GetChildSchool(1, 5);
                 RepeaterKindergarten.DataSource = from item in json.JObjMessageToken()
-                                          select new
-                                          {
-                                              Name = item["Name"].ValueOrDefault<string>(),
-                                              Address = item["Address"].ValueOrDefault<string>(),
-                                              //Type = item["Type"].ValueOrDefault<string>(),
-                                          };
+                                                  select new
+                                                  {
+                                                      Name = item["Name"].ValueOrDefault <string>(),
+                                                      Address = item["Address"].ValueOrDefault <string>(),
+                                                      //Type = item["Type"].ValueOrDefault<string>(),
+                                                  };
                 RepeaterKindergarten.DataBind();
             }
-            
         }
 
         private void BankBinding()
         {
             string json = _openDataServiceClient.GetBankLocationCount();
-            if (json.JObjCodeTrue() && json.JobjMessageConvert<int>() > 0)
+            if (json.JObjCodeTrue() && json.JobjMessageConvert <int>() > 0)
             {
                 json = _openDataServiceClient.GetBankLocation(1, 5);
                 RepeaterBank.DataSource = from item in json.JObjMessageToken()
-                                                  select new
-                                                  {
-                                                      Name = item["Name"].ValueOrDefault<string>(),
-                                                      Address = item["Address"].ValueOrDefault<string>(),
-                                                      //Type = item["Type"].ValueOrDefault<string>(),
-                                                  };
+                                          select new
+                                          {
+                                              Name = item["Name"].ValueOrDefault <string>(),
+                                              Address = item["Address"].ValueOrDefault <string>(),
+                                              //Type = item["Type"].ValueOrDefault<string>(),
+                                          };
                 RepeaterBank.DataBind();
             }
         }
@@ -156,19 +153,18 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         private void MarketBinding()
         {
             string json = _openDataServiceClient.GetMarketCount();
-            if (json.JObjCodeTrue() && json.JobjMessageConvert<int>() > 0)
+            if (json.JObjCodeTrue() && json.JobjMessageConvert <int>() > 0)
             {
                 json = _openDataServiceClient.GetMarket(1, 5);
                 RepeaterMarket.DataSource = from item in json.JObjMessageToken()
-                                                  select new
-                                                  {
-                                                      Name = item["Name"].ValueOrDefault<string>(),
-                                                      Address = item["Address"].ValueOrDefault<string>(),
-                                                      //Type = item["Type"].ValueOrDefault<string>(),
-                                                  };
+                                            select new
+                                            {
+                                                Name = item["Name"].ValueOrDefault <string>(),
+                                                Address = item["Address"].ValueOrDefault <string>(),
+                                                //Type = item["Type"].ValueOrDefault<string>(),
+                                            };
                 RepeaterMarket.DataBind();
             }
-            
         }
     }
 

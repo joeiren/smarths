@@ -1,4 +1,4 @@
-﻿<%@ Page Title="海曙智慧社区" Language="C#" MasterPageFile="~/SmartHaiShu/SmartHaiShu.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="SmartHaiShu_WebApp.SmartHaiShu.Index2" %>
+﻿<%@ Page Title="海曙智慧社区" Language="C#" MasterPageFile="~/SmartHaiShu/SmartHaiShu.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="SmartHaiShu_WebApp.SmartHaiShu.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/index.css" rel="stylesheet" type="text/css" />
