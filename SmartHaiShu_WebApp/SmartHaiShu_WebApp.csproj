@@ -112,6 +112,7 @@
     <Content Include="Global.asax" />
     <Content Include="SmartHaiShu\css\siderbar.css" />
     <Content Include="SmartHaiShu\HomeFljs.aspx" />
+    <Content Include="SmartHaiShu\HomeInteractionPostPublish.aspx" />
     <Content Include="SmartHaiShu\HomeInteractPost.aspx" />
     <Content Include="SmartHaiShu\HomePhoneRefer.aspx" />
     <Content Include="SmartHaiShu\HomeStreetMail.aspx" />
@@ -319,6 +320,13 @@
     </Compile>
     <Compile Include="SmartHaiShu\HomeFljs.aspx.designer.cs">
       <DependentUpon>HomeFljs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomeInteractionPostPublish.aspx.cs">
+      <DependentUpon>HomeInteractionPostPublish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\HomeInteractionPostPublish.aspx.designer.cs">
+      <DependentUpon>HomeInteractionPostPublish.aspx</DependentUpon>
     </Compile>
     <Compile Include="SmartHaiShu\HomeInteractPost.aspx.cs">
       <DependentUpon>HomeInteractPost.aspx</DependentUpon>

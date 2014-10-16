@@ -79,5 +79,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                 "<script language='javascript'>pageNoSelector(" + PageNo + "," + TotalPage + ");</script>");
 
         }
+
+       
     }
 }

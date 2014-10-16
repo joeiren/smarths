@@ -33,6 +33,12 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             protected set;
         }
 
+        public long MemberId
+        {
+            get;
+            set;
+        }
+
         protected const string _testCommunity = "牡丹社区";
 
         HSSmartDataService.SmartHsServiceClient service0 = new SmartHsServiceClient();

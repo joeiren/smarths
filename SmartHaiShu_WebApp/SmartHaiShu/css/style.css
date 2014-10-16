@@ -28,7 +28,11 @@ body {
     font-weight: bolder;
     line-height: 15px;
 }
-
+.required-field {
+    font-size: 16px;
+    color: red;
+    font-weight: bolder;
+}
 #menu_list li a span 
 {
     font-size: 14px;

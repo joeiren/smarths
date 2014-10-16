@@ -11,7 +11,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
 {
 
 
-    public partial class CommonInvoke1
+    public partial class CommonInvoke
     {
 
         /// <summary>

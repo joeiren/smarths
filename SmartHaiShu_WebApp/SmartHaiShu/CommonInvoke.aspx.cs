@@ -14,7 +14,7 @@ using SmartHaiShu.Utility;
 
 namespace SmartHaiShu_WebApp.SmartHaiShu
 {
-    public partial class CommonInvoke1 : System.Web.UI.Page
+    public partial class CommonInvoke : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,7 +22,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         }
 
 
-        private SmartHsServiceClient _clientService = new SmartHsServiceClient();
+        private static SmartHsServiceClient _clientService = new SmartHsServiceClient();
         private OpenDataServiceClient _openDataService = new OpenDataServiceClient();
 
         [WebMethod]
@@ -113,6 +113,26 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         {
             HttpContext.Current.Session["SelectedCommunity"] = community;
             HttpContext.Current.Session["SelectedStreet"] = street;
+        }
+
+        [WebMethod]
+        public static string PublishInteractPost(string title, string keywords, string contenet, int dateSpan, string contactInfo, long memberId)
+        {
+            try
+            {
+                var json = _clientService.AddInteractPost(title, contenet, keywords, contactInfo, dateSpan, memberId);
+                if (json.JObjCodeTrue())
+                {
+                    return json;
+                }
+                return string.Empty;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                var exResult = new {Code = 0, Message = ex.Message};
+                return JsonConvert.SerializeObject(exResult);
+            }
         }
 
     }
