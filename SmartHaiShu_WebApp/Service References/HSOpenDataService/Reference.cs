@@ -146,6 +146,12 @@ namespace SmartHaiShu_WebApp.HSOpenDataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetBikeLocation", ReplyAction="http://tempuri.org/IOpenDataService/GetBikeLocationResponse")]
         string GetBikeLocation(int pageNo, int pageSize);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetFlightCount", ReplyAction="http://tempuri.org/IOpenDataService/GetFlightCountResponse")]
+        string GetFlightCount(bool import);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetFlights", ReplyAction="http://tempuri.org/IOpenDataService/GetFlightsResponse")]
+        string GetFlights(bool import, int pageNo, int pageSize);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -349,6 +355,14 @@ namespace SmartHaiShu_WebApp.HSOpenDataService {
         
         public string GetBikeLocation(int pageNo, int pageSize) {
             return base.Channel.GetBikeLocation(pageNo, pageSize);
+        }
+        
+        public string GetFlightCount(bool import) {
+            return base.Channel.GetFlightCount(import);
+        }
+        
+        public string GetFlights(bool import, int pageNo, int pageSize) {
+            return base.Channel.GetFlights(import, pageNo, pageSize);
         }
     }
 }

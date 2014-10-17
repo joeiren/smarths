@@ -143,5 +143,11 @@ namespace SmartHaiShu.WcfService
 
         [OperationContract]
         string GetBikeLocation(int pageNo, int pageSize);
+
+        [OperationContract]
+        string GetFlightCount(bool import);
+
+        [OperationContract]
+        string GetFlights(bool import, int pageNo, int pageSize);
     }
 }

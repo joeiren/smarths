@@ -28,7 +28,7 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
         {
             var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_4_3_1
                           orderby entity.RELEASE_TIME descending
-                          select entity).Skip(Math.Max(0, pageNo -1)).Take(pageSize);
+                          select entity).Skip(Math.Max(0, pageNo - 1) * pageSize).Take(pageSize);
             return record.Any() ? record : null;
         }
 
@@ -50,7 +50,7 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
         {
             var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_4_3_2
                           orderby entity.RELEASE_TIME descending
-                          select entity).Skip(Math.Max(0, pageNo - 1)).Take(pageSize);
+                          select entity).Skip(Math.Max(0, pageNo - 1) * pageSize).Take(pageSize);
             return record.Any() ? record : null;
         }
 
@@ -71,7 +71,7 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
         {
             var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_4_3_3
                           orderby entity.RELEASE_TIME descending
-                          select entity).Skip(Math.Max(0, pageNo - 1)).Take(pageSize);
+                          select entity).Skip(Math.Max(0, pageNo - 1) * pageSize).Take(pageSize);
             return record.Any() ? record : null;
         }
 
@@ -92,7 +92,7 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
         {
             var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_4_3_5
                           orderby entity.RELEASE_TIME descending
-                          select entity).Skip(Math.Max(0, pageNo - 1)).Take(pageSize);
+                          select entity).Skip(Math.Max(0, pageNo - 1) * pageSize).Take(pageSize);
             return record.Any() ? record : null;
         }
 

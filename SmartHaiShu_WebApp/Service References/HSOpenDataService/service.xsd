@@ -608,4 +608,34 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetFlightCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="import" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlightCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFlightCountResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlights">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="import" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlightsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFlightsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

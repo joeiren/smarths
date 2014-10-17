@@ -8,6 +8,52 @@
     <title>汽车4S店</title>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var currpage = <%=PageNo%>;
+        var pageList = <%=PageListNumber %>;
+        var maxPageNo = 1;
+        function trunPage(pageNo, next) {
+
+            if (next == undefined) {
+                if (pageNo != currpage) {
+                    location.href = "Trip4S.aspx?PageNo=" + pageNo ;     
+                }
+
+            } else {
+                if ((currpage != maxPageNo && next )|| (!next && currpage != 1))
+
+                    location.href = "Trip4S.aspx?PageNo=" + (currpage + (next?1:-1)); 
+            }
+        }
+        
+        function pageNoSelector(pageNo, totalNo) {
+            maxPageNo = totalNo;
+            currpage = pageNo;
+            $("#pageNoArea li").removeClass("active");
+            var index = (currpage + pageList) % pageList;
+            index = index == 0 ? pageList : index;
+            $("#pageNoArea li").eq(index).addClass("active");
+            if (currpage <= pageList) {
+                $("#pagePrev").addClass("disabled");
+            } else {
+                $("#pagePrev").removeClass("disabled");
+            }
+
+            if (maxPageNo == pageNo || maxPageNo < pageNo + (pageList - index)) {
+                var maxIndex = maxPageNo % pageList;
+                maxIndex = maxIndex == 0 ? pageList : maxIndex;
+                $("#pageNoArea li:gt(" + maxIndex + ")").not("#pageNext").addClass("hidden");
+                $("#pageNext").addClass("disabled");
+            } else {
+                $("#pageNoArea li").removeClass("hidden");
+                $("#pageNext").removeClass("disabled");
+            }
+        }
+
+ 
+    </script>
 </head>
 <body>
     <form id="form2" runat="server">
@@ -18,75 +64,47 @@
             <%--<caption>Table</caption>  --%>
           <thead>  
             <tr class="warning">  
-              <th class="col-sm-1">#</th>
+             <%-- <th class="col-sm-1">#</th>--%>
               <th class="col-sm-2 col-md-2">名称</th>  
               <th class="col-sm-4 col-md-4">汽车品牌</th>
               <th class="col-sm-2 col-md-2">地址</th>  
               <th class="col-sm-2 col-md-2">联系电话</th>  
             </tr>  
           </thead>  
-      <tbody>  
-        <tr>  
-          <td>1</td>
-          <td>宁波辰通汽车有限公司</td>  
-          <td>三菱</td> 
-          <td>宁波市通达路368号</td>  
-          <td>18968315235</td>  
-        </tr>
-        <tr class="info">  
-          <td>2</td>
-          <td>宁波明日汽车销售服务有限公司</td>  
-          <td>奇瑞</td> 
-          <td>宁波市海曙区段塘西路69号</td>  
-          <td>400-872-3804</td>   
-        </tr>
-        <tr>  
-          <td>3</td>
-          <td>宁波元通辰通汽车有限公司</td>  
-          <td>Jeep、道奇、克莱斯勒</td> 
-          <td>宁波市海曙区通达路368号</td>  
-          <td>400-830-3564</td>   
-        </tr>
-        <tr class="info"> 
-          <td>4</td>
-          <td>宁波鑫之杰汽车有限公司</td>  
-          <td>马自达</td> 
-          <td>宁波市海曙区南苑街301号</td>  
-          <td>400-830-6970</td> 
-        </tr>
-        <tr > 
-          <td>5</td>
-          <td>宁波广达汽车销售服务有限公司</td>  
-          <td>本田，理念</td> 
-          <td>宁波市海曙区段塘西路68号</td>  
-          <td>400-872-3886</td> 
-        </tr>
-        <tr class="info">  
-          <td>6</td>
-          <td>宁波市海曙博纳汽车销售服务有限公司雷诺4S店</td>  
-          <td>雷诺</td> 
-          <td>宁波市南苑街278号</td>  
-          <td>400-872-5141</td> 
-        </tr>
-        <tr>  
-          <td>7</td>
-          <td>宁波中基东本汽车销售服务有限公司</td>  
-          <td>本田、思铭</td> 
-          <td>宁波市雅戈尔大道27号</td>  
-          <td>400-872-3180</td> 
-        </tr>
+      <tbody>
+           <asp:Repeater ID="Repeater1" runat="server">
+                    <ItemTemplate>
+                        <tr>
+                       <%--  <td><%#Container.ItemIndex+1 %></td>--%>
+                          <td><%# Eval("Name")%></td>  
+                          <td><%# Eval("Brand")%></td> 
+                          <td><%# Eval("Address")%></td> 
+                          <td><%# Eval("Tel")%></td> 
+                        </tr>
+                    </ItemTemplate>
+                    <AlternatingItemTemplate>
+                    <tr class="info">
+                    <%--     <td><%#Container.ItemIndex+1 %></td>--%>
+                          <td><%# Eval("Name")%></td>  
+                          <td><%# Eval("Brand")%></td> 
+                          <td><%# Eval("Address")%></td> 
+                          <td><%# Eval("Tel")%></td> 
+                          </tr>
+                    </AlternatingItemTemplate>
+         </asp:Repeater>    
     
       </tbody>  
     </table>
     <div class="row text-center">
             <ul class="pagination pagination-sm " id="pageNoArea">
-            <li class="disabled"><a href="#">&laquo;</a></li>
-          <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">&raquo;</a></li>
+            <%--<ul class="pager">--%>
+              <li id="pagePrev"><a href="javascript:trunPage(<%=Page1%>,false)">&laquo;</a></li>
+              <li><a href="javascript:trunPage(<%=Page1%>);"><%=Page1%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 1%>);"><%=Page1 + 1%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 2%>)"><%=Page1 + 2%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 3%>)"><%=Page1 + 3%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 4%>)"><%=Page1 + 4%></a></li>
+              <li id="pageNext"><a href="javascript:trunPage(<%=Page1 + 4%>,true)">&raquo;</a></li>
             </ul> 
         </div>
         </div>

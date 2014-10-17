@@ -5,25 +5,96 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>航班信息</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        var currpage = <%=PageNo %>;
+        var pageList = <%=PageListNumber %>;
+        var maxPageNo = 1;
+        var type = <%=Import %>;
+
+        function trunPage(pageNo, next) {
+            if (type == 1) {
+                if (next == undefined) {
+                    if (pageNo != currpage) {
+                        location.href = "TripFlight.aspx?Import=true&PageNo=" + pageNo;
+                    }
+                } else {
+                    if ((currpage != maxPageNo && next) || (!next && currpage != 1))
+                        location.href = "TripFlight.aspx?Import=true&PageNo=" + (currpage + (next ? 1 : -1));
+                }
+            } else {
+                if (next == undefined) {
+                    if (pageNo != currpage) {
+                        location.href = "TripFlight.aspx?Import=false&PageNo=" + pageNo;
+                    }
+
+                } else {
+                    if ((currpage != maxPageNo && next) || (!next && currpage != 1))
+                        location.href = "TripFlight.aspx?Import=false&PageNo=" + (currpage + (next ? 1 : -1));
+                }
+            }
+        }
+        
+        function pageNoSelector(pageType, pageNo, totalNo) {
+            var index = 0;
+            var maxIndex = 0;
+            if (pageType==1) {
+                $("#exportLi").removeClass("active");
+                $("#importLi").addClass("active");
+                $("#outPort").removeClass("active");
+                $("#inPort").addClass("active");
+
+            } else {
+                $("#importLi").removeClass("active");
+                $("#exportLi").addClass("active");
+                $("#outPort").addClass("active");
+                $("#inPort").removeClass("active");
+            }
+            maxPageNo = totalNo;
+            currpage = pageNo;
+             $("#pageNoArea li").removeClass("active");
+            index = (currpage + pageList) % pageList;
+            index = index == 0 ? pageList : index;
+            $("#pageNoArea li").eq(index).addClass("active");
+            if (currpage <= pageList) {
+                $("#pagePrev").addClass("disabled");
+            } else {
+                $("#pagePrev").removeClass("disabled");
+            }
+
+            if (maxPageNo == currpage || maxPageNo < currpage + (pageList - index)) {
+                maxIndex = maxPageNo % pageList;
+                maxIndex = maxIndex == 0 ? pageList : maxIndex;
+                $("#pageNoArea li:gt(" + maxIndex + ")").not("#pageNext").addClass("hidden");
+                $("#pageNext").addClass("disabled");
+            } else {
+                $("#pageNoArea li").removeClass("hidden");
+                $("#pageNext").removeClass("disabled");
+            }
+        }
+        $(document).ready(function() {
+           
+        }); 
+        function navTabSwitch(tab) {
+            if ($("#" + tab.parentNode.id).hasClass("active")) {
+                return;
+            }
+            location.href = "TripFlight.aspx?Import="+(tab.parentNode.id == "importLi");
+            
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
     <div id="container1" class="container ">
-     <%--   <ul class="nav nav-pills">
-          <li><a href="#outPort">出港</a></li>
-          <li><a href="#inPort">到港</</a></li>
+        <ul class="nav nav-pills" role="tablist" id="navTab">
+          <li id="exportLi"><a href="#outPort" role="tab" data-toggle="tab" onclick="navTabSwitch(this);">出港</a></li>
+          <li id="importLi"> <a href="#inPort" role="tab" data-toggle="tab" onclick="navTabSwitch(this);">到港</a></li>
         </ul>
-        <div class="tab-content">
-          <div class="tab-pane fade in active" id="outPort">1</div>
-          <div class="tab-pane fade" id="inPort">2..Ra</div>
-        </div>--%>
-        <ul class="nav nav-pills" role="tablist">
-  <li class="active"><a href="#outPort" role="tab" data-toggle="tab">出港</a></li>
-  <li><a href="#inPort" role="tab" data-toggle="tab">到港</a></li>
-  
-</ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
@@ -40,82 +111,36 @@
               <th class="col-sm-2 col-md-2">班期</th>  
             </tr>  
           </thead>  
-          <tbody>  
-        <tr>  
-          <td>1</td>
-          <td>三亚</td>  
-          <td></td>
-          <td>3U8766</td> 
-          <td>每周1, 3, 5, 7</td>  
-        </tr>
-        <tr class="info">  
-          <td>2</td>
-          <td>三亚</td>  
-          <td></td>
-          <td>BK2835</td> 
-          <td>每周2, 4, 6</td>  
-        </tr>
-        <tr>  
-          <td>3</td>
-          <td>三亚</td>  
-          <td></td>
-          <td>3U8766</td> 
-          <td>每周1, 3, 5, 7</td>  
-        </tr>
-        <tr class="info">  
-          <td>4</td>
-          <td>丽江</td>  
-          <td></td>
-          <td>8L9830</td> 
-          <td>每周2, 4, 6</td>  
-        </tr>
-        <tr>  
-          <td>5</td>
-          <td>三亚</td>  
-          <td></td>
-          <td>3U8766</td> 
-          <td>每周1, 3, 5, 7</td>  
-        </tr>
-        <tr class="info">  
-          <td>6</td>
-          <td>丽江</td>  
-          <td>武汉</td>
-          <td>8L9830</td> 
-          <td>每周2, 4, 6</td>  
-        </tr>
-        <tr>  
-          <td>7</td>
-          <td>三亚</td>  
-          <td></td>
-          <td>3U8766</td> 
-          <td>每周1, 3, 5, 7</td>  
-        </tr>
-        <tr class="info">  
-          <td>8</td>
-          <td>丽江</td>  
-          <td></td>
-          <td>8L9830</td> 
-          <td>每周2, 4, 6</td>  
-        </tr>
+          <tbody>
+              <asp:Repeater ID="RepeaterExport" runat="server">
+                  <ItemTemplate>
+                      <tr>  
+                          <td><%#Container.ItemIndex + 1 %></td>
+                          <td>  <%# Eval("Address")%></td>  
+                          <td>  <%# Eval("Approach")%></td>
+                          <td>  <%# Eval("Flight")%></td> 
+                          <td>  <%# Eval("DateLimit")%></td>  
+                        </tr>
+                  </ItemTemplate>
+                  <AlternatingItemTemplate>
+                      <tr class="info">  
+                          <td><%#Container.ItemIndex + 1 %></td>
+                          <td>  <%# Eval("Address")%></td>  
+                          <td>  <%# Eval("Approach")%></td>
+                          <td>  <%# Eval("Flight")%></td> 
+                          <td>  <%# Eval("DateLimit")%></td>  
+                       </tr>
+                  </AlternatingItemTemplate>
+              </asp:Repeater>  
+      
       </tbody>  
     </table>
-    <div class="row text-center">
-            <ul class="pagination pagination-sm " id="pageNoArea">
-            <li class="disabled"><a href="#">&laquo;</a></li>
-          <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">&raquo;</a></li>
-            </ul> 
-        </div>
-        </div>
+   
+    </div>
   </div>
   <div class="tab-pane fade in" id="inPort">
       <div class="table ">
             <table class="table table-bordered table-striped table-condensed table-hover">  
-            <%--<caption>Table</caption>  --%>
               <thead>  
             <tr class="warning">  
               <th class="col-sm-1">序号</th>
@@ -126,84 +151,48 @@
             </tr>  
           </thead>  
           <tbody>  
-        <tr>  
-          <td>1</td>
-          <td>三亚</td>  
-          <td></td>
-          <td>3U8766</td> 
-          <td>每周1, 3, 5, 7</td>  
-        </tr>
-        <tr class="info">  
-          <td>2</td>
-          <td>三亚</td>  
-          <td></td>
-          <td>BK2835</td> 
-          <td>每周2, 4, 6</td>  
-        </tr>
-        <tr>  
-          <td>3</td>
-          <td>三亚</td>  
-          <td></td>
-          <td>3U8766</td> 
-          <td>每周1, 3, 5, 7</td>  
-        </tr>
-        <tr class="info">  
-          <td>4</td>
-          <td>丽江</td>  
-          <td></td>
-          <td>8L9830</td> 
-          <td>每周2, 4, 6</td>  
-        </tr>
-        <tr>  
-          <td>5</td>
-          <td>三亚</td>  
-          <td>武汉</td>
-          <td>3U8766</td> 
-          <td>每周1, 3, 5, 7</td>  
-        </tr>
-        <tr class="info">  
-          <td>6</td>
-          <td>丽江</td>  
-          <td></td>
-          <td>8L9830</td> 
-          <td>每周2, 4, 6</td>  
-        </tr>
-        <tr>  
-          <td>7</td>
-          <td>三亚</td>  
-          <td></td>
-          <td>3U8766</td> 
-          <td>每周1, 3, 5, 7</td>  
-        </tr>
-        <tr class="info">  
-          <td>8</td>
-          <td>丽江</td>  
-          <td></td>
-          <td>8L9830</td> 
-          <td>每周2, 4, 6</td>  
-        </tr>
+        <asp:Repeater ID="RepeaterImport" runat="server">
+                  <ItemTemplate>
+                      <tr>  
+                          <td><%#Container.ItemIndex + 1 %></td>
+                          <td>  <%# Eval("Address")%></td>  
+                          <td>  <%# Eval("Approach")%></td>
+                          <td>  <%# Eval("Flight")%></td> 
+                          <td>  <%# Eval("DateLimit")%></td>  
+                        </tr>
+                  </ItemTemplate>
+                  <AlternatingItemTemplate>
+                      <tr class="info">  
+                          <td><%#Container.ItemIndex + 1 %></td>
+                          <td>  <%# Eval("Address")%></td>  
+                          <td>  <%# Eval("Approach")%></td>
+                          <td>  <%# Eval("Flight")%></td> 
+                          <td>  <%# Eval("DateLimit")%></td>  
+                       </tr>
+                  </AlternatingItemTemplate>
+              </asp:Repeater>
       </tbody>  
     </table>
-            <div class="row text-center">
-            <ul class="pagination pagination-sm " id="Ul1">
-            <li class="disabled"><a href="#">&laquo;</a></li>
-          <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">&raquo;</a></li>
+           
+    </div>
+  </div>
+  <div class="row text-center">
+            <ul class="pagination pagination-sm " id="pageNoArea">
+            <li id="pagePrev"><a href="javascript:trunPage(<%=Page1%>,false)">&laquo;</a></li>
+              <li><a href="javascript:trunPage(<%=Page1%>);"><%=Page1%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 1%>);"><%=Page1 + 1%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 2%>)"><%=Page1 + 2%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 3%>)"><%=Page1 + 3%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 4%>)"><%=Page1 + 4%></a></li>
+              <li id="pageNext"><a href="javascript:trunPage(<%=Page1 + 4%>,true)">&raquo;</a></li>
             </ul> 
         </div>
-        </div>
-  </div>
-
 </div>
         
     </div>
     
     </form>
-       <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script type="text/javascript">
     </script>

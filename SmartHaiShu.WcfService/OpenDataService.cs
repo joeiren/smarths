@@ -21,6 +21,7 @@ namespace SmartHaiShu.WcfService
         private readonly MarketLogic _marketLogic = new MarketLogic();
         private readonly CommunityNoticeLogic _noticeLogic = new CommunityNoticeLogic();
         private readonly RetirementLogic _retirementLogic = new RetirementLogic();
+        private readonly FlightLogic _flightLogic = new FlightLogic();
 
         /// <summary>
         ///     社区简介
@@ -607,9 +608,10 @@ namespace SmartHaiShu.WcfService
                               select new
                               {
                                   Name = it.NAME,
-                                  Level = it.LEVEL,
+                                  Tel = it.TEL,
                                   Type = it.TYPE1,
-                                  Address = it.ADDRESS
+                                  Address = it.ADDRESS,
+                                  Manager = it.MANAGER
                               }).ToList();
 
                 return new ResultFormat(1, routes).ToString();
@@ -702,7 +704,7 @@ namespace SmartHaiShu.WcfService
                                   Name = it.NAME,
                                   Address = it.ADDRESS,
                                   Tel = it.TEL,
-                                  Level = it.LEVEL
+                                  LinkMan = it.LINKMAN
                               }).ToList();
 
                 return new ResultFormat(1, routes).ToString();
@@ -1151,6 +1153,55 @@ namespace SmartHaiShu.WcfService
                              }).ToList();
 
                 return new ResultFormat(1, bikes).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+        /// <summary>
+        /// 航班（进港/出港）条数
+        /// </summary>
+        /// <param name="import">进港/出港</param>
+        /// <returns></returns>
+        public string GetFlightCount(bool import)
+        {
+            try
+            {
+                int result = import ? _flightLogic.FlightImportCount() : _flightLogic.FlightExportCount();
+                return new ResultFormat(1, result.ToString(CultureInfo.InvariantCulture)).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
+        /// 航班信息
+        /// </summary>
+        /// <param name="import">进港/出港</param>
+        /// <param name="pageNo">页号(大于0)</param>
+        /// <param name="pageSize">每页大小(小于20)</param>
+        /// <returns></returns>
+        public string GetFlights(bool import, int pageNo, int pageSize)
+        {
+            try
+            {
+                var result = _flightLogic.FindFlightsImport(pageNo, pageSize, import);
+                var flights = (from it in result
+                             select new
+                             {
+                                 Address = it.ADDRESS,
+                                 Flight = it.FLIGHT,
+                                 DateLimit = it.LIMIT1,
+                                 Approach = it.PAUSE_ADD,
+                                 CheckTime = it.CHECK_TIME
+                             }).ToList();
+
+                return new ResultFormat(1, flights).ToString();
             }
             catch (Exception ex)
             {

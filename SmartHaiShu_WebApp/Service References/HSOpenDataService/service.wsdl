@@ -270,6 +270,18 @@
   <wsdl:message name="IOpenDataService_GetBikeLocation_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetBikeLocationResponse" />
   </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetFlightCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetFlightCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetFlights_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlights" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetFlights_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IOpenDataService">
     <wsdl:operation name="GetCommunityIntroduction">
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityIntroduction" message="tns:IOpenDataService_GetCommunityIntroduction_InputMessage" />
@@ -446,6 +458,14 @@
     <wsdl:operation name="GetBikeLocation">
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetBikeLocation" message="tns:IOpenDataService_GetBikeLocation_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetBikeLocationResponse" message="tns:IOpenDataService_GetBikeLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetFlightCount" message="tns:IOpenDataService_GetFlightCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetFlightCountResponse" message="tns:IOpenDataService_GetFlightCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlights">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetFlights" message="tns:IOpenDataService_GetFlights_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetFlightsResponse" message="tns:IOpenDataService_GetFlights_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IOpenDataService" type="tns:IOpenDataService">
@@ -839,6 +859,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetBikeLocation">
       <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetBikeLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetFlightCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlights">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetFlights" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -8,6 +8,50 @@
     <title>汽车维修站</title>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var currpage = <%=PageNo%>;
+        var pageList = <%=PageListNumber %>;
+        var maxPageNo = 1;
+        function trunPage(pageNo, next) {
+
+            if (next == undefined) {
+                if (pageNo != currpage) {
+                    location.href = "TripCarRepair.aspx?PageNo=" + pageNo ;     
+                }
+
+            } else {
+                if ((currpage != maxPageNo && next )|| (!next && currpage != 1))
+
+                    location.href = "TripCarRepair.aspx?PageNo=" + (currpage + (next?1:-1)); 
+            }
+        }
+        
+        function pageNoSelector(pageNo, totalNo) {
+            maxPageNo = totalNo;
+            currpage = pageNo;
+            $("#pageNoArea li").removeClass("active");
+            var index = (currpage + pageList) % pageList;
+            index = index == 0 ? pageList : index;
+            $("#pageNoArea li").eq(index).addClass("active");
+            if (currpage <= pageList) {
+                $("#pagePrev").addClass("disabled");
+            } else {
+                $("#pagePrev").removeClass("disabled");
+            }
+
+            if (maxPageNo == pageNo || maxPageNo < pageNo + (pageList - index)) {
+                var maxIndex = maxPageNo % pageList;
+                maxIndex = maxIndex == 0 ? pageList : maxIndex;
+                $("#pageNoArea li:gt(" + maxIndex + ")").not("#pageNext").addClass("hidden");
+                $("#pageNext").addClass("disabled");
+            } else {
+                $("#pageNoArea li").removeClass("hidden");
+                $("#pageNext").removeClass("disabled");
+            }
+        }
+       </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -21,63 +65,44 @@
               <th class="col-sm-1">#</th>
               <th>名称</th>  
               <th>地址</th>
-              <th>类型</th> 
               <th>联系人</th>
               <th>联系电话</th>  
             </tr>  
           </thead>  
       <tbody>  
-        <tr>  
-          <td>1</td>
-          <td>宁波海曙永润汽车销售服务有限公司</td>  
-          <td>海曙段塘西路68号</td> 
-          <td></td>  
-          <td>暂无</td>  
-          <td>0574-87495999/13967808912</td>
-        </tr>
-        <tr class="info">  
-          <td>2</td>
-          <td>宁波广达汽车销售服务有限公司</td>  
-          <td>海曙段塘西路68号</td> 
-          <td>小型汽车</td>  
-          <td>俞红华</td>  
-          <td>0574-87470088/13008991027</td> 
-        </tr>
-        <tr>  
-          <td>3</td>
-          <td>宁波天天汽车贸易有限公司</td>  
-          <td>海曙顺德路78弄78号</td> 
-          <td>小型汽车</td>  
-          <td>俞红华</td>  
-          <td>0574-87473819/13605743352</td>  
-        </tr>
-        <tr class="info"> 
-          <td>4</td>
-          <td>宁波市景润汽车销售服务有限公司</td>  
-          <td>海曙段塘西路68号</td> 
-          <td>小型汽车</td>  
-          <td>俞红华</td>  
-          <td>0574-56166331/13362460052</td>  
-        </tr>
-        <tr>  
-          <td>5</td>
-          <td>宁波公运集团股份有限公司客车修理分公司</td>  
-          <td>海曙通达路89号</td> 
-          <td>大中型客车</td>  
-          <td>冯力飞</td>  
-          <td>0574-87091263/13454712760</td>  
-        </tr>
+        <asp:Repeater ID="Repeater1" runat="server">
+                    <ItemTemplate>
+                        <tr>
+                         <td><%#Container.ItemIndex+1 %></td>
+                          <td><%# Eval("Name")%></td>  
+                          <td><%# Eval("Address")%></td> 
+                          <td><%# Eval("Manager")%></td> 
+                          <td><%# Eval("Tel")%></td>  
+                        </tr>
+                    </ItemTemplate>
+                    <AlternatingItemTemplate>
+                    <tr class="info">
+                         <td><%#Container.ItemIndex+1 %></td>
+                          <td><%# Eval("Name")%></td>  
+                          <td><%# Eval("Address")%></td> 
+  
+                          <td><%# Eval("Manager")%></td> 
+                          <td><%# Eval("Tel")%></td> 
+                          </tr>
+                    </AlternatingItemTemplate>
+         </asp:Repeater>
       </tbody>  
     </table>
     <div class="row text-center">
             <ul class="pagination pagination-sm " id="pageNoArea">
-            <li class="disabled"><a href="#">&laquo;</a></li>
-          <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">&raquo;</a></li>
+            <%--<ul class="pager">--%>
+              <li id="pagePrev"><a href="javascript:trunPage(<%=Page1%>,false)">&laquo;</a></li>
+              <li><a href="javascript:trunPage(<%=Page1%>);"><%=Page1%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 1%>);"><%=Page1 + 1%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 2%>)"><%=Page1 + 2%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 3%>)"><%=Page1 + 3%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 4%>)"><%=Page1 + 4%></a></li>
+              <li id="pageNext"><a href="javascript:trunPage(<%=Page1 + 4%>,true)">&raquo;</a></li>
             </ul> 
         </div>
         </div>
@@ -85,9 +110,6 @@
     </div>
     
     </form>
-       <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    </script>
+      
 </body>
 </html>

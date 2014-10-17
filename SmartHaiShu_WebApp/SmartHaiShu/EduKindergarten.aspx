@@ -7,6 +7,50 @@
     <title>幼儿园讯息</title>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var currpage = <%=PageNo%>;
+        var pageList = <%=PageListNumber %>;
+        var maxPageNo = 1;
+        function trunPage(pageNo, next) {
+
+            if (next == undefined) {
+                if (pageNo != currpage) {
+                    location.href = "EduKindergarten.aspx?PageNo=" + pageNo ;     
+                }
+
+            } else {
+                if ((currpage != maxPageNo && next )|| (!next && currpage != 1))
+
+                    location.href = "EduKindergarten.aspx?PageNo=" + (currpage + (next?1:-1)); 
+            }
+        }
+        
+        function pageNoSelector(pageNo, totalNo) {
+            maxPageNo = totalNo;
+            currpage = pageNo;
+            $("#pageNoArea li").removeClass("active");
+            var index = (currpage + pageList) % pageList;
+            index = index == 0 ? pageList : index;
+            $("#pageNoArea li").eq(index).addClass("active");
+            if (currpage <= pageList) {
+                $("#pagePrev").addClass("disabled");
+            } else {
+                $("#pagePrev").removeClass("disabled");
+            }
+
+            if (maxPageNo == pageNo || maxPageNo < pageNo + (pageList - index)) {
+                var maxIndex = maxPageNo % pageList;
+                maxIndex = maxIndex == 0 ? pageList : maxIndex;
+                $("#pageNoArea li:gt(" + maxIndex + ")").not("#pageNext").addClass("hidden");
+                $("#pageNext").addClass("disabled");
+            } else {
+                $("#pageNoArea li").removeClass("hidden");
+                $("#pageNext").removeClass("disabled");
+            }
+        }
+       </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -25,83 +69,45 @@
             </tr>  
           </thead>  
       <tbody>  
-        <tr>  
-          <td>1</td>
-          <td>宁波市第二幼儿园（月湖园区）</td>  
-          <td>宁波市海曙区解放南路111弄4号</td> 
-          <td>0574—87320221</td>  
-          <td></td>  
-        </tr>
-        <tr class="info">  
-          <td>2</td>
-          <td>宁波市德财幼儿园</td>  
-          <td>宁波市海曙区小梁街37号</td> 
-          <td>87301630</td>  
-          <td></td>   
-        </tr>
-        <tr>  
-          <td>3</td>
-          <td>宁波市海曙区东方幼儿园</td>  
-          <td>三市路228弄21号</td> 
-          <td>0574-87499222</td>  
-          <td></td>   
-        </tr>
-        <tr class="info"> 
-          <td>4</td>
-          <td>宁波市启文幼儿园</td>  
-          <td>海曙区新典路粮丰街38号</td> 
-          <td>0574-87467417</td>  
-          <td>http://nbqw.hsedu.com.cn/ </td> 
-        </tr>
-        <tr>  
-          <td>5</td>
-          <td>宁波市南雅音乐幼儿园</td>  
-          <td>宁波市海曙区南雅街10弄22号 </td> 
-          <td>0574-87135750</td>  
-          <td>http://nbny.hsedu.com.cn/</td>  
-        </tr>
-        <tr class="info">  
-          <td>6</td>
-          <td>宁波市红旗幼儿园</td>  
-          <td>宁波市柳翠街80号</td> 
-          <td>0574-87217929</td>  
-          <td></td>   
-        </tr>
-        <tr>  
-          <td>7</td>
-          <td>宁波市新芝幼儿园（孝闻园区）</td>  
-          <td>宁波市海曙区永丰西路98弄高塘花园</td> 
-          <td>(0574)87216126</td>  
-          <td>http://xinzhi-baby.hsedu.com.cn/</td>   
-        </tr>
-        <tr class="info"> 
-          <td>8</td>
-          <td>宁波市新芝幼儿园（莲桥园区）</td>  
-          <td>宁波市海曙区小沙泥街莲桥第</td> 
-          <td></td>  
-          <td>http://xinzhi-baby.hsedu.com.cn/ </td> 
-        </tr>
+        <asp:Repeater ID="Repeater1" runat="server">
+                    <ItemTemplate>
+                        <tr>
+                         <td><%#Container.ItemIndex+1 %></td>
+                          <td><%# Eval("Name")%></td>  
+                          <td><%# Eval("Address")%></td> 
+                          <td><%# Eval("Tel")%></td> 
+                          <td><%# Eval("HomePage")%></td>  
+                        </tr>
+                    </ItemTemplate>
+                    <AlternatingItemTemplate>
+                    <tr class="info">
+                         <td><%#Container.ItemIndex+1 %></td>
+                          <td><%# Eval("Name")%></td>  
+                          <td><%# Eval("Address")%></td> 
+                          <td><%# Eval("Tel")%></td> 
+                          <td><%# Eval("HomePage")%></td> 
+                          </tr>
+                    </AlternatingItemTemplate>
+         </asp:Repeater>
  
       </tbody>  
     </table>
     <div class="row text-center">
             <ul class="pagination pagination-sm " id="pageNoArea">
-            <li class="disabled"><a href="#">&laquo;</a></li>
-          <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">&raquo;</a></li>
+            <%--<ul class="pager">--%>
+              <li id="pagePrev"><a href="javascript:trunPage(<%=Page1%>,false)">&laquo;</a></li>
+              <li><a href="javascript:trunPage(<%=Page1%>);"><%=Page1%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 1%>);"><%=Page1 + 1%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 2%>)"><%=Page1 + 2%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 3%>)"><%=Page1 + 3%></a></li>
+              <li><a href="javascript:trunPage(<%=Page1 + 4%>)"><%=Page1 + 4%></a></li>
+              <li id="pageNext"><a href="javascript:trunPage(<%=Page1 + 4%>,true)">&raquo;</a></li>
             </ul> 
         </div>
         </div>
         
     </div>
     </form>
-     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    </script>
+    
 </body>
 </html>
