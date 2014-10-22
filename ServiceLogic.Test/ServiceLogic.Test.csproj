@@ -84,8 +84,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MemberServiceTest.cs" />
     <Compile Include="SessionVerifyTest.cs" />
+    <Compile Include="CityScreenServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SmartHaiShu.CityScreenServices\SmartHaiShu.CityScreenServices.csproj">
+      <Project>{E7E6DA15-37C5-458E-824B-AB8EFC265174}</Project>
+      <Name>SmartHaiShu.CityScreenServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SmartHaiShu.Utility\SmartHaiShu.Utility.csproj">
       <Project>{3871B4C5-DB83-4F0D-80B9-5A74B19E31B1}</Project>
       <Name>SmartHaiShu.Utility</Name>
