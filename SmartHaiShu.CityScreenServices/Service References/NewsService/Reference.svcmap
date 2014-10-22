@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f4c73300-5b4b-44e9-9959-fa9d2164cee5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="9c2b2655-3027-448a-8961-c5cc55e7bd16" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3d3b906c-c3fa-462e-944a-5020fc196006" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="621a325e-50cf-4276-9ec1-7f3322b2fe9c" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" />
+    <MetadataFile FileName="CityInfoScreenWcf.xsd" MetadataType="Schema" ID="85cdade5-554a-4175-90fc-545f37ad3bf5" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -83,6 +83,18 @@ namespace SmartHaiShu_WebApp.HSSmartDataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/DeleteInteractPost", ReplyAction="http://smarths-ndtv.com/ISmartHsService/DeleteInteractPostResponse")]
         string DeleteInteractPost(long postId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/SocialInsureQuery", ReplyAction="http://smarths-ndtv.com/ISmartHsService/SocialInsureQueryResponse")]
+        string SocialInsureQuery(string cardId, string pwd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/WeatherInfoToday", ReplyAction="http://smarths-ndtv.com/ISmartHsService/WeatherInfoTodayResponse")]
+        string WeatherInfoToday();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/WeatherInfoFuture", ReplyAction="http://smarths-ndtv.com/ISmartHsService/WeatherInfoFutureResponse")]
+        string WeatherInfoFuture();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetTrafficCodeImg", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetTrafficCodeImgResponse")]
+        byte[] GetTrafficCodeImg();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -202,6 +214,22 @@ namespace SmartHaiShu_WebApp.HSSmartDataService {
         
         public string DeleteInteractPost(long postId) {
             return base.Channel.DeleteInteractPost(postId);
+        }
+        
+        public string SocialInsureQuery(string cardId, string pwd) {
+            return base.Channel.SocialInsureQuery(cardId, pwd);
+        }
+        
+        public string WeatherInfoToday() {
+            return base.Channel.WeatherInfoToday();
+        }
+        
+        public string WeatherInfoFuture() {
+            return base.Channel.WeatherInfoFuture();
+        }
+        
+        public byte[] GetTrafficCodeImg() {
+            return base.Channel.GetTrafficCodeImg();
         }
     }
 }

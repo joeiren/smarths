@@ -92,6 +92,7 @@
     <Compile Include="OpenDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultFormat.cs" />
+    <Compile Include="SmartHsService_CityScreen.cs" />
     <Compile Include="SmartHsService_Community.cs" />
     <Compile Include="SmartHsService.cs" />
     <Compile Include="SmartHsService_GlobalTypeConfig.cs" />
@@ -112,6 +113,10 @@
     <ProjectReference Include="..\SmartHaiShu.BizLogic.Interface\SmartHaiShu.BizLogic.Interface.csproj">
       <Project>{29DE2311-771C-4B62-848C-A93F63004B00}</Project>
       <Name>SmartHaiShu.BizLogic.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartHaiShu.CityScreenServices\SmartHaiShu.CityScreenServices.csproj">
+      <Project>{E7E6DA15-37C5-458E-824B-AB8EFC265174}</Project>
+      <Name>SmartHaiShu.CityScreenServices</Name>
     </ProjectReference>
     <ProjectReference Include="..\SmartHaiShu.Utility\SmartHaiShu.Utility.csproj">
       <Project>{3871B4C5-DB83-4F0D-80B9-5A74B19E31B1}</Project>

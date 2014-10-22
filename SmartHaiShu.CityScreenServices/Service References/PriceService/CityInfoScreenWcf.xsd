@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CityInfoScreenWcf" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CityInfoScreenWcf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="FoodMonitor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FoodID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FoodName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Metrics" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SiteID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Spec" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uploadtime" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FoodMonitor" nillable="true" type="tns:FoodMonitor" />
+  <xs:complexType name="ArrayOfFoodMonitor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FoodMonitor" nillable="true" type="tns:FoodMonitor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFoodMonitor" nillable="true" type="tns:ArrayOfFoodMonitor" />
+</xs:schema>

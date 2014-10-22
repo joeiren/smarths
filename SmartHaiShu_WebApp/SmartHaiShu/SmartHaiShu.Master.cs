@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using SmartHaiShu.Utility;
 using SmartHaiShu_WebApp.HSSmartDataService;
 using SmartHaiShu_WebApp.HSOpenDataService;
 using Newtonsoft.Json;
@@ -21,16 +22,32 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             get { return DateTime.Now.ToString("yyyy年MM月dd日"); }
         }
 
+        private string _street;
         public string StreetName
         {
-            get;
-            set;
+            get
+            {
+                return _street;
+            }
+            set
+            {
+                _street = value;
+                HttpContext.Current.Session["SelectedStreet"] = value;
+            }
         }
 
+        private string _community;
         public string CommunityName
         {
-            get;
-            protected set;
+            get
+            {
+                return _community;
+            }
+            protected set
+            {
+                _community = value;
+                HttpContext.Current.Session["SelectedCommunity"] = value;
+            }
         }
 
         public long MemberId
@@ -40,6 +57,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         }
 
         protected const string _testCommunity = "牡丹社区";
+        protected string _weatherInfo = "";
 
         HSSmartDataService.SmartHsServiceClient service0 = new SmartHsServiceClient();
         HSOpenDataService.OpenDataServiceClient service1 = new OpenDataServiceClient();
@@ -51,8 +69,8 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
 
                 if (string.IsNullOrWhiteSpace(CurrentCommunity))
                 {
-                    StreetName = "南门街道";
-                    CommunityName = "朝阳社区";
+                    StreetName = "白云街道";
+                    CommunityName = "牡丹社区";
                     result = service0.FindStreetGroup();
                     result_community = service1.GetCommunityIntroduction(CommunityName);
                 }
@@ -71,6 +89,8 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                     }
                     
                 }
+
+                LoadWeather();
             }
         }
 
@@ -91,6 +111,39 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                return string.IsNullOrWhiteSpace(street) ? StreetName : street;
             }
             
+        }
+
+        private void LoadWeather()
+        {
+            var json = service0.WeatherInfoToday();
+            if (json.JObjCodeTrue())
+            {
+                var today = DateTime.ParseExact( json.JObjMessageInner("date_y").ValueOrDefault<string>(), "yyyy年MM月dd日", null );
+                if (today.Date == DateTime.Now.Date)
+                {
+                    _weatherInfo = string.Format("{0},{1},{2}。",
+                        json.JObjMessageInner("weather").ValueOrDefault <string>(),
+                        json.JObjMessageInner("temperature").ValueOrDefault <string>(),
+                        json.JObjMessageInner("wind").ValueOrDefault <string>());
+                }
+                else
+                {
+                    json = service0.WeatherInfoFuture();
+                    var future = (from item in json.JObjMessageToken()
+                                  where
+                                      DateTime.ParseExact(item["date"].ValueOrDefault<string>(), "yyyyMMdd", null).Date ==
+                                          DateTime.Now.Date
+                                  select item).FirstOrDefault() ?? json.JObjMessageToken().LastOrDefault();
+                    if (future != null)
+                    {
+                        _weatherInfo = string.Format("{0},{1},{2}。", future["weather"].ValueOrDefault<string>(),
+                            future["temperature"].ValueOrDefault<string>(),
+                            future["wind"].ValueOrDefault<string>());
+                    }
+                }
+                
+            }
+
         }
 
         

@@ -2,16 +2,6 @@
 <wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
-      <s:element name="GetSecodePic">
-        <s:complexType />
-      </s:element>
-      <s:element name="GetSecodePicResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetSecodePicResult" type="s:base64Binary" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="LoginPass">
         <s:complexType>
           <s:sequence>
@@ -47,34 +37,44 @@
           <s:element minOccurs="0" maxOccurs="1" name="Dpt" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="GetSecodePic">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSecodePicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSecodePicResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="GetSecodePicSoapIn">
-    <wsdl:part name="parameters" element="tns:GetSecodePic" />
-  </wsdl:message>
-  <wsdl:message name="GetSecodePicSoapOut">
-    <wsdl:part name="parameters" element="tns:GetSecodePicResponse" />
-  </wsdl:message>
   <wsdl:message name="LoginPassSoapIn">
     <wsdl:part name="parameters" element="tns:LoginPass" />
   </wsdl:message>
   <wsdl:message name="LoginPassSoapOut">
     <wsdl:part name="parameters" element="tns:LoginPassResponse" />
   </wsdl:message>
+  <wsdl:message name="GetSecodePicSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSecodePic" />
+  </wsdl:message>
+  <wsdl:message name="GetSecodePicSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSecodePicResponse" />
+  </wsdl:message>
   <wsdl:portType name="TrafficVioServiceSoap">
-    <wsdl:operation name="GetSecodePic">
-      <wsdl:input message="tns:GetSecodePicSoapIn" />
-      <wsdl:output message="tns:GetSecodePicSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="LoginPass">
       <wsdl:input message="tns:LoginPassSoapIn" />
       <wsdl:output message="tns:LoginPassSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetSecodePic">
+      <wsdl:input message="tns:GetSecodePicSoapIn" />
+      <wsdl:output message="tns:GetSecodePicSoapOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="TrafficVioServiceSoap" type="tns:TrafficVioServiceSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetSecodePic">
-      <soap:operation soapAction="http://tempuri.org/GetSecodePic" style="document" />
+    <wsdl:operation name="LoginPass">
+      <soap:operation soapAction="http://tempuri.org/LoginPass" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -82,8 +82,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="LoginPass">
-      <soap:operation soapAction="http://tempuri.org/LoginPass" style="document" />
+    <wsdl:operation name="GetSecodePic">
+      <soap:operation soapAction="http://tempuri.org/GetSecodePic" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -94,8 +94,8 @@
   </wsdl:binding>
   <wsdl:binding name="TrafficVioServiceSoap12" type="tns:TrafficVioServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetSecodePic">
-      <soap12:operation soapAction="http://tempuri.org/GetSecodePic" style="document" />
+    <wsdl:operation name="LoginPass">
+      <soap12:operation soapAction="http://tempuri.org/LoginPass" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -103,8 +103,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="LoginPass">
-      <soap12:operation soapAction="http://tempuri.org/LoginPass" style="document" />
+    <wsdl:operation name="GetSecodePic">
+      <soap12:operation soapAction="http://tempuri.org/GetSecodePic" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -115,10 +115,10 @@
   </wsdl:binding>
   <wsdl:service name="TrafficVioService">
     <wsdl:port name="TrafficVioServiceSoap" binding="tns:TrafficVioServiceSoap">
-      <soap:address location="http://10.254.208.72/TrafficVioService.asmx" />
+      <soap:address location="http://10.8.33.136:81/TrafficVioService.asmx" />
     </wsdl:port>
     <wsdl:port name="TrafficVioServiceSoap12" binding="tns:TrafficVioServiceSoap12">
-      <soap12:address location="http://10.254.208.72/TrafficVioService.asmx" />
+      <soap12:address location="http://10.8.33.136:81/TrafficVioService.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

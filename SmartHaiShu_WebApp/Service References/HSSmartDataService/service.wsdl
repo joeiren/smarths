@@ -211,6 +211,42 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SocialInsureQuery">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/SocialInsureQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WeatherInfoToday">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/WeatherInfoToday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WeatherInfoFuture">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/WeatherInfoFuture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrafficCodeImg">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetTrafficCodeImg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="SmartHsService">
     <wsdl:port name="BasicHttpBinding_ISmartHsService" binding="tns:BasicHttpBinding_ISmartHsService">

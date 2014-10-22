@@ -87,7 +87,7 @@
                      
                     <span>
                         <img src="images/main/wea-cloud.png" /></span>     
-                    今天到明天阴有雨,雨量小到中等。         
+                   <%=_weatherInfo%>        
              
             </div>
 

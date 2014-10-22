@@ -91,5 +91,19 @@ namespace SmartHaiShu.WcfService
 
         [OperationContract]
         string DeleteInteractPost(long postId);
+
+        #region CityScreen
+        [OperationContract]
+        string SocialInsureQuery(string cardId, string pwd);
+
+        [OperationContract]
+        string WeatherInfoToday();
+
+        [OperationContract]
+        string WeatherInfoFuture();
+
+        [OperationContract]
+        byte[] GetTrafficCodeImg();
+        #endregion
     }
 }

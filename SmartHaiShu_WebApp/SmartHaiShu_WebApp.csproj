@@ -83,20 +83,6 @@
     <None Include="Service References\HSSmartDataService\smarths-ndtv.com.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SocialInsureService\SocialInsureService.disco" />
-    <None Include="Service References\SocialInsureService\configuration91.svcinfo" />
-    <None Include="Service References\SocialInsureService\configuration.svcinfo" />
-    <None Include="Service References\SocialInsureService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\TrafficVioService\TrafficVioService.disco" />
-    <None Include="Service References\TrafficVioService\configuration91.svcinfo" />
-    <None Include="Service References\TrafficVioService\configuration.svcinfo" />
-    <None Include="Service References\TrafficVioService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <None Include="Service References\HSOpenDataService\configuration91.svcinfo" />
     <None Include="Service References\HSOpenDataService\configuration.svcinfo" />
     <None Include="Service References\HSOpenDataService\Reference.svcmap">
@@ -110,6 +96,8 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Global.asax" />
+    <Content Include="SmartHaiShu\ConfirmCode4Traffic.aspx" />
+    <Content Include="SmartHaiShu\ConvLiveSocialSecurityResult.aspx" />
     <Content Include="SmartHaiShu\css\siderbar.css" />
     <Content Include="SmartHaiShu\HomeFljs.aspx" />
     <Content Include="SmartHaiShu\HomeInteractionPostPublish.aspx" />
@@ -293,8 +281,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SmartHaiShu\SmartHaiShu.Master" />
-    <None Include="Service References\SocialInsureService\SocialInsureService.wsdl" />
-    <None Include="Service References\TrafficVioService\TrafficVioService.wsdl" />
     <None Include="SmartHaiShu\fonts\glyphicons-halflings-regular.eot" />
     <None Include="SmartHaiShu\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="SmartHaiShu\fonts\glyphicons-halflings-regular.woff" />
@@ -313,6 +299,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConfirmCode4Traffic.aspx.cs">
+      <DependentUpon>ConfirmCode4Traffic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConfirmCode4Traffic.aspx.designer.cs">
+      <DependentUpon>ConfirmCode4Traffic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLiveSocialSecurityResult.aspx.cs">
+      <DependentUpon>ConvLiveSocialSecurityResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\ConvLiveSocialSecurityResult.aspx.designer.cs">
+      <DependentUpon>ConvLiveSocialSecurityResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="SmartHaiShu\HomeFljs.aspx.cs">
       <DependentUpon>HomeFljs.aspx</DependentUpon>
@@ -378,16 +378,6 @@
       <DependentUpon>NoticeDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\SocialInsureService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\TrafficVioService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="SmartHaiShu\ApplyMemberKey.aspx.cs">
       <DependentUpon>ApplyMemberKey.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -718,8 +708,6 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\HSOpenDataService\" />
     <WCFMetadataStorage Include="Service References\HSSmartDataService\" />
-    <WCFMetadataStorage Include="Service References\SocialInsureService\" />
-    <WCFMetadataStorage Include="Service References\TrafficVioService\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SmartHaiShu.Utility\SmartHaiShu.Utility.csproj">

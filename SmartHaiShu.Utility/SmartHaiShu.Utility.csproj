@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="AuthCodeSecurity.cs" />
     <Compile Include="AuthenticationInvokeAttribute.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="JsonObjectExtension.cs" />
     <Compile Include="LogHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

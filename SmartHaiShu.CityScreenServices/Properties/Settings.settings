@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SmartHaiShu.CityScreenServices.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SmartHaiShu_CityScreenServices_SocialInsureService_SocialInsureService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.8.33.136:81/SocialInsureService.asmx</Value>
+    </Setting>
+    <Setting Name="SmartHaiShu_CityScreenServices_WeatherjhService_WeatherjhService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.8.33.136:81/WeatherjhService.asmx</Value>
+    </Setting>
+    <Setting Name="SmartHaiShu_CityScreenServices_TrafficVioService_TrafficVioService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.8.33.136:81/TrafficVioService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

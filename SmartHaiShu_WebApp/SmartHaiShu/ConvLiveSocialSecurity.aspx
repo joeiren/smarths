@@ -7,6 +7,21 @@
     <title>社保查询</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function onSubmit() {
+            var user = $("#txtUser").val(); encodeURI($("#txtUser").val());
+            var pwd = encodeURI($("#txtPwd").val());
+            if (user.trim().length == 0 || pwd.trim().length == 0) {
+                alert("身份证号/社保卡号 或 密码 不能为空！");
+                return false;
+            } else {
+                location.href = "ConvLiveSocialSecurityResult.aspx?user=" + encodeURI(user) + "&pwd=" + encodeURI(pwd);
+                return true;
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="container1" class="container">
@@ -30,7 +45,7 @@
           
           <div class="form-group">
             <div class="col-sm-offset-3 col-sm-2">
-              <button type="submit" class="btn btn-primary btn-block">查询</button>
+              <button type="submit" class="btn btn-primary btn-block" onclick="onSubmit();return false;">查询</button>
             </div>
           </div>
         </form>
@@ -61,9 +76,7 @@
     
     
 
-    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    </script>
+    
+    
 </body>
 </html>

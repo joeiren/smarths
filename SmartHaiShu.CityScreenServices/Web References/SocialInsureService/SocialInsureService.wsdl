@@ -98,10 +98,10 @@
   </wsdl:binding>
   <wsdl:service name="SocialInsureService">
     <wsdl:port name="SocialInsureServiceSoap" binding="tns:SocialInsureServiceSoap">
-      <soap:address location="http://10.254.208.72/SocialInsureService.asmx" />
+      <soap:address location="http://10.8.33.136:81/SocialInsureService.asmx" />
     </wsdl:port>
     <wsdl:port name="SocialInsureServiceSoap12" binding="tns:SocialInsureServiceSoap12">
-      <soap12:address location="http://10.254.208.72/SocialInsureService.asmx" />
+      <soap12:address location="http://10.8.33.136:81/SocialInsureService.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

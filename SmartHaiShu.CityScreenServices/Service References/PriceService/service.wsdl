@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Price" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/CityInfoScreenWcf" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPrice_ExsitesFoodMonitor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExsitesFoodMonitor" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_ExsitesFoodMonitor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExsitesFoodMonitorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetFoodMonitorById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodMonitorById" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetFoodMonitorById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodMonitorByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_FindFoodMonitors_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindFoodMonitors" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_FindFoodMonitors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindFoodMonitorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetFoodMonitorsCounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodMonitorsCounts" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetFoodMonitorsCounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodMonitorsCountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_AddFoodMonitor_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFoodMonitor" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_AddFoodMonitor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFoodMonitorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_DeleteFoodMonitor_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFoodMonitor" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_DeleteFoodMonitor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFoodMonitorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_UpdateFoodMonitor_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFoodMonitor" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_UpdateFoodMonitor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFoodMonitorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetDatetimeNewest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatetimeNewest" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetDatetimeNewest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatetimeNewestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetMonitorSites_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMonitorSites" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetMonitorSites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMonitorSitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetFoods_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoods" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetFoods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetCategorys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategorys" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetCategorys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategorysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetFoodName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodName" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetFoodName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetTableNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTableNames" />
+  </wsdl:message>
+  <wsdl:message name="IPrice_GetTableNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTableNamesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPrice">
+    <wsdl:operation name="ExsitesFoodMonitor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrice/ExsitesFoodMonitor" message="tns:IPrice_ExsitesFoodMonitor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrice/ExsitesFoodMonitorResponse" message="tns:IPrice_ExsitesFoodMonitor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodMonitorById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrice/GetFoodMonitorById" message="tns:IPrice_GetFoodMonitorById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrice/GetFoodMonitorByIdResponse" message="tns:IPrice_GetFoodMonitorById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindFoodMonitors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrice/FindFoodMonitors" message="tns:IPrice_FindFoodMonitors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrice/FindFoodMonitorsResponse" message="tns:IPrice_FindFoodMonitors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodMonitorsCounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrice/GetFoodMonitorsCounts" message="tns:IPrice_GetFoodMonitorsCounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrice/GetFoodMonitorsCountsResponse" message="tns:IPrice_GetFoodMonitorsCounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFoodMonitor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrice/AddFoodMonitor" message="tns:IPrice_AddFoodMonitor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrice/AddFoodMonitorResponse" message="tns:IPrice_AddFoodMonitor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFoodMonitor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrice/DeleteFoodMonitor" message="tns:IPrice_DeleteFoodMonitor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrice/DeleteFoodMonitorResponse" message="tns:IPrice_DeleteFoodMonitor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFoodMonitor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrice/UpdateFoodMonitor" message="tns:IPrice_UpdateFoodMonitor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrice/UpdateFoodMonitorResponse" message="tns:IPrice_UpdateFoodMonitor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatetimeNewest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrice/GetDatetimeNewest" message="tns:IPrice_GetDatetimeNewest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrice/GetDatetimeNewestResponse" message="tns:IPrice_GetDatetimeNewest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMonitorSites">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrice/GetMonitorSites" message="tns:IPrice_GetMonitorSites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrice/GetMonitorSitesResponse" message="tns:IPrice_GetMonitorSites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFoods">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrice/GetFoods" message="tns:IPrice_GetFoods_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrice/GetFoodsResponse" message="tns:IPrice_GetFoods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorys">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrice/GetCategorys" message="tns:IPrice_GetCategorys_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrice/GetCategorysResponse" message="tns:IPrice_GetCategorys_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrice/GetFoodName" message="tns:IPrice_GetFoodName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrice/GetFoodNameResponse" message="tns:IPrice_GetFoodName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTableNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrice/GetTableNames" message="tns:IPrice_GetTableNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrice/GetTableNamesResponse" message="tns:IPrice_GetTableNames_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPrice" type="tns:IPrice">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExsitesFoodMonitor">
+      <soap:operation soapAction="http://tempuri.org/IPrice/ExsitesFoodMonitor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodMonitorById">
+      <soap:operation soapAction="http://tempuri.org/IPrice/GetFoodMonitorById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindFoodMonitors">
+      <soap:operation soapAction="http://tempuri.org/IPrice/FindFoodMonitors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodMonitorsCounts">
+      <soap:operation soapAction="http://tempuri.org/IPrice/GetFoodMonitorsCounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFoodMonitor">
+      <soap:operation soapAction="http://tempuri.org/IPrice/AddFoodMonitor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFoodMonitor">
+      <soap:operation soapAction="http://tempuri.org/IPrice/DeleteFoodMonitor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFoodMonitor">
+      <soap:operation soapAction="http://tempuri.org/IPrice/UpdateFoodMonitor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatetimeNewest">
+      <soap:operation soapAction="http://tempuri.org/IPrice/GetDatetimeNewest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonitorSites">
+      <soap:operation soapAction="http://tempuri.org/IPrice/GetMonitorSites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoods">
+      <soap:operation soapAction="http://tempuri.org/IPrice/GetFoods" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorys">
+      <soap:operation soapAction="http://tempuri.org/IPrice/GetCategorys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodName">
+      <soap:operation soapAction="http://tempuri.org/IPrice/GetFoodName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTableNames">
+      <soap:operation soapAction="http://tempuri.org/IPrice/GetTableNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Price">
+    <wsdl:port name="BasicHttpBinding_IPrice" binding="tns:BasicHttpBinding_IPrice">
+      <soap:address location="http://win-iirmxfzw3uu/CityInfoScreenWcf.Price.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

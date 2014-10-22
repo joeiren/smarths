@@ -144,6 +144,30 @@
   <wsdl:message name="ISmartHsService_DeleteInteractPost_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteInteractPostResponse" />
   </wsdl:message>
+  <wsdl:message name="ISmartHsService_SocialInsureQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:SocialInsureQuery" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_SocialInsureQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SocialInsureQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_WeatherInfoToday_InputMessage">
+    <wsdl:part name="parameters" element="tns:WeatherInfoToday" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_WeatherInfoToday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WeatherInfoTodayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_WeatherInfoFuture_InputMessage">
+    <wsdl:part name="parameters" element="tns:WeatherInfoFuture" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_WeatherInfoFuture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WeatherInfoFutureResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetTrafficCodeImg_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrafficCodeImg" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetTrafficCodeImg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrafficCodeImgResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISmartHsService">
     <wsdl:operation name="AddMember">
       <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddMember" message="tns:ISmartHsService_AddMember_InputMessage" />
@@ -236,6 +260,22 @@
     <wsdl:operation name="DeleteInteractPost">
       <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/DeleteInteractPost" message="tns:ISmartHsService_DeleteInteractPost_InputMessage" />
       <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/DeleteInteractPostResponse" message="tns:ISmartHsService_DeleteInteractPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SocialInsureQuery">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/SocialInsureQuery" message="tns:ISmartHsService_SocialInsureQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/SocialInsureQueryResponse" message="tns:ISmartHsService_SocialInsureQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WeatherInfoToday">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/WeatherInfoToday" message="tns:ISmartHsService_WeatherInfoToday_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/WeatherInfoTodayResponse" message="tns:ISmartHsService_WeatherInfoToday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WeatherInfoFuture">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/WeatherInfoFuture" message="tns:ISmartHsService_WeatherInfoFuture_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/WeatherInfoFutureResponse" message="tns:ISmartHsService_WeatherInfoFuture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrafficCodeImg">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetTrafficCodeImg" message="tns:ISmartHsService_GetTrafficCodeImg_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetTrafficCodeImgResponse" message="tns:ISmartHsService_GetTrafficCodeImg_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

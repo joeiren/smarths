@@ -15,7 +15,9 @@
         <div id="alert1"  class="row alert alert-warning fade in">
             查询违章详情，可参照<a href="http://wf.nbjj.gov.cn/" target="_blank">“宁波公安交管信息网”</a>。
       </div> 
-        
+        <div>
+            <img id="verifyCode" title="点击刷新" src="/SmartHaiShu/ConfirmCode4Traffic.aspx" style="cursor:pointer" onclick="this.src=this.src+'?'" />
+        </div>
     </div>
     
     </form>
