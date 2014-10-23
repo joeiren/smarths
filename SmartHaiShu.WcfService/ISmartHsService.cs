@@ -104,6 +104,72 @@ namespace SmartHaiShu.WcfService
 
         [OperationContract]
         byte[] GetTrafficCodeImg();
+
+        [OperationContract]
+        string GetTrafficRecode(string no, string frameNo, string type, string vcode);
+        
+        [OperationContract]
+        string GetFavorableNewsCount();
+
+        [OperationContract]
+        string GetFavorableNews(int pageSize, int pageNo);
+
+        [OperationContract]
+        string GetFavorableNewsTitle(int pageSize, int pageNo);
+
+        [OperationContract]
+        string GetEducationNewsCount();
+
+        [OperationContract]
+        string GetEducationleNews(int pageSize, int pageNo);
+
+        [OperationContract]
+        string GetEducationleNewsTitle(int pageSize, int pageNo);
+
+        [OperationContract]
+        string GetHealthNewsCount();
+
+        [OperationContract]
+        string GetHealthNews(int pageSize, int pageNo);
+
+        [OperationContract]
+        string GetHealthNewsTitle(int pageSize, int pageNo);
+
+        [OperationContract]
+        string GetPriceNewsCount();
+
+        [OperationContract]
+        string GetPriceeNews(int pageSize, int pageNo);
+
+        [OperationContract]
+        string GetPriceeNewsTitle(int pageSize, int pageNo);
+
+        [OperationContract]
+        string GetTripNewsCount();
+
+        [OperationContract]
+        string GetTripNews(int pageSize, int pageNo);
+
+        [OperationContract]
+        string GetTripNewsTitle(int pageSize, int pageNo);
+
+        [OperationContract]
+        string GetAllFoods();
+
+        [OperationContract]
+        string GetAllFoodCategories();
+
+        [OperationContract]
+        string GetAllMonitorSites();
+
+        [OperationContract]
+        string FilterFoodsByCategory(string category);
+
+        [OperationContract]
+        string GetFoodMonitorCount(string category, string foodname, string site);
+
+        [OperationContract]
+        string GetFoodMonitorsByPage(string category, string foodname, string site, int pageSize, int pageNo);
         #endregion
     }
 }

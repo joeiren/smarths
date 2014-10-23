@@ -95,6 +95,72 @@ namespace SmartHaiShu_WebApp.HSSmartDataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetTrafficCodeImg", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetTrafficCodeImgResponse")]
         byte[] GetTrafficCodeImg();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetTrafficRecode", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetTrafficRecodeResponse")]
+        string GetTrafficRecode(string no, string frameNo, string type, string vcode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetFavorableNewsCount", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetFavorableNewsCountResponse")]
+        string GetFavorableNewsCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetFavorableNews", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetFavorableNewsResponse")]
+        string GetFavorableNews(int pageSize, int pageNo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetFavorableNewsTitle", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetFavorableNewsTitleResponse")]
+        string GetFavorableNewsTitle(int pageSize, int pageNo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetEducationNewsCount", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetEducationNewsCountResponse")]
+        string GetEducationNewsCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetEducationleNews", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetEducationleNewsResponse")]
+        string GetEducationleNews(int pageSize, int pageNo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetEducationleNewsTitle", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetEducationleNewsTitleResponse")]
+        string GetEducationleNewsTitle(int pageSize, int pageNo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetHealthNewsCount", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetHealthNewsCountResponse")]
+        string GetHealthNewsCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetHealthNews", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetHealthNewsResponse")]
+        string GetHealthNews(int pageSize, int pageNo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetHealthNewsTitle", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetHealthNewsTitleResponse")]
+        string GetHealthNewsTitle(int pageSize, int pageNo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetPriceNewsCount", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetPriceNewsCountResponse")]
+        string GetPriceNewsCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetPriceeNews", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetPriceeNewsResponse")]
+        string GetPriceeNews(int pageSize, int pageNo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetPriceeNewsTitle", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetPriceeNewsTitleResponse")]
+        string GetPriceeNewsTitle(int pageSize, int pageNo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetTripNewsCount", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetTripNewsCountResponse")]
+        string GetTripNewsCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetTripNews", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetTripNewsResponse")]
+        string GetTripNews(int pageSize, int pageNo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetTripNewsTitle", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetTripNewsTitleResponse")]
+        string GetTripNewsTitle(int pageSize, int pageNo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetAllFoods", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetAllFoodsResponse")]
+        string GetAllFoods();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetAllFoodCategories", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetAllFoodCategoriesResponse")]
+        string GetAllFoodCategories();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetAllMonitorSites", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetAllMonitorSitesResponse")]
+        string GetAllMonitorSites();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/FilterFoodsByCategory", ReplyAction="http://smarths-ndtv.com/ISmartHsService/FilterFoodsByCategoryResponse")]
+        string FilterFoodsByCategory(string category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetFoodMonitorCount", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetFoodMonitorCountResponse")]
+        string GetFoodMonitorCount(string category, string foodname, string site);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://smarths-ndtv.com/ISmartHsService/GetFoodMonitorsByPage", ReplyAction="http://smarths-ndtv.com/ISmartHsService/GetFoodMonitorsByPageResponse")]
+        string GetFoodMonitorsByPage(string category, string foodname, string site, int pageSize, int pageNo);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -230,6 +296,94 @@ namespace SmartHaiShu_WebApp.HSSmartDataService {
         
         public byte[] GetTrafficCodeImg() {
             return base.Channel.GetTrafficCodeImg();
+        }
+        
+        public string GetTrafficRecode(string no, string frameNo, string type, string vcode) {
+            return base.Channel.GetTrafficRecode(no, frameNo, type, vcode);
+        }
+        
+        public string GetFavorableNewsCount() {
+            return base.Channel.GetFavorableNewsCount();
+        }
+        
+        public string GetFavorableNews(int pageSize, int pageNo) {
+            return base.Channel.GetFavorableNews(pageSize, pageNo);
+        }
+        
+        public string GetFavorableNewsTitle(int pageSize, int pageNo) {
+            return base.Channel.GetFavorableNewsTitle(pageSize, pageNo);
+        }
+        
+        public string GetEducationNewsCount() {
+            return base.Channel.GetEducationNewsCount();
+        }
+        
+        public string GetEducationleNews(int pageSize, int pageNo) {
+            return base.Channel.GetEducationleNews(pageSize, pageNo);
+        }
+        
+        public string GetEducationleNewsTitle(int pageSize, int pageNo) {
+            return base.Channel.GetEducationleNewsTitle(pageSize, pageNo);
+        }
+        
+        public string GetHealthNewsCount() {
+            return base.Channel.GetHealthNewsCount();
+        }
+        
+        public string GetHealthNews(int pageSize, int pageNo) {
+            return base.Channel.GetHealthNews(pageSize, pageNo);
+        }
+        
+        public string GetHealthNewsTitle(int pageSize, int pageNo) {
+            return base.Channel.GetHealthNewsTitle(pageSize, pageNo);
+        }
+        
+        public string GetPriceNewsCount() {
+            return base.Channel.GetPriceNewsCount();
+        }
+        
+        public string GetPriceeNews(int pageSize, int pageNo) {
+            return base.Channel.GetPriceeNews(pageSize, pageNo);
+        }
+        
+        public string GetPriceeNewsTitle(int pageSize, int pageNo) {
+            return base.Channel.GetPriceeNewsTitle(pageSize, pageNo);
+        }
+        
+        public string GetTripNewsCount() {
+            return base.Channel.GetTripNewsCount();
+        }
+        
+        public string GetTripNews(int pageSize, int pageNo) {
+            return base.Channel.GetTripNews(pageSize, pageNo);
+        }
+        
+        public string GetTripNewsTitle(int pageSize, int pageNo) {
+            return base.Channel.GetTripNewsTitle(pageSize, pageNo);
+        }
+        
+        public string GetAllFoods() {
+            return base.Channel.GetAllFoods();
+        }
+        
+        public string GetAllFoodCategories() {
+            return base.Channel.GetAllFoodCategories();
+        }
+        
+        public string GetAllMonitorSites() {
+            return base.Channel.GetAllMonitorSites();
+        }
+        
+        public string FilterFoodsByCategory(string category) {
+            return base.Channel.FilterFoodsByCategory(category);
+        }
+        
+        public string GetFoodMonitorCount(string category, string foodname, string site) {
+            return base.Channel.GetFoodMonitorCount(category, foodname, site);
+        }
+        
+        public string GetFoodMonitorsByPage(string category, string foodname, string site, int pageSize, int pageNo) {
+            return base.Channel.GetFoodMonitorsByPage(category, foodname, site, pageSize, pageNo);
         }
     }
 }

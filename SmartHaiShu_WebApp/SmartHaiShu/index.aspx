@@ -21,17 +21,19 @@
                   <ol class="carousel-indicators">
                     <li data-target="#carousel1" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel1" data-slide-to="1"></li>
-    
-           
+                    <li data-target="#carousel1" data-slide-to="2"></li>
                   </ol>
     
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner" style="text-align:center">
-                    <div class="item active">
-                      <img alt="First slide" src="images/53f444b8N7c7db751.jpg" ></img>
+                    <div class="item active">                      
+                        <img alt="First slide" src="images/index02.jpg" />
                     </div>
                     <div class="item">
-                      <img alt="Second slide" src="images/53f4799dNc363ef75.jpg" ></img>
+                      <img alt="Second slide" src="images/index01.jpg" />
+                    </div>
+                    <div class="item">
+                        <img alt="Third slide" src="images/index03.jpg" />
                     </div>
                   </div>
     
@@ -125,8 +127,8 @@
                                 <li class="list-group-item list-group-item-info"><strong>互帮互助</strong><span class="badge" style="background-color:lightsalmon"><a href="HomeInteraction.aspx?toSub=m_interact">更多</a></span></li>
                                 <asp:Repeater ID="RepeaterPost" runat="server">
                                     <ItemTemplate>
-                                    <li class="list-group-item"><%#Eval("Title") %> 
-                                        <span class="bg-success "><%#Eval("ReleaseTime")%>  </span> 
+                                    <li class="list-group-item" style="height: 35px;"><span class="col-sm-7"><strong><%#Eval("Title") %></strong></span>
+                                        <span class="bg-success col-sm-3"><%#Eval("ReleaseTime")%>  </span> 
                                         <span class="badge" style="background-color:slateblue"><%#Eval("DateSpan")%></span> 
                                     </li>    
                                     </ItemTemplate>
@@ -160,6 +162,32 @@
                  <div class="panel panel-default panel-body" >
                         <div class="media">
                             <a class="pull-left" href="#">
+                                <img class="media-object" src="images/test/itpubcms%20(99).jpg" alt=""/>
+                          </a>
+                          <div class="media-body">
+                            <ul class="list-group" style="margin-bottom: 0px;">
+                              <li class="list-group-item list-group-item-info"><strong>货比三家</strong><span class="badge" style="background-color:lightsalmon"><a href="ConvenienceLive.aspx?toSub=m_price">更多</a></span></li>
+                              <asp:Repeater ID="RepeaterFood" runat="server">
+                                    <ItemTemplate>
+                                    <li class="list-group-item " style="height: 35px;">
+                                        <span class="col-sm-3"><strong><%#Eval("Category") %> -- <%#Eval("Food") %> </strong></span>
+                                        <span  class="col-sm-3" style="font-size: 14px;">价格：<span class="bg-success"><%#Eval("Price")%></span>  <%#Eval("Unit")%>  </span>
+                                        <span  style="font-size: 14px;">物价监测点：<%#Eval("Site")%>  </span> 
+                                        <span class="badge" style="background-color:red"><%#Eval("Count")%></span> 
+                                        
+                                    </li>   
+                                    </ItemTemplate>
+                               </asp:Repeater>
+                            </ul>
+                          </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-left: 20px;">
+                 <div class="panel panel-default panel-body" >
+                        <div class="media">
+                            <a class="pull-left" href="#">
                                 <img class="media-object" src="images/test/itpubcms%20(76).jpg" alt=""/>
                           </a>
                           <div class="media-body">
@@ -167,10 +195,10 @@
                               <li class="list-group-item list-group-item-info"><strong>学校讯息</strong><span class="badge" style="background-color:lightsalmon"><a href="Education.aspx?toSub=m_school">更多</a></span></li>
                               <asp:Repeater ID="RepeaterScholl" runat="server">
                                     <ItemTemplate>
-                                    <li class="list-group-item"><%#Eval("Name") %> 
+                                    <li class="list-group-item"  style="height: 35px;"><span class="col-sm-4"><%#Eval("Name") %> </span>
                                         <span class="bg-success "><%#Eval("Address")%>  </span> 
                                         <span class="badge" style="background-color:slateblue"><%#Eval("Type")%></span> 
-                                    </li>    
+                                    </li>
                                     </ItemTemplate>
                                </asp:Repeater>
                             </ul>

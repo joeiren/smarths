@@ -59,10 +59,14 @@
         <div style="float: left;">
             <div class="pgw-slide" id="pgw-slide">
                 <ul class="pgwSlider">
-				    <li><img src="images/paris.jpg" alt="Paris, France" data-description="Eiffel Tower and Champ de Mars"></li>
+				    <%--<li><img src="images/paris.jpg" alt="Paris, France" data-description="Eiffel Tower and Champ de Mars"></li>
 				    <li><img src="images/new-york.jpg" alt="Montréal, QC, Canada" data-large-src="images/new-york.jpg"></li>
 				    <li> <img src="images/shanghai.jpg"> <span>Shanghai, China</span> </li>
-				    <li> <a href="http://www.jq22.com" target="_blank"> <img src="images/new-york.jpg"> <span>New York, NY, USA</span> </a> </li>
+				    <li> <a href="http://www.jq22.com" target="_blank"> <img src="images/new-york.jpg"> <span>New York, NY, USA</span> </a> </li>--%>
+                    <li><img src="images/active1.jpg" alt="绿色出行" data-description=""></li>
+                    <li><img src="images/active2.jpg" alt="大家一起来行动" data-description=""></li>
+                    <li><img src="images/active3.jpg" alt="牵起你我他" data-description=""></li>
+                    <li><img src="images/active4.jpg" alt="梨园风采" data-description=""></li>
 		        </ul>
             </div>
         </div>

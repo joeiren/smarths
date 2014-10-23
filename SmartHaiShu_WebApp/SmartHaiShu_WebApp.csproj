@@ -96,6 +96,12 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Global.asax" />
+    <None Include="Service References\PriceService\configuration91.svcinfo" />
+    <None Include="Service References\PriceService\configuration.svcinfo" />
+    <None Include="Service References\PriceService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="SmartHaiShu\ConfirmCode4Traffic.aspx" />
     <Content Include="SmartHaiShu\ConvLiveSocialSecurityResult.aspx" />
     <Content Include="SmartHaiShu\css\siderbar.css" />
@@ -116,12 +122,20 @@
     <Content Include="SmartHaiShu\images\home\fljs.png" />
     <Content Include="SmartHaiShu\images\home\fljs_0.png" />
     <Content Include="SmartHaiShu\HomeInteraction.aspx" />
+    <Content Include="SmartHaiShu\images\index01.jpg" />
+    <Content Include="SmartHaiShu\images\index02.jpg" />
+    <Content Include="SmartHaiShu\images\index03.jpg" />
+    <Content Include="SmartHaiShu\images\active1.jpg" />
+    <Content Include="SmartHaiShu\images\active2.jpg" />
+    <Content Include="SmartHaiShu\images\active3.jpg" />
+    <Content Include="SmartHaiShu\images\active4.jpg" />
     <Content Include="SmartHaiShu\images\test\itpubcms %2827%29.jpg" />
     <Content Include="SmartHaiShu\images\test\itpubcms %2834%29.jpg" />
     <Content Include="SmartHaiShu\images\test\itpubcms %2854%29.jpg" />
     <Content Include="SmartHaiShu\images\test\itpubcms %2863%29.jpg" />
     <Content Include="SmartHaiShu\images\test\itpubcms %2876%29.jpg" />
     <Content Include="SmartHaiShu\images\test\itpubcms %2882%29.jpg" />
+    <Content Include="SmartHaiShu\images\test\itpubcms %2899%29.jpg" />
     <Content Include="SmartHaiShu\index.aspx" />
     <Content Include="SmartHaiShu\NoticeDetail.aspx" />
     <Content Include="SmartHaiShu\ApplyMemberKey.aspx" />
@@ -190,8 +204,6 @@
     <Content Include="SmartHaiShu\images\02.png" />
     <Content Include="SmartHaiShu\images\17.png" />
     <Content Include="SmartHaiShu\images\20130725.png" />
-    <Content Include="SmartHaiShu\images\53f444b8N7c7db751.jpg" />
-    <Content Include="SmartHaiShu\images\53f4799dNc363ef75.jpg" />
     <Content Include="SmartHaiShu\images\index\icon10.png" />
     <Content Include="SmartHaiShu\images\index\icon11.png" />
     <Content Include="SmartHaiShu\images\index\icon12.png" />
@@ -266,6 +278,7 @@
     <Content Include="SmartHaiShu\TripInfo.aspx" />
     <Content Include="SmartHaiShu\TripMetro.aspx" />
     <Content Include="SmartHaiShu\TripRecord.aspx" />
+    <Content Include="SmartHaiShu\TripRecordResult.aspx" />
     <Content Include="SmartHaiShu\TripTrain.aspx" />
     <Content Include="SmartHaiShu\VerifyCode.aspx" />
     <Content Include="Web.config">
@@ -281,6 +294,25 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SmartHaiShu\SmartHaiShu.Master" />
+    <None Include="Service References\PriceService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PriceService\CityInfoScreenWcf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PriceService\service.wsdl" />
+    <None Include="Service References\PriceService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PriceService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PriceService\SmartHaiShu_WebApp.PriceService.FoodMonitor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PriceService\System.Collections.Generic.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="SmartHaiShu\fonts\glyphicons-halflings-regular.eot" />
     <None Include="SmartHaiShu\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="SmartHaiShu\fonts\glyphicons-halflings-regular.woff" />
@@ -300,6 +332,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\PriceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHaiShu\CityScreenService\PriceQuery.cs" />
     <Compile Include="SmartHaiShu\ConfirmCode4Traffic.aspx.cs">
       <DependentUpon>ConfirmCode4Traffic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -687,6 +725,13 @@
     <Compile Include="SmartHaiShu\TripRecord.aspx.designer.cs">
       <DependentUpon>TripRecord.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SmartHaiShu\TripRecordResult.aspx.cs">
+      <DependentUpon>TripRecordResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartHaiShu\TripRecordResult.aspx.designer.cs">
+      <DependentUpon>TripRecordResult.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SmartHaiShu\TripTrain.aspx.cs">
       <DependentUpon>TripTrain.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -708,6 +753,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\HSOpenDataService\" />
     <WCFMetadataStorage Include="Service References\HSSmartDataService\" />
+    <WCFMetadataStorage Include="Service References\PriceService\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SmartHaiShu.Utility\SmartHaiShu.Utility.csproj">

@@ -44,11 +44,8 @@
                       
                 </dt>    
                 <dd class="dd">        
-                    <ul class="lh">                     
-                                                                     
+                    <ul class="lh">                                
                     </ul> 
-                          
-                    <%--<div class="close" onclick="$('#home-area').removeClass('hover')">×</div>   --%>
                 </dd>
                 <dd class="dd_comm">
                     <ul class="commh">

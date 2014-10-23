@@ -65,9 +65,22 @@
     <div id="container1" class="container ">
         <div class="row">
             <%--<button class="pull-right btn btn-success" style="margin-bottom: 5px;" data-toggle="modal" data-target="#dlgPost" onclick="showPostDlg();">我要发布</button>--%>
-            <button class="pull-right btn btn-success" style="margin-bottom: 5px;" onclick="showPostDlg();return false;">我要发布</button>
+            <button class="pull-left btn btn-success" style="margin-bottom: 5px;" onclick="showPostDlg();return false;">我要发布</button>
+            <div class="text-right">
+                <ul class="pagination pagination-sm " style="margin-top: 5px; margin-bottom: 5px; " id="pageNoArea">
+                <%--<ul class="pager">--%>
+                  <li id="pagePrev"><a href="javascript:trunPage(<%=Page1%>,false)">&laquo;</a></li>
+                  <li><a href="javascript:trunPage(<%=Page1%>);"><%=Page1%></a></li>
+                  <li><a href="javascript:trunPage(<%=Page1 + 1%>);"><%=Page1 + 1%></a></li>
+                  <li><a href="javascript:trunPage(<%=Page1 + 2%>)"><%=Page1 + 2%></a></li>
+                  <li><a href="javascript:trunPage(<%=Page1 + 3%>)"><%=Page1 + 3%></a></li>
+                  <li><a href="javascript:trunPage(<%=Page1 + 4%>)"><%=Page1 + 4%></a></li>
+                  <li id="pageNext"><a href="javascript:trunPage(<%=Page1 + 4%>,true)">&raquo;</a></li>
+                </ul> 
         </div>
-        <div class="row">
+        </div>
+        
+        <div class="row" >
         <div class="panel-group" id="accordion">
        
        <div class="panel panel-warning">
@@ -118,21 +131,24 @@
             </div>
                         
             <div id="collapse<%#Container.ItemIndex+1 %>"  class="<%#Container.ItemIndex==0? "panel-collapse collapse in" : "panel-collapse collapse" %> " >
-                    <div class="panel-body" style="font-size: 12px;height: 150px;overflow-y:auto; ">
-         <div class="panel">
-                    <%# Eval("Content")%>
-               </div>
-               <div class="panel-success">
-                   联系方式： <%# Eval("Contact")%>
-               </div>
-                <p style="margin-left: 20px; margin-right: 20px;margin-top: 10px;">
-                   <span class="bg-success pull-left">
-                       发布者：<%# Eval("Member")%>
-                   </span>
-                   <span class="bg-success pull-right">
-                        有效时间：<%# Eval("DateSpan")%>
-                   </span>
-               </p>
+                    <div class="panel-body" style="font-size: 12px;height: 200px;overflow-y:auto; ">
+                        <h5><strong> <%# Eval("Title")%></strong></h5>
+                        <p> <%# Eval("Content")%></p>
+                        
+                        <table class="table table-bordered table-striped table-condensed">  
+                                  <thead> </thead>  
+                                  <tbody>  
+                                    <tr>  
+                                      <td>联系方式</td> <td><%# Eval("Contact")%></td>
+                                    </tr>
+                                    <tr>
+                                        <td>发布者</td><td><%# Eval("Member")%> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>有效时间</td><td><%# Eval("DateSpan")%> </td>
+                                    </tr>
+                                </tbody>
+                          </table>
                 </div>
             </div>
             </div>
@@ -162,8 +178,8 @@
             </div>
                         
             <div id="collapse<%#Container.ItemIndex+1 %>"  class="panel-collapse collapse" >
-                 <div class="panel-body" style="font-size: 12px;height: 150px;overflow-y:auto; ">
-               <div class="panel">
+                 <div class="panel-body" style="font-size: 12px;height: 200px;overflow-y:auto; ">
+               <%--<div class="panel">
                     <%# Eval("Content")%>
                </div>
                <div class="panel-success">
@@ -176,7 +192,24 @@
                    <span class="bg-success pull-right">
                         有效时间：<%# Eval("DateSpan")%>
                    </span>
-               </p>
+               </p>--%>
+              <h5><strong> <%# Eval("Title")%></strong></h5>
+                        <p> <%# Eval("Content")%></p>
+                        
+                  <table class="table table-bordered table-striped table-condensed">  
+                                  <thead> </thead>  
+                                  <tbody>  
+                                    <tr>  
+                                      <td>联系方式</td> <td><%# Eval("Contact")%></td>
+                                    </tr>
+                                    <tr>
+                                        <td>发布者</td><td><%# Eval("Member")%> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>有效时间</td><td><%# Eval("DateSpan")%> </td>
+                                    </tr>
+                                </tbody>
+                          </table>
                 </div>
                
             </div>
@@ -186,19 +219,7 @@
         </div>
         
     </div>
-        <div class="row text-center">
-            <ul class="pagination pagination-sm " id="pageNoArea">
-            <%--<ul class="pager">--%>
-              <li id="pagePrev"><a href="javascript:trunPage(<%=Page1%>,false)">&laquo;</a></li>
-              <li><a href="javascript:trunPage(<%=Page1%>);"><%=Page1%></a></li>
-              <li><a href="javascript:trunPage(<%=Page1 + 1%>);"><%=Page1 + 1%></a></li>
-              <li><a href="javascript:trunPage(<%=Page1 + 2%>)"><%=Page1 + 2%></a></li>
-              <li><a href="javascript:trunPage(<%=Page1 + 3%>)"><%=Page1 + 3%></a></li>
-              <li><a href="javascript:trunPage(<%=Page1 + 4%>)"><%=Page1 + 4%></a></li>
-              <li id="pageNext"><a href="javascript:trunPage(<%=Page1 + 4%>,true)">&raquo;</a></li>
-            </ul> 
-        </div>
-       
+  
     </div>
     </form>
     

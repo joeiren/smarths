@@ -11,6 +11,8 @@ using SmartHaiShu_WebApp.HSSmartDataService;
 using SmartHaiShu_WebApp.SmartHaiShu.Cache;
 using SmartHaiShu_WebApp.HSOpenDataService;
 using SmartHaiShu.Utility;
+using SmartHaiShu_WebApp.SmartHaiShu.CityScreenService;
+
 
 namespace SmartHaiShu_WebApp.SmartHaiShu
 {
@@ -131,6 +133,89 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             {
                 LogHelper.GetInstance().Error(ex.ToString());
                 var exResult = new {Code = 0, Message = ex.Message};
+                return JsonConvert.SerializeObject(exResult);
+            }
+        }
+
+
+        [WebMethod]
+        public static string LoadFoodCategories()
+        {
+            try
+            {
+                var result = new PriceQuery().GetAllFoodCategories();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                var exResult = new { Code = 0, Message = ex.Message };
+                return JsonConvert.SerializeObject(exResult);
+            }
+        }
+
+        [WebMethod]
+        public static string LoadFoodByCategory(string category)
+        {
+            try
+            {
+                var result = new PriceQuery().FilterFoodsByCategory(string.IsNullOrWhiteSpace(category) ? null : category);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                var exResult = new { Code = 0, Message = ex.Message };
+                return JsonConvert.SerializeObject(exResult);
+            }
+        }
+
+        [WebMethod]
+        public static string LoadAllFoodMonitorSites()
+        {
+            try
+            {
+                var result = new PriceQuery().GetAllMonitorSites();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                var exResult = new { Code = 0, Message = ex.Message };
+                return JsonConvert.SerializeObject(exResult);
+            }
+        }
+
+        [WebMethod]
+        public static string LoadFoodMonitorCount(string category, string foodname, string site)
+        {
+            try
+            {
+                var result = new PriceQuery().GetFoodMonitorCount(string.IsNullOrEmpty(category) ? null : category,
+                    string.IsNullOrEmpty(foodname) ? null : foodname, string.IsNullOrEmpty(site) ? null : site);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                var exResult = new { Code = 0, Message = ex.Message };
+                return JsonConvert.SerializeObject(exResult);
+            }
+        }
+
+        [WebMethod]
+        public static string LoadFoodMonitorByPage(string category, string foodname, string site, int pageSize, int pageNo)
+        {
+            try
+            {
+                var result = new PriceQuery().GetFoodMonitorsByPage(string.IsNullOrEmpty(category) ? null:category,
+                    string.IsNullOrEmpty(foodname) ? null : foodname, string.IsNullOrEmpty(site) ? null : site, pageSize, pageNo);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                var exResult = new { Code = 0, Message = ex.Message };
                 return JsonConvert.SerializeObject(exResult);
             }
         }

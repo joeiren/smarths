@@ -41,7 +41,7 @@ namespace ServiceLogic.Test
         public void PriceTest()
         {
             var query = new PriceQuery();
-            query.Query();
+            query.QueryAllCategorys();
         }
     }
 }
