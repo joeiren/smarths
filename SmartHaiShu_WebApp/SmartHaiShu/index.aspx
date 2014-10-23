@@ -284,6 +284,97 @@
                 
                 <div class="panel panel-default">
                 <div class="panel-heading">
+	                <a href="EasyTrip.aspx?toSub=m_trip_info"  style="cursor:pointer;" >出行信息</a>
+                    <span class="badge" style="background-color:red"><%=TripCount%></span> 
+                </div>
+                <div id="Div1"  class="panel-collapse collapse in">
+                    <div class="panel-body" style="font-size: 12px; padding: 0px;">
+	                    <ul class="list-group" style="margin-bottom: 0px;">
+	                        <asp:Repeater ID="RepeaterTrip" runat="server">
+	                            <ItemTemplate>
+		                            <li class="list-group-item list-group-item-text"><%#Eval("Title")%> </li>
+                                </ItemTemplate>
+		                    </asp:Repeater>
+	                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <div class="panel panel-default">
+                <div class="panel-heading">
+	                <a data-toggle="collapse"  data-parent="#accordion" data-target="#collapse1"  style="cursor:pointer;" >物价信息</a>
+                    <span class="badge" style="background-color:red"><%=FoodCount%></span> 
+                </div>
+                <div id="Div2"  class="panel-collapse collapse in">
+                    <div class="panel-body" style="font-size: 12px; padding: 0px;">
+	                    <ul class="list-group" style="margin-bottom: 0px;">
+	                        <asp:Repeater ID="RepeaterFoodInfo" runat="server">
+	                            <ItemTemplate>
+		                            <li class="list-group-item list-group-item-text"><%#Eval("Title")%> </li>
+                                </ItemTemplate>
+		                    </asp:Repeater>
+	                    </ul>
+                    </div>
+                </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                <div class="panel-heading">
+	                <a href="LifeArea.aspx?toSub=m_special" style="cursor:pointer;">惠生活</a>
+                    <span class="badge" style="background-color:red"><%=FavorableCount%></span> 
+                </div>
+                <div id="Div3"  class="panel-collapse collapse in">
+                    <div class="panel-body" style="font-size: 12px; padding: 0px;">
+	                    <ul class="list-group" style="margin-bottom: 0px;">
+	                        <asp:Repeater ID="RepeaterFavorable" runat="server">
+	                            <ItemTemplate>
+		                            <li class="list-group-item list-group-item-text"><%#Eval("Title")%> </li>
+                                </ItemTemplate>
+		                    </asp:Repeater>
+	                    </ul>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="panel panel-default">
+                <div class="panel-heading">
+	                <a href="Education.aspx?toSub=m_edu_info"  style="cursor:pointer;" >教育资讯</a>
+                    <span class="badge" style="background-color:red"><%=EducationCount%></span> 
+                </div>
+                <div id="Div4"  class="panel-collapse collapse in">
+                    <div class="panel-body" style="font-size: 12px; padding: 0px;">
+	                    <ul class="list-group" style="margin-bottom: 0px;">
+	                        <asp:Repeater ID="RepeaterEducation" runat="server">
+	                            <ItemTemplate>
+		                            <li class="list-group-item list-group-item-text"><%#Eval("Title")%> </li>
+                                </ItemTemplate>
+		                    </asp:Repeater>
+	                    </ul>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="panel panel-default">
+                <div class="panel-heading">
+	                <a href="Education.aspx?toSub=m_health"  style="cursor:pointer;" >医疗卫生讯息</a>
+                    <span class="badge" style="background-color:red"><%=HealthCount%></span> 
+                </div>
+                <div id="Div5"  class="panel-collapse collapse in">
+                    <div class="panel-body" style="font-size: 12px; padding: 0px;">
+	                    <ul class="list-group" style="margin-bottom: 0px;">
+	                        <asp:Repeater ID="RepeaterHealth" runat="server">
+	                            <ItemTemplate>
+		                            <li class="list-group-item list-group-item-text"><%#Eval("Title")%> </li>
+                                </ItemTemplate>
+		                    </asp:Repeater>
+	                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <div class="panel panel-default">
+                <div class="panel-heading">
 	                <a data-toggle="collapse"  data-parent="#accordion" data-target="#collapse1"  style="cursor:pointer;" >停电通知</a>
                 </div>
                 <div id="collapse1"  class="panel-collapse collapse in">

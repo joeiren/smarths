@@ -96,9 +96,28 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Global.asax" />
+    <None Include="Service References\NewsService\CityInfoScreenWcf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewsService\service.wsdl" />
+    <None Include="Service References\NewsService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewsService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewsService\SmartHaiShu_WebApp.NewsService.NewsModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\PriceService\configuration91.svcinfo" />
     <None Include="Service References\PriceService\configuration.svcinfo" />
     <None Include="Service References\PriceService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\NewsService\configuration91.svcinfo" />
+    <None Include="Service References\NewsService\configuration.svcinfo" />
+    <None Include="Service References\NewsService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -332,11 +351,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\NewsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\PriceService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="SmartHaiShu\CityScreenService\NewsQuery.cs" />
     <Compile Include="SmartHaiShu\CityScreenService\PriceQuery.cs" />
     <Compile Include="SmartHaiShu\ConfirmCode4Traffic.aspx.cs">
       <DependentUpon>ConfirmCode4Traffic.aspx</DependentUpon>
@@ -753,6 +778,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\HSOpenDataService\" />
     <WCFMetadataStorage Include="Service References\HSSmartDataService\" />
+    <WCFMetadataStorage Include="Service References\NewsService\" />
     <WCFMetadataStorage Include="Service References\PriceService\" />
   </ItemGroup>
   <ItemGroup>

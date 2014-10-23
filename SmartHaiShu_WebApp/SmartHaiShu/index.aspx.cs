@@ -16,7 +16,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
     {
         private readonly OpenDataServiceClient _openDataServiceClient = new OpenDataServiceClient();
         private readonly SmartHsServiceClient _smartHsServiceClient = new SmartHsServiceClient();
-
+        private NewsQuery _query = new NewsQuery();
         public ElectricNotic Notice1
         {
             get;
@@ -29,6 +29,35 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             private set;
         }
 
+        public int TripCount
+        {
+            get;
+            set;
+        }
+
+        public int FoodCount
+        {
+            get;
+            set;
+        }
+
+        public int FavorableCount
+        {
+            get;
+            set;
+        }
+
+        public int EducationCount
+        {
+            get;
+            set;
+        }
+
+        public int HealthCount
+        {
+            get;
+            set;
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -99,7 +128,11 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             KindergartenBinding();
             BankBinding();
             MarketBinding();
-            
+            TripInfoBinding();
+            FoodInfoBinding();
+            FavorableBinding();
+            EducationBinding();
+            HealthBinding();
         }
 
         private void SchoolBinding()
@@ -265,6 +298,66 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
 
             RepeaterFood.DataSource = source;
             RepeaterFood.DataBind();
+        }
+
+        private void TripInfoBinding()
+        {
+
+            TripCount = _query.TripNewsCount();
+            if (TripCount > 0)
+            {
+                var trips = _query.TripNews(5, 1);
+                RepeaterTrip.DataSource = from it in trips
+                                          select new {Title = it.Title};
+                RepeaterTrip.DataBind();
+            }
+        }
+
+        private void FoodInfoBinding()
+        {
+            FoodCount = _query.PriceNewsCount();
+            if (TripCount > 0)
+            {
+                var prices = _query.PriceNews(5, 1);
+                RepeaterFoodInfo.DataSource = from it in prices
+                                          select new { Title = it.Title };
+                RepeaterFoodInfo.DataBind();
+            }
+        }
+
+        private void FavorableBinding()
+        {
+            FavorableCount = _query.FavorableNewsCount();
+            if (FavorableCount > 0)
+            {
+                var prices = _query.FavorableNews(5, 1);
+                RepeaterFavorable.DataSource = from it in prices
+                                              select new { Title = it.Title };
+                RepeaterFavorable.DataBind();
+            }
+        }
+        private void EducationBinding()
+        {
+            EducationCount = _query.EducationNewsCount();
+            if (FavorableCount > 0)
+            {
+                var education = _query.EducationNews(5, 1);
+                RepeaterEducation.DataSource = from it in education
+                                               select new { Title = it.Title };
+                RepeaterEducation.DataBind();
+            }
+        }
+
+        private void HealthBinding()
+        {
+            HealthCount = _query.HealthNewsCount();
+            if (FavorableCount > 0)
+            {
+                var health = _query.HealthNews(5, 1);
+                RepeaterHealth.DataSource = from it in health
+                                               select new { Title = it.Title };
+                RepeaterHealth.DataBind();
+            }
         }
     }
 
