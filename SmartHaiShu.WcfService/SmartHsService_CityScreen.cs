@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SmartHaiShu.CityScreenServices;
-using SmartHaiShu.CityScreenServices.PriceService;
 using SmartHaiShu.Utility;
+using SmartHaiShu.WcfService.CityScreenInfo;
+using SmartHaiShu.WcfService.PriceMexService;
 
 
 namespace SmartHaiShu.WcfService
 {
     public partial class SmartHsService
     {
-        protected NewsQuery _newsQueryService = new NewsQuery();
-        protected PriceQuery _priceQueryService = new PriceQuery();
+        protected NewsInfoQuery _newsQueryService = new NewsInfoQuery();
+        protected PriceInfoQuery _priceQueryService = new PriceInfoQuery();
 
         /// <summary>
         ///     今天天气情况

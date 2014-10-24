@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SmartHaiShu.CityScreenServices.NewsService {
+namespace SmartHaiShu.WcfService.NewsMexService {
     using System.Runtime.Serialization;
     using System;
     
@@ -251,29 +251,29 @@ namespace SmartHaiShu.CityScreenServices.NewsService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="NewsService.INews")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="NewsMexService.INews")]
     public interface INews {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INews/ExsitesNews", ReplyAction="http://tempuri.org/INews/ExsitesNewsResponse")]
         bool ExsitesNews(long AutoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INews/GetNewsById", ReplyAction="http://tempuri.org/INews/GetNewsByIdResponse")]
-        SmartHaiShu.CityScreenServices.NewsService.NewsModel GetNewsById(long AutoID);
+        SmartHaiShu.WcfService.NewsMexService.NewsModel GetNewsById(long AutoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INews/FindNewss", ReplyAction="http://tempuri.org/INews/FindNewssResponse")]
-        SmartHaiShu.CityScreenServices.NewsService.NewsModel[] FindNewss(SmartHaiShu.CityScreenServices.NewsService.NewsModel findEntity, string filedOrder, System.Nullable<bool> desc, int pageSize, int pageIndex);
+        SmartHaiShu.WcfService.NewsMexService.NewsModel[] FindNewss(SmartHaiShu.WcfService.NewsMexService.NewsModel findEntity, string filedOrder, System.Nullable<bool> desc, int pageSize, int pageIndex);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INews/GetNewssCounts", ReplyAction="http://tempuri.org/INews/GetNewssCountsResponse")]
-        int GetNewssCounts(SmartHaiShu.CityScreenServices.NewsService.NewsModel findEntity);
+        int GetNewssCounts(SmartHaiShu.WcfService.NewsMexService.NewsModel findEntity);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface INewsChannel : SmartHaiShu.CityScreenServices.NewsService.INews, System.ServiceModel.IClientChannel {
+    public interface INewsChannel : SmartHaiShu.WcfService.NewsMexService.INews, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class NewsClient : System.ServiceModel.ClientBase<SmartHaiShu.CityScreenServices.NewsService.INews>, SmartHaiShu.CityScreenServices.NewsService.INews {
+    public partial class NewsClient : System.ServiceModel.ClientBase<SmartHaiShu.WcfService.NewsMexService.INews>, SmartHaiShu.WcfService.NewsMexService.INews {
         
         public NewsClient() {
         }
@@ -298,15 +298,15 @@ namespace SmartHaiShu.CityScreenServices.NewsService {
             return base.Channel.ExsitesNews(AutoID);
         }
         
-        public SmartHaiShu.CityScreenServices.NewsService.NewsModel GetNewsById(long AutoID) {
+        public SmartHaiShu.WcfService.NewsMexService.NewsModel GetNewsById(long AutoID) {
             return base.Channel.GetNewsById(AutoID);
         }
         
-        public SmartHaiShu.CityScreenServices.NewsService.NewsModel[] FindNewss(SmartHaiShu.CityScreenServices.NewsService.NewsModel findEntity, string filedOrder, System.Nullable<bool> desc, int pageSize, int pageIndex) {
+        public SmartHaiShu.WcfService.NewsMexService.NewsModel[] FindNewss(SmartHaiShu.WcfService.NewsMexService.NewsModel findEntity, string filedOrder, System.Nullable<bool> desc, int pageSize, int pageIndex) {
             return base.Channel.FindNewss(findEntity, filedOrder, desc, pageSize, pageIndex);
         }
         
-        public int GetNewssCounts(SmartHaiShu.CityScreenServices.NewsService.NewsModel findEntity) {
+        public int GetNewssCounts(SmartHaiShu.WcfService.NewsMexService.NewsModel findEntity) {
             return base.Channel.GetNewssCounts(findEntity);
         }
     }

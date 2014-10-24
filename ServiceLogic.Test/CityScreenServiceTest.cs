@@ -29,12 +29,12 @@ namespace ServiceLogic.Test
         [TestMethod]
         public void NewsTest()
         {
-            var query = new NewsQuery();
-            var news = query.EducationNews(10,0);
-            news = query.FavorableNews(10, 0);
-            news = query.HealthNews(10, 0);
-            news = query.PriceNews(10, 0);
-            news = query.TripNews(10, 0);
+            //var query = new NewsQuery();
+            //var news = query.EducationNews(10,0);
+            //news = query.FavorableNews(10, 0);
+            //news = query.HealthNews(10, 0);
+            //news = query.PriceNews(10, 0);
+            //news = query.TripNews(10, 0);
         }
 
         [TestMethod]

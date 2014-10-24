@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SmartHaiShu.CityScreenServices.PriceService {
+namespace SmartHaiShu.WcfService.PriceMexService {
     using System.Runtime.Serialization;
     using System;
     
@@ -235,29 +235,29 @@ namespace SmartHaiShu.CityScreenServices.PriceService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PriceService.IPrice")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PriceMexService.IPrice")]
     public interface IPrice {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrice/ExsitesFoodMonitor", ReplyAction="http://tempuri.org/IPrice/ExsitesFoodMonitorResponse")]
         bool ExsitesFoodMonitor(long AutoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrice/GetFoodMonitorById", ReplyAction="http://tempuri.org/IPrice/GetFoodMonitorByIdResponse")]
-        SmartHaiShu.CityScreenServices.PriceService.FoodMonitor GetFoodMonitorById(long AutoID);
+        SmartHaiShu.WcfService.PriceMexService.FoodMonitor GetFoodMonitorById(long AutoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrice/FindFoodMonitors", ReplyAction="http://tempuri.org/IPrice/FindFoodMonitorsResponse")]
-        SmartHaiShu.CityScreenServices.PriceService.FoodMonitor[] FindFoodMonitors(SmartHaiShu.CityScreenServices.PriceService.FoodMonitor findEntity, string filedOrder, System.Nullable<bool> desc, int pageSize, int pageIndex);
+        SmartHaiShu.WcfService.PriceMexService.FoodMonitor[] FindFoodMonitors(SmartHaiShu.WcfService.PriceMexService.FoodMonitor findEntity, string filedOrder, System.Nullable<bool> desc, int pageSize, int pageIndex);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrice/GetFoodMonitorsCounts", ReplyAction="http://tempuri.org/IPrice/GetFoodMonitorsCountsResponse")]
-        int GetFoodMonitorsCounts(SmartHaiShu.CityScreenServices.PriceService.FoodMonitor findEntity);
+        int GetFoodMonitorsCounts(SmartHaiShu.WcfService.PriceMexService.FoodMonitor findEntity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrice/AddFoodMonitor", ReplyAction="http://tempuri.org/IPrice/AddFoodMonitorResponse")]
-        long AddFoodMonitor(SmartHaiShu.CityScreenServices.PriceService.FoodMonitor fm);
+        long AddFoodMonitor(SmartHaiShu.WcfService.PriceMexService.FoodMonitor fm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrice/DeleteFoodMonitor", ReplyAction="http://tempuri.org/IPrice/DeleteFoodMonitorResponse")]
         bool DeleteFoodMonitor(long AutoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrice/UpdateFoodMonitor", ReplyAction="http://tempuri.org/IPrice/UpdateFoodMonitorResponse")]
-        bool UpdateFoodMonitor(SmartHaiShu.CityScreenServices.PriceService.FoodMonitor fm);
+        bool UpdateFoodMonitor(SmartHaiShu.WcfService.PriceMexService.FoodMonitor fm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrice/GetDatetimeNewest", ReplyAction="http://tempuri.org/IPrice/GetDatetimeNewestResponse")]
         System.DateTime GetDatetimeNewest();
@@ -279,12 +279,12 @@ namespace SmartHaiShu.CityScreenServices.PriceService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IPriceChannel : SmartHaiShu.CityScreenServices.PriceService.IPrice, System.ServiceModel.IClientChannel {
+    public interface IPriceChannel : SmartHaiShu.WcfService.PriceMexService.IPrice, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class PriceClient : System.ServiceModel.ClientBase<SmartHaiShu.CityScreenServices.PriceService.IPrice>, SmartHaiShu.CityScreenServices.PriceService.IPrice {
+    public partial class PriceClient : System.ServiceModel.ClientBase<SmartHaiShu.WcfService.PriceMexService.IPrice>, SmartHaiShu.WcfService.PriceMexService.IPrice {
         
         public PriceClient() {
         }
@@ -309,19 +309,19 @@ namespace SmartHaiShu.CityScreenServices.PriceService {
             return base.Channel.ExsitesFoodMonitor(AutoID);
         }
         
-        public SmartHaiShu.CityScreenServices.PriceService.FoodMonitor GetFoodMonitorById(long AutoID) {
+        public SmartHaiShu.WcfService.PriceMexService.FoodMonitor GetFoodMonitorById(long AutoID) {
             return base.Channel.GetFoodMonitorById(AutoID);
         }
         
-        public SmartHaiShu.CityScreenServices.PriceService.FoodMonitor[] FindFoodMonitors(SmartHaiShu.CityScreenServices.PriceService.FoodMonitor findEntity, string filedOrder, System.Nullable<bool> desc, int pageSize, int pageIndex) {
+        public SmartHaiShu.WcfService.PriceMexService.FoodMonitor[] FindFoodMonitors(SmartHaiShu.WcfService.PriceMexService.FoodMonitor findEntity, string filedOrder, System.Nullable<bool> desc, int pageSize, int pageIndex) {
             return base.Channel.FindFoodMonitors(findEntity, filedOrder, desc, pageSize, pageIndex);
         }
         
-        public int GetFoodMonitorsCounts(SmartHaiShu.CityScreenServices.PriceService.FoodMonitor findEntity) {
+        public int GetFoodMonitorsCounts(SmartHaiShu.WcfService.PriceMexService.FoodMonitor findEntity) {
             return base.Channel.GetFoodMonitorsCounts(findEntity);
         }
         
-        public long AddFoodMonitor(SmartHaiShu.CityScreenServices.PriceService.FoodMonitor fm) {
+        public long AddFoodMonitor(SmartHaiShu.WcfService.PriceMexService.FoodMonitor fm) {
             return base.Channel.AddFoodMonitor(fm);
         }
         
@@ -329,7 +329,7 @@ namespace SmartHaiShu.CityScreenServices.PriceService {
             return base.Channel.DeleteFoodMonitor(AutoID);
         }
         
-        public bool UpdateFoodMonitor(SmartHaiShu.CityScreenServices.PriceService.FoodMonitor fm) {
+        public bool UpdateFoodMonitor(SmartHaiShu.WcfService.PriceMexService.FoodMonitor fm) {
             return base.Channel.UpdateFoodMonitor(fm);
         }
         

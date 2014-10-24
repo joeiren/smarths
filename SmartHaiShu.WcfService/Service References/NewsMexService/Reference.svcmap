@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f4c73300-5b4b-44e9-9959-fa9d2164cee5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9ed0209c-cadc-4a2a-ae5d-08df35ff4e02" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -21,10 +21,10 @@
     <MetadataSource Address="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="9c2b2655-3027-448a-8961-c5cc55e7bd16" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3d3b906c-c3fa-462e-944a-5020fc196006" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="621a325e-50cf-4276-9ec1-7f3322b2fe9c" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" />
-    <MetadataFile FileName="CityInfoScreenWcf.xsd" MetadataType="Schema" ID="85cdade5-554a-4175-90fc-545f37ad3bf5" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d66e04f7-b22d-4d53-9bb7-58d887f75b49" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="955975c4-2a69-4e84-a344-5ffbaa4cbb7b" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="704ac895-f4f7-4320-be99-074546c7007c" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" />
+    <MetadataFile FileName="CityInfoScreenWcf.xsd" MetadataType="Schema" ID="3c2ab83a-f1b8-4232-ab77-e51721c318c0" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.News.svc/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

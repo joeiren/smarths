@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ac497999-9e32-4bad-8f26-69a9aded93a1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2707/SmartHsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SmartHsService.wsdl" MetadataType="Wsdl" ID="98d5ef73-8176-4e1c-9e51-ae307e06582b" SourceId="1" SourceUrl="http://localhost:2707/SmartHsService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SmartHsService.xsd" MetadataType="Schema" ID="7fbb0623-a4cd-44cb-bc65-c0521c052b9a" SourceId="1" SourceUrl="http://localhost:2707/SmartHsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SmartHsService1.xsd" MetadataType="Schema" ID="01407e76-5e94-4d8f-944e-819a03dfc6f7" SourceId="1" SourceUrl="http://localhost:2707/SmartHsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SmartHsService1.wsdl" MetadataType="Wsdl" ID="77ea781e-a402-473a-89f2-073a5437c876" SourceId="1" SourceUrl="http://localhost:2707/SmartHsService.svc?wsdl=wsdl1" />
+    <MetadataFile FileName="SmartHsService2.wsdl" MetadataType="Wsdl" ID="a6c9540c-a930-45ae-b097-2b47686d90a9" SourceId="1" SourceUrl="http://localhost:2707/SmartHsService.svc?wsdl" />
+    <MetadataFile FileName="SmartHsService.disco" MetadataType="Disco" ID="42aa4640-9899-4147-9954-dfdda749d22f" SourceId="1" SourceUrl="http://localhost:2707/SmartHsService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

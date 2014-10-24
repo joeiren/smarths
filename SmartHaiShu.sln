@@ -45,6 +45,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHaiShu.Utility", "Smar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHaiShu.CityScreenServices", "SmartHaiShu.CityScreenServices\SmartHaiShu.CityScreenServices.csproj", "{E7E6DA15-37C5-458E-824B-AB8EFC265174}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublishedServiceTest", "PublishedServiceTest\PublishedServiceTest.csproj", "{4E798372-7B62-4914-9A71-4CC2594923AA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C7C76C90-3516-4F9C-827F-5AFBE155B34D} = {C7C76C90-3516-4F9C-827F-5AFBE155B34D}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = SmartHaiShu.vsmdi
@@ -178,6 +183,16 @@ Global
 		{E7E6DA15-37C5-458E-824B-AB8EFC265174}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E7E6DA15-37C5-458E-824B-AB8EFC265174}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E7E6DA15-37C5-458E-824B-AB8EFC265174}.Release|x86.ActiveCfg = Release|Any CPU
+		{4E798372-7B62-4914-9A71-4CC2594923AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E798372-7B62-4914-9A71-4CC2594923AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E798372-7B62-4914-9A71-4CC2594923AA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4E798372-7B62-4914-9A71-4CC2594923AA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4E798372-7B62-4914-9A71-4CC2594923AA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4E798372-7B62-4914-9A71-4CC2594923AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E798372-7B62-4914-9A71-4CC2594923AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E798372-7B62-4914-9A71-4CC2594923AA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4E798372-7B62-4914-9A71-4CC2594923AA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4E798372-7B62-4914-9A71-4CC2594923AA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -193,5 +208,6 @@ Global
 		{E7E6DA15-37C5-458E-824B-AB8EFC265174} = {63F3DC63-1875-4DAB-AFA2-BAD207AD3C51}
 		{95DCA095-B85A-41C0-A8BE-587912EC5249} = {4E62098B-D63D-40F1-B438-2E953A1E3F83}
 		{D635EAF6-8265-414D-90BC-36D05B979772} = {4E62098B-D63D-40F1-B438-2E953A1E3F83}
+		{4E798372-7B62-4914-9A71-4CC2594923AA} = {4E62098B-D63D-40F1-B438-2E953A1E3F83}
 	EndGlobalSection
 EndGlobal

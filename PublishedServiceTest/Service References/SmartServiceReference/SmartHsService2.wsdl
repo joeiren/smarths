@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://smarths-ndtv.com" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:i1="http://schemas.microsoft.com/ws/2005/02/mex/bindings" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SmartHsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://smarths-ndtv.com" location="http://localhost:2707/SmartHsService.svc?wsdl=wsdl0" />
+  <wsdl:import namespace="http://schemas.microsoft.com/ws/2005/02/mex/bindings" location="http://localhost:2707/SmartHsService.svc?wsdl=wsdl1" />
+  <wsdl:types />
+  <wsdl:binding name="basicSmart" type="i0:ISmartHsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddMember">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/AddMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistMemberName">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/ExistMemberName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindMember">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/FindMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindMemberByName">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/FindMemberByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMember">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/UpdateMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberKey">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/UpdateMemberKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllStreet">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/FindAllStreet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCommunityByStreet">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/FindCommunityByStreet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCommunity">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/FindCommunity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindStreetGroup">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/FindStreetGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSessionVerify">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/AddSessionVerify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadyToUseSessionVerify">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/ReadyToUseSessionVerify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CanUseSession">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/CanUseSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CanUseSessionById">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/CanUseSessionById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindPostSpanTypeConfig">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/FindPostSpanTypeConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTypeConfigByCategory">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/FindTypeConfigByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInteractPost">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/AddInteractPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostCount">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetPostCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostTitlesByPage">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetPostTitlesByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostsByPage">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetPostsByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialInteractPost">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetSpecialInteractPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInteractPost">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/DeleteInteractPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SocialInsureQuery">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/SocialInsureQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WeatherInfoToday">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/WeatherInfoToday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WeatherInfoFuture">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/WeatherInfoFuture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrafficCodeImg">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetTrafficCodeImg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrafficRecode">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetTrafficRecode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavorableNewsCount">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetFavorableNewsCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavorableNews">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetFavorableNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavorableNewsTitle">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetFavorableNewsTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEducationNewsCount">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetEducationNewsCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEducationleNews">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetEducationleNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEducationleNewsTitle">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetEducationleNewsTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHealthNewsCount">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetHealthNewsCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHealthNews">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetHealthNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHealthNewsTitle">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetHealthNewsTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceNewsCount">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetPriceNewsCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceeNews">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetPriceeNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceeNewsTitle">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetPriceeNewsTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTripNewsCount">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetTripNewsCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTripNews">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetTripNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTripNewsTitle">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetTripNewsTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFoods">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetAllFoods" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFoodCategories">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetAllFoodCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMonitorSites">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetAllMonitorSites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterFoodsByCategory">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/FilterFoodsByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodMonitorCount">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetFoodMonitorCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodMonitorsByPage">
+      <soap:operation soapAction="http://smarths-ndtv.com/ISmartHsService/GetFoodMonitorsByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SmartHsService">
+    <wsdl:port name="basicSmart" binding="tns:basicSmart">
+      <soap:address location="http://localhost:2707/SmartHsService.svc/basic" />
+    </wsdl:port>
+    <wsdl:port name="mexSmart" binding="i1:mexSmart">
+      <soap12:address location="http://localhost:2707/SmartHsService.svc/mex" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:2707/SmartHsService.svc/mex</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

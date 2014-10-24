@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="41c6b09f-596f-48a6-8346-bbe3b15e78b5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.254.208.100/CityInfoScreenWcf.Price.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="611e722f-2e07-4e3b-8fa7-ab58231774ea" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.Price.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="ffc6bc0b-bf9e-4149-833e-cb38b26ee22c" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.Price.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="376c2d60-d188-4072-8a0c-d5f8cd533983" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.Price.svc/mex" />
+    <MetadataFile FileName="CityInfoScreenWcf.xsd" MetadataType="Schema" ID="3e7d8e1f-8c9e-49b2-b9bb-a543d1f86332" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.Price.svc/mex" />
+    <MetadataFile FileName="System.Collections.Generic.xsd" MetadataType="Schema" ID="3b2b2de8-8b28-4eaf-9f67-0b2afa1ea56a" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.Price.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="15b51990-a1ec-403f-8eca-6f211aff1f32" SourceId="1" SourceUrl="http://10.254.208.100/CityInfoScreenWcf.Price.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

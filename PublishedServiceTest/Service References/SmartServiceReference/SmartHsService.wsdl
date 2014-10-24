@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://smarths-ndtv.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://smarths-ndtv.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://smarths-ndtv.com/Imports">
+      <xsd:import schemaLocation="http://localhost:2707/SmartHsService.svc?xsd=xsd0" namespace="http://smarths-ndtv.com" />
+      <xsd:import schemaLocation="http://localhost:2707/SmartHsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISmartHsService_AddMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMember" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_AddMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_ExistMemberName_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExistMemberName" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_ExistMemberName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExistMemberNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindMember" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindMemberByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindMemberByName" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindMemberByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindMemberByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_UpdateMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMember" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_UpdateMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_UpdateMemberKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberKey" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_UpdateMemberKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindAllStreet_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllStreet" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindAllStreet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllStreetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindCommunityByStreet_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCommunityByStreet" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindCommunityByStreet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCommunityByStreetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindCommunity_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCommunity" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindCommunity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCommunityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindStreetGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindStreetGroup" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindStreetGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStreetGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_AddSessionVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSessionVerify" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_AddSessionVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSessionVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_ReadyToUseSessionVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadyToUseSessionVerify" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_ReadyToUseSessionVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadyToUseSessionVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_CanUseSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:CanUseSession" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_CanUseSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CanUseSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_CanUseSessionById_InputMessage">
+    <wsdl:part name="parameters" element="tns:CanUseSessionById" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_CanUseSessionById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CanUseSessionByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindPostSpanTypeConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPostSpanTypeConfig" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindPostSpanTypeConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPostSpanTypeConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindTypeConfigByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTypeConfigByCategory" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FindTypeConfigByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTypeConfigByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_AddInteractPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddInteractPost" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_AddInteractPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddInteractPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPostCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostCount" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPostCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPostTitlesByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostTitlesByPage" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPostTitlesByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostTitlesByPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPostsByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostsByPage" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPostsByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostsByPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetSpecialInteractPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialInteractPost" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetSpecialInteractPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialInteractPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_DeleteInteractPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInteractPost" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_DeleteInteractPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInteractPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_SocialInsureQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:SocialInsureQuery" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_SocialInsureQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SocialInsureQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_WeatherInfoToday_InputMessage">
+    <wsdl:part name="parameters" element="tns:WeatherInfoToday" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_WeatherInfoToday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WeatherInfoTodayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_WeatherInfoFuture_InputMessage">
+    <wsdl:part name="parameters" element="tns:WeatherInfoFuture" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_WeatherInfoFuture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WeatherInfoFutureResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetTrafficCodeImg_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrafficCodeImg" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetTrafficCodeImg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrafficCodeImgResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetTrafficRecode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrafficRecode" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetTrafficRecode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrafficRecodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetFavorableNewsCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavorableNewsCount" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetFavorableNewsCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavorableNewsCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetFavorableNews_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavorableNews" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetFavorableNews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavorableNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetFavorableNewsTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavorableNewsTitle" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetFavorableNewsTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavorableNewsTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetEducationNewsCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEducationNewsCount" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetEducationNewsCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEducationNewsCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetEducationleNews_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEducationleNews" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetEducationleNews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEducationleNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetEducationleNewsTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEducationleNewsTitle" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetEducationleNewsTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEducationleNewsTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetHealthNewsCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHealthNewsCount" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetHealthNewsCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHealthNewsCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetHealthNews_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHealthNews" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetHealthNews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHealthNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetHealthNewsTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHealthNewsTitle" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetHealthNewsTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHealthNewsTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPriceNewsCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceNewsCount" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPriceNewsCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceNewsCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPriceeNews_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceeNews" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPriceeNews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceeNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPriceeNewsTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceeNewsTitle" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetPriceeNewsTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceeNewsTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetTripNewsCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTripNewsCount" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetTripNewsCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTripNewsCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetTripNews_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTripNews" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetTripNews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTripNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetTripNewsTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTripNewsTitle" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetTripNewsTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTripNewsTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetAllFoods_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFoods" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetAllFoods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetAllFoodCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFoodCategories" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetAllFoodCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFoodCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetAllMonitorSites_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMonitorSites" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetAllMonitorSites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMonitorSitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FilterFoodsByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:FilterFoodsByCategory" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_FilterFoodsByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FilterFoodsByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetFoodMonitorCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodMonitorCount" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetFoodMonitorCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodMonitorCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetFoodMonitorsByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodMonitorsByPage" />
+  </wsdl:message>
+  <wsdl:message name="ISmartHsService_GetFoodMonitorsByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodMonitorsByPageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISmartHsService">
+    <wsdl:operation name="AddMember">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddMember" message="tns:ISmartHsService_AddMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddMemberResponse" message="tns:ISmartHsService_AddMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistMemberName">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/ExistMemberName" message="tns:ISmartHsService_ExistMemberName_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/ExistMemberNameResponse" message="tns:ISmartHsService_ExistMemberName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindMember">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindMember" message="tns:ISmartHsService_FindMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindMemberResponse" message="tns:ISmartHsService_FindMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindMemberByName">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindMemberByName" message="tns:ISmartHsService_FindMemberByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindMemberByNameResponse" message="tns:ISmartHsService_FindMemberByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMember">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/UpdateMember" message="tns:ISmartHsService_UpdateMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/UpdateMemberResponse" message="tns:ISmartHsService_UpdateMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/Login" message="tns:ISmartHsService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/LoginResponse" message="tns:ISmartHsService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberKey">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/UpdateMemberKey" message="tns:ISmartHsService_UpdateMemberKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/UpdateMemberKeyResponse" message="tns:ISmartHsService_UpdateMemberKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllStreet">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindAllStreet" message="tns:ISmartHsService_FindAllStreet_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindAllStreetResponse" message="tns:ISmartHsService_FindAllStreet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCommunityByStreet">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindCommunityByStreet" message="tns:ISmartHsService_FindCommunityByStreet_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindCommunityByStreetResponse" message="tns:ISmartHsService_FindCommunityByStreet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCommunity">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindCommunity" message="tns:ISmartHsService_FindCommunity_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindCommunityResponse" message="tns:ISmartHsService_FindCommunity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindStreetGroup">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindStreetGroup" message="tns:ISmartHsService_FindStreetGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindStreetGroupResponse" message="tns:ISmartHsService_FindStreetGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSessionVerify">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddSessionVerify" message="tns:ISmartHsService_AddSessionVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddSessionVerifyResponse" message="tns:ISmartHsService_AddSessionVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadyToUseSessionVerify">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/ReadyToUseSessionVerify" message="tns:ISmartHsService_ReadyToUseSessionVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/ReadyToUseSessionVerifyResponse" message="tns:ISmartHsService_ReadyToUseSessionVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CanUseSession">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/CanUseSession" message="tns:ISmartHsService_CanUseSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/CanUseSessionResponse" message="tns:ISmartHsService_CanUseSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CanUseSessionById">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/CanUseSessionById" message="tns:ISmartHsService_CanUseSessionById_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/CanUseSessionByIdResponse" message="tns:ISmartHsService_CanUseSessionById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPostSpanTypeConfig">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindPostSpanTypeConfig" message="tns:ISmartHsService_FindPostSpanTypeConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindPostSpanTypeConfigResponse" message="tns:ISmartHsService_FindPostSpanTypeConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTypeConfigByCategory">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindTypeConfigByCategory" message="tns:ISmartHsService_FindTypeConfigByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FindTypeConfigByCategoryResponse" message="tns:ISmartHsService_FindTypeConfigByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddInteractPost">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddInteractPost" message="tns:ISmartHsService_AddInteractPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/AddInteractPostResponse" message="tns:ISmartHsService_AddInteractPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostCount">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPostCount" message="tns:ISmartHsService_GetPostCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPostCountResponse" message="tns:ISmartHsService_GetPostCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostTitlesByPage">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPostTitlesByPage" message="tns:ISmartHsService_GetPostTitlesByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPostTitlesByPageResponse" message="tns:ISmartHsService_GetPostTitlesByPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostsByPage">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPostsByPage" message="tns:ISmartHsService_GetPostsByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPostsByPageResponse" message="tns:ISmartHsService_GetPostsByPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialInteractPost">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetSpecialInteractPost" message="tns:ISmartHsService_GetSpecialInteractPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetSpecialInteractPostResponse" message="tns:ISmartHsService_GetSpecialInteractPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInteractPost">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/DeleteInteractPost" message="tns:ISmartHsService_DeleteInteractPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/DeleteInteractPostResponse" message="tns:ISmartHsService_DeleteInteractPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SocialInsureQuery">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/SocialInsureQuery" message="tns:ISmartHsService_SocialInsureQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/SocialInsureQueryResponse" message="tns:ISmartHsService_SocialInsureQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WeatherInfoToday">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/WeatherInfoToday" message="tns:ISmartHsService_WeatherInfoToday_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/WeatherInfoTodayResponse" message="tns:ISmartHsService_WeatherInfoToday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WeatherInfoFuture">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/WeatherInfoFuture" message="tns:ISmartHsService_WeatherInfoFuture_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/WeatherInfoFutureResponse" message="tns:ISmartHsService_WeatherInfoFuture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrafficCodeImg">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetTrafficCodeImg" message="tns:ISmartHsService_GetTrafficCodeImg_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetTrafficCodeImgResponse" message="tns:ISmartHsService_GetTrafficCodeImg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrafficRecode">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetTrafficRecode" message="tns:ISmartHsService_GetTrafficRecode_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetTrafficRecodeResponse" message="tns:ISmartHsService_GetTrafficRecode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavorableNewsCount">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetFavorableNewsCount" message="tns:ISmartHsService_GetFavorableNewsCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetFavorableNewsCountResponse" message="tns:ISmartHsService_GetFavorableNewsCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavorableNews">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetFavorableNews" message="tns:ISmartHsService_GetFavorableNews_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetFavorableNewsResponse" message="tns:ISmartHsService_GetFavorableNews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavorableNewsTitle">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetFavorableNewsTitle" message="tns:ISmartHsService_GetFavorableNewsTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetFavorableNewsTitleResponse" message="tns:ISmartHsService_GetFavorableNewsTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEducationNewsCount">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetEducationNewsCount" message="tns:ISmartHsService_GetEducationNewsCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetEducationNewsCountResponse" message="tns:ISmartHsService_GetEducationNewsCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEducationleNews">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetEducationleNews" message="tns:ISmartHsService_GetEducationleNews_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetEducationleNewsResponse" message="tns:ISmartHsService_GetEducationleNews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEducationleNewsTitle">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetEducationleNewsTitle" message="tns:ISmartHsService_GetEducationleNewsTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetEducationleNewsTitleResponse" message="tns:ISmartHsService_GetEducationleNewsTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHealthNewsCount">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetHealthNewsCount" message="tns:ISmartHsService_GetHealthNewsCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetHealthNewsCountResponse" message="tns:ISmartHsService_GetHealthNewsCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHealthNews">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetHealthNews" message="tns:ISmartHsService_GetHealthNews_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetHealthNewsResponse" message="tns:ISmartHsService_GetHealthNews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHealthNewsTitle">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetHealthNewsTitle" message="tns:ISmartHsService_GetHealthNewsTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetHealthNewsTitleResponse" message="tns:ISmartHsService_GetHealthNewsTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceNewsCount">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPriceNewsCount" message="tns:ISmartHsService_GetPriceNewsCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPriceNewsCountResponse" message="tns:ISmartHsService_GetPriceNewsCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceeNews">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPriceeNews" message="tns:ISmartHsService_GetPriceeNews_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPriceeNewsResponse" message="tns:ISmartHsService_GetPriceeNews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceeNewsTitle">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPriceeNewsTitle" message="tns:ISmartHsService_GetPriceeNewsTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetPriceeNewsTitleResponse" message="tns:ISmartHsService_GetPriceeNewsTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTripNewsCount">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetTripNewsCount" message="tns:ISmartHsService_GetTripNewsCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetTripNewsCountResponse" message="tns:ISmartHsService_GetTripNewsCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTripNews">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetTripNews" message="tns:ISmartHsService_GetTripNews_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetTripNewsResponse" message="tns:ISmartHsService_GetTripNews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTripNewsTitle">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetTripNewsTitle" message="tns:ISmartHsService_GetTripNewsTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetTripNewsTitleResponse" message="tns:ISmartHsService_GetTripNewsTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFoods">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetAllFoods" message="tns:ISmartHsService_GetAllFoods_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetAllFoodsResponse" message="tns:ISmartHsService_GetAllFoods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFoodCategories">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetAllFoodCategories" message="tns:ISmartHsService_GetAllFoodCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetAllFoodCategoriesResponse" message="tns:ISmartHsService_GetAllFoodCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMonitorSites">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetAllMonitorSites" message="tns:ISmartHsService_GetAllMonitorSites_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetAllMonitorSitesResponse" message="tns:ISmartHsService_GetAllMonitorSites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FilterFoodsByCategory">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FilterFoodsByCategory" message="tns:ISmartHsService_FilterFoodsByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/FilterFoodsByCategoryResponse" message="tns:ISmartHsService_FilterFoodsByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodMonitorCount">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetFoodMonitorCount" message="tns:ISmartHsService_GetFoodMonitorCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetFoodMonitorCountResponse" message="tns:ISmartHsService_GetFoodMonitorCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodMonitorsByPage">
+      <wsdl:input wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetFoodMonitorsByPage" message="tns:ISmartHsService_GetFoodMonitorsByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://smarths-ndtv.com/ISmartHsService/GetFoodMonitorsByPageResponse" message="tns:ISmartHsService_GetFoodMonitorsByPage_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
