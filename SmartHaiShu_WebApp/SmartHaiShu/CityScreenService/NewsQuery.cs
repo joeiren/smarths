@@ -85,6 +85,25 @@ namespace SmartHaiShu_WebApp.SmartHaiShu.CityScreenService
             return Count((int)NewsCategory.TRIP);
         }
 
+        public NewsModel QuerySpecial(long id)
+        {
+            try
+            {
+                var client = new NewsClient();
+                var existed = client.ExsitesNews(id);
+                if (existed)
+                {
+                    return client.GetNewsById(id);
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return null;
+            }
+        }
+
         public IEnumerable<NewsModel> Query(int pageSize, int pageNo, int category)
         {
             try

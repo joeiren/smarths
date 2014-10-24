@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using SmartHaiShu.Utility;
 using SmartHaiShu_WebApp.HSOpenDataService;
+using SmartHaiShu_WebApp.SmartHaiShu.CityScreenService;
 
 
 namespace SmartHaiShu_WebApp.SmartHaiShu
@@ -31,6 +32,8 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         }
 
         private OpenDataServiceClient _serviceClient = new OpenDataServiceClient();
+        private NewsQuery _newsQuery = new NewsQuery();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -57,6 +60,16 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                             ReleaseTime = result.JObjMessageInner("ReleaseTime").ValueOrDefault <string>();
                         }
                         break;
+                    case 3: //favorable
+                        var news =_newsQuery.QuerySpecial(Convert.ToInt64(id));
+                        if (news != null)
+                        {
+                            InfoContent = news.Contents;
+                            InfoTitle = news.Title;
+                            ReleaseTime = news.LastModifyTime!= null ? news.LastModifyTime.Value.ToString("yyyy-MM-dd") : string.Empty;
+                        }
+                        break;
+                   
                     default:
                         break;
                 }

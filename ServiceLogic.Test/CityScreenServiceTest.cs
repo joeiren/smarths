@@ -16,7 +16,7 @@ namespace ServiceLogic.Test
         public void SocialInsureTest()
         {
             var query = new SocialInsureQuery();
-            query.Query("","");
+            query.Query("332623198010027111","1111");
         }
 
         [TestMethod]

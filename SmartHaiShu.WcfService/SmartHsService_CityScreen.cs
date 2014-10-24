@@ -62,7 +62,7 @@ namespace SmartHaiShu.WcfService
             try
             {
                 var result = new SocialInsureQuery().Query(cardId, pwd);
-                return new ResultFormat(1, result).ToString();
+                return new ResultFormat(result == null || !result.Any() ? 0: 1, result).ToString();
             }
             catch (Exception ex)
             {
