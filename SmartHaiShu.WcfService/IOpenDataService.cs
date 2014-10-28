@@ -149,5 +149,29 @@ namespace SmartHaiShu.WcfService
 
         [OperationContract]
         string GetFlights(bool import, int pageNo, int pageSize);
+
+        [OperationContract]
+        string GetHospitalInfoCount();
+
+        [OperationContract]
+        string GetHospitalInfoByPage(int pageSize, int pageNo);
+
+        [OperationContract]
+        string GetHospitalDoctorCount();
+
+        [OperationContract]
+        string GetHospitalDoctorByPage(int pageSize, int pageNo);
+
+        [OperationContract]
+        string GetAllDoctorHospitals();
+
+        [OperationContract]
+        string GetDoctorDepartmentsByHostpital(string hospital);
+
+        [OperationContract]
+        string GetHospitalDoctorCountBy(string hospital, string department);
+
+        [OperationContract]
+        string GetHospitalDoctorsBy(string hospital, string department, int pageSize, int pageNo);
     }
 }

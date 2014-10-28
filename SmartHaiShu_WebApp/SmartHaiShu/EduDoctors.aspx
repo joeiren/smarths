@@ -7,6 +7,184 @@
     <title>专家介绍</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+        var _pageSize = 10;
+        var _pageNo = 1;
+        var _pageRange = 5;
+        $(document).ready(function () {
+            $.ajax({
+                type: 'POST',
+                url: 'CommonInvoke.aspx/LoadAllDoctorHospitals',
+                contentType: "application/json; charset=utf-8",
+                success: function (result) {
+                    var data = eval("(" + result.d + ")");
+                    if (data.Code == 1) {
+                        $.each(data.Message, function (entryIndex, entry) {
+                            if (entry["Name"] != undefined) {
+                                var item = '<option value=' + '"' + entry["Name"] + '">' + entry["Name"] + '</option>';
+                                $("#lstHospital").append(item);
+                            }
+                        });
+                        reloadDepartmentList();
+                    }
+                },
+                error: function (result) {
+                }
+
+            });
+
+            $("#lstHospital").change(function () {
+                reloadDepartmentList();
+            });
+
+        });
+
+        function reloadDepartmentList() {
+            var hospital = $("#lstHospital").children('option:selected').val();
+            $("#lstDepartment > option:gt(0)").remove();
+            $.ajax({
+                type: 'POST',
+                url: 'CommonInvoke.aspx/LoadDepartmentsByHospital',
+                contentType: "application/json; charset=utf-8",
+                data: "{'hospital':'" + hospital + "'}",
+                success: function (result) {
+                    var data = eval("(" + result.d + ")");
+                    if (data.Code == 1) {
+                        $.each(data.Message, function (entryIndex, entry) {
+                            if (entry["Name"] != undefined) {
+                                var item = '<option value=' + '"' + entry["Name"] + '">' + entry["Name"] + '</option>';
+                                $("#lstDepartment").append(item);
+                            }
+                        });
+
+                    }
+                },
+                error: function (result) {
+                }
+            });
+        }
+
+        function onQuery() {
+            _pageNo = 1;
+            loadResultTable();
+
+        }
+
+        function loadResultTable() {
+           // $("#resultTable").addClass("hidden");
+            var hospital = $("#lstHospital").val();
+            var department = $("#lstDepartment").val();
+
+            $("#resultTable").children().remove();
+            $.ajax({
+                type: 'POST',
+                url: 'CommonInvoke.aspx/LoadDoctorsByHospitalDepartment',
+                contentType: "application/json; charset=utf-8",
+                data: "{'hospital':'" + hospital + "','department':'" + department + "','pageSize':" + _pageSize + ",'pageNo':" + _pageNo + "}",
+                success: function(result) {
+                        var data = eval("(" + result.d + ")");
+                        if (data.Code == 1) {
+                            var count = data.Message.length;
+                            var rowLength = Number(count / 2) + (count == 0 ? 0 : (count % 2 == 0 ? 0 : 1));
+
+                            for (var row = 0; row < rowLength; row++) {
+                                var rowHtml = '<div class="row" style="margin-top: 15px; ">';
+                                var cellsHtml = '';
+                                for (var cell = 0; cell < 2; cell++) {
+                                    var index = 2 * row + cell;
+                                    if (index >= count) {
+                                        break;
+                                    }
+                                    var entry = data.Message[index];
+                                    var cellHtml = '<div style="width: 320px; float: left;margin-left: 10px;"><div class="thumbnail" style="border-color:#bcebf1;;"><div class="caption">';
+                                    cellHtml += '<h4>' + entry["Name"].substr(0, 9) + (entry["Name"].length > 9 ? '...' : '') + '<span class="badge" style="background-color: slateblue">' + entry["Technic"].substr(0, 6) + (entry["Technic"].length > 6 ? '...' : '') + '</span></h4>';
+                                    cellHtml += ' <ul class="list-group">';
+                                    cellHtml += '<li class="list-group-item list-group-item-success">' + entry["Name"] + ' @ ' + entry["Department"].substr(0,5) + '</li>';
+                                    cellHtml += '<li class="list-group-item list-group-item-warning">专业：' + entry["Major"] + '</li>';
+                                    cellHtml += '<li class="list-group-item list-group-item-info">' + entry["Sex"] + ' &nbsp;' + entry["Age"] + '岁 </li>';
+                                    cellHtml += '<li class="list-group-item" style="height: 140px;overflow-y:auto;">' + entry["Content"] + '</li>';
+                                    cellHtml += '</ul></div></div></div>';
+                                    cellsHtml += cellHtml;
+                                }
+                                rowHtml += cellsHtml;
+                                rowHtml += '</div>';
+                                $("#resultTable").append(rowHtml);
+                            }
+                            showPageSelector();
+                        }
+                },
+                error: function (result) {
+                }
+            });
+        }
+
+
+        function showPageSelector() {
+            //$("#pageNoArea").addClass("hidden");
+            $("#resultTable").prev("#pageDiv").remove();
+            var hospital = $("#lstHospital").val();
+            var department = $("#lstDepartment").val();
+            var count = 0;
+            $.ajax({
+                type: 'POST',
+                url: 'CommonInvoke.aspx/LoadDoctorCountByHospitalDepartment',
+                contentType: "application/json; charset=utf-8",
+                data: "{'hospital':'" + hospital + "','department':'" + department + "'}",
+                success: function (result) {
+                    var data = eval("(" + result.d + ")");
+                    if (data.Code == 1) {
+                        count = Number(data.Message);
+                        if (count > 0) {
+                            var totalPage = parseInt(count / _pageSize) + (count % _pageSize == 0 ? 0 : 1);
+                            var html = ' <div class="row text-right" id="pageDiv"><ul class="pagination pagination-sm " style="margin-right: 15px;margin-top: 5px; margin-bottom: 5px; " id="pageNoArea" >';
+                            if (_pageNo <= _pageRange) {
+                                html += '<li class="disabled"><a href="#">&laquo;</a></li>';
+                            } else {
+                                html += '<li><a href="javascript:trunPage(' + (_pageNo - 1) + ',' + totalPage + ')">&laquo;</a></li>';
+                            }
+                            var begin = (parseInt(_pageNo / _pageRange) - (_pageNo % _pageRange == 0 ? 1 : 0)) * _pageRange + 1;
+                            var end = (parseInt(_pageNo / _pageRange) + (_pageNo % _pageRange == 0 ? 0 : 1)) * _pageRange;
+                            var lastpage = _pageNo >= totalPage;
+                            end = Math.min(end, totalPage);
+                            for (var no = begin; no <= end; no++) {
+                                if (no == _pageNo) {
+                                    html += ' <li class="active"><span>' + no + ' <span class="sr-only">(current)</span></span></li>';
+                                } else {
+                                    html += ' <li><a href="javascript:trunPage(' + no + ',' + totalPage + ')">' + no + '</a></li>';
+                                }
+                            }
+                            if (lastpage) {
+                                html += '<li class="disabled"><a href="#">&raquo;</a></li>';
+                            } else {
+                                html += '<li><a href="javascript:trunPage(' + (_pageNo + 1) + ',' + totalPage + ')">&raquo;</a></li>';
+                            }
+                            html += '</ul> </div>';
+                            $("#resultTable").before(html);
+                        }
+
+                    }
+                },
+                error: function (result) {
+                }
+            });
+
+
+
+            //$("#pageNoArea").removeClass("hidden");
+        }
+
+        function trunPage(toPageNo, maxPageNo) {
+            if (toPageNo > 0 && toPageNo <= maxPageNo) {
+                _pageNo = toPageNo;
+                loadResultTable();
+
+            }
+        }
+
+        </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -16,16 +194,8 @@
             <div style="width: 250px;float: left;margin-left: 10px;">
                 <div class="input-group">
                     <span class="input-group-addon">医院</span>
-                    <%--<asp:DropDownList runat="server" CssClass="form-control" ID="lstStreet" />--%>  
-                    <select id="lstStreet" name="lstStreet" class="form-control">
-                        <option>宁波市中医院</option>
-                        <option>宁波市妇女儿童医院</option>
-                        <option>宁波市第一医院</option>
-                        <option>宁波市第二医院</option>
-                        <option>宁波海曙口腔医院（老院）</option>
-                        <option>宁波口腔医院（新院）</option>
-                        <option>宁波市华慈医院</option>
-                        <option>月湖街道社区卫生服务中心</option>
+                    <select id="lstHospital" name="lstHospital" class="form-control">
+                       <option value="">全部</option>
                     </select>
                 </div>
             </div>
@@ -33,98 +203,20 @@
                 <div class="input-group">
                     <span class="input-group-addon">科室</span>
                     
-                    <select id="Select1" name="lstStreet" class="form-control">
-                        <option>中医专家</option>
-                        <option>中医妇科专科</option>
-                        <option>产科专家</option>
-                        <option>内分泌专科</option>
-                        <option>内分泌科</option>
-                        <option>内分泌科</option>
-                        <option>心血管内科一</option>
-                        <option>内科(高级)</option>
+                    <select id="lstDepartment" name="lstDepartment" class="form-control">
+                        <option value="">全部</option>
                     </select>
                 </div>
             </div>
              <div style="width: 120px; float: left;padding-left: 10px;">
-              <button  type="button" class="btn btn-primary btn-block"> 查询</button> 
+              <button  type="button" class="btn btn-primary btn-block" onclick="onQuery();"> 查询</button> 
              </div>
         </div>
+        <div id="resultTable" class="container" style="height: 720px;">
         
-        <div class="row" style="margin-top: 15px; ">
-            <div style="width: 320px; float: left;margin-left: 10px;">
-             <div class="thumbnail" style="border-color:#bcebf1;;">
-                  <div class="caption">
-                    <h4>史文骥<span class="badge" style="background-color: slateblue">主任医师</span></h4>
-                   <ul class="list-group">
-                      <li class="list-group-item list-group-item-success">宁波市第一医院 @ 骨科专家</li>
-                      <li class="list-group-item list-group-item-warning">专业：外科专业</li>
-                      <li class="list-group-item list-group-item-info">男 &nbsp; 52岁 </li>
-                      <li class="list-group-item" style="height: 140px;overflow-y:auto;">史文骥，男，1986年毕业于浙江医科大学医学系，从事骨科临床工作20年。曾在上海第二医科大学附属第九医院骨科进修，擅长关节外科，关节镜外科，四肢创伤，脊柱外科等骨科疾病。发表论文9篇，已参与完成科研1项，获2000年浙江省科技进步奖三等奖，2000年度市科技进步奖三等奖。</li>
-                    </ul>
-                  </div>
-             </div>
-            </div>
-            
-            <div style="width: 320px;float: left;margin-left: 30px;">
-             <div class="thumbnail" style="border-color:#bcebf1;;">
-                  <div class="caption">
-                    <h4>舒静<span class="badge" style="background-color: slateblue">主任医师</span></h4>
-                   <ul class="list-group">
-                      <li class="list-group-item list-group-item-success">宁波市第一医院 @ 高危妊娠门诊</li>
-                      <li class="list-group-item list-group-item-warning">专业：外科专业</li>
-                      <li class="list-group-item list-group-item-info">女 &nbsp;47岁</li>
-                      <li class="list-group-item" style="height: 140px;overflow-y:auto;">舒静，女，主任医师。1987年毕业于西安医科大学。从事临床工作18年。曾在德国进修4个月。擅长不孕症、难免流产、优生优育、妇产科内分泌相关疾病的诊治。发表论文10余篇。</li>
-                    </ul>
-                  </div>
-             </div>
-            </div>
         </div>
-        
-        <div class="row" style="margin-top: 15px; ">
-            <div style="width: 320px; float: left;margin-left: 10px;">
-             <div class="thumbnail" style="border-color:#bcebf1;;">
-                  <div class="caption">
-                    <h4>袁雄芳<span class="badge" style="background-color: slateblue">副主任中医</span></h4>
-                   <ul class="list-group">
-                      <li class="list-group-item list-group-item-success">宁波市第二医院 @ 中医妇科(副)</li>
-                      <li class="list-group-item list-group-item-warning">专业：内科专业</li>
-                      <li class="list-group-item list-group-item-info">女 &nbsp; 56岁 </li>
-                      <li class="list-group-item" style="height: 140px;overflow-y:auto;">女， 从事中医临床30年，曾师从徐文达、宋世焱、董幼祺等著名老中医。擅长诊治月经失调、痛经、不孕症、盆腔炎、乳房小叶增生、更年期综合症和胃痛、头痛、肿瘤等内、妇科疾病。</li>
-                    </ul>
-                  </div>
-             </div>
-            </div>
-            
-            <div style="width: 320px;float: left;margin-left: 30px;">
-             <div class="thumbnail" style="border-color:#bcebf1;;">
-                  <div class="caption">
-                    <h4>付波<span class="badge" style="background-color: slateblue">副主任医师</span></h4>
-                   <ul class="list-group">
-                      <li class="list-group-item list-group-item-success">宁波市第一医院 @ 耳鼻喉科专家</li>
-                      <li class="list-group-item list-group-item-warning">专业：眼耳鼻咽喉科专业</li>
-                      <li class="list-group-item list-group-item-info">女 &nbsp;55岁</li>
-                      <li class="list-group-item" style="height: 140px;overflow-y:auto;">1979年毕业于宁波市第二医院卫校临床医学专业，在宁波市第一医院耳鼻咽喉专业工作30年，在耳鼻喉科的常见病、多发病及疑难病、复杂的疾病的诊断及治疗上有丰富的临床经验。</li>
-                    </ul>
-                  </div>
-             </div>
-            </div>
-        </div>
-        <div class="row text-center">
-                    <ul class="pagination pagination-sm " id="pageNoArea">
-                    <li class="disabled"><a href="#">&laquo;</a></li>
-                  <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li><a href="#">&raquo;</a></li>
-                    </ul> 
-                </div>
     </div>
     </form>
-     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    </script>
+   
 </body>
 </html>

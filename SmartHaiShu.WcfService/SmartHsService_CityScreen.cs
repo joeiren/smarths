@@ -669,7 +669,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 根据条件查看物价条数
+        /// 根据条件查看物价分页
         /// </summary>
         /// <param name="category">物品分类</param>
         /// <param name="foodname">物品名称</param>
@@ -682,8 +682,22 @@ namespace SmartHaiShu.WcfService
             try
             {
                 FoodMonitor entity = new FoodMonitor {Category = category, FoodName = foodname, SiteName = site};
-                var count = _priceQueryService.QueryFoodMonitorsByPage(entity, pageSize,pageNo);
-                return new ResultFormat(1, count).ToString();
+                var result = _priceQueryService.QueryFoodMonitorsByPage(entity, pageSize, pageNo);
+                var foods = from it in result
+                            select new
+                            {
+                                it.AutoID,
+                                Category = it.Category ?? "",
+                                FoodName = it.FoodName ?? "",
+                                Metrics = it.Metrics ?? "",
+                                Price = it.Price == null ? "" : it.Price.Value.ToString(),
+                                SiteName = it.SiteName ?? "",
+                                Spec = it.Spec ?? "",
+                                TableName = it.TableName ?? "",
+                                Unit = it.Unit ?? "",
+                                Uploadtime = it.Uploadtime != null ? it.Uploadtime.Value.ToString("yyyy-MM-dd") : ""
+                            };
+                return new ResultFormat(1, foods).ToString();
             }
             catch (Exception ex)
             {

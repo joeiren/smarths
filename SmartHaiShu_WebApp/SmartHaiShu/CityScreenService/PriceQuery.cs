@@ -72,7 +72,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu.CityScreenService
         public IEnumerable<FoodMonitor> QueryFoodMonitorsByPage(FoodMonitor condition, int pageSize, int pageNo)
         {
             PriceService.PriceClient client = new PriceClient();
-            var result = client.FindFoodMonitors(condition, "FoodName", true, 20, Math.Max(0, pageNo - 1));
+            var result = client.FindFoodMonitors(condition, "FoodName", true, pageSize, Math.Max(0, pageNo - 1));
             return result;
         }
 

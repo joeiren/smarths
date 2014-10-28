@@ -40,8 +40,8 @@ namespace ServiceLogic.Test
         [TestMethod]
         public void PriceTest()
         {
-            var query = new PriceQuery();
-            query.QueryAllCategorys();
+            //var query = new PriceQuery();
+            //query.QueryAllCategorys();
         }
     }
 }

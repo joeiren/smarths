@@ -282,6 +282,54 @@
   <wsdl:message name="IOpenDataService_GetFlights_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetFlightsResponse" />
   </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetHospitalInfoCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalInfoCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetHospitalInfoCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalInfoCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetHospitalInfoByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalInfoByPage" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetHospitalInfoByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalInfoByPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetHospitalDoctorCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalDoctorCount" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetHospitalDoctorCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalDoctorCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetHospitalDoctorByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalDoctorByPage" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetHospitalDoctorByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalDoctorByPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetAllDoctorHospitals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDoctorHospitals" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetAllDoctorHospitals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDoctorHospitalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetDoctorDepartmentsByHostpital_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorDepartmentsByHostpital" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetDoctorDepartmentsByHostpital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorDepartmentsByHostpitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetHospitalDoctorCountBy_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalDoctorCountBy" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetHospitalDoctorCountBy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalDoctorCountByResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetHospitalDoctorsBy_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalDoctorsBy" />
+  </wsdl:message>
+  <wsdl:message name="IOpenDataService_GetHospitalDoctorsBy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalDoctorsByResponse" />
+  </wsdl:message>
   <wsdl:portType name="IOpenDataService">
     <wsdl:operation name="GetCommunityIntroduction">
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetCommunityIntroduction" message="tns:IOpenDataService_GetCommunityIntroduction_InputMessage" />
@@ -466,6 +514,38 @@
     <wsdl:operation name="GetFlights">
       <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetFlights" message="tns:IOpenDataService_GetFlights_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetFlightsResponse" message="tns:IOpenDataService_GetFlights_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalInfoCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetHospitalInfoCount" message="tns:IOpenDataService_GetHospitalInfoCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetHospitalInfoCountResponse" message="tns:IOpenDataService_GetHospitalInfoCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalInfoByPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetHospitalInfoByPage" message="tns:IOpenDataService_GetHospitalInfoByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetHospitalInfoByPageResponse" message="tns:IOpenDataService_GetHospitalInfoByPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalDoctorCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetHospitalDoctorCount" message="tns:IOpenDataService_GetHospitalDoctorCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetHospitalDoctorCountResponse" message="tns:IOpenDataService_GetHospitalDoctorCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalDoctorByPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetHospitalDoctorByPage" message="tns:IOpenDataService_GetHospitalDoctorByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetHospitalDoctorByPageResponse" message="tns:IOpenDataService_GetHospitalDoctorByPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDoctorHospitals">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetAllDoctorHospitals" message="tns:IOpenDataService_GetAllDoctorHospitals_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetAllDoctorHospitalsResponse" message="tns:IOpenDataService_GetAllDoctorHospitals_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorDepartmentsByHostpital">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetDoctorDepartmentsByHostpital" message="tns:IOpenDataService_GetDoctorDepartmentsByHostpital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetDoctorDepartmentsByHostpitalResponse" message="tns:IOpenDataService_GetDoctorDepartmentsByHostpital_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalDoctorCountBy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetHospitalDoctorCountBy" message="tns:IOpenDataService_GetHospitalDoctorCountBy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetHospitalDoctorCountByResponse" message="tns:IOpenDataService_GetHospitalDoctorCountBy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalDoctorsBy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpenDataService/GetHospitalDoctorsBy" message="tns:IOpenDataService_GetHospitalDoctorsBy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpenDataService/GetHospitalDoctorsByResponse" message="tns:IOpenDataService_GetHospitalDoctorsBy_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IOpenDataService" type="tns:IOpenDataService">
@@ -877,6 +957,78 @@
     </wsdl:operation>
     <wsdl:operation name="GetFlights">
       <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetFlights" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalInfoCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetHospitalInfoCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalInfoByPage">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetHospitalInfoByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalDoctorCount">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetHospitalDoctorCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalDoctorByPage">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetHospitalDoctorByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDoctorHospitals">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetAllDoctorHospitals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorDepartmentsByHostpital">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetDoctorDepartmentsByHostpital" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalDoctorCountBy">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetHospitalDoctorCountBy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalDoctorsBy">
+      <soap:operation soapAction="http://tempuri.org/IOpenDataService/GetHospitalDoctorsBy" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -152,6 +152,30 @@ namespace SmartHaiShu_WebApp.HSOpenDataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetFlights", ReplyAction="http://tempuri.org/IOpenDataService/GetFlightsResponse")]
         string GetFlights(bool import, int pageNo, int pageSize);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetHospitalInfoCount", ReplyAction="http://tempuri.org/IOpenDataService/GetHospitalInfoCountResponse")]
+        string GetHospitalInfoCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetHospitalInfoByPage", ReplyAction="http://tempuri.org/IOpenDataService/GetHospitalInfoByPageResponse")]
+        string GetHospitalInfoByPage(int pageSize, int pageNo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetHospitalDoctorCount", ReplyAction="http://tempuri.org/IOpenDataService/GetHospitalDoctorCountResponse")]
+        string GetHospitalDoctorCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetHospitalDoctorByPage", ReplyAction="http://tempuri.org/IOpenDataService/GetHospitalDoctorByPageResponse")]
+        string GetHospitalDoctorByPage(int pageSize, int pageNo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetAllDoctorHospitals", ReplyAction="http://tempuri.org/IOpenDataService/GetAllDoctorHospitalsResponse")]
+        string GetAllDoctorHospitals();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetDoctorDepartmentsByHostpital", ReplyAction="http://tempuri.org/IOpenDataService/GetDoctorDepartmentsByHostpitalResponse")]
+        string GetDoctorDepartmentsByHostpital(string hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetHospitalDoctorCountBy", ReplyAction="http://tempuri.org/IOpenDataService/GetHospitalDoctorCountByResponse")]
+        string GetHospitalDoctorCountBy(string hospital, string department);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOpenDataService/GetHospitalDoctorsBy", ReplyAction="http://tempuri.org/IOpenDataService/GetHospitalDoctorsByResponse")]
+        string GetHospitalDoctorsBy(string hospital, string department, int pageSize, int pageNo);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -363,6 +387,38 @@ namespace SmartHaiShu_WebApp.HSOpenDataService {
         
         public string GetFlights(bool import, int pageNo, int pageSize) {
             return base.Channel.GetFlights(import, pageNo, pageSize);
+        }
+        
+        public string GetHospitalInfoCount() {
+            return base.Channel.GetHospitalInfoCount();
+        }
+        
+        public string GetHospitalInfoByPage(int pageSize, int pageNo) {
+            return base.Channel.GetHospitalInfoByPage(pageSize, pageNo);
+        }
+        
+        public string GetHospitalDoctorCount() {
+            return base.Channel.GetHospitalDoctorCount();
+        }
+        
+        public string GetHospitalDoctorByPage(int pageSize, int pageNo) {
+            return base.Channel.GetHospitalDoctorByPage(pageSize, pageNo);
+        }
+        
+        public string GetAllDoctorHospitals() {
+            return base.Channel.GetAllDoctorHospitals();
+        }
+        
+        public string GetDoctorDepartmentsByHostpital(string hospital) {
+            return base.Channel.GetDoctorDepartmentsByHostpital(hospital);
+        }
+        
+        public string GetHospitalDoctorCountBy(string hospital, string department) {
+            return base.Channel.GetHospitalDoctorCountBy(hospital, department);
+        }
+        
+        public string GetHospitalDoctorsBy(string hospital, string department, int pageSize, int pageNo) {
+            return base.Channel.GetHospitalDoctorsBy(hospital, department, pageSize, pageNo);
         }
     }
 }

@@ -60,13 +60,20 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                             ReleaseTime = result.JObjMessageInner("ReleaseTime").ValueOrDefault <string>();
                         }
                         break;
-                    case 3: //favorable
+                    case 3: //
                         var news =_newsQuery.QuerySpecial(Convert.ToInt64(id));
                         if (news != null)
                         {
                             InfoContent = news.Contents;
                             InfoTitle = news.Title;
-                            ReleaseTime = news.LastModifyTime!= null ? news.LastModifyTime.Value.ToString("yyyy-MM-dd") : string.Empty;
+                            ReleaseTime = news.LastModifyTime != null
+                                ? news.LastModifyTime.Value.ToString("yyyy-MM-dd")
+                                : string.Empty;
+                        }
+                        else
+                        {
+                            InfoTitle = "null";
+
                         }
                         break;
                    

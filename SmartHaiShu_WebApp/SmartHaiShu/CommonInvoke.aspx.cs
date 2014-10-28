@@ -220,5 +220,70 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             }
         }
 
+        [WebMethod]
+        public static string LoadAllDoctorHospitals()
+        {
+            try
+            {
+                var result = new OpenDataServiceClient().GetAllDoctorHospitals();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                var exResult = new { Code = 0, Message = ex.Message };
+                return JsonConvert.SerializeObject(exResult);
+            }
+        }
+
+        [WebMethod]
+        public static string LoadDepartmentsByHospital(string hospital)
+        {
+            try
+            {
+                var result = new OpenDataServiceClient().GetDoctorDepartmentsByHostpital(hospital);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                var exResult = new { Code = 0, Message = ex.Message };
+                return JsonConvert.SerializeObject(exResult);
+            }
+        }
+
+        [WebMethod]
+        public static string LoadDoctorsByHospitalDepartment(string hospital, string department, int pageSize,
+                                                             int pageNo)
+        {
+            try
+            {
+                var result = new OpenDataServiceClient().GetHospitalDoctorsBy(hospital, department, pageSize, pageNo);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                var exResult = new { Code = 0, Message = ex.Message };
+                return JsonConvert.SerializeObject(exResult);
+            }
+        }
+
+        [WebMethod]
+        public static string LoadDoctorCountByHospitalDepartment(string hospital, string department)
+        {
+            try
+            {
+                var result = new OpenDataServiceClient().GetHospitalDoctorCountBy(hospital, department);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                var exResult = new { Code = 0, Message = ex.Message };
+                return JsonConvert.SerializeObject(exResult);
+            }
+        }
+
     }
 }

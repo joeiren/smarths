@@ -1,7 +1,10 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
+using System.ServiceModel.Syndication;
 using SmartHaiShu.WcfService.OpenDataLogic;
 using SmartHaisuModel;
 
@@ -17,11 +20,12 @@ namespace SmartHaiShu.WcfService
         private readonly DrugStoreLogic _drugStoreLogic = new DrugStoreLogic();
         private readonly DzkBizLogic _dzkLogic = new DzkBizLogic();
         private readonly EducationLogic _educationLogic = new EducationLogic();
+        private readonly FlightLogic _flightLogic = new FlightLogic();
+        private readonly HospitalLogic _hospitalLogic = new HospitalLogic();
         private readonly HotelLogic _hotelLogic = new HotelLogic();
         private readonly MarketLogic _marketLogic = new MarketLogic();
         private readonly CommunityNoticeLogic _noticeLogic = new CommunityNoticeLogic();
         private readonly RetirementLogic _retirementLogic = new RetirementLogic();
-        private readonly FlightLogic _flightLogic = new FlightLogic();
 
         /// <summary>
         ///     社区简介
@@ -1160,8 +1164,9 @@ namespace SmartHaiShu.WcfService
                 return new ResultFormat(0, ex.Message).ToString();
             }
         }
+
         /// <summary>
-        /// 航班（进港/出港）条数
+        ///     航班（进港/出港）条数
         /// </summary>
         /// <param name="import">进港/出港</param>
         /// <returns></returns>
@@ -1180,7 +1185,7 @@ namespace SmartHaiShu.WcfService
         }
 
         /// <summary>
-        /// 航班信息
+        ///     航班信息
         /// </summary>
         /// <param name="import">进港/出港</param>
         /// <param name="pageNo">页号(大于0)</param>
@@ -1192,16 +1197,221 @@ namespace SmartHaiShu.WcfService
             {
                 var result = _flightLogic.FindFlightsImport(pageNo, pageSize, import);
                 var flights = (from it in result
-                             select new
-                             {
-                                 Address = it.ADDRESS,
-                                 Flight = it.FLIGHT,
-                                 DateLimit = it.LIMIT1,
-                                 Approach = it.PAUSE_ADD,
-                                 CheckTime = it.CHECK_TIME
-                             }).ToList();
+                               select new
+                               {
+                                   Address = it.ADDRESS,
+                                   Flight = it.FLIGHT,
+                                   DateLimit = it.LIMIT1,
+                                   Approach = it.PAUSE_ADD,
+                                   CheckTime = it.CHECK_TIME
+                               }).ToList();
 
                 return new ResultFormat(1, flights).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
+        ///     获取医院信息条数
+        /// </summary>
+        /// <returns></returns>
+        public string GetHospitalInfoCount()
+        {
+            try
+            {
+                int result = _hospitalLogic.HospitalLocationCount();
+                return new ResultFormat(1, result.ToString(CultureInfo.InvariantCulture)).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
+        ///     分页获取医院信息
+        /// </summary>
+        /// <param name="pageSize"></param>
+        /// <param name="pageNo"></param>
+        /// <returns></returns>
+        public string GetHospitalInfoByPage(int pageSize, int pageNo)
+        {
+            try
+            {
+                var result = _hospitalLogic.LoadHospitalLoaction(pageSize, pageNo);
+                var infos = (from it in result
+                             select
+                                 new
+                                 {
+                                     Name = it.NAME,
+                                     Type = it.TYPE1,
+                                     Level = it.LEVEL,
+                                     Address = it.ADDRESS,
+                                     Tel = it.TEL,
+                                     Bus = it.BUS,
+                                     Url = it.URL,
+                                     Content = it.CONTENT,
+                                     ReleaseTime = it.RELEASE_TIME,
+                                     CheckTime = it.CHECK_TIME
+                                 }).ToList();
+                return new ResultFormat(1, infos).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
+        ///     获取医院专家信息条数
+        /// </summary>
+        /// <returns></returns>
+        public string GetHospitalDoctorCount()
+        {
+            try
+            {
+                int result = _hospitalLogic.HospitalDoctorCount();
+                return new ResultFormat(1, result.ToString(CultureInfo.InvariantCulture)).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
+        ///     分页获取医院专家信息
+        /// </summary>
+        /// <param name="pageSize"></param>
+        /// <param name="pageNo"></param>
+        /// <returns></returns>
+        public string GetHospitalDoctorByPage(int pageSize, int pageNo)
+        {
+            try
+            {
+                var result = _hospitalLogic.LoadHospitalDoctors(pageSize, pageNo);
+                var infos = (from it in result
+                             select
+                                 new
+                                 {
+                                     Name = it.NAME,
+                                     Department = it.DEPARTMENT,
+                                     Doctor = it.DOCTOR,
+                                     Sex = it.SEX,
+                                     Age = it.AGE,
+                                     Technic = it.TECHNIC,
+                                     Major = it.MAJOR,
+                                     Content = it.CONTENT,
+                                     ReleaseTime = it.RELEASE_TIME,
+                                     CheckTime = it.CHECK_TIME
+                                 }).ToList();
+                return new ResultFormat(1, infos).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
+        ///     获取专家信息中所有的医院名称
+        /// </summary>
+        /// <returns></returns>
+        public string GetAllDoctorHospitals()
+        {
+            try
+            {
+                var result = _hospitalLogic.LoadAllDoctorHospitals();
+                var hospitals = (from it in result
+                                 select new {Name = it}).ToList();
+                return new ResultFormat(1, hospitals).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
+        ///     根据医院获取所有科室名称
+        /// </summary>
+        /// <param name="hospital">医院名称</param>
+        /// <returns></returns>
+        public string GetDoctorDepartmentsByHostpital(string hospital)
+        {
+            try
+            {
+                var result = _hospitalLogic.LoadDoctorDepartmentsByHostpital(hospital);
+                var hospitals = (from it in result
+                                 select new {Name = it}).ToList();
+                return new ResultFormat(1, hospitals).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
+        ///     根据医院和科室获取专家数量
+        /// </summary>
+        /// <param name="hospital">医院名称</param>
+        /// <param name="department">科室</param>
+        /// <returns></returns>
+        public string GetHospitalDoctorCountBy(string hospital, string department)
+        {
+            try
+            {
+                int result = _hospitalLogic.HospitalDoctorCountBy(hospital, department);
+
+                return new ResultFormat(1, result).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                return new ResultFormat(0, ex.Message).ToString();
+            }
+        }
+
+        /// <summary>
+        /// 根据医院名称和科室分页获取专家信息
+        /// </summary>
+        /// <param name="hospital">医院名称</param>
+        /// <param name="department">科室</param>
+        /// <param name="pageSize"></param>
+        /// <param name="pageNo"></param>
+        /// <returns></returns>
+        public string GetHospitalDoctorsBy(string hospital, string department, int pageSize, int pageNo)
+        {
+            try
+            {
+                var result = _hospitalLogic.LoadHospitalDoctorsBy(hospital, department, pageSize, pageNo);
+                var infos = (from it in result
+                             select
+                                 new
+                                 {
+                                     Name = it.NAME,
+                                     Department = it.DEPARTMENT,
+                                     Doctor = it.DOCTOR,
+                                     Sex = it.SEX,
+                                     Age = it.AGE,
+                                     Technic = it.TECHNIC,
+                                     Major = it.MAJOR,
+                                     Content = it.CONTENT,
+                                     ReleaseTime = it.RELEASE_TIME,
+                                     CheckTime = it.CHECK_TIME
+                                 }).ToList();
+                return new ResultFormat(1, infos).ToString();
             }
             catch (Exception ex)
             {

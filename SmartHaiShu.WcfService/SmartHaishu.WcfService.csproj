@@ -88,6 +88,7 @@
     <Compile Include="OpenDataLogic\DzkBizLogic.cs" />
     <Compile Include="OpenDataLogic\EducationLogic.cs" />
     <Compile Include="OpenDataLogic\FlightLogic.cs" />
+    <Compile Include="OpenDataLogic\HospitalLogic.cs" />
     <Compile Include="OpenDataLogic\HotelLogic.cs" />
     <Compile Include="OpenDataLogic\MarketLogic.cs" />
     <Compile Include="OpenDataLogic\RetirementLogic.cs" />
