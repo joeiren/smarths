@@ -16,16 +16,14 @@ using SmartHaiShu_WebApp.SmartHaiShu.CityScreenService;
 
 namespace SmartHaiShu_WebApp.SmartHaiShu
 {
-    public partial class CommonInvoke : System.Web.UI.Page
+    public partial class CommonInvoke : Page
     {
+        private static readonly SmartHsServiceClient _clientService = new SmartHsServiceClient();
+        private OpenDataServiceClient _openDataService = new OpenDataServiceClient();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
-
-
-        private static SmartHsServiceClient _clientService = new SmartHsServiceClient();
-        private OpenDataServiceClient _openDataService = new OpenDataServiceClient();
 
         [WebMethod]
         public static string LoadStreet()
@@ -33,8 +31,8 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             try
             {
                 var list = from street in StaticData.StreetInfo
-                           select new { id = street.Key, name = street.Value };
-                var json = JsonConvert.SerializeObject(list);
+                           select new {id = street.Key, name = street.Value};
+                string json = JsonConvert.SerializeObject(list);
                 return json;
             }
             catch (Exception)
@@ -48,7 +46,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         {
             try
             {
-                var community = new SmartHsServiceClient().FindCommunityByStreet(id);
+                string community = new SmartHsServiceClient().FindCommunityByStreet(id);
                 var jObj = JObject.Parse(community);
                 if (Convert.ToInt32(jObj["Code"]) == 1)
                 {
@@ -56,10 +54,10 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                                 select new
                                 {
                                     id = Convert.ToInt32(obj["community_id"]),
-                                    name = (string)obj["name"]
+                                    name = (string) obj["name"]
                                 });
 
-                    var result = JsonConvert.SerializeObject(list);
+                    string result = JsonConvert.SerializeObject(list);
                     return result;
                 }
                 return string.Empty;
@@ -71,13 +69,12 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             }
         }
 
-
         [WebMethod]
         public static string GetSpecialNotice(string noticeId)
         {
             try
             {
-                var json = new OpenDataServiceClient().GetCommunityNotice(noticeId);
+                string json = new OpenDataServiceClient().GetCommunityNotice(noticeId);
                 if (json.JObjCodeTrue())
                 {
                     return json.JObjParse()["Message"].ToString();
@@ -96,7 +93,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         {
             try
             {
-                var json = new OpenDataServiceClient().GetCommunityFC(noticeId);
+                string json = new OpenDataServiceClient().GetCommunityFC(noticeId);
                 if (json.JObjCodeTrue())
                 {
                     return json.JObjParse()["Message"].ToString();
@@ -111,18 +108,19 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         }
 
         [WebMethod]
-        public static void SetSelectedCommunity( string street,string community)
+        public static void SetSelectedCommunity(string street, string community)
         {
             HttpContext.Current.Session["SelectedCommunity"] = community;
             HttpContext.Current.Session["SelectedStreet"] = street;
         }
 
         [WebMethod]
-        public static string PublishInteractPost(string title, string keywords, string contenet, int dateSpan, string contactInfo, long memberId)
+        public static string PublishInteractPost(string title, string keywords, string contenet, int dateSpan,
+                                                 string contactInfo, long memberId)
         {
             try
             {
-                var json = _clientService.AddInteractPost(title, contenet, keywords, contactInfo, dateSpan, memberId);
+                string json = _clientService.AddInteractPost(title, contenet, keywords, contactInfo, dateSpan, memberId);
                 if (json.JObjCodeTrue())
                 {
                     return json;
@@ -132,24 +130,23 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             catch (Exception ex)
             {
                 LogHelper.GetInstance().Error(ex.ToString());
-                var exResult = new {Code = 0, Message = ex.Message};
+                var exResult = new {Code = 0, ex.Message};
                 return JsonConvert.SerializeObject(exResult);
             }
         }
-
 
         [WebMethod]
         public static string LoadFoodCategories()
         {
             try
             {
-                var result = new PriceQuery().GetAllFoodCategories();
+                string result = new PriceQuery().GetAllFoodCategories();
                 return result;
             }
             catch (Exception ex)
             {
                 LogHelper.GetInstance().Error(ex.ToString());
-                var exResult = new { Code = 0, Message = ex.Message };
+                var exResult = new {Code = 0, ex.Message};
                 return JsonConvert.SerializeObject(exResult);
             }
         }
@@ -159,13 +156,14 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         {
             try
             {
-                var result = new PriceQuery().FilterFoodsByCategory(string.IsNullOrWhiteSpace(category) ? null : category);
+                string result =
+                    new PriceQuery().FilterFoodsByCategory(string.IsNullOrWhiteSpace(category) ? null : category);
                 return result;
             }
             catch (Exception ex)
             {
                 LogHelper.GetInstance().Error(ex.ToString());
-                var exResult = new { Code = 0, Message = ex.Message };
+                var exResult = new {Code = 0, ex.Message};
                 return JsonConvert.SerializeObject(exResult);
             }
         }
@@ -175,13 +173,13 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         {
             try
             {
-                var result = new PriceQuery().GetAllMonitorSites();
+                string result = new PriceQuery().GetAllMonitorSites();
                 return result;
             }
             catch (Exception ex)
             {
                 LogHelper.GetInstance().Error(ex.ToString());
-                var exResult = new { Code = 0, Message = ex.Message };
+                var exResult = new {Code = 0, ex.Message};
                 return JsonConvert.SerializeObject(exResult);
             }
         }
@@ -191,31 +189,33 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         {
             try
             {
-                var result = new PriceQuery().GetFoodMonitorCount(string.IsNullOrEmpty(category) ? null : category,
+                string result = new PriceQuery().GetFoodMonitorCount(string.IsNullOrEmpty(category) ? null : category,
                     string.IsNullOrEmpty(foodname) ? null : foodname, string.IsNullOrEmpty(site) ? null : site);
                 return result;
             }
             catch (Exception ex)
             {
                 LogHelper.GetInstance().Error(ex.ToString());
-                var exResult = new { Code = 0, Message = ex.Message };
+                var exResult = new {Code = 0, ex.Message};
                 return JsonConvert.SerializeObject(exResult);
             }
         }
 
         [WebMethod]
-        public static string LoadFoodMonitorByPage(string category, string foodname, string site, int pageSize, int pageNo)
+        public static string LoadFoodMonitorByPage(string category, string foodname, string site, int pageSize,
+                                                   int pageNo)
         {
             try
             {
-                var result = new PriceQuery().GetFoodMonitorsByPage(string.IsNullOrEmpty(category) ? null:category,
-                    string.IsNullOrEmpty(foodname) ? null : foodname, string.IsNullOrEmpty(site) ? null : site, pageSize, pageNo);
+                string result = new PriceQuery().GetFoodMonitorsByPage(string.IsNullOrEmpty(category) ? null : category,
+                    string.IsNullOrEmpty(foodname) ? null : foodname, string.IsNullOrEmpty(site) ? null : site, pageSize,
+                    pageNo);
                 return result;
             }
             catch (Exception ex)
             {
                 LogHelper.GetInstance().Error(ex.ToString());
-                var exResult = new { Code = 0, Message = ex.Message };
+                var exResult = new {Code = 0, ex.Message};
                 return JsonConvert.SerializeObject(exResult);
             }
         }
@@ -225,13 +225,13 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         {
             try
             {
-                var result = new OpenDataServiceClient().GetAllDoctorHospitals();
+                string result = new OpenDataServiceClient().GetAllDoctorHospitals();
                 return result;
             }
             catch (Exception ex)
             {
                 LogHelper.GetInstance().Error(ex.ToString());
-                var exResult = new { Code = 0, Message = ex.Message };
+                var exResult = new {Code = 0, ex.Message};
                 return JsonConvert.SerializeObject(exResult);
             }
         }
@@ -241,13 +241,13 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         {
             try
             {
-                var result = new OpenDataServiceClient().GetDoctorDepartmentsByHostpital(hospital);
+                string result = new OpenDataServiceClient().GetDoctorDepartmentsByHostpital(hospital);
                 return result;
             }
             catch (Exception ex)
             {
                 LogHelper.GetInstance().Error(ex.ToString());
-                var exResult = new { Code = 0, Message = ex.Message };
+                var exResult = new {Code = 0, ex.Message};
                 return JsonConvert.SerializeObject(exResult);
             }
         }
@@ -258,13 +258,13 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         {
             try
             {
-                var result = new OpenDataServiceClient().GetHospitalDoctorsBy(hospital, department, pageSize, pageNo);
+                string result = new OpenDataServiceClient().GetHospitalDoctorsBy(hospital, department, pageSize, pageNo);
                 return result;
             }
             catch (Exception ex)
             {
                 LogHelper.GetInstance().Error(ex.ToString());
-                var exResult = new { Code = 0, Message = ex.Message };
+                var exResult = new {Code = 0, ex.Message};
                 return JsonConvert.SerializeObject(exResult);
             }
         }
@@ -274,16 +274,48 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         {
             try
             {
-                var result = new OpenDataServiceClient().GetHospitalDoctorCountBy(hospital, department);
+                string result = new OpenDataServiceClient().GetHospitalDoctorCountBy(hospital, department);
                 return result;
             }
             catch (Exception ex)
             {
                 LogHelper.GetInstance().Error(ex.ToString());
-                var exResult = new { Code = 0, Message = ex.Message };
+                var exResult = new {Code = 0, ex.Message};
                 return JsonConvert.SerializeObject(exResult);
             }
         }
 
+
+        [WebMethod]
+        public static string LoadRetirementHomeCount()
+        {
+            try
+            {
+                string result = new OpenDataServiceClient().GetRetirementHomeCount();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                var exResult = new { Code = 0, ex.Message };
+                return JsonConvert.SerializeObject(exResult);
+            }
+        }
+
+        [WebMethod]
+        public static string LoadRetirementHome(int pageSize, int pageNo)
+        {
+            try
+            {
+                string result = new OpenDataServiceClient().GetRetirementHome(pageNo,pageSize);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.GetInstance().Error(ex.ToString());
+                var exResult = new { Code = 0, ex.Message };
+                return JsonConvert.SerializeObject(exResult);
+            }
+        }
     }
 }

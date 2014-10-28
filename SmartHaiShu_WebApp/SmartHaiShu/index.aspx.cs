@@ -15,8 +15,9 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
     public partial class index : Page
     {
         private readonly OpenDataServiceClient _openDataServiceClient = new OpenDataServiceClient();
+        private readonly NewsQuery _query = new NewsQuery();
         private readonly SmartHsServiceClient _smartHsServiceClient = new SmartHsServiceClient();
-        private NewsQuery _query = new NewsQuery();
+
         public ElectricNotic Notice1
         {
             get;
@@ -58,6 +59,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             get;
             set;
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -115,7 +117,10 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                 RepeaterPost.DataSource = from item in json.JObjMessageToken()
                                           select new
                                           {
-                                              Title = new string(item["Title"].ValueOrDefault <string>().ToCharArray().Take(30).ToArray()),
+                                              Title =
+                                                  new string(
+                                                      item["Title"].ValueOrDefault <string>().ToCharArray().Take(30)
+                                                                   .ToArray()),
                                               Keyword = item["Keyword"].ValueOrDefault <string>(),
                                               Id = item["Id"].ValueOrDefault <string>(),
                                               ReleaseTime = item["ReleaseTime"].ValueOrDefault <string>(),
@@ -206,94 +211,114 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
         private void FoodPriceBinding()
         {
             var query = new PriceQuery();
-            var json = query.GetFoodMonitorCount("蔬菜", null, null);
-            List<FoodPriceVo> source = new List<FoodPriceVo>();
-            var count = json.JobjMessageConvert <int>();
-            if (json.JObjCodeTrue() && count > 0)
+            string json = query.GetFoodMonitorCount("蔬菜", null, null);
+            var source = new List <FoodPriceVo>();
+            int count = 0;
+            if (json.JObjCodeTrue())
             {
-                json = query.GetFoodMonitorsByPage("蔬菜",null, null, 1, 1);
-                
-                var food1 = (from item in json.JObjMessageToken()
-                            select new FoodPriceVo
-                            {
-                                Category = "蔬菜",
-                                Food = item["FoodName"].ValueOrDefault<string>(),
-                                Price = item["Price"].ValueOrDefault<string>(),
-                                Unit = item["Unit"].ValueOrDefault<string>(),
-                                Site = item["SiteName"].ValueOrDefault<string>(),
-                                Count = count
-                            }).FirstOrDefault();
-                source.Add(food1);
+                count = json.JobjMessageConvert <int>();
+                if (count > 0)
+                {
+                    json = query.GetFoodMonitorsByPage("蔬菜", null, null, 1, 1);
+
+                    var food1 = (from item in json.JObjMessageToken()
+                                 select new FoodPriceVo
+                                 {
+                                     Category = "蔬菜",
+                                     Food = item["FoodName"].ValueOrDefault <string>(),
+                                     Price = item["Price"].ValueOrDefault <string>(),
+                                     Unit = item["Unit"].ValueOrDefault <string>(),
+                                     Site = item["SiteName"].ValueOrDefault <string>(),
+                                     Count = count
+                                 }).FirstOrDefault();
+                    source.Add(food1);
+                }
             }
 
             json = query.GetFoodMonitorCount("肉", null, null);
-            count = json.JobjMessageConvert<int>();
-            if (json.JObjCodeTrue() && count > 0)
+
+            if (json.JObjCodeTrue())
             {
-                json = query.GetFoodMonitorsByPage("肉", null, null, 1, 1);
-                var food1 = (from item in json.JObjMessageToken()
-                             select new FoodPriceVo
-                             {
-                                 Category = "肉",
-                                 Food = item["FoodName"].ValueOrDefault<string>(),
-                                 Price = item["Price"].ValueOrDefault<string>(),
-                                 Unit = item["Unit"].ValueOrDefault<string>(),
-                                 Site = item["SiteName"].ValueOrDefault<string>(),
-                                 Count = count
-                             }).FirstOrDefault();
-                source.Add(food1);
+                count = json.JobjMessageConvert <int>();
+                if (count > 0)
+                {
+                    json = query.GetFoodMonitorsByPage("肉", null, null, 1, 1);
+                    var food1 = (from item in json.JObjMessageToken()
+                                 select new FoodPriceVo
+                                 {
+                                     Category = "肉",
+                                     Food = item["FoodName"].ValueOrDefault <string>(),
+                                     Price = item["Price"].ValueOrDefault <string>(),
+                                     Unit = item["Unit"].ValueOrDefault <string>(),
+                                     Site = item["SiteName"].ValueOrDefault <string>(),
+                                     Count = count
+                                 }).FirstOrDefault();
+                    source.Add(food1);
+                }
             }
             json = query.GetFoodMonitorCount("鱼", null, null);
-            count = json.JobjMessageConvert<int>();
-            if (json.JObjCodeTrue() && count > 0)
+
+            if (json.JObjCodeTrue())
             {
-                json = query.GetFoodMonitorsByPage("鱼", null, null, 1, 1);
-                var food1 = (from item in json.JObjMessageToken()
-                             select new FoodPriceVo
-                             {
-                                 Category = "鱼",
-                                 Food = item["FoodName"].ValueOrDefault<string>(),
-                                 Price = item["Price"].ValueOrDefault<string>(),
-                                 Unit = item["Unit"].ValueOrDefault<string>(),
-                                 Site = item["SiteName"].ValueOrDefault<string>(),
-                                 Count = count
-                             }).FirstOrDefault();
-                source.Add(food1);
+                count = json.JobjMessageConvert <int>();
+                if (count > 0)
+                {
+                    json = query.GetFoodMonitorsByPage("鱼", null, null, 1, 1);
+                    var food1 = (from item in json.JObjMessageToken()
+                                 select new FoodPriceVo
+                                 {
+                                     Category = "鱼",
+                                     Food = item["FoodName"].ValueOrDefault <string>(),
+                                     Price = item["Price"].ValueOrDefault <string>(),
+                                     Unit = item["Unit"].ValueOrDefault <string>(),
+                                     Site = item["SiteName"].ValueOrDefault <string>(),
+                                     Count = count
+                                 }).FirstOrDefault();
+                    source.Add(food1);
+                }
             }
 
             json = query.GetFoodMonitorCount("蛋", null, null);
-            count = json.JobjMessageConvert<int>();
-            if (json.JObjCodeTrue() && count > 0)
+
+            if (json.JObjCodeTrue())
             {
-                json = query.GetFoodMonitorsByPage("蛋", null, null, 1, 1);
-                var food1 = (from item in json.JObjMessageToken()
-                             select new FoodPriceVo
-                             {
-                                 Category = "蛋",
-                                 Food = item["FoodName"].ValueOrDefault<string>(),
-                                 Price = item["Price"].ValueOrDefault<string>(),
-                                 Unit = item["Unit"].ValueOrDefault<string>(),
-                                 Site = item["SiteName"].ValueOrDefault<string>(),
-                                 Count = count
-                             }).FirstOrDefault();
-                source.Add(food1);
+                count = json.JobjMessageConvert <int>();
+                if (count > 0)
+                {
+                    json = query.GetFoodMonitorsByPage("蛋", null, null, 1, 1);
+                    var food1 = (from item in json.JObjMessageToken()
+                                 select new FoodPriceVo
+                                 {
+                                     Category = "蛋",
+                                     Food = item["FoodName"].ValueOrDefault <string>(),
+                                     Price = item["Price"].ValueOrDefault <string>(),
+                                     Unit = item["Unit"].ValueOrDefault <string>(),
+                                     Site = item["SiteName"].ValueOrDefault <string>(),
+                                     Count = count
+                                 }).FirstOrDefault();
+                    source.Add(food1);
+                }
             }
             json = query.GetFoodMonitorCount("水果", null, null);
-            count = json.JobjMessageConvert<int>();
+
             if (json.JObjCodeTrue() && count > 0)
             {
-                json = query.GetFoodMonitorsByPage("水果", null, null, 1, 1);
-                var food1 = (from item in json.JObjMessageToken()
-                             select new FoodPriceVo
-                             {
-                                 Category = "水果",
-                                 Food = item["FoodName"].ValueOrDefault<string>(),
-                                 Price = item["Price"].ValueOrDefault<string>(),
-                                 Unit = item["Unit"].ValueOrDefault<string>(),
-                                 Site = item["SiteName"].ValueOrDefault<string>(),
-                                 Count = count
-                             }).FirstOrDefault();
-                source.Add(food1);
+                count = json.JobjMessageConvert <int>();
+                if (count > 0)
+                {
+                    json = query.GetFoodMonitorsByPage("水果", null, null, 1, 1);
+                    var food1 = (from item in json.JObjMessageToken()
+                                 select new FoodPriceVo
+                                 {
+                                     Category = "水果",
+                                     Food = item["FoodName"].ValueOrDefault <string>(),
+                                     Price = item["Price"].ValueOrDefault <string>(),
+                                     Unit = item["Unit"].ValueOrDefault <string>(),
+                                     Site = item["SiteName"].ValueOrDefault <string>(),
+                                     Count = count
+                                 }).FirstOrDefault();
+                    source.Add(food1);
+                }
             }
 
             RepeaterFood.DataSource = source;
@@ -302,13 +327,12 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
 
         private void TripInfoBinding()
         {
-
             TripCount = _query.TripNewsCount();
             if (TripCount > 0)
             {
                 var trips = _query.TripNews(5, 1);
                 RepeaterTrip.DataSource = from it in trips
-                                          select new {Title = it.Title};
+                                          select new {it.Title};
                 RepeaterTrip.DataBind();
             }
         }
@@ -320,7 +344,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             {
                 var prices = _query.PriceNews(5, 1);
                 RepeaterFoodInfo.DataSource = from it in prices
-                                          select new { Title = it.Title };
+                                              select new {it.Title};
                 RepeaterFoodInfo.DataBind();
             }
         }
@@ -332,10 +356,11 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             {
                 var prices = _query.FavorableNews(5, 1);
                 RepeaterFavorable.DataSource = from it in prices
-                                              select new { Title = it.Title };
+                                               select new {it.Title};
                 RepeaterFavorable.DataBind();
             }
         }
+
         private void EducationBinding()
         {
             EducationCount = _query.EducationNewsCount();
@@ -343,7 +368,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             {
                 var education = _query.EducationNews(5, 1);
                 RepeaterEducation.DataSource = from it in education
-                                               select new { Title = it.Title };
+                                               select new {it.Title};
                 RepeaterEducation.DataBind();
             }
         }
@@ -355,7 +380,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             {
                 var health = _query.HealthNews(5, 1);
                 RepeaterHealth.DataSource = from it in health
-                                               select new { Title = it.Title };
+                                            select new {it.Title};
                 RepeaterHealth.DataBind();
             }
         }
@@ -422,6 +447,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             get;
             set;
         }
+
         public string Food
         {
             get;
@@ -451,6 +477,5 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             get;
             set;
         }
-
     }
 }
