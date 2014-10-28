@@ -94,14 +94,12 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                         {
                             Time =
                                 string.Format("{0} — {1}",
-                                    DateTime.Parse(result.Value <string>("StartTime")).ToString("yyyy-MM-dd HH:mm"),
-                                    DateTime.Parse(result.Value <string>("EndTime")).ToString("yyyy-MM-dd HH:mm")),
+                                    result.Value<string>("StartTime"),result.Value<string>("EndTime")),
                             Range = result.Value <string>("Range"),
                             Reason = result.Value <string>("Reason"),
                             ReleaseTime = DateTime.Parse(result.Value <string>("ReleaseTime"))
                         };
                     }
-                    //Notice += openDataServiceClient.GetWaterNotice(1,1);
                 }
 
                 PostBinding();

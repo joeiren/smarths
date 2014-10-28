@@ -113,8 +113,10 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
         /// <returns></returns>
         public IEnumerable<b_t_ufp_3_2_3> LoadWaterNotice(int pageNo, int pageSize)
         {
-            var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_3_2_3
-                          orderby entity.RELEASE_TIME descending, entity.CHECK_TIME descending
+            var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_3_2_3.ToList()
+                          let release = string.IsNullOrEmpty(entity.RELEASE_TIME) ? DateTime.MinValue: Convert.ToDateTime(entity.RELEASE_TIME)
+                          let checktime = string.IsNullOrEmpty(entity.CHECK_TIME) ? DateTime.MinValue : Convert.ToDateTime(entity.CHECK_TIME)
+                          orderby checktime descending, release descending
                           select entity).Skip(Math.Max(0,pageNo -1) * pageSize).Take(pageSize);
             return record;
         }
@@ -138,8 +140,10 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
         /// <returns></returns>
         public IEnumerable<b_t_ufp_3_2_4> LoadElectricNotice(int pageNo, int pageSize)
         {
-            var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_3_2_4
-                          orderby entity.RELEASE_TIME descending, entity.CHECK_TIME descending
+            var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_3_2_4.ToList()
+                          let release = string.IsNullOrEmpty(entity.RELEASE_TIME) ? DateTime.MinValue : Convert.ToDateTime(entity.RELEASE_TIME)
+                          let checktime = string.IsNullOrEmpty(entity.CHECK_TIME) ? DateTime.MinValue : Convert.ToDateTime(entity.CHECK_TIME)
+                          orderby checktime descending, release descending
                           select entity).Skip(Math.Max(0, pageNo - 1) * pageSize).Take(pageSize);
             return record;
         }

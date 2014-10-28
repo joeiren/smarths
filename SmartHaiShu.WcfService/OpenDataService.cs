@@ -1250,12 +1250,14 @@ namespace SmartHaiShu.WcfService
                                  {
                                      Name = it.NAME,
                                      Type = it.TYPE1,
-                                     Level = it.LEVEL,
+                                     Corpoarte = it.CORPORATE,
                                      Address = it.ADDRESS,
                                      Tel = it.TEL,
-                                     Bus = it.BUS,
-                                     Url = it.URL,
-                                     Content = it.CONTENT,
+                                     Area = it.AREA,
+                                     CheckNum = it.CHECK_NUM,
+                                     FactNum = it.FACT_NUM,
+                                     Community = it.COMMUNITY,
+                                     WorkTime = it.WORK_TIME,
                                      ReleaseTime = it.RELEASE_TIME,
                                      CheckTime = it.CHECK_TIME
                                  }).ToList();

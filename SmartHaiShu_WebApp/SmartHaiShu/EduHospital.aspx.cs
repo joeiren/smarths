@@ -95,11 +95,14 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                                            {
                                                Name = it["Name"].ValueOrDefault<string>(),
                                                Type = it["Type"].ValueOrDefault<string>(),
-                                               Level = it["Level"].ValueOrDefault<string>(),
+                                               Corpoarte = it["Corpoarte"].ValueOrDefault<string>(),
                                                Address = it["Address"].ValueOrDefault<string>(),
                                                Tel = it["Tel"].ValueOrDefault<string>(),
-                                               Bus = it["Bus"].ValueOrDefault<string>(),
-                                               Content = it["Content"].ValueOrDefault<string>(),
+                                               Area = it["Area"].ValueOrDefault<string>(),
+                                               CheckNum = it["CheckNum"].ValueOrDefault<string>(),
+                                               FactNum = it["FactNum"].ValueOrDefault<string>(),
+                                               Community = it["Community"].ValueOrDefault<string>(),
+                                               WorkTime = it["WorkTime"].ValueOrDefault<string>(),
                                                
                                            };
                     Repeater1.DataBind();
