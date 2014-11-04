@@ -59,7 +59,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                                                         select new
                                                         {
                                                             Title = item["Title"].ValueOrDefault<string>(),
-                                                            Keyword = item["Keyword"].ValueOrDefault<string>(),
+                                                            Keyword = new string(item["Keyword"].ValueOrDefault<string>().ToCharArray().Take(10).ToArray()),
                                                             Contact = item["Contact"].ValueOrDefault<string>(),
                                                             Id = item["Id"].ValueOrDefault<string>(),
                                                             ReleaseTime = item["ReleaseTime"].ValueOrDefault<string>(),

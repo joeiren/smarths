@@ -20,7 +20,7 @@
         <!-- Tab panes -->
         <div class="tab-content">
           <div class="tab-pane fade in active" id="star">
-              <div class="row ">
+              <div class="row " style="margin-right: 0px;">
                 <div class="panel-group" id="accordion">
                 
                     <div class="panel panel-info">

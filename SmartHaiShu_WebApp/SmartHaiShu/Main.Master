@@ -286,88 +286,7 @@
             
 
         </div>
-        
-       <%-- <nav class="navbar navbar-default navbar-static-top" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">&nbsp;&nbsp;&nbsp;</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav" id="top_nav">
-                <li class="dropdown" >
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>便民服务大全</b> <span class="caret"></span></a>
-                  <ul id="category_drop_menu" class="dropdown-menu dropdown-menu-right" style="-moz-min-width: 160px; -ms-min-width: 160px; -o-min-width: 160px; -webkit-min-width: 160px; min-width: 160px; margin-left: 15px; padding-bottom: 30px; padding-right: 10px; border: 1px solid #085e9b; -ms-border-radius: 0px; border-radius: 0px;">
-                        <li class="dropdown-submenu">
-                             <a href="#">
-                                 <img src="images/main/icon2.png" />
-                                 便民生活
-                                 </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Level 5</a>
-                                </li>
-                                <li><a href="#">Level 5</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                             <a href="#">
-                            <img src="images/main/icon6.png" />快捷出行</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Level 5</a>
-                                </li>
-                                <li><a href="#">Level 5</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                             <a href="#">
-                                 <img src="images/main/icon5.png" />医疗教育</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Level 5</a>
-                                </li>
-                                <li><a href="#">Level 5</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                             <a href="#">
-                            <img src="images/main/icon4.png" />互动家园</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Level 5</a>
-                                </li>
-                                <li><a href="#">Level 5</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu"> <a href="#">
-                            <img src="images/main/icon3.png" />社区生活圈</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Level 5</a>
-                                </li>
-                                <li><a href="#">Level 5</a>
-                                </li>
-                            </ul>
-                        </li>
-                  
-                    </ul>
-                </li>
-                <li><a href="#"><b>首页</b></a></li>
-                <li ><a href="#"><b>社区动态</b></a></li>
-                <li ><a href="#"><b>社区生活圈</b></a></li>
-                <li ><a href="#"><b>互动家园</b></a></li>
-                <li ><a href="#"><b>教育</b></a></li>
-                <li ><a href="#"><b>网上办事</b></a></li>
-              </ul>
-              
-            </div><!--/.nav-collapse -->
-          </div>
-        </nav>--%>
+       
       
       <div class="modal fade" id="dlgCommunity">
           <div class="modal-dialog">
@@ -383,20 +302,7 @@
                 </ul>
                 <div class="tab-content tabContainer" >
                     <div class="tab-pane active " id="tabStreet">
-                        
-                    <%--   <div class="row" id="street10">
-                           <span class="col-md-3"><a>南门街道</a></span>
-                           <span class="col-md-3"><a>南门街道</a></span>
-                           <span class="col-md-3"><a>南门街道</a></span>
-                           <span class="col-md-3"><a>南门街道</a></span>
-                           
-                       </div>
-                       <div class="row" id="street20">
-                           <span class="col-md-3"><a>南门街道</a></span>
-                           <span class="col-md-3"><a>南门街道</a></span>
-                           <span class="col-md-3"><a>南门街道</a></span>
-                           <span class="col-md-3"><a>南门街道</a></span>
-                       </div>--%>
+          
                     </div>
                     <div class="tab-pane" id="tabCommunity">
                         

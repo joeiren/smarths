@@ -25,26 +25,26 @@
 </head>
 <body>
     <div id="container1" class="container">
-        <div id="alert1"  class="row alert alert-warning fade in">
+        <div id="alert1"  class="row alert alert-warning fade in" style="margin-right: 0px;">
             查询社保详情，可访问<a href="http://www.nbhrss.gov.cn/cx/cxzx/cy/sbgr/#Menu=1303" target="_blank">“宁波市人力资源和社会保障局”</a>。
         </div> 
-        <div style="width: 300px; ">
+        <div style="width: 400px;">
         <form class="form-horizontal" role="form">
           <div class="form-group">
-            <label for="txtUser" class="col-sm-3 control-label">身份证号/社保卡号：</label>
-            <div class="col-sm-2">
+            <label for="txtUser" class="col-md-3 control-label">身份证号/社保卡号：</label>
+            <div class="col-md-3" style="width: 300px;">
               <input type="text" class="form-control" id="txtUser" autofocus="true" required="" placeholder="">
             </div>
           </div>
           <div class="form-group">
-            <label for="txtPwd" class="col-sm-3 control-label">密码：</label>
-            <div class="col-sm-2">
+            <label for="txtPwd" class="col-md-3 control-label">密码：</label>
+            <div class="col-md-3" style="width: 300px;">
               <input type="password" class="form-control" id="txtPwd" placeholder="" required="">
             </div>
           </div>
           
           <div class="form-group">
-            <div class="col-sm-offset-3 col-sm-2">
+            <div class="col-md-offset-3 col-md-2" style="width: 300px;">
               <button type="submit" class="btn btn-primary btn-block" onclick="onSubmit();return false;">查询</button>
             </div>
           </div>

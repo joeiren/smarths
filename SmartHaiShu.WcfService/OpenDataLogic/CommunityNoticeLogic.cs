@@ -37,7 +37,7 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
         {
             var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_3_2_2
                           where String.Compare(community, entity.COMMUNITY_NAME, System.StringComparison.OrdinalIgnoreCase) == 0
-                          orderby entity.RELEASE_TIME descending
+                          orderby entity.RELEASE_TIME descending, entity.UUID descending 
                           select entity).Skip(Math.Max(0, pageNo - 1) * pageSize).Take(pageSize).ToList();
             return record;
         }
@@ -75,7 +75,7 @@ namespace SmartHaiShu.WcfService.OpenDataLogic
         {
             var record = (from entity in ContextFactory.GetOpenDataContext().Db_b_t_ufp_3_2_5
                           where String.Compare(community, entity.COMMUNITY_NAME, System.StringComparison.OrdinalIgnoreCase) == 0
-                          orderby entity.RELEASE_TIME descending
+                          orderby entity.RELEASE_TIME descending, entity.UUID descending 
                           select entity).Skip(Math.Max(0, pageNo - 1) * pageSize).Take(pageSize).ToList();
             return record;
         }

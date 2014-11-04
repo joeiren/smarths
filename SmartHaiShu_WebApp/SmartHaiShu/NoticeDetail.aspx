@@ -66,8 +66,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
  
      <div class="container-fluid">
-      <div class="row" style="margin-left:20px;">
-        <div class="col-md-2 sidebar" style="min-height:550px;" id="menu_list">
+      <div class="row" >
+        <div class="col-md-3 sidebar" style="min-height:550px;" id="menu_list">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="javascript:changeType(0)">社区通告</a></li>
             <li><a href="javascript:changeType(1)">社区风采</a></li>
@@ -87,7 +87,7 @@
             <li><a href="">Another nav item</a></li>
           </ul>--%>
         </div>
-        <div class="col-md-10  main">
+        <div class="col-md-9 ">
           <%--<h1 class="page-header">Dashboard</h1>--%>
 
          <%-- <div class="row placeholders">

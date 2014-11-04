@@ -98,19 +98,7 @@
 					    <h2><a href="#" clstag="homepage|keycount|home2013|06a">便民服务大全<b></b></a></h2>
 				    </div>
 				    <div id="_JD_ALLSORT" class="mc" load="2">
-                        <%--<div class="item fore0" onmousedown="">
-                            <span data-split="1" clstag="homepage|keycount|home2013|0601a">
-                                <h3 class="master-h2h3"><img src="images/main/icon2.png" style="position: relative;margin-right: 10px;top: -2px;"/><a href="#">
-                                    便民生活</a></h3>
-                                <s></s>
-                            </span>
-                            <div class="i-mc">
-                                <div onclick="$(this).parent().parent().removeClass('hover')" class="close">×</div>
-                                <div class="subitem" clstag="homepage|keycount|home2013|0601b">
-                                    <dl class="fore1"><dd><em><a href="#">物价查询</a></em><em><a href="#">家政维修</a></em><em><a href="#">快递查询</a></em><em><a href="#">社保查询</a></em><em><a href="#">公积金查询</a></em><em><a href="#">银行网点</a></em></dd></dl>
-                                </div>
-                            </div>
-                        </div>  --%>     
+                         
                     </div>
 
 			    </div>
@@ -150,7 +138,7 @@
     
     <div class="footer">
       <p class="text-center">宁波市海曙区经济和信息化局 版权所有</p>
-      <p class=" text-center">建议浏览器 IE10 Firefox Chrome 分辨率 1280*960 以上</p>
+      <p class=" text-center">建议浏览器 IE10 Firefox Chrome 分辨率 1024*768 以上</p>
     </div>
 </body>
 </html>

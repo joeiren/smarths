@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
     <div id="container1" class="container container_bg">
        
-      <div id="alert1"  class="row alert alert-warning fade in">
+      <div id="alert1"  class="row alert alert-warning fade in" style="margin-right: 0px;">
             查询火车班次详情，可参照<a href="http://www.12306.cn/" target="_blank">“铁路客户服务中心”</a>。
       </div> 
         

@@ -86,18 +86,18 @@
        <div class="panel panel-warning">
         <div class="panel-heading" style="padding-top: 1px;padding-left: 0px; height: 40px;">
             <ul class="list-group">
-                <li class="list-group-item list-group-item-warning " style="float: left;width: 45px;height: 38px;border-bottom-width: 0px;border-top-width: 0px;">
+                <li class="list-group-item list-group-item-warning " style="float: left;width: 7%;height: 38px;border-bottom-width: 0px;border-top-width: 0px;">
                     <a id="a-head">
                         <i class="glyphicon glyphicon-link"></i>
                     </a>
                 </li>
-                <li class="list-group-item list-group-item-warning" style="float: left;width: 380px;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px; text-align: center;font-weight: bold;">
+                <li class="list-group-item list-group-item-warning" style="float: left;width: 50%;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px; text-align: center;font-weight: bold;">
                     标题
                 </li>
-                <li class="list-group-item list-group-item-warning" style="float: left;width: 150px;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;text-align: center;font-weight: bold;">
+                <li class="list-group-item list-group-item-warning" style="float: left;width: 20%;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;text-align: center;font-weight: bold;">
                     关键字
                 </li>
-                <li class="list-group-item list-group-item-warning" style="float: left;width: 150px;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;text-align: center;font-weight: bold;">
+                <li class="list-group-item list-group-item-warning" style="float: left;width: 23%;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;text-align: center;font-weight: bold;">
                     发布时间
                 </li>
             </ul>
@@ -109,21 +109,21 @@
         <div class="panel panel-default" style="margin-top: 0px;">
             <div class="panel-heading" style="padding-top: 1px;padding-left: 0px; height: 40px;">
                 <ul class="list-group">
-                    <li class="list-group-item" style="float: left;width: 45px;height: 38px;border-bottom-width: 0px;border-top-width: 0px;">
+                    <li class="list-group-item" style="float: left;width: 7%;height: 38px;border-bottom-width: 0px;border-top-width: 0px;">
                         <a style="text-decoration: none;cursor: pointer;" data-toggle="collapse"  data-parent="#accordion" data-target="#collapse<%#Container.ItemIndex+1 %>" >
                             <%--<i class="glyphicon glyphicon-link"></i>--%>
                             <span class="caret"></span>
                         </a>
                     </li>
-                    <li class="list-group-item" style="float: left;width: 380px;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px; font-size: 12px;">
+                    <li class="list-group-item" style="float: left;width:50%;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px; font-size: 12px;">
                         <a style="text-decoration: none;cursor: pointer;" data-toggle="collapse"  data-parent="#accordion" data-target="#collapse<%#Container.ItemIndex+1 %>" >
                             <%# Eval("Title")%>
                         </a>
                     </li>
-                    <li class="list-group-item" style="float: left;width: 150px;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;font-size: 12px;">
+                    <li class="list-group-item" style="float: left;width: 20%;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;font-size: 12px;">
                     <%# Eval("Keyword")%>
                     </li>
-                    <li class="list-group-item" style="float: left;width: 150px;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;font-size: 12px;">
+                    <li class="list-group-item" style="float: left;width: 23%;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;font-size: 12px;">
                     <%# Eval("ReleaseTime")%>
                     </li>
                 </ul>
@@ -132,12 +132,20 @@
                         
             <div id="collapse<%#Container.ItemIndex+1 %>"  class="<%#Container.ItemIndex==0? "panel-collapse collapse in" : "panel-collapse collapse" %> " >
                     <div class="panel-body" style="font-size: 12px;height: 200px;overflow-y:auto; ">
-                        <h5><strong> <%# Eval("Title")%></strong></h5>
-                        <p> <%# Eval("Content")%></p>
+                        <%--<h5><strong> <%# Eval("Title")%></strong></h5>--%>
+                        <%--<p> <%# Eval("Content")%></p>--%>
                         
                         <table class="table table-bordered table-striped table-condensed">  
-                                  <thead> </thead>  
-                                  <tbody>  
+                                  <thead>
+                                     <tr>
+                                         <td colspan="2" style="text-align:center;">
+                                             <strong><%# Eval("Title")%></strong>
+                                             <span class="badge pull-right" style="background-color:slateblue"><%#Eval("Keyword")%></span>
+                                         </td> 
+                                     </tr>
+                                 </thead>    
+                                  <tbody>
+                                    <tr><td colspan="2"><%# Eval("Content")%></td></tr>
                                     <tr>  
                                       <td>联系方式</td> <td><%# Eval("Contact")%></td>
                                     </tr>
@@ -157,20 +165,20 @@
         <div class="panel panel-info" style="margin-top: 0px;">
             <div class="panel-heading" style="padding-top: 1px;padding-left: 0px; height: 40px;">
                 <ul class="list-group">
-                    <li class="list-group-item list-group-item-info" style="float: left;width: 45px;height: 38px;border-bottom-width: 0px;border-top-width: 0px;">
+                    <li class="list-group-item list-group-item-info" style="float: left;width: 7%;height: 38px;border-bottom-width: 0px;border-top-width: 0px;">
                         <a style="text-decoration: none;cursor: pointer;" data-toggle="collapse"  data-parent="#accordion" data-target="#collapse<%#Container.ItemIndex+1 %>">
                             <span class="caret"></span>
                         </a>
                     </li>
-                        <li class="list-group-item list-group-item-info" style="float: left;width: 380px;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;font-size: 12px;">
+                        <li class="list-group-item list-group-item-info" style="float: left;width: 50%;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;font-size: 12px;">
                         <a style="text-decoration: none;cursor: pointer;" data-toggle="collapse"  data-parent="#accordion" data-target="#collapse<%#Container.ItemIndex+1 %>" >
                             <%# Eval("Title")%>
                         </a>
                     </li>
-                        <li class="list-group-item list-group-item-info" style="float: left;width: 150px;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;font-size: 12px;">
+                        <li class="list-group-item list-group-item-info" style="float: left;width: 20%;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;font-size: 12px;">
                         <%# Eval("Keyword")%>
                     </li>
-                        <li class="list-group-item list-group-item-info" style="float: left;width: 150px;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;font-size: 12px;">
+                        <li class="list-group-item list-group-item-info" style="float: left;width: 23%;height: 38px;border-bottom-width: 0px;border-left-width: 0px; border-top-width: 0px;font-size: 12px;">
                         <%# Eval("ReleaseTime")%>
                     </li>
                 </ul>
@@ -179,26 +187,21 @@
                         
             <div id="collapse<%#Container.ItemIndex+1 %>"  class="panel-collapse collapse" >
                  <div class="panel-body" style="font-size: 12px;height: 200px;overflow-y:auto; ">
-               <%--<div class="panel">
-                    <%# Eval("Content")%>
-               </div>
-               <div class="panel-success">
-                   联系方式： <%# Eval("Contact")%>
-               </div>
-                <p style="margin-left: 20px; margin-right: 20px;margin-top: 10px;">
-                   <span class="bg-success pull-left">
-                       发布者：<%# Eval("Member")%>
-                   </span>
-                   <span class="bg-success pull-right">
-                        有效时间：<%# Eval("DateSpan")%>
-                   </span>
-               </p>--%>
-              <h5><strong> <%# Eval("Title")%></strong></h5>
-                        <p> <%# Eval("Content")%></p>
+              
+           <%--   <h5><strong> <%# Eval("Title")%></strong></h5>
+                        <p> <%# Eval("Content")%></p>--%>
                         
                   <table class="table table-bordered table-striped table-condensed">  
-                                  <thead> </thead>  
-                                  <tbody>  
+                                 <thead>
+                                     <tr>
+                                         <td colspan="2" style="text-align:center;">
+                                             <strong><%# Eval("Title")%></strong>
+                                             <span class="badge pull-right" style="background-color:slateblue"><%#Eval("Keyword")%></span>
+                                         </td> 
+                                     </tr>
+                                 </thead>  
+                                  <tbody>
+                                    <tr><td colspan="2"><%# Eval("Content")%></td></tr>
                                     <tr>  
                                       <td>联系方式</td> <td><%# Eval("Contact")%></td>
                                     </tr>

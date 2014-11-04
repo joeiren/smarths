@@ -2,7 +2,7 @@
 }
 #pgw-o-slide {
 float: left;
-width: 890px;
+width: 790px;
 height: 662px;
 overflow: hidden;
 /*padding-left: 220px;*/
@@ -10,8 +10,8 @@ overflow: hidden;
 
 #pgw-slide
 {
-    margin-left: 35px;
-    width: 820px;
+    margin-left: -10px;
+    width: 720px;
     height: 450px;
 }
 #SheQuTongGao {

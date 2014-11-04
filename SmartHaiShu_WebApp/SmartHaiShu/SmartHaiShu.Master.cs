@@ -118,7 +118,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
             var json = service0.WeatherInfoToday();
             if (json.JObjCodeTrue())
             {
-                var today = DateTime.ParseExact( json.JObjMessageInner("date_y").ValueOrDefault<string>(), "yyyy年MM月dd日", null );
+                var today = DateTime.ParseExact( json.JObjMessageInner("date_y").ValueOrDefault<string>(), "yyyy年M月d日", null );
                 if (today.Date == DateTime.Now.Date)
                 {
                     _weatherInfo = string.Format("{0},{1},{2}。",

@@ -58,7 +58,7 @@
     <form id="form1" runat="server">
       <div id="container1" class="container ">
 
-        <div class="row">
+        <div class="row" style="margin-right: 0px;">
         <div class="panel-group" id="accordion">
             <asp:Repeater ID="RepeaterMarket" runat="server">
                     <ItemTemplate>

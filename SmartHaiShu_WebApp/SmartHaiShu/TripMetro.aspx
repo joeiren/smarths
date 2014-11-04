@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
     <div id="container1" class="container container_bg">
        
-        <div class="row">
+        <div class="row" style="margin-right: 0px;">
             <div class="panel-group" id="accordion">
                 
                     <div class="panel panel-info">
@@ -46,7 +46,7 @@
                                   <li class="list-group-item list-group-item-success">盛莫路</li>
                                   <li class="list-group-item list-group-item-success">东环南路</li>
                                </ul>
-                              <ul class="list-group" style="width: 200px;float: left;margin-left: 80px;">
+                              <ul class="list-group" style="width: 200px;float: left;margin-left: 30px;">
                                   <li class="list-group-item active">二期（未开通）</li>
                                   <li class="list-group-item list-group-item-danger">邱隘</li>
                                   <li class="list-group-item list-group-item-danger">五乡</li>

@@ -227,7 +227,7 @@
             </div>
         </li>
         <li>
-            <div class="container_bg col-sm-8 col-md-8" style="padding-left: 1px;padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" id="rigthContainer">
+            <div class="container_bg col-sm-9 col-md-9" style="padding-left: 1px;padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" id="rigthContainer">
                
 <iframe src="EduSchool.aspx" id="contentFrame" name="contentFrame" frameborder="0"  marginheight="0" marginwidth="0" scrolling="auto" width="100%" onLoad="iFrameHeight()" ></iframe>
             </div>

@@ -11,7 +11,7 @@
 <body>
     <form id="form1" runat="server">
     <div id="container1" class="container container_bg">
-        <div id="alert1"  class="row alert alert-warning fade in">
+        <div id="alert1"  class="row alert alert-warning fade in" style="margin-right: 0px;">
             查询快递服务，可访问<a href="http://www.kuaidi100.com/" target="_blank">“快递100”</a>。
         </div> 
     </div>

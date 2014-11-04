@@ -56,8 +56,8 @@
     
     <div class="container-fluid">
         <div class="row">
-        <div style="float: left;">
-            <div class="pgw-slide" id="pgw-slide">
+        <div style="float: left;padding-left: 0px; padding-right: 0px;" class="col-md-9">
+            <div style="width: 100%;" id="pslide">
                 <ul class="pgwSlider">
 				    <%--<li><img src="images/paris.jpg" alt="Paris, France" data-description="Eiffel Tower and Champ de Mars"></li>
 				    <li><img src="images/new-york.jpg" alt="Montréal, QC, Canada" data-large-src="images/new-york.jpg"></li>
@@ -70,17 +70,17 @@
 		        </ul>
             </div>
         </div>
-         <div style="float: left;margin-left: 12px;width: 240px; ">
+         <div style="padding-right: 0px; " class="pull-right col-md-3"> 
                 <div class="panel panel-default">
                     <div class="panel-heading  text-center" style="background-color: #D9EDF7;color:#31708F; "><strong>社区简介</strong></div>
-                      <div class="panel-body" id="intro1" style="height: 380px;overflow-y:auto;line-height:23px;">
+                      <div class="panel-body" id="intro1" style="height: 320px;overflow-y:auto;line-height:23px;">
                        <%=Introduction%>
                       </div>
                 </div>
             </div>
        </div>
        <div class="row">
-           <div class="col-sm-6 col-md-6" style="padding-left: 30px;">
+           <div class="col-sm-6 col-md-6" style="padding-left: 0px;">
                <ul class="list-group">
                   <li class="list-group-item list-group-item-info" ><strong>社区通告</strong><span class="badge" style="background-color:lightsalmon"><a href="NoticeDetail.aspx?Type=0">更多</a></span></li>
                   <asp:Repeater ID="RepeaterNotice" runat="server">
@@ -94,7 +94,7 @@
                   <li class="list-group-item"><a href="#">Dapibus ac facilisis in</a></li>--%>
                 </ul>
            </div>
-           <div class="col-sm-6 col-md-6" style="padding-right: 30px;">
+           <div class="col-sm-6 col-md-6" style="padding-right: 0px;">
                <ul class="list-group">
                   <li class="list-group-item list-group-item-info"><strong>社区风采</strong><span class="badge" style="background-color:lightsalmon"><a href="NoticeDetail.aspx?Type=1">更多</a></span></li>
                   <asp:Repeater ID="RepeaterFengcai" runat="server">

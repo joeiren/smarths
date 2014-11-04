@@ -151,7 +151,7 @@
             </div>
         </li>
         <li>
-            <div class="container_bg col-sm-8 col-md-8" id="rigthContainer" style="padding-left: 1px;padding-top: 0px; padding-right: 0px; padding-bottom: 0px;">
+            <div class="container_bg col-sm-9 col-md-9" id="rigthContainer" style="padding-left: 1px;padding-top: 0px; padding-right: 0px; padding-bottom: 0px;">
               
 
 <iframe src="HomePhoneRefer.aspx" id="contentFrame" name="contentFrame" frameborder="0"  marginheight="0" marginwidth="0" scrolling="auto" width="100%" onLoad="iFrameHeight()" ></iframe>

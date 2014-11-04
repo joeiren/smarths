@@ -421,13 +421,33 @@
                     <div class="row">
                         <div class="col-md-offset-1 col-md-7 collapse" id="contract">
                             <textarea class="form-control"  rows="9" style="resize: none;" disabled>
-                            <h3 align="center">用户注册协议</h3>
-                            <p >
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </p>
-                            <p>
-                                123 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </p>
+                       用户注册协议
+1.使用规则
+1.1 用户在海曙智慧社区网注册时，需提供准确的个人资料，如个人资料有任何变动，请及时更新。
+1.2 用户注册成功后，海曙智慧社区网将给予每个用户一个用户帐号及相应的密码，该用户帐号和密码由用户负责保管；用户应当对以其用户帐号进行的所有活动和事件负法律责任。
+1.3 用户在海曙智慧社区网注册后，必须遵循以下原则：
+(a) 遵守中国有关的法律和法规；
+(b) 不得为任何非法目的而使用网络服务系统；
+(c) 遵守所有与网络服务有关的网络协议、规定和程序；
+(d) 不得利用海曙智慧社区网进行任何可能对互联网的正常运转造成不利影响的行为；
+(e) 不得利用海曙智慧社区网传输任何骚扰性的、中伤他人的、辱骂性的、恐吓性的、庸俗淫秽的或其他任何非法的信息资料；
+(f) 不得利用海曙智慧社区网进行任何不利于海曙智慧社区网的行为；
+(g) 如发现任何非法使用用户帐号或帐号出现安全漏洞的情况，应立即通告海曙智慧社区网。
+2. 内容所有权
+2.1 海曙智慧社区网提供的网络服务内容可能包括：文字、软件、声音、图片、录象、图表等。所有这些内容受版权、商标和其它财产所有权法律的保护。
+2.2 用户只有在获得海曙智慧社区网或其他相关权利人的授权之后才能使用这些内容，而不能擅自复制、再造这些内容、或创造与内容有关的派生产品。
+3. 隐私保护
+3.1 保护用户隐私是海曙智慧社区网的一项基本政策，海曙智慧社区网保证不对外公开或向第三方提供用户注册资料及用户在使用网络服务时存储在海曙智慧社区网的非公开内容，但下列情况除外：
+(a) 事先获得用户的明确授权；
+(b) 根据有关的法律法规要求；
+(c) 按照相关政府主管部门的要求；
+(d) 为维护社会公众的利益；
+(e) 为维护海曙智慧社区网的合法权益。
+4. 免责声明
+4.1 用户明确同意其使用海曙智慧社区网网络服务所存在的风险将完全由其自己承担；因其使用海曙智慧社区网网络服务而产生的一切后果也由其自己承担，海曙智慧社区网对用户不承担任何责任。
+4.2 海曙智慧社区网不担保网络服务一定能满足用户的要求，也不担保网络服务不会中断，对网络服务的及时性、安全性、准确性也都不作担保。
+
+                            
                             </textarea>
                         </div>
                     </div>

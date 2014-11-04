@@ -117,7 +117,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                                           {
                                               Title =
                                                   new string(
-                                                      item["Title"].ValueOrDefault <string>().ToCharArray().Take(30)
+                                                      item["Title"].ValueOrDefault <string>().ToCharArray().Take(24)
                                                                    .ToArray()),
                                               Keyword = item["Keyword"].ValueOrDefault <string>(),
                                               Id = item["Id"].ValueOrDefault <string>(),
@@ -181,7 +181,7 @@ namespace SmartHaiShu_WebApp.SmartHaiShu
                 RepeaterBank.DataSource = from item in json.JObjMessageToken()
                                           select new
                                           {
-                                              Name = item["Name"].ValueOrDefault <string>(),
+                                              Name = new string(item["Name"].ValueOrDefault<string>().ToCharArray().Take(34).ToArray()),
                                               Address = item["Address"].ValueOrDefault <string>(),
                                               //Type = item["Type"].ValueOrDefault<string>(),
                                           };

@@ -31,7 +31,7 @@
                             var count = data.Message.length;
                             var rowLength = Number(count / 2) + (count == 0 ? 0 : (count % 2 == 0 ? 0 : 1));
                             for (var row = 0; row < rowLength; row++) {
-                                var rowHtml = ' <div class="row" style="margin-top: 3px;">';
+                                var rowHtml = ' <div class="row" style="margin-top: 3px;margin-right:0px;">';
                                 var cellsHtml = '';
                                 for (var cell = 0; cell < 2; cell++) {
                                     var index = 2 * row + cell;
@@ -39,7 +39,7 @@
                                         break;
                                     }
                                     var entry = data.Message[index];
-                                    var cellHtml = '<div style="width: 320px; float: left; margin-left: 30px;"><div class="thumbnail" style="margin-bottom: 0px;border-color: #bcebf1; "><div class="caption">';
+                                    var cellHtml = '<div style="width: 320px; float: left; margin-left: 2px;"><div class="thumbnail" style="margin-bottom: 0px;border-color: #bcebf1; "><div class="caption">';
                                     cellHtml += '<h5><strong>'+entry["Name"]+'</strong></h5>';
                                     cellHtml += ' <ul class="list-group" style="margin-bottom: 0px;">';
                                     cellHtml += '<li class="list-group-item list-group-item-success" style="height: 40px; overflow-y: auto;">地址：'+entry["Address"]+'</li>';

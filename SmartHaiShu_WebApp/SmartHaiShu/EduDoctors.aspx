@@ -99,9 +99,9 @@
                                         break;
                                     }
                                     var entry = data.Message[index];
-                                    var cellHtml = '<div style="width: 320px; float: left;margin-left: 10px;"><div class="thumbnail" style="border-color:#bcebf1;;"><div class="caption">';
+                                    var cellHtml = '<div style="width: 320px; float: left;margin-left: 3px;"><div class="thumbnail" style="border-color:#bcebf1;margin-bottom:0px;"><div class="caption">';
                                     cellHtml += '<h4>' + entry["Name"].substr(0, 9) + (entry["Name"].length > 9 ? '...' : '') + '<span class="badge" style="background-color: slateblue">' + entry["Technic"].substr(0, 6) + (entry["Technic"].length > 6 ? '...' : '') + '</span></h4>';
-                                    cellHtml += ' <ul class="list-group">';
+                                    cellHtml += ' <ul class="list-group" style="margin-bottom:0px;">';
                                     cellHtml += '<li class="list-group-item list-group-item-success">' + entry["Name"] + ' @ ' + entry["Department"].substr(0, 5) + '</li>';
                                     cellHtml += '<li class="list-group-item list-group-item-warning">专业：' + entry["Major"] + '</li>';
                                     cellHtml += '<li class="list-group-item list-group-item-info">' + entry["Sex"] + ' &nbsp;' + entry["Age"] + '岁 </li>';
@@ -139,7 +139,7 @@
                             count = Number(data.Message);
                             if (count > 0) {
                                 var totalPage = parseInt(count / _pageSize) + (count % _pageSize == 0 ? 0 : 1);
-                                var html = ' <div class="row text-right" id="pageDiv"><ul class="pagination pagination-sm " style="margin-right: 15px;margin-top: 5px; margin-bottom: 5px; " id="pageNoArea" >';
+                                var html = ' <div class="row text-right" style="margin-right:10px;margin-left:0px;" id="pageDiv"><ul class="pagination pagination-sm " style="margin-right: 15px;margin-top: 5px; margin-bottom: 5px; " id="pageNoArea" >';
                                 if (_pageNo <= _pageRange) {
                                     html += '<li class="disabled"><a href="#">&laquo;</a></li>';
                                 } else {
@@ -187,7 +187,7 @@
         <form id="form1" runat="server">
             <div id="container1" class="container ">
        
-                <div class="row">
+                <div class="row" style="margin-right: 0px;">
                     <div style="width: 250px; float: left; margin-left: 10px;">
                         <div class="input-group">
                             <span class="input-group-addon">医院</span>
@@ -210,7 +210,7 @@
                     </div>
                 </div>
 
-                <div id="resultTable" class="container" style="height: 720px;">
+                <div id="resultTable" class="container" style="height: 720px; padding-left:0px; padding-right: 0px; ">
         
                 </div>
             </div>

@@ -11,32 +11,32 @@
 <body>
 
     <div id="container1" class="container container_bg">
-        <div id="alert1"  class="row alert alert-warning fade in">
+        <div id="alert1"  class="row alert alert-warning fade in" style="margin-right: 0px;">
             查询社保详情，可访问<a href="http://www.nbgjj.com/web/singlepage.aspx?id=1" target="_blank">“宁波住房公积金查询系统”</a>。
         </div> 
-        <div id="reqForm" style="width: 300px;">
+        <div id="reqForm" style="width: 400px;">
         <form role="form" class="form-horizontal" id="form1" runat="server">
             <div class="form-group">
-                <label for="txtUser" class="col-sm-3 control-label">个人账号：</label>
-                <div class="col-sm-2">
+                <label for="txtUser" class="col-md-3 control-label" >个人账号：</label>
+                <div class="col-md-2" style="width: 300px;">
                     <input type="text" class="form-control" id="txtUser" autofocus="true" maxlength="20" placeholder="">
                 </div>
           </div>
           <div class="form-group">
-                <label for="txtId" class="col-sm-3 control-label">身份证号：</label>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control" id="txtId" autofocus="true" maxlength="20"  placeholder="">
+                <label for="txtId" class="col-md-3 control-label">身份证号：</label>
+                <div class="col-md-2" style="width: 300px;">
+                    <input type="text" class="form-control" id="txtId"  maxlength="20"  placeholder="">
                 </div>
           </div>
             
             <div class="form-group" id="pwdInput">
-                <label for="txtPwd" class="col-md-3 control-label">密码：</label>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control" id="txtPwd" autofocus="true" maxlength="30"  placeholder="">
+                <label for="txtPwd" class="col-md-3 control-label" >密码：</label>
+                <div class="col-md-2" style="width: 300px;">
+                    <input type="text" class="form-control" id="txtPwd"  maxlength="30"  placeholder="">
                 </div>
             </div>
             <div class="form-group">
-            <div class="col-sm-offset-3 col-sm-2">
+            <div class="col-md-offset-3 col-md-2" style="width: 300px;">
               <button type="submit" class="btn btn-primary btn-block">查询</button>
             </div>
           </div>

@@ -11,7 +11,7 @@
 <body>
     <form id="form1" runat="server">
      <div id="container1" class="container container_bg">
-        <div id="alert1"  class="row alert alert-warning fade in">
+        <div id="alert1"  class="row alert alert-warning fade in" style="margin-right: 0px;">
             查询详细家政服务，可访问<a href="http://www.81890.gov.cn/EnterpriseWeb/Enterprise/Default.aspx?Code=01" target="_blank">“宁波81890服务网”</a>。
         </div> 
     </div>

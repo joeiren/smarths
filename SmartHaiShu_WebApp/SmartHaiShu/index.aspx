@@ -13,10 +13,10 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container-fluid">
-        <div style="float: left;">
-            <div class="row" style=" padding-left:240px;">
-                <div id="carousel1" class="carousel slide pull-left" data-ride="carousel" style="width: 620px;">
+    <div class="container-fluid" style="padding-top: 0px;">
+        <div style="float: left;" class="col-md-9">
+            <div class="row" style=" padding-left:200px;" >
+                <div id="carousel1" class="carousel slide pull-left" data-ride="carousel" style="width: 100%">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
                     <li data-target="#carousel1" data-slide-to="0" class="active"></li>
@@ -46,7 +46,7 @@
                   </a>
                 </div>
             </div>
-            <div class="row" style="margin-left: 20px;margin-top: 20px;">
+            <div class="row" style="margin-left: -30px;margin-top: 20px;">
                 <div class="panel panel-default">
                     <div class="panel-body">
                 <div class="media pull-left" style="margin: 10px;">
@@ -65,14 +65,14 @@
                         <h5 class="media-heading text-center">违章查询</h5>
                       </div>
                 </div>
-                 <div class="media pull-left" style="margin: 10px;">
+                 <%--<div class="media pull-left" style="margin: 10px;">
                     <a href="ConvenienceLive.aspx?toSub=m_fund">
                         <img class="media-object" src="images/index/icon8.png" alt="">
                       </a>
                       <div class="media-body">
                         <h5 class="media-heading text-center">公积金查询</h5>
                       </div>
-                </div>
+                </div>--%>
                  <div class="media pull-left" style="margin: 10px;">
                     <a href="ConvenienceLive.aspx?toSub=m_express">
                         <img class="media-object" src="images/index/icon10.png" alt="">
@@ -106,7 +106,7 @@
                       </div>
                 </div>
                 <div class="media pull-left" style="margin: 10px;">
-                    <a href="EasyTrip.aspx?toSub=m_metro">
+                    <a href="EasyTrip.aspx?toSub=m_bus">
                         <img class="media-object" src="images/index/icon13.png" alt="">
                       </a>
                       <div class="media-body">
@@ -116,7 +116,7 @@
                 </div>
                 </div>    
             </div>
-            <div class="row" style="margin-left: 20px;">
+            <div class="row" style="margin-left: -30px;">
                  <div class="panel panel-default panel-body" >
                         <div class="media">
                             <a class="pull-left" href="#">
@@ -127,8 +127,8 @@
                                 <li class="list-group-item list-group-item-info"><strong>互帮互助</strong><span class="badge" style="background-color:lightsalmon"><a href="HomeInteraction.aspx?toSub=m_interact">更多</a></span></li>
                                 <asp:Repeater ID="RepeaterPost" runat="server">
                                     <ItemTemplate>
-                                    <li class="list-group-item" style="height: 35px;"><span class="col-sm-7"><strong><%#Eval("Title") %></strong></span>
-                                        <span class="bg-success col-sm-3"><%#Eval("ReleaseTime")%>  </span> 
+                                    <li class="list-group-item" style="height: 35px;"><span class="col-md-6"><strong><%#Eval("Title") %></strong></span>
+                                        <span class="bg-success col-md-4"><%#Eval("ReleaseTime")%>  </span> 
                                         <span class="badge" style="background-color:slateblue"><%#Eval("DateSpan")%></span> 
                                     </li>    
                                     </ItemTemplate>
@@ -140,7 +140,7 @@
                 </div>
             </div>
             
-            <div class="row" style="margin-left: 20px;">
+            <div class="row" style="margin-left: -30px;">
                  <div class="panel panel-default panel-body" >
                         <div class="media">
                             <a class="pull-left" href="#">
@@ -158,7 +158,7 @@
                         </div>
                 </div>
             </div>
-            <div class="row" style="margin-left: 20px;">
+            <div class="row" style="margin-left: -30px;">
                  <div class="panel panel-default panel-body" >
                         <div class="media">
                             <a class="pull-left" href="#">
@@ -170,8 +170,8 @@
                               <asp:Repeater ID="RepeaterFood" runat="server">
                                     <ItemTemplate>
                                     <li class="list-group-item " style="height: 35px;">
-                                        <span class="col-sm-3"><strong><%#Eval("Category") %> -- <%#Eval("Food") %> </strong></span>
-                                        <span  class="col-sm-3" style="font-size: 14px;">价格：<span class="bg-success"><%#Eval("Price")%></span>  <%#Eval("Unit")%>  </span>
+                                        <span class="col-md-3"><strong><%#Eval("Category") %> -- <%#Eval("Food") %> </strong></span>
+                                        <span  class="col-md-4" style="font-size: 14px;">价格：<span class="bg-success"><%#Eval("Price")%></span>  <%#Eval("Unit")%>  </span>
                                         <span  style="font-size: 14px;">物价监测点：<%#Eval("Site")%>  </span> 
                                         <span class="badge" style="background-color:red"><%#Eval("Count")%></span> 
                                         
@@ -184,7 +184,7 @@
                 </div>
             </div>
 
-            <div class="row" style="margin-left: 20px;">
+            <div class="row" style="margin-left: -30px;">
                  <div class="panel panel-default panel-body" >
                         <div class="media">
                             <a class="pull-left" href="#">
@@ -207,7 +207,7 @@
                 </div>
             </div>
             
-            <div class="row" style="margin-left: 20px;">
+            <div class="row" style="margin-left: -30px;">
                  <div class="panel panel-default panel-body" >
                         <div class="media">
                             <a class="pull-left" href="#">
@@ -229,7 +229,7 @@
                         </div>
                 </div>
             </div>
-            <div class="row" style="margin-left: 20px;">
+            <div class="row" style="margin-left: -30px;">
                  <div class="panel panel-default panel-body" >
                         <div class="media">
                             <a class="pull-left" href="#">
@@ -252,7 +252,7 @@
                 </div>
             </div>
             
-            <div class="row" style="margin-left: 20px;">
+            <div class="row" style="margin-left: -30px;">
                  <div class="panel panel-default panel-body" >
                         <div class="media">
                             <a class="pull-left" href="#">
@@ -275,7 +275,7 @@
                 </div>
             </div>
         </div>
-        <div style="float: left;margin-left: 30px;width: 230px; ">
+        <div <%--style="float: left;margin-left: 30px;width: 230px; "--%> class="pull-right col-md-3">
                 <div class="panel panel-default">
                     <div class="panel-heading text-center"><h5>社区电话本</h5></div>
                       <div class="panel-body" id="telbook" style="height: 150px;overflow-y:auto;">
